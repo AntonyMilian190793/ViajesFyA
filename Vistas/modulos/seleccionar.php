@@ -54,7 +54,7 @@
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>Administrador</h3>
+              <h3>Sistemas</h3>
 
               <p>Iniciar Sesión</p>
             </div>
