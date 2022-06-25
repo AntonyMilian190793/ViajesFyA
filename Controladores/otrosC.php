@@ -31,7 +31,7 @@ class OtrosC{
                 }
                 else{
 
-                    echo 'Error al ingresar al sistema';
+                    echo '<div class= "alert alert-danger">Error al ingresar al sistema</div>';
 
                 }
 
