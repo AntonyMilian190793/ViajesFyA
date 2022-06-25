@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini login-page">
   <!-- Site wrapper -->
 
 
@@ -70,6 +70,10 @@
     if($_GET["url"] == "seleccionar"){
 
       include "modulos/seleccionar.php";
+
+    }else if($_GET["url"] == "ingreso-Otros"){
+
+      include "modulos/ingreso-Otros.php";
 
     }
 
