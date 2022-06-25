@@ -1,10 +1,8 @@
 <?php
 
-class ConexionBD
-{
+class ConexionBD{
 
-    public function cBD()
-    {
+    public function cBD(){
 
         $bd = new PDO("mysql:host=localhost;dbname=viajesfya", "root", "");
 

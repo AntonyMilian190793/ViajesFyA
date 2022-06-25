@@ -10,7 +10,7 @@
 
       <div class="form-group has-feedback">
 
-        <input type="email" class="form-control" name="usuario-Ing" placeholder="Usuario">
+        <input type="text" class="form-control" name="usuario-Ing" placeholder="Usuario">
 
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
