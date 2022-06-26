@@ -57,7 +57,7 @@ session_start();
        
       $url = explode("/", $_GET["url"]);
 
-      if($url[0] == "inicio"){
+      if($url[0] == "inicio" || $url[0] == "salir"){
 
         include "modulos/".$url[0].".php";
 
@@ -83,6 +83,10 @@ session_start();
 
     }
 
+  }else{
+      
+      include "modulos/seleccionar.php";
+  
   }
 
   ?>
