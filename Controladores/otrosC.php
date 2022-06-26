@@ -73,7 +73,7 @@ class OtrosC{
 
 
         echo '<td>
-            <a href="#">
+            <a href="http://localhost/ViajesFyA/perfil-O/'.$resultado["id"].'">
                 <button class="btn btn-success"><i class="fa fa-pencil"></i></button>
             </a>
         </td>
@@ -81,6 +81,72 @@ class OtrosC{
 
     }
 
-}
+    //editar Perfil de Otros
 
-?>
+    public function EditarPerfilOtrosC(){
+
+        $tablaBD = "otros";
+
+        $id = $_SESSION["id"];
+        $resultado = OtrosM::VerPefilOtrosC($tablaBD, $id);
+
+        echo 
+        '<form method="post" enctype="multipart/form-data">
+
+        <div class="row">
+
+            <div class="col-md-6 col-xs-12">
+
+                <h2>Nombre:</h2>
+                <input type="text" class="input-lg" name="nombreP" value="'.$resultado['nombre'].'">
+                <input type="hidden" class="input-lg" name="idP" value="'.$resultado['id'].'">
+
+                <h2>Apellido:</h2>
+                <input type="text" class="input-lg" name="apellidoP" value="'.$resultado['apellido'].'">
+
+                <h2>Usuario:</h2>
+                <input type="text" class="input-lg" name="usuarioP" value="'.$resultado['usuario'].'">
+
+                <h2>Contraseña:</h2>
+                <input type="text" class="input-lg" name="claveP" value="'.$resultado['clave'].'">
+
+            </div>
+
+            <div class="col-md-6 col-xs-12">
+
+                <br><br>
+
+                <input type="file" name="imgP">
+                <br>';
+                
+                if($resultado['foto'] == ""){
+
+                    echo '<img src="http://localhost/ViajesFyA/Vistas/img/defecto.png" width="200px;">';
+
+                }else{
+
+                    echo '<img src="http://localhost/ViajesFyA/Vistas/'.$resultado['foto'].'" width="200px;">';
+
+                }
+                
+
+                
+
+                
+                echo '
+                <input type="hidden" name="imgActual" value="'.$resultado['foto'].'">
+                <br><br>
+
+                <button type="submit" class="btn btn-success">Guardar</button>
+
+
+
+            </div>
+
+        </div>
+
+    </form>';
+
+    }
+
+}
