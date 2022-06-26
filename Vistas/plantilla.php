@@ -42,7 +42,7 @@ session_start();
 
   <?php
 
-  if(isset($_SESSION["Ingresar"])&& $_SESSION["Ingresar"] == true){
+  if (isset($_SESSION["Ingresar"]) && $_SESSION["Ingresar"] == true) {
 
 
     echo '<div class="wrapper">';
@@ -53,40 +53,32 @@ session_start();
 
     $url = array();
 
-    if(isset($_GET["url"])){
-       
+    if (isset($_GET["url"])) {
+
       $url = explode("/", $_GET["url"]);
 
-      if($url[0] == "inicio" || $url[0] == "salir"){
+      if ($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "perfil-Otros") {
 
-        include "modulos/".$url[0].".php";
-
+        include "modulos/" . $url[0] . ".php";
       }
-
-    }else{
+    } else {
 
       include "modulos/inicio.php";
-
     }
 
     echo '</div>';
+  } else if (isset($_GET["url"])) {
 
-  }else if(isset($_GET["url"])){
-
-    if($_GET["url"] == "seleccionar"){
+    if ($_GET["url"] == "seleccionar") {
 
       include "modulos/seleccionar.php";
-
-    }else if($_GET["url"] == "ingreso-Otros"){
+    } else if ($_GET["url"] == "ingreso-Otros") {
 
       include "modulos/ingreso-Otros.php";
-
     }
+  } else {
 
-  }else{
-      
-      include "modulos/seleccionar.php";
-  
+    include "modulos/seleccionar.php";
   }
 
   ?>
