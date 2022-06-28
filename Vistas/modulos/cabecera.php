@@ -28,7 +28,7 @@
                 echo '<img src="http://localhost/ViajesFyA/Vistas/img/defecto.png" class="user-image" alt="User Image">';
 
               }else{
-                echo '<img src="http://localhost/ViajesFyA/Vistas/'.$_SESSION["foto"].'" class="user-image" alt="User Image">';
+                echo '<img src="http://localhost/ViajesFyA/'.$_SESSION["foto"].'" class="user-image" alt="User Image">';
               }
             ?>
               

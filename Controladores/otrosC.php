@@ -125,7 +125,7 @@ class OtrosC{
 
                 }else{
 
-                    echo '<img src="http://localhost/ViajesFyA/Vistas/'.$resultado['foto'].'" width="200px;">';
+                    echo '<img src="http://localhost/ViajesFyA/'.$resultado["foto"].'" width="200px;">';
 
                 }
                 
@@ -134,10 +134,11 @@ class OtrosC{
 
                 
                 echo '
-                <input type="hidden" name="imgActual" value="'.$resultado['foto'].'">
+                <input type="hidden" name="imgActual" value="'.$resultado["foto"].'">
+
                 <br><br>
 
-                <button type="submit" class="btn btn-success">Guardar</button>
+                <button type="submit" class="btn btn-success">Guardar Cambios</button>
 
 
 
@@ -149,16 +150,73 @@ class OtrosC{
 
     }
 
-    //Actualizar Perfil de Otros
+    //Actualizar Perfil  Otros
 
     public function ActualizarPerfilOtrosC(){
 
 
+		if(isset($_POST["idP"])){
+
+			$rutaImg = $_POST["imgActual"];
+
+			if(isset($_FILES["imgP"]["tmp_name"]) && !empty($_FILES["imgP"]["tmp_name"])){
+
+				if(!empty($_POST["imgActual"])){
+
+					unlink($_POST["imgActual"]);
+
+				}
+
+
+				if($_FILES["imgP"]["type"] == "image/jpeg"){
+
+					$nombre = mt_rand(10,99);
+
+					$rutaImg = "Vistas/img/Otros/O-".$nombre.".jpg";
+
+					$foto = imagecreatefromjpeg($_FILES["imgP"]["tmp_name"]);
+
+					imagejpeg($foto, $rutaImg);
+
+				}
+
+				if($_FILES["imgP"]["type"] == "image/png"){
+
+					$nombre = mt_rand(10,99);
+
+					$rutaImg = "Vistas/img/Otros/O-".$nombre.".png";
+
+					$foto = imagecreatefrompng($_FILES["imgP"]["tmp_name"]);
+
+					imagepng($foto, $rutaImg);
+
+				}
+
+			}
+
+        $tablaBD = "otros";
+
+        $datosC = array("id"=>$_POST["idP"], 
+        "nombre"=>$_POST["nombreP"], 
+        "apellido"=>$_POST["apellidoP"], 
+        "usuario"=>$_POST["usuarioP"], 
+        "clave"=>$_POST["claveP"], 
+        "foto"=>$rutaImg);
+
+        $resultado = OtrosM::ActualizarPerfilOtroM($tablaBD, $datosC);
+
+        if($resultado == true){
+
+            echo '<script>
+
+            window.location = "http://localhost/ViajesFyA/perfil-O/'.$_SESSION["id"].'";
+            
+            </script>';
+
+        }
+
+        }
 
     }
 
 }
-
-
-
-?>

@@ -31,6 +31,31 @@ require_once "ConexionBD.php";
         $pdo -> close();
         $pdo = null;
     }
+
+    //actualizar perfil otros
+
+    static public  function ActualizarPerfilOtroM($tablaBD, $datosC){
+        $pdo = ConexionBD::cBD()->prepare("UPDATE $tablaBD SET usuario = :usuario, clave = :clave, nombre = :nombre, 
+        apellido = :apellido, foto = :foto  WHERE id = :id");
+
+        $pdo -> bindParam(":id", $datosC["id"], PDO::PARAM_INT);
+        $pdo -> bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
+        $pdo -> bindParam(":clave", $datosC["clave"], PDO::PARAM_STR);
+        $pdo -> bindParam(":nombre", $datosC["nombre"], PDO::PARAM_STR);
+        $pdo -> bindParam(":apellido", $datosC["apellido"], PDO::PARAM_STR);
+        $pdo -> bindParam(":foto", $datosC["foto"], PDO::PARAM_STR);
+
+        if($pdo -> execute()){
+            return true;
+        }
+        else{
+            return false;
+        }
+
+
+        $pdo -> close();
+        $pdo = null;
+    }
         
 }
 
