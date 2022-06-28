@@ -149,4 +149,16 @@ class OtrosC{
 
     }
 
+    //Actualizar Perfil de Otros
+
+    public function ActualizarPerfilOtrosC(){
+
+
+
+    }
+
 }
+
+
+
+?>

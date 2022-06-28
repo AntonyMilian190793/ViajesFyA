@@ -24,6 +24,7 @@ if ($_SESSION["rol"] != "Otros") {
 
             $editarPerfil = new OtrosC();
             $editarPerfil -> EditarPerfilOtrosC();
+            $editarPerfil -> ActualizarPerfilOtrosC();
 
             ?>
 
