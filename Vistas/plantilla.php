@@ -49,7 +49,13 @@ session_start();
 
     include "modulos/cabecera.php";
 
-    include "modulos/menu.php";
+    if($_SESSION["rol"] == "Otros"){
+
+      include "modulos/menuOtro.php";
+
+    }
+
+    
 
     $url = array();
 
@@ -57,7 +63,7 @@ session_start();
 
       $url = explode("/", $_GET["url"]);
 
-      if ($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "perfil-Otros" || $url[0] == "perfil-O") {
+      if ($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "perfil-Otros" || $url[0] == "perfil-O" || $url[0] == "consultas") {
 
         include "modulos/" . $url[0] . ".php";
       }
