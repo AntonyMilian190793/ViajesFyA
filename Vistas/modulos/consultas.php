@@ -21,13 +21,20 @@ if($_SESSION["rol"] != "Otros"){
     <section class="content">
         <div class="box">
             <div class="box-header">
-                <form action="post">
+                <form method="post">
                     <div class="col-md-6 col-xs-12">
                         <input type="text" class="form-control" name="consultasN" placeholder="Ingrese Nueva Consulta" required>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Crear Consulta </button>
                 </form>
+
+                <?php
+
+                    $crearC = new ConsultasC();
+                    $crearC -> CrearConsultasC();
+
+                ?>
             </div>
             <div class="box-body">
                 <table class="table -table-bordered table-hover table-striped">
