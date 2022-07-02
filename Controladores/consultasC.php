@@ -20,6 +20,16 @@
                 }
             }
         }
+
+        //ver consultas
+
+        static public function VerConsultasC($columna, $valor){
+            
+            $tablaBD = "consultas";
+            $resultado = ConsultasM::VerConsultasM($tablaBD, $columna, $valor);
+
+            return $resultado;
+        }
     }
 
 
