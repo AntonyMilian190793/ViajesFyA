@@ -51,7 +51,7 @@ if($_SESSION["rol"] != "Otros"){
                         <td>Cardio</td>
                         <td>
                             <div class="btn-group">
-                               <button class="btn btn-success"><i class="fa fa-pencil"> AEditar</i></button>
+                               <button class="btn btn-success"><i class="fa fa-pencil"> Editar</i></button>
                             </div>
 
                             <div class="btn-group">
