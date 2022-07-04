@@ -63,7 +63,7 @@ if ($_SESSION["rol"] != "Otros") {
                                         <button class="btn btn-success"><i class="fa fa-pencil"> Editar</i></button>
                                     </div>
                                 </a>
-                                <a href="http://localhost/ViajesFyA/">
+                                <a href="http://localhost/ViajesFyA/consultas/'.$value["id"].'">
                                     <div class="btn-group">
                                         <button class="btn btn-danger"><i class="fa fa-times"> Borrar</i></button>
                                     </div>
@@ -81,3 +81,10 @@ if ($_SESSION["rol"] != "Otros") {
     </section>
 
 </div>
+
+<?php
+
+    $borrarC = new ConsultasC();
+    $borrarC -> BorrarConsulasC();
+
+?>

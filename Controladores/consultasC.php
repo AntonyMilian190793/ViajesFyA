@@ -30,6 +30,26 @@
 
             return $resultado;
         }
+
+        //borrar consultas
+        public function BorrarConsulasC(){
+
+            if(substr($_GET["url"], 10)){
+
+                $tablaBD = "consultas";
+                $id = substr($_GET["url"], 10);
+                $resultado = ConsultasM::BorrarConsultasM($tablaBD, $id);
+
+                if($resultado == true){
+                    echo '<script>
+
+                    window.location = "http://localhost/ViajesFyA/consultas";
+                    </script>';
+
+                }
+
+            }
+        }
     }
 
 
