@@ -50,6 +50,25 @@
 
             }
         }
+
+        //editar consultas
+
+        public function EditarConsultasC(){
+
+            $tablaBD = "consultas";
+            $id = substr($_GET["url"], 4);
+            $resultado = ConsultasM::EditarConsultasM($tablaBD, $id);
+
+            echo '<div class="form-group">
+                    <h2>Nombre:</h2>
+                    <input type="text" class="form-control input-lg" name="consultaE" value="'.$resultado['nombre'].'">
+                    <input type="hidden" class="form-control input-lg" name="Cid" value="'.$resultado['id'].'">
+
+                    <br>
+
+                    <button class="btn btn-success" type="submit">Guardar</button>
+                </div>';
+        }
     }
 
 

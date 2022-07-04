@@ -58,7 +58,7 @@ if ($_SESSION["rol"] != "Otros") {
                             <td>'.($key+1).'</td>
                             <td>'.$value["nombre"].'</td>
                             <td>
-                                <a href="http://localhost/ViajesFyA/">
+                                <a href="http://localhost/ViajesFyA/E-C/'.$value["id"].'">
                                     <div class="btn-group">
                                         <button class="btn btn-success"><i class="fa fa-pencil"> Editar</i></button>
                                     </div>
