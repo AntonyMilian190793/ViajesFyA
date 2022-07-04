@@ -66,8 +66,28 @@
 
                     <br>
 
-                    <button class="btn btn-success" type="submit">Guardar</button>
+                    <button class="btn btn-success" type="submit">Guardar Cambios</button>
                 </div>';
+        }
+
+        //actualizar consultas
+
+        public function ActualizarConsultaC(){
+
+            if(isset($_POST["consultaE"])){
+
+                $tablaBD = "consultas";
+                $datosC = array("id" => $_POST["Cid"], "nombre" => $_POST["consultaE"]);
+                $resultado = ConsultasM::ActualizarConsultasM($tablaBD, $datosC);
+
+                if($resultado == true){
+                    echo '<script>
+
+                    window.location = "http://localhost/ViajesFyA/consultas";
+                    </script>';
+
+                }
+            }
         }
     }
 
