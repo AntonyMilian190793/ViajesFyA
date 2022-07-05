@@ -33,3 +33,10 @@ $(".DT").on("click", ".EditarPadre", function() {
     })
 
 });
+
+$(".DT").on("click", ".EliminarPadre", function() {
+    var Pid = $(this).attr("Pid");
+    var imgD = $(this).attr("imgD");
+
+    window.location = "index.php?url=padres&Pid=" + Pid + "&imgD=" + imgD;
+});

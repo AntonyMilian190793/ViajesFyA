@@ -89,6 +89,21 @@
         
         }
 
+        //eliminar Padres
+        static public function BorrarPadresM($tablaBD, $id){
+
+            $pdo = ConexionBD::cBD()->prepare("DELETE FROM $tablaBD WHERE id = :id");
+            $pdo->bindParam(":id", $id, PDO::PARAM_INT);
+
+            if($pdo->execute()){
+                return true;
+            }
+
+            $pdo->close();
+            $pdo = null;
+        
+        }
+
     }
 
 

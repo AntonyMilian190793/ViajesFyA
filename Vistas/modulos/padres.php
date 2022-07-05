@@ -72,16 +72,17 @@ if ($_SESSION["rol"] != "Otros") {
                             
                             <td>
                                 
-                                <div class="btn-group">
-                                    <button class="btn btn-success EditarPadre" Pid="'.$value["id"].'" data-toggle="modal" data-target="#EditarPadre"><i class="fa fa-pencil"> 
-                                    Editar</i></button>
-                                </div>
+                            <div class="btn-group">
+                                <button class="btn btn-success EditarPadre" Pid="'.$value["id"].'" data-toggle="modal" data-target="#EditarPadre"><i class="fa fa-pencil"> 
+                                Editar</i></button>
+                            </div>
                                 
-                                <a href="http://localhost/ViajesFyA/consultas/'.$value["id"].'">
+                                
                                     <div class="btn-group">
-                                        <button class="btn btn-danger"><i class="fa fa-times"> Borrar</i></button>
+                                        <button class="btn btn-danger EliminarPadre" Pid="'.$value["id"].'" imgD="'.$value["foto"].'">
+                                        <i class="fa fa-times"> Borrar</i></button>
                                     </div>
-                                </a>
+                                
                             </td>
                         </tr>';
                         }
@@ -226,7 +227,7 @@ if ($_SESSION["rol"] != "Otros") {
 
 <?php
 
-    // $borrarC = new ConsultasC();
-    // $borrarC -> BorrarConsulasC();
+    $borrarP = new PadresC();
+    $borrarP -> BorrarPadreC();
 
 ?>

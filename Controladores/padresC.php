@@ -55,6 +55,28 @@
                 }
             }
         }
+
+        //eliminar Padres
+        public function BorrarPadreC(){
+
+            if(isset($_GET["Pid"])){
+
+                $tablaBD = "padres";
+                $id = $_GET["Pid"];
+
+                if($_GET["imgD"] != ""){
+                    unlink($_GET["imgD"]);
+                }
+
+                $resultado = PadresM::BorrarPadresM($tablaBD, $id);
+
+                if($resultado == true){
+                    echo '<script>
+                        window.location = "padres";
+                    </script>';
+                }
+            }
+        }
     }
 
 ?>    
