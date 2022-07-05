@@ -177,13 +177,13 @@ if ($_SESSION["rol"] != "Otros") {
                     <div class="box-body">
                         <div class="form-group">
                             <h2>Apellidos:</h2>
-                            <input type="text" class="form-control" id="apellidoE" name="apellido" required>
+                            <input type="text" class="form-control" id="apellidoE" name="apellidoE" required>
                             <input type="hidden" id="Pid" name="Pid">
                         </div>
 
                         <div class="form-group">
                             <h2>Nombres:</h2>
-                            <input type="text" class="form-control" id="nombreE" name="nombre" required>
+                            <input type="text" class="form-control" id="nombreE" name="nombreE" required>
                         </div>
 
                         <div class="form-group">
@@ -195,34 +195,16 @@ if ($_SESSION["rol"] != "Otros") {
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            <h2>Área:</h2>
-                            <select class="form-control input-lg" name="consultaE" required>
-                                <option id="consultaE></option>
 
-                                <?php
-
-                                    $columna = null;
-                                    $valor = null;
-
-                                    $resultado = ConsultasC::VerConsultasC($columna, $valor);
-
-                                    foreach ($resultado as $key => $value) {
-                                        echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
-                                    }
-
-                                ?>
-                            </select>
-                        </div>
 
                         <div class="form-group">
                             <h2>Usuario:</h2>
-                            <input type="text" class="form-control" id="usuarioE" name="usuario" required>
+                            <input type="text" class="form-control" id="usuarioE" name="usuarioE" required>
                         </div>
 
                         <div class="form-group">
                             <h2>Contraseña:</h2>
-                            <input type="text" class="form-control" id="claveE" name="clave" required>
+                            <input type="text" class="form-control" id="claveE" name="claveE" required>
                         </div>
 
                     </div>                            
@@ -234,8 +216,8 @@ if ($_SESSION["rol"] != "Otros") {
                 </div>
 
                 <?php
-                    // $crear = new PadresC();
-                    // $crear ->CrearPadreC();
+                    $actualizar = new PadresC();
+                    $actualizar ->ActualizarPadreC();
                 ?>
             </form>
         </div>

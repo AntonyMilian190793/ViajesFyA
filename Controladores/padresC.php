@@ -29,12 +29,31 @@
             return $resultado;
         }
 
-        
+        //editar Padres
         static public function PadreC($columna, $valor){
             $tablaBD = "padres";
             $resultado = PadresM::PadreM($tablaBD, $columna, $valor);
 
             return $resultado;
+        }
+
+        //actualizar Padres
+        public function ActualizarPadreC(){
+
+            if(isset($_POST["Pid"])){
+
+                $tablaBD = "padres";
+                $datosC = array("id"=>$_POST["Pid"], "apellido"=>$_POST["apellidoE"], "nombre"=>$_POST["nombreE"], "sexo"=>$_POST["sexoE"],
+                "usuario"=>$_POST["usuarioE"], "clave"=>$_POST["claveE"]);
+
+                $resultado = PadresM::ActualizarPadresM($tablaBD, $datosC);
+
+                if($resultado == true){
+                    echo '<script>
+                        window.location = "padres";
+                    </script>';
+                }
+            }
         }
     }
 
