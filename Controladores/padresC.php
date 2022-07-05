@@ -2,6 +2,7 @@
 
     class PadresC{
         
+        //crear Padres
         public function CrearPadreC(){
 
             if(isset($_POST["rolP"])){
@@ -18,6 +19,14 @@
                 }
             }
 
+        }
+
+        //mostar Padres
+        static public function VerPadresC($columna, $valor){
+            $tablaBD = "padres";
+            $resultado = PadresM::VerPadresM($tablaBD, $columna, $valor);
+
+            return $resultado;
         }
     }
 

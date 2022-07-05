@@ -4,6 +4,7 @@
 
     class PadresM extends ConexionBD{
 
+        //crear padres
         static public function CrearPadresM($tablaBD, $datosC){
 
             $pdo = ConexionBD::cBD()->prepare("INSERT INTO $tablaBD (apellido, nombre, sexo, id_consulta, usuario, clave, rol) VALUES 
@@ -24,6 +25,27 @@
             $pdo->close();
             $pdo = null;
 
+        }
+
+        //mostar Padres
+
+        static public function VerPadresM($tablaBD, $columna, $valor){
+                
+                if($columna != null){
+    
+                    $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD WHERE $columna = :$columna");
+                    $pdo->bindParam(":$columna", $valor, PDO::PARAM_STR);
+                    $pdo->execute();
+                    return $pdo->fetchAll();
+    
+                }else{
+    
+                    $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD");
+                    $pdo->execute();
+                    return $pdo->fetchAll();
+    
+                }
+    
         }
 
     }
