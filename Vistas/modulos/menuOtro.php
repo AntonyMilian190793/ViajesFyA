@@ -19,14 +19,14 @@
 
       <li>
         <a href="http://localhost/ViajesFyA/consultas">
-          <i class="fa fa-user"></i>
+          <i class="fa fa-address-book-o"></i>
           <span>Consultas</span>
         </a>
       </li>
 
       <li>
         <a href="http://localhost/ViajesFyA/otros">
-          <i class="fa fa-user"></i>
+          <i class="fa fa-code"></i>
           <span>Sistemas</span>
         </a>
       </li>
