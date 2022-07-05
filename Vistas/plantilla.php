@@ -117,6 +117,8 @@ session_start();
   <script src="http://localhost/ViajesFyA/Vistas/dist/js/adminlte.min.js"></script>
   <!-- AdminLTE for demo purposes -->
   <script src="http://localhost/ViajesFyA/Vistas/dist/js/demo.js"></script>
+
+  <script src="http://localhost/ViajesFyA/Vistas/js/padres.js"></script>
   <script>
     $(document).ready(function() {
       $('.sidebar-menu').tree()

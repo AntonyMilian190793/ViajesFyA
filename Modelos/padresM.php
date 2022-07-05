@@ -45,8 +45,26 @@
                     return $pdo->fetchAll();
     
                 }
+                $pdo -> close();
+                $pdo = null;
     
         }
 
+        //editar Padre
+
+        static public function PadreM($tablaBD, $columna, $valor){
+                
+            if($columna != null){
+
+                $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD WHERE $columna = :$columna");
+                $pdo->bindParam(":$columna", $valor, PDO::PARAM_STR);
+                $pdo->execute();
+                return $pdo->fetch();
+            }
+
+            $pdo -> close();
+            $pdo = null;
+
+        }
+
     }
-?>

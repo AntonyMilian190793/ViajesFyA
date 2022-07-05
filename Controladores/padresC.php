@@ -28,6 +28,14 @@
 
             return $resultado;
         }
+
+        
+        static public function PadreC($columna, $valor){
+            $tablaBD = "padres";
+            $resultado = PadresM::PadreM($tablaBD, $columna, $valor);
+
+            return $resultado;
+        }
     }
 
 ?>    

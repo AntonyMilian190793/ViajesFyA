@@ -26,7 +26,7 @@ if ($_SESSION["rol"] != "Otros") {
 
             </div>
             <div class="box-body">
-                <table class="table -table-bordered table-hover table-striped">
+                <table class="table -table-bordered table-hover table-striped DT">
                     <thead>
                         <tr>
                             <th>N°</th>
@@ -71,11 +71,12 @@ if ($_SESSION["rol"] != "Otros") {
                             
                             
                             <td>
-                                <a href="http://localhost/ViajesFyA/E-C/'.$value["id"].'">
-                                    <div class="btn-group">
-                                        <button class="btn btn-success"><i class="fa fa-pencil"> Editar</i></button>
-                                    </div>
-                                </a>
+                                
+                                <div class="btn-group">
+                                    <button class="btn btn-success EditarPadre" Pid="'.$value["id"].'" data-toggle="modal" data-target="#EditarPadre"><i class="fa fa-pencil"> 
+                                    Editar</i></button>
+                                </div>
+                                
                                 <a href="http://localhost/ViajesFyA/consultas/'.$value["id"].'">
                                     <div class="btn-group">
                                         <button class="btn btn-danger"><i class="fa fa-times"> Borrar</i></button>
@@ -162,6 +163,79 @@ if ($_SESSION["rol"] != "Otros") {
                 <?php
                     $crear = new PadresC();
                     $crear ->CrearPadreC();
+                ?>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" role="dialog" id="EditarPadre">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" role="form">
+                <div class="modal-body">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <h2>Apellidos:</h2>
+                            <input type="text" class="form-control" id="apellidoE" name="apellido" required>
+                            <input type="hidden" id="Pid" name="Pid">
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Nombres:</h2>
+                            <input type="text" class="form-control" id="nombreE" name="nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Sexo:</h2>
+                            <select class="form-control input-lg" name="sexoE" required>
+                                <option id="sexoE"></option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Área:</h2>
+                            <select class="form-control input-lg" name="consultaE" required>
+                                <option id="consultaE></option>
+
+                                <?php
+
+                                    $columna = null;
+                                    $valor = null;
+
+                                    $resultado = ConsultasC::VerConsultasC($columna, $valor);
+
+                                    foreach ($resultado as $key => $value) {
+                                        echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
+                                    }
+
+                                ?>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Usuario:</h2>
+                            <input type="text" class="form-control" id="usuarioE" name="usuario" required>
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Contraseña:</h2>
+                            <input type="text" class="form-control" id="claveE" name="clave" required>
+                        </div>
+
+                    </div>                            
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Guarda Cambios</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                </div>
+
+                <?php
+                    // $crear = new PadresC();
+                    // $crear ->CrearPadreC();
                 ?>
             </form>
         </div>
