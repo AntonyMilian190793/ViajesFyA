@@ -25,6 +25,10 @@ session_start();
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/dist/css/skins/_all-skins.min.css">
 
+  <!-- Data Tables -->
+  <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.css">
+  <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -117,6 +121,14 @@ session_start();
   <script src="http://localhost/ViajesFyA/Vistas/dist/js/adminlte.min.js"></script>
   <!-- AdminLTE for demo purposes -->
   <script src="http://localhost/ViajesFyA/Vistas/dist/js/demo.js"></script>
+
+  <!-- DataTables -->
+  <script src="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net/js/jquery.dataTables.js"></script>
+  <script src="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.js"></script>
+  <script src="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.min"></script>
+
+
 
   <script src="http://localhost/ViajesFyA/Vistas/js/padres.js"></script>
   <script>
