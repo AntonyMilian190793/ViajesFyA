@@ -81,12 +81,12 @@ if ($_SESSION["rol"] != "Otros") {
     <div class="modal-dialog">
         <div class="modal-content">
             <form method="post" role="form">
-                <div class="form-body">
+                <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">
                             <h2>Apellidos:</h2>
                             <input type="text" class="form-control" name="apellido" required>
-                            <input type="hidden" name="rolID" value="Padre">
+                            <input type="hidden" name="rolP" value="Padre">
                         </div>
 
                         <div class="form-group">
@@ -107,8 +107,19 @@ if ($_SESSION["rol"] != "Otros") {
                             <h2>Área:</h2>
                             <select class="form-control input-lg" name="consulta">
                                 <option>Seleccionar...</option>
-                                <option value="Administración">Administración</option>
-                                <option value="EBR">EBR</option>
+
+                                <?php
+
+                                    $columna = null;
+                                    $valor = null;
+
+                                    $resultado = ConsultasC::VerConsultasC($columna, $valor);
+
+                                    foreach ($resultado as $key => $value) {
+                                        echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
+                                    }
+
+                                ?>
                             </select>
                         </div>
 
@@ -129,6 +140,11 @@ if ($_SESSION["rol"] != "Otros") {
                     <button type="submit" class="btn btn-primary">Crear</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 </div>
+
+                <?php
+                    $crear = new PadresC();
+                    $crear ->CrearPadreC();
+                ?>
             </form>
         </div>
     </div>
