@@ -25,9 +25,9 @@
       </li>
 
       <li>
-        <a href="http://localhost/ViajesFyA/otros">
+        <a href="http://localhost/ViajesFyA/otrosTrabajadores">
           <i class="fa fa-users"></i>
-          <span>Otros</span>
+          <span>Otros Trabajadores</span>
         </a>
       </li>
 

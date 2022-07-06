@@ -9,14 +9,14 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>Otros</h3>
+              <h3>Secretarias</h3>
 
               <p>Inicio de Sesión</p>
             </div>
             <div class="icon">
-              <i class="fa fa-users"></i>
+              <i class="fa fa-female"></i>
             </div>
-            <a href="ingreso-Otros" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="ingreso-Secretarias" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

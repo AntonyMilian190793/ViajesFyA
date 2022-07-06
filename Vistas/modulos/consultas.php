@@ -14,7 +14,7 @@ if ($_SESSION["rol"] != "Otros") {
 <div class="content-wrapper">
 
     <section class="content-header">
-        <h1>Gestor de Consultas</h1>
+        <h1>Gestor de Áreas</h1>
     </section>
 
     <section class="content">
@@ -25,7 +25,7 @@ if ($_SESSION["rol"] != "Otros") {
                         <input type="text" class="form-control" name="consultasN" placeholder="Ingrese Nueva Consulta" required>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Crear Consulta </button>
+                    <button type="submit" class="btn btn-primary">Crear Área </button>
                 </form>
 
                 <?php
