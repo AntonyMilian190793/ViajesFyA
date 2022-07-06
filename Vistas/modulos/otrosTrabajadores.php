@@ -22,7 +22,7 @@ if ($_SESSION["rol"] != "Otros") {
             <div class="box-header">
 
 
-                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#CrearOtros">Crear Nombre</button>
+                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#CrearOtrosT">Crear Nombre</button>
 
             </div>
             <div class="box-body">
@@ -57,7 +57,7 @@ if ($_SESSION["rol"] != "Otros") {
                             <td>
                                 
                             <div class="btn-group">
-                                <button class="btn btn-success EditarPadre" Pid="" data-toggle="modal" data-target="#EditarOtro"><i class="fa fa-pencil"> 
+                                <button class="btn btn-success EditarPadre" Pid="" data-toggle="modal" data-target="#EditarOtrosT"><i class="fa fa-pencil"> 
                                 Editar</i></button>
                             </div>
                                 
@@ -79,7 +79,7 @@ if ($_SESSION["rol"] != "Otros") {
 
 </div>
 
-<div class="modal fade" role="dialog" id="CrearOtros">
+<div class="modal fade" role="dialog" id="CrearOtrosT">
     <div class="modal-dialog">
         <div class="modal-content">
             <form method="post" role="form">
@@ -88,7 +88,7 @@ if ($_SESSION["rol"] != "Otros") {
                         <div class="form-group">
                             <h2>Apellidos:</h2>
                             <input type="text" class="form-control" name="apellido" required>
-                            <input type="hidden" name="rolS" value="Sistemas">
+                            <input type="hidden" name="rolOT" value="otrosTrabajadores">
                         </div>
 
                         <div class="form-group">
@@ -120,15 +120,15 @@ if ($_SESSION["rol"] != "Otros") {
                 </div>
 
                 <?php
-                    // $crear = new PadresC();
-                    // $crear ->CrearPadreC();
+                    $crear = new OtrosTC();
+                    $crear ->CrearOtrosTC();
                 ?>
             </form>
         </div>
     </div>
 </div>
 
-<div class="modal fade" role="dialog" id="EditarOtro">
+<div class="modal fade" role="dialog" id="EditarOtrosT">
     <div class="modal-dialog">
         <div class="modal-content">
             <form method="post" role="form">
