@@ -26,8 +26,8 @@
 
       <li>
         <a href="http://localhost/ViajesFyA/otros">
-          <i class="fa fa-code"></i>
-          <span>Sistemas</span>
+          <i class="fa fa-users"></i>
+          <span>Otros</span>
         </a>
       </li>
 
