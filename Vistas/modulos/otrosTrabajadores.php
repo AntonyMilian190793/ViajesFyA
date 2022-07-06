@@ -40,18 +40,35 @@ if ($_SESSION["rol"] != "Otros") {
                         </tr>
                     </thead>
                     <tbody>
-                        
-                        <tr>
-                            <td>1</td>
-                            <td>Milian</td>
-                            <td>Jorge</td>
-                            <td>70311233</td>
-                            <td><img src="Vistas/img/defecto.png" width="40px"></td>
+
+                        <?php
+
+                        $columna = null;
+                        $valor = null;
+
+                        $resultado = OtrosTC::VerOtrosTC($columna, $valor);
+
+                        foreach ($resultado as $key => $value) {
+
+                            echo '<tr>
+                            <td>'.($key+1).'</td>
+                            <td>'.$value["apellido"].'</td>
+                            <td>'.$value["nombre"].'</td>
+                            <td>'.$value["documento"].'</td>';
+
+                            if($value["foto"] == ""){
+                                echo ' <td><img src="Vistas/img/defecto.png" width="40px"></td>';
+
+                            }else{
+                                echo ' <td><img src="'.$value["foto"].'" width="40px"></td>';
+                            }
+                            
+                           
 
 
-
-                            <td>jmilian</td>
-                            <td>123</td>
+                            echo '
+                            <td>'.$value["usuario"].'</td>
+                            <td>'.$value["clave"].'</td>
                             
                             
                             <td>
@@ -68,7 +85,12 @@ if ($_SESSION["rol"] != "Otros") {
                                     </div>
                                 
                             </td>
-                        </tr>
+                        </tr>';
+                        }
+
+                        ?>
+
+
 
 
                     </tbody>
@@ -111,7 +133,7 @@ if ($_SESSION["rol"] != "Otros") {
                             <input type="text" class="form-control" name="clave" required>
                         </div>
 
-                    </div>                            
+                    </div>
                 </div>
 
                 <div class="modal-footer">
@@ -120,8 +142,8 @@ if ($_SESSION["rol"] != "Otros") {
                 </div>
 
                 <?php
-                    $crear = new OtrosTC();
-                    $crear ->CrearOtrosTC();
+                $crear = new OtrosTC();
+                $crear->CrearOtrosTC();
                 ?>
             </form>
         </div>
@@ -162,7 +184,7 @@ if ($_SESSION["rol"] != "Otros") {
                             <input type="text" class="form-control" id="claveE" name="claveE" required>
                         </div>
 
-                    </div>                            
+                    </div>
                 </div>
 
                 <div class="modal-footer">
@@ -171,8 +193,8 @@ if ($_SESSION["rol"] != "Otros") {
                 </div>
 
                 <?php
-                    // $actualizar = new PadresC();
-                    // $actualizar ->ActualizarPadreC();
+                // $actualizar = new PadresC();
+                // $actualizar ->ActualizarPadreC();
                 ?>
             </form>
         </div>
@@ -181,7 +203,7 @@ if ($_SESSION["rol"] != "Otros") {
 
 <?php
 
-    // $borrarP = new PadresC();
-    // $borrarP -> BorrarPadreC();
+// $borrarP = new PadresC();
+// $borrarP -> BorrarPadreC();
 
 ?>

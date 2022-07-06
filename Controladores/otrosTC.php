@@ -20,6 +20,15 @@
             }   
         }
     }
+
+    // ver otros trabajadores
+    static public function VerOtrosTC($columna, $valor){
+
+        $tablaBD = "otrosTrabajadores";
+        $resultado = OtrosTM::VerOtrosTM($tablaBD, $columna, $valor);
+
+        return $resultado;
+    }
 }
 
 ?>
