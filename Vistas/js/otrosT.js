@@ -9,7 +9,7 @@ $(".DT").on("click",".EditarOtrosT", function(){
     var Pid = $(this).attr("Pid");
     var datos = new FormData();
 
-    datos.append("Pid",Pid);
+    datos.append("Pid", Pid);
 
     $.ajax({
         url: "Ajax/otrosTA.php",
@@ -22,9 +22,9 @@ $(".DT").on("click",".EditarOtrosT", function(){
 
         success: function(resultado){
             $("#Pid").val(resultado["id"]);
-            $("#apellidoE").val(resultado["apellidoE"]);
-            $("#nombreE").val(resultado["nombreE"]);
-            $("#documentoE").val(resultado["documentoE"]);
+            $("#apellidoE").val(resultado["apellido"]);
+            $("#nombreE").val(resultado["nombre"]);
+            $("#documentoE").val(resultado["documento"]);
             $("#usuarioE").val(resultado["usuario"]);
             $("#claveE").val(resultado["clave"]);
         }

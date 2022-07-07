@@ -34,7 +34,7 @@
             return $pdo -> fetchAll();
         }else{
             $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD WHERE $columna = :$columna ORDER BY apellido ASC");
-            $pdo -> bindParam(":", $columna, $valor, PDO::PARAM_STR);
+            $pdo -> bindParam(":".$columna, $valor, PDO::PARAM_STR);
             $pdo -> execute();
             return $pdo -> fetch();
         }

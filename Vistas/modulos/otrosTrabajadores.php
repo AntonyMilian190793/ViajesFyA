@@ -75,13 +75,12 @@ if ($_SESSION["rol"] != "Otros") {
                             <div class="btn-group">
                                 <button class="btn btn-success EditarOtrosT" Pid="'.$value["id"].'" data-toggle="modal" data-target="#EditarOtrosT"><i class="fa fa-pencil"> 
                                 Editar</i></button>
+
+                                
+                                <button class="btn btn-danger EliminarOtroT" Pid="'.$value["id"].'" imgOT="'.$value["foto"].'">
+                                <i class="fa fa-times"> Borrar</i></button>
                             </div>
-                                
-                                
-                                    <div class="btn-group">
-                                        <button class="btn btn-danger EliminarOtroT" Pid="'.$value["id"].'" imgOT="'.$value["foto"].'">
-                                        <i class="fa fa-times"> Borrar</i></button>
-                                    </div>
+
                                 
                             </td>
                         </tr>';
@@ -155,7 +154,7 @@ if ($_SESSION["rol"] != "Otros") {
                         <div class="form-group">
                             <h2>Apellidos:</h2>
                             <input type="text" class="form-control" id="apellidoE" name="apellidoE" required>
-                            <input type="text" id="Pid" name="Pid">
+                            <input type="hidden" id="Pid" name="Pid">
                         </div>
 
                         <div class="form-group">
@@ -167,8 +166,6 @@ if ($_SESSION["rol"] != "Otros") {
                             <h2>Documento:</h2>
                             <input type="text" class="form-control" id="documentoE" name="documentoE" required>
                         </div>
-
-
 
                         <div class="form-group">
                             <h2>Usuario:</h2>
