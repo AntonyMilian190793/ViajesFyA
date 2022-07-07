@@ -48,7 +48,26 @@
                 '<script>
                         window.location = "otrosTrabajadores";
                 </script>';
-        }  
+            }  
+        }
+    }
+
+    // actualizar otros trabajadores
+    public function ActualizarOtrosTC(){
+
+        if(isset($_POST["Pid"])){
+
+            $tablaBD = "otrosTrabajadores";
+            $datosC = array("id"=>$_POST["Pid"], "apellido"=>$_POST["apellidoE"],"nombre"=>$_POST["nombreE"],"documento"=>
+            $_POST["documentoE"], "usuario"=>$_POST["usuarioE"],"clave"=>$_POST["claveE"]);
+            $resultado = OtrosTM::ActualizarOtrosTM($tablaBD, $datosC);
+
+            if($resultado == true){
+                echo 
+                '<script>
+                        window.location = "otrosTrabajadores";
+                </script>';
+            }  
         }
     }
 }

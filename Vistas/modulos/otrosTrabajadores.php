@@ -186,8 +186,8 @@ if ($_SESSION["rol"] != "Otros") {
                 </div>
 
                 <?php
-                // $actualizar = new PadresC();
-                // $actualizar ->ActualizarPadreC();
+                $actualizar = new OtrosTC();
+                $actualizar ->ActualizarOtrosTC();
                 ?>
             </form>
         </div>
