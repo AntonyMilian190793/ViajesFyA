@@ -29,6 +29,26 @@
 
         return $resultado;
     }
+
+    //borrar otros trabajadores
+    public function BorrarOtrosTC(){
+
+        if(isset($_GET["OTid"])){
+            $tablaBD = "otrosTrabajadores";
+            $id = $_GET["OTid"];
+
+            if($_GET["imgOT"] != ""){
+                unlink($_GET["imgOT"]);
+            }
+            $resultado = OtrosTM::BorrarOtrosTM($tablaBD, $id);
+
+            if($resultado == true){
+                echo '<script>
+                        window.location = "otrosTrabajadores";
+                      </script>';
+        }  
+        }
+    }
 }
 
 ?>

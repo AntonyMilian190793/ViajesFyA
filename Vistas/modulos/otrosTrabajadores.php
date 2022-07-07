@@ -80,7 +80,7 @@ if ($_SESSION["rol"] != "Otros") {
                                 
                                 
                                     <div class="btn-group">
-                                        <button class="btn btn-danger EliminarPadre" Pid="" imgD="">
+                                        <button class="btn btn-danger EliminarOtroT" OTid="'.$value["id"].'" imgOT="'.$value["foto"].'">
                                         <i class="fa fa-times"> Borrar</i></button>
                                     </div>
                                 
@@ -203,7 +203,7 @@ if ($_SESSION["rol"] != "Otros") {
 
 <?php
 
-// $borrarP = new PadresC();
-// $borrarP -> BorrarPadreC();
+$borrarP = new OtrosTC();
+$borrarP -> BorrarOtrosTC();
 
 ?>

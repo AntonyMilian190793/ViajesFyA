@@ -20,6 +20,7 @@
             if($pdo -> execute()){
                 return true;
             }
+
             $pdo -> close();
             $pdo = null;
     }
@@ -40,6 +41,21 @@
         $pdo -> close();
         $pdo = null;
     }
+
+    //borrar otros trabajadores
+    static public function BorrarOtrosTM($tablaBD, $id){
+
+        $pdo = ConexionBD::cBD()->prepare("DELETE FROM $tablaBD WHERE id = :id");
+        $pdo -> bindParam(":id", $id, PDO::PARAM_INT);
+
+        if($pdo -> execute()){
+            return true;
+        }
+        
+        $pdo -> close();
+        $pdo = null;
+    }
+    
 }
 
 ?>
