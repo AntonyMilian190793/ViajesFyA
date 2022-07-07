@@ -63,7 +63,6 @@ if ($_SESSION["rol"] != "Otros") {
                                 echo ' <td><img src="'.$value["foto"].'" width="40px"></td>';
                             }
                             
-                           
 
 
                             echo '
@@ -74,13 +73,13 @@ if ($_SESSION["rol"] != "Otros") {
                             <td>
                                 
                             <div class="btn-group">
-                                <button class="btn btn-success EditarPadre" Pid="" data-toggle="modal" data-target="#EditarOtrosT"><i class="fa fa-pencil"> 
+                                <button class="btn btn-success EditarOtrosT" Pid="'.$value["id"].'" data-toggle="modal" data-target="#EditarOtrosT"><i class="fa fa-pencil"> 
                                 Editar</i></button>
                             </div>
                                 
                                 
                                     <div class="btn-group">
-                                        <button class="btn btn-danger EliminarOtroT" OTid="'.$value["id"].'" imgOT="'.$value["foto"].'">
+                                        <button class="btn btn-danger EliminarOtroT" Pid="'.$value["id"].'" imgOT="'.$value["foto"].'">
                                         <i class="fa fa-times"> Borrar</i></button>
                                     </div>
                                 
@@ -89,10 +88,6 @@ if ($_SESSION["rol"] != "Otros") {
                         }
 
                         ?>
-
-
-
-
                     </tbody>
                 </table>
             </div>
@@ -125,7 +120,7 @@ if ($_SESSION["rol"] != "Otros") {
 
                         <div class="form-group">
                             <h2>Usuario:</h2>
-                            <input type="text" class="form-control" name="usuario" required>
+                            <input type="text" class="form-control" id="usuario" name="usuario" required>
                         </div>
 
                         <div class="form-group">
@@ -145,6 +140,7 @@ if ($_SESSION["rol"] != "Otros") {
                 $crear = new OtrosTC();
                 $crear->CrearOtrosTC();
                 ?>
+
             </form>
         </div>
     </div>
@@ -159,7 +155,7 @@ if ($_SESSION["rol"] != "Otros") {
                         <div class="form-group">
                             <h2>Apellidos:</h2>
                             <input type="text" class="form-control" id="apellidoE" name="apellidoE" required>
-                            <input type="hidden" id="Oid" name="Oid">
+                            <input type="text" id="Pid" name="Pid">
                         </div>
 
                         <div class="form-group">
@@ -188,7 +184,7 @@ if ($_SESSION["rol"] != "Otros") {
                 </div>
 
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-success">Guarda Cambios</button>
+                    <button type="submit" class="btn btn-success">Guardar Cambios</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 </div>
 

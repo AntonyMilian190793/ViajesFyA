@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-07-2022 a las 06:04:44
+-- Tiempo de generación: 07-07-2022 a las 05:47:38
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -69,6 +69,32 @@ INSERT INTO `otros` (`id`, `usuario`, `clave`, `nombre`, `apellido`, `foto`, `ro
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `otrostrabajadores`
+--
+
+CREATE TABLE `otrostrabajadores` (
+  `id` int(11) NOT NULL,
+  `apellido` text NOT NULL,
+  `nombre` text NOT NULL,
+  `documento` text NOT NULL,
+  `foto` text NOT NULL,
+  `usuario` text NOT NULL,
+  `clave` text NOT NULL,
+  `rol` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `otrostrabajadores`
+--
+
+INSERT INTO `otrostrabajadores` (`id`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `clave`, `rol`) VALUES
+(1, 'Milian Montalvo', 'Jorge Antony', '70311233', '', 'antony123', '123', 'otrosTrabajadores'),
+(4, 'More', 'Alex', '70522122', '', 'alex123', '123', 'otrosTrabajadores'),
+(11, 'asaasqw', 'qwqw', 'qwqwwq', '', 'qwqwwq', 'wqqwqw', 'otrosTrabajadores');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `padres`
 --
 
@@ -93,7 +119,7 @@ CREATE TABLE `padres` (
 INSERT INTO `padres` (`id`, `id_consulta`, `apellido`, `nombre`, `foto`, `usuario`, `clave`, `sexo`, `horarioE`, `horarioS`, `rol`) VALUES
 (2, 1, 'Cavassa', 'Ernesto', '', 'ernesto123', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
 (3, 2, 'Piñeyro', 'Javier', '', 'javier123', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
-(4, 2, 'Morelli', 'Oscar', '', 'oscar123', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre');
+(6, 2, 'Morelli', 'Oscar', '', 'oscar123', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre');
 
 --
 -- Índices para tablas volcadas
@@ -109,6 +135,12 @@ ALTER TABLE `consultas`
 -- Indices de la tabla `otros`
 --
 ALTER TABLE `otros`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `otrostrabajadores`
+--
+ALTER TABLE `otrostrabajadores`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -134,10 +166,16 @@ ALTER TABLE `otros`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT de la tabla `otrostrabajadores`
+--
+ALTER TABLE `otrostrabajadores`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
 -- AUTO_INCREMENT de la tabla `padres`
 --
 ALTER TABLE `padres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

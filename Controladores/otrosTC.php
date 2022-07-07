@@ -14,9 +14,10 @@
                 $resultado = OtrosTM::CrearOtrosTM($tablaBD, $datosC);
 
                 if($resultado == true){
-                    echo '<script>
+                    echo 
+                    '<script>
                             window.location = "otrosTrabajadores";
-                          </script>';
+                    </script>';
             }   
         }
     }
@@ -33,9 +34,9 @@
     //borrar otros trabajadores
     public function BorrarOtrosTC(){
 
-        if(isset($_GET["OTid"])){
+        if(isset($_GET["Pid"])){
             $tablaBD = "otrosTrabajadores";
-            $id = $_GET["OTid"];
+            $id = $_GET["Pid"];
 
             if($_GET["imgOT"] != ""){
                 unlink($_GET["imgOT"]);
@@ -43,9 +44,10 @@
             $resultado = OtrosTM::BorrarOtrosTM($tablaBD, $id);
 
             if($resultado == true){
-                echo '<script>
+                echo 
+                '<script>
                         window.location = "otrosTrabajadores";
-                      </script>';
+                </script>';
         }  
         }
     }
