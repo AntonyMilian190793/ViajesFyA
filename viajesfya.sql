@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-07-2022 a las 05:47:38
+-- Tiempo de generación: 11-07-2022 a las 02:59:52
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `viajesfya`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `administracion`
+--
+
+CREATE TABLE `administracion` (
+  `id` int(11) NOT NULL,
+  `usuario` text NOT NULL,
+  `clave` text NOT NULL,
+  `nombre` text NOT NULL,
+  `apellido` text NOT NULL,
+  `foto` text NOT NULL,
+  `rol` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `administracion`
+--
+
+INSERT INTO `administracion` (`id`, `usuario`, `clave`, `nombre`, `apellido`, `foto`, `rol`) VALUES
+(1, 'vquijaite123', '123', 'Victor', 'Quijaite', '', 'Administracion');
 
 -- --------------------------------------------------------
 
@@ -90,7 +113,7 @@ CREATE TABLE `otrostrabajadores` (
 INSERT INTO `otrostrabajadores` (`id`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `clave`, `rol`) VALUES
 (1, 'Milian Montalvo', 'Jorge Antony', '70311233', '', 'antony123', '123', 'otrosTrabajadores'),
 (4, 'More', 'Alex', '70522122', '', 'alex123', '123', 'otrosTrabajadores'),
-(11, 'asaasqw', 'qwqw', 'qwqwwq', '', 'qwqwwq', 'wqqwqw', 'otrosTrabajadores');
+(11, 'Esquivel', 'Hanns', '7088122', '', 'hans123', '123', 'otrosTrabajadores');
 
 -- --------------------------------------------------------
 
@@ -126,6 +149,12 @@ INSERT INTO `padres` (`id`, `id_consulta`, `apellido`, `nombre`, `foto`, `usuari
 --
 
 --
+-- Indices de la tabla `administracion`
+--
+ALTER TABLE `administracion`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `consultas`
 --
 ALTER TABLE `consultas`
@@ -154,6 +183,12 @@ ALTER TABLE `padres`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `administracion`
+--
+ALTER TABLE `administracion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `consultas`
 --
 ALTER TABLE `consultas`
@@ -169,13 +204,13 @@ ALTER TABLE `otros`
 -- AUTO_INCREMENT de la tabla `otrostrabajadores`
 --
 ALTER TABLE `otrostrabajadores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `padres`
 --
 ALTER TABLE `padres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
