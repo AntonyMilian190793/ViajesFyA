@@ -126,6 +126,63 @@ class AdministracionC{
         </div>
     </form>';
     }
+
+    //actualizar perfil administracion
+    public function ActualizarPerfilAdministracionC(){
+
+        if(isset($_POST["Pid"])){
+
+            $rutaImg = $_POST["imgActual"];
+
+			if(isset($_FILES["imgPerfil"]["tmp_name"]) && !empty($_FILES["imgPerfil"]["tmp_name"])){
+
+				if(!empty($_POST["imgActual"])){
+
+					unlink($_POST["imgActual"]);
+
+				}
+
+
+				if($_FILES["imgPerfil"]["type"] == "image/png"){
+
+					$nombre = mt_rand(100,999);
+
+					$rutaImg = "Vistas/img/Administracion/administracion".$nombre.".png";
+
+					$foto = imagecreatefrompng($_FILES["imgPerfil"]["tmp_name"]);
+
+					imagepng($foto, $rutaImg);
+
+				}
+
+				if($_FILES["imgPerfil"]["type"] == "image/jpeg"){
+
+					$nombre = mt_rand(100,999);
+
+					$rutaImg = "Vistas/img/Administracion/administracion".$nombre.".jpg";
+
+					$foto = imagecreatefromjpeg($_FILES["imgPerfil"]["tmp_name"]);
+
+					imagejpeg($foto, $rutaImg);
+
+				}
+
+			}
+
+            $tablaBD = "administracion";
+            $datosC = array("id" => $_POST["Pid"], "nombre" => $_POST["nombrePerfil"], "apellido" => $_POST["apellidoPerfil"], 
+            "usuario" => $_POST["usuarioPerfil"], "clave" => $_POST["clavePerfil"], "documento" => $_POST["documentoPerfil"], 
+            "foto" => $rutaImg);
+            $resultado = AdministracionM::ActualizarPerfilAdministracionM($tablaBD, $datosC);
+
+            if($resultado == true){
+
+                echo '<script>
+                window.location = "http://localhost/ViajesFyA/perfil-A/'.$_SESSION["id"].'";
+                </script>';
+            }
+        }
+    }
 }
 
 ?>
