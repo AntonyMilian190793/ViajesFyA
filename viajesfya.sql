@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-07-2022 a las 02:59:52
+-- Tiempo de generación: 11-07-2022 a las 22:38:43
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -29,11 +29,12 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `administracion` (
   `id` int(11) NOT NULL,
+  `apellido` text NOT NULL,
+  `nombre` text NOT NULL,
+  `documento` text NOT NULL,
+  `foto` text NOT NULL,
   `usuario` text NOT NULL,
   `clave` text NOT NULL,
-  `nombre` text NOT NULL,
-  `apellido` text NOT NULL,
-  `foto` text NOT NULL,
   `rol` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -41,8 +42,9 @@ CREATE TABLE `administracion` (
 -- Volcado de datos para la tabla `administracion`
 --
 
-INSERT INTO `administracion` (`id`, `usuario`, `clave`, `nombre`, `apellido`, `foto`, `rol`) VALUES
-(1, 'vquijaite123', '123', 'Victor', 'Quijaite', '', 'Administracion');
+INSERT INTO `administracion` (`id`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `clave`, `rol`) VALUES
+(1, 'Quijaite', 'Víctor', '9087611', 'Vistas/img/Administracion/administracion610.jpg', 'vquijaite123', '123', 'Administracion'),
+(2, 'Milian', 'Antony', '70311233', '', 'jmilian123', '123', 'Administracion');
 
 -- --------------------------------------------------------
 
@@ -186,7 +188,7 @@ ALTER TABLE `padres`
 -- AUTO_INCREMENT de la tabla `administracion`
 --
 ALTER TABLE `administracion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `consultas`
