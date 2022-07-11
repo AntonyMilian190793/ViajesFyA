@@ -69,7 +69,7 @@ session_start();
 
       $url = explode("/", $_GET["url"]);
 
-      if ($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "perfil-Otrosd" || $url[0] == "perfil-O" || $url[0] == "consultas"
+      if ($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "perfil-Otros" || $url[0] == "perfil-O" || $url[0] == "consultas"
        || $url[0] == "E-C" || $url[0] == "padres" || $url[0] == "otrosTrabajadores") {
 
         include "modulos/" . $url[0] . ".php";
