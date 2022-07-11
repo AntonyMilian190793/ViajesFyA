@@ -64,11 +64,67 @@ class AdministracionC{
         echo '<td>'.$resultado["documento"].'</td>
         
         <td>
-            <a href="#">
+            <a href="http://localhost/ViajesFyA/perfil-A/'.$resultado["id"].'">
                 <button class="btn btn-success"><i class="fa fa-pencil"></i></button>
             </a>
         </td>
     </tr>';
+    }
+
+    //editar perfil administracion
+    public function EditarPerfilAdministracionC(){
+
+        $tablaBD = "administracion";
+        $id = $_SESSION["id"];
+        $resultado = AdministracionM::VerPefilAdministracionM($tablaBD, $id);
+
+        echo '<form method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <h2>Nombre:</h2>
+                <input type="text" class="input-lg" name="nombrePerfil" value="'.$resultado["nombre"].'">
+                <input type="hidden" class="input-lg" name="Pid" value="'.$resultado["id"].'">
+
+                <h2>Apellido:</h2>
+                <input type="text" class="input-lg" name="apellidoPerfil" value="'.$resultado["apellido"].'">
+
+                <h2>Usuario:</h2>
+                <input type="text" class="input-lg" name="usuarioPerfil" value="'.$resultado["usuario"].'">
+
+                <h2>Clave:</h2>
+                <input type="text" class="input-lg" name="clavePerfil" value="'.$resultado["clave"].'">
+
+                <h2>Documento:</h2>
+                <input type="text" class="input-lg" name="documentoPerfil" value="'.$resultado["documento"].'">
+            </div>
+
+            <div class="col-md-6 col-xs-12">
+
+            <br><br>
+
+            <input type="file" name="imgPerfil">
+            <br>';
+
+            
+            if($resultado["foto"] != ""){
+
+                echo '<img src="http://localhost/ViajesFyA/'.$resultado["foto"].'" width="200px" class="img-responsive">';
+
+            }else{
+                    
+                    echo '<img src="http://localhost/ViajesFyA/Vistas/img/defecto.png" width="200px" class="img-responsive">';
+            }
+
+            
+            
+            echo '<input type="hidden" name="imgActual" value="'.$resultado["foto"].'">
+
+            <br><br>
+
+            <button type="submit" class="btn btn-success">Guardar Cambios</button>
+            </div>
+        </div>
+    </form>';
     }
 }
 
