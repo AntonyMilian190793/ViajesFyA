@@ -19,6 +19,20 @@ require_once "ConexionBD.php";
 
         }
 
+        //ver perfil administracion
+       static public function VerPefilAdministracionM($tablaBD, $id){
+
+        $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, apellido, nombre, documento, foto, rol, id FROM $tablaBD 
+        WHERE id = :id");
+
+        $pdo -> bindParam(":id", $id, PDO::PARAM_INT);
+        $pdo -> execute();
+        return $pdo -> fetch();
+        $pdo -> close();
+        $pdo = null;
+        
+       }
+
     }
 
 

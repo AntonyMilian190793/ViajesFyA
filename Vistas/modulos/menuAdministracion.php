@@ -10,24 +10,18 @@
         </a>
       </li>
 
-      <li>
-        <a href="http://localhost/ViajesFyA/padres">
-          <i class="fa fa-user"></i>
-          <span>Padres</span>
-        </a>
-      </li>
 
       <li>
-        <a href="http://localhost/ViajesFyA/consultas">
+        <a href="http://localhost/ViajesFyA/Ver-areas">
           <i class="fa fa-address-book-o"></i>
-          <span>Áreas</span>
+          <span>Ver Áreas</span>
         </a>
       </li>
 
       <li>
         <a href="http://localhost/ViajesFyA/otrosTrabajadores">
-          <i class="fa fa-users"></i>
-          <span>Otros Trabajadores</span>
+          <i class="fa fa-calendar-check-o"></i>
+          <span>Historial</span>
         </a>
       </li>
 
