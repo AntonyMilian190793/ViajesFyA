@@ -14,5 +14,8 @@ require_once "Modelos/padresM.php";
 require_once "Controladores/otrosTC.php";
 require_once "Modelos/otrosTM.php";
 
+require_once "Controladores/administracionC.php";
+require_once "Modelos/administracionM.php";
+
 $plantilla = new Plantilla();
 $plantilla -> LlamarPlantilla();

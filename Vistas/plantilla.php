@@ -57,6 +57,8 @@ session_start();
 
       include "modulos/menuOtro.php";
 
+    }else if($_SESSION["rol"] == "Administracion"){
+      include "modulos/menuAdministracion.php";
     }
 
     
@@ -83,9 +85,13 @@ session_start();
     if ($_GET["url"] == "seleccionar") {
 
       include "modulos/seleccionar.php";
+
     } else if ($_GET["url"] == "ingreso-Secretarias") {
 
       include "modulos/ingreso-Secretarias.php";
+    }else if ($_GET["url"] == "ingreso-Administracion") {
+
+      include "modulos/ingreso-Administracion.php";
     }
   } else {
 

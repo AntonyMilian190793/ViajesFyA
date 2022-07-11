@@ -31,8 +31,7 @@ class OtrosC{
 
 					window.location = "inicio";
 					</script>';
-                }
-                else{
+                }else{
 
                     echo '<div class="alert alert-danger">Error al Ingresar al sistema</div>';
 
@@ -220,3 +219,4 @@ class OtrosC{
     }
 
 }
+?>

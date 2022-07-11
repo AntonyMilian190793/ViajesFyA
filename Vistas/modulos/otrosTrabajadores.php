@@ -77,10 +77,11 @@ if ($_SESSION["rol"] != "Otros") {
                                 Editar</i></button>
 
                                 
-                                <button class="btn btn-danger EliminarOtroT" Pid="'.$value["id"].'" imgOT="'.$value["foto"].'">
-                                <i class="fa fa-times"> Borrar</i></button>
-                            </div>
+                                
 
+                                        <button class="btn btn-danger EliminarOtroT" Pid="'.$value["id"].'" imgOT="'.$value["foto"].'">
+                                        <i class="fa fa-times"> Borrar</i></button>
+                                    </div>
                                 
                             </td>
                         </tr>';
@@ -167,6 +168,7 @@ if ($_SESSION["rol"] != "Otros") {
                             <input type="text" class="form-control" id="documentoE" name="documentoE" required>
                         </div>
 
+
                         <div class="form-group">
                             <h2>Usuario:</h2>
                             <input type="text" class="form-control" id="usuarioE" name="usuarioE" required>
@@ -186,8 +188,8 @@ if ($_SESSION["rol"] != "Otros") {
                 </div>
 
                 <?php
-                $actualizar = new OtrosTC();
-                $actualizar ->ActualizarOtrosTC();
+                // $actualizar = new PadresC();
+                // $actualizar ->ActualizarPadreC();
                 ?>
             </form>
         </div>
