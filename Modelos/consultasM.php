@@ -23,7 +23,7 @@
 
         static public function VerConsultasM($tablaBD, $columna, $valor){
             if($columna == null){
-                $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD");
+                $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD ORDER BY nombre ASC");
                 $pdo -> execute();
                 return $pdo -> fetchAll();
             }else{

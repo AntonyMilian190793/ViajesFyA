@@ -14,9 +14,35 @@ if ($_SESSION["rol"] != "Administracion") {
 <div class="content-wrapper">
 
     <section class="content-header">
-        <h1>Padre: Ernesto Cavassa</h1>
+        <?php
+
+        $columna = "id";
+        $valor = substr($_GET["url"], 6);
+
+        $resultado = PadresC::PadreC($columna, $valor);
+
+        if($resultado["sexo"] == "Femenino"){
+            echo '<h1>Trabajadora: '.$resultado["apellido"].' '.$resultado["nombre"].'</h1>';
+        }else{
+            echo '<h1>Trabajador: '.$resultado["apellido"].' '.$resultado["nombre"].'</h1>';
+        }
+
+
+        $columna = "id";
+
+        $valor = $resultado["id_consulta"];
+
+        $consultorio = ConsultasC::VerConsultasC($columna, $valor);
+
+
+        echo '        
         <br>
-        <h1>Ádministración Administracion</h1>
+            <h1>Área de : '.$consultorio["nombre"].'</h1>';
+        ?>
+
+        
+        
+
     </section>
 
 

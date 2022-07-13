@@ -21,15 +21,38 @@ if ($_SESSION["rol"] != "Administracion") {
         <div class="box">
 
             <div class="box-body">
-                <div class="col-lg-3 col-xs-6">
-                    <div class="small-box bg-aqua">
+
+            <?php
+
+                $columna = null;
+                $valor = null;
+
+                $resultado = ConsultasC::VerConsultasC($columna, $valor);
+
+                foreach ($resultado as $key => $value) {
+                    echo '
+                    <div class="col-lg-3 col-xs-6">
+                        <div class="small-box bg-aqua">
                         <div class="inner">
-                            <h3>EBR</h3>
-                            <a href="Padre" style="color:black;"><p>Ernesto Cavassa</p></a>
-                        </div>
+                            <h3>'.$value["nombre"].'</h3>';
+
+                            $columna = "id_consulta";
+                            $valor = $value["id"];
+                            $padres = PadresC::VerPadresC($columna, $valor);
+
+                            foreach ($padres as $key => $value) {
+                                echo ' <a href="Padre/'.$value["id"].'" style="color:black;"><p>'.$value["apellido"].' '.$value["nombre"].'</p></a>';
+                            }
+
+                           
+                        echo '</div>
                     </div>
                     
-                </div>
+                </div>';
+                }
+            
+            ?>
+
             </div>
         </div>
     </section>
