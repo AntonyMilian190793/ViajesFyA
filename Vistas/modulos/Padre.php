@@ -48,9 +48,8 @@ if ($_SESSION["rol"] != "Administracion") {
 
     <section class="content">
         <div class="box">
-
             <div class="box-body">
-
+                <div id="calendar"></div>
             </div>
         </div>
     </section>

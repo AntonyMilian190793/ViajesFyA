@@ -29,6 +29,11 @@ session_start();
   <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.css">
   <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
 
+
+    <!-- fullCalendar -->
+    <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/bower_components/fullcalendar/dist/fullcalendar.min.css">
+  <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/bower_components/fullcalendar/dist/fullcalendar.print.min.css" media="print">
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -135,7 +140,10 @@ session_start();
   <script src="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.js"></script>
   <script src="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.min"></script>
 
-
+<!-- fullCalendar -->
+<script src="http://localhost/ViajesFyA/Vistas/bower_components/moment/moment.js"></script>
+<script src="http://localhost/ViajesFyA/Vistas/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+<script src="http://localhost/ViajesFyA/Vistas/bower_components/fullcalendar/dist/locale/es.js"></script>
 
   <script src="http://localhost/ViajesFyA/Vistas/js/padres.js"></script>
   <script src="http://localhost/ViajesFyA/Vistas/js/otrosT.js"></script>
@@ -144,6 +152,18 @@ session_start();
   <script>
     $(document).ready(function() {
       $('.sidebar-menu').tree()
+    });
+
+    var date = new Date()
+    var d    = date.getDate(),
+        m    = date.getMonth(),
+        y    = date.getFullYear()
+
+    $('#calendar').fullCalendar({
+
+      hiddenDays: [0, 6],
+      defaultView: 'agendaWeek',
+
     })
   </script>
 </body>
