@@ -55,3 +55,47 @@ if ($_SESSION["rol"] != "Administracion") {
     </section>
 
 </div>
+
+<div class="modal fade" role="dialog" id="CitaModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post">
+                <div class="modal-body">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <h2>Nombre del Trabajador:</h2>
+                            <input type="text" class="form-control input-lg" name="nyaC" value="" readonly>
+                            <input type="hidden" name="Did" value="" id="">
+                            <input type="hidden" name="Cid" value="" id="">
+
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Documento:</h2>
+                            <input type="text" class="form-control input-lg" name="documentoC" value="" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Fecha:</h2>
+                            <input type="text" class="form-control input-lg" name="fechaC" value="" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Hora:</h2>
+                            <input type="text" class="form-control input-lg" name="horaC" value="" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="hidden" class="form-control input-lg" name="fyhIC" value=""  id="fyhIC" readonly>
+                            <input type="hidden" class="form-control input-lg" name="fyhFC" value=""  id="fyhFC" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                    <button type="button" class="btn btn-danger">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
