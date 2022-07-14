@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-07-2022 a las 22:38:43
+-- Tiempo de generación: 14-07-2022 a las 16:55:16
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -43,7 +43,7 @@ CREATE TABLE `administracion` (
 --
 
 INSERT INTO `administracion` (`id`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `clave`, `rol`) VALUES
-(1, 'Quijaite', 'Víctor', '9087611', 'Vistas/img/Administracion/administracion610.jpg', 'vquijaite123', '123', 'Administracion'),
+(1, 'Quijaite', 'Víctor', '9087611', 'Vistas/img/Administracion/administracion115.png', 'vquijaite123', '123', 'Administracion'),
 (2, 'Milian', 'Antony', '70311233', '', 'jmilian123', '123', 'Administracion');
 
 -- --------------------------------------------------------
@@ -66,7 +66,12 @@ INSERT INTO `consultas` (`id`, `nombre`) VALUES
 (2, 'Identidad y misión'),
 (5, 'Logística'),
 (7, 'EBR'),
-(8, 'EBA');
+(8, 'EBA'),
+(9, 'Contabilidad'),
+(10, 'Sistemas'),
+(11, 'Recursos Humanos'),
+(12, 'Legal'),
+(13, 'Secretaria');
 
 -- --------------------------------------------------------
 
@@ -144,7 +149,11 @@ CREATE TABLE `padres` (
 INSERT INTO `padres` (`id`, `id_consulta`, `apellido`, `nombre`, `foto`, `usuario`, `clave`, `sexo`, `horarioE`, `horarioS`, `rol`) VALUES
 (2, 1, 'Cavassa', 'Ernesto', '', 'ernesto123', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
 (3, 2, 'Piñeyro', 'Javier', '', 'javier123', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
-(6, 2, 'Morelli', 'Oscar', '', 'oscar123', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre');
+(6, 2, 'Morelli', 'Oscar', '', 'oscar123', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
+(8, 9, 'Liendo', 'Ada', '', 'aliendo', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
+(9, 7, 'Lancastre', 'Aba', '', 'alancastre', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
+(10, 5, 'Alania', 'Angela', '', 'aalania', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
+(11, 8, 'Milian', 'Jorge', '', 'jmilian', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre');
 
 --
 -- Índices para tablas volcadas
@@ -194,7 +203,7 @@ ALTER TABLE `administracion`
 -- AUTO_INCREMENT de la tabla `consultas`
 --
 ALTER TABLE `consultas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `otros`
@@ -212,7 +221,7 @@ ALTER TABLE `otrostrabajadores`
 -- AUTO_INCREMENT de la tabla `padres`
 --
 ALTER TABLE `padres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
