@@ -55,7 +55,7 @@ if ($_SESSION["rol"] != "Otros") {
                             <td>'.$value["nombre"].'</td>';
 
                             if($value["foto"] == ""){
-                                echo '<td><img src="Vistas/img/defecto.png" width="40px"></td>';
+                                echo '<td><img src="Vistas/img/defecto1.png" width="40px"></td>';
                             }else{
                                 '<td><img src="'.$value["foto"].'" width="40px"></td>';
                             }

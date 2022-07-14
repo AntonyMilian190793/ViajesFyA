@@ -66,7 +66,7 @@ class OtrosC{
         }
         else{
 
-            echo '<td><img src="http://localhost/ViajesFyA/Vistas/img/defecto.png" class="img-thumbnail" width="40px"></td>';
+            echo '<td><img src="http://localhost/ViajesFyA/Vistas/img/defecto1.png" class="img-thumbnail" width="40px"></td>';
 
         }
 
@@ -120,7 +120,7 @@ class OtrosC{
                 
                 if($resultado['foto'] == ""){
 
-                    echo '<img src="http://localhost/ViajesFyA/Vistas/img/defecto.png" width="200px;">';
+                    echo '<img src="http://localhost/ViajesFyA/Vistas/img/defecto1.png" width="200px;">';
 
                 }else{
 

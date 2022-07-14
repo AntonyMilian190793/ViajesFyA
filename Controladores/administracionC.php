@@ -55,7 +55,7 @@ class AdministracionC{
 
         if($resultado["foto"] == ""){
 
-            echo '<td><img src="Vistas/img/defecto.png"  width="40px"></td>';
+            echo '<td><img src="Vistas/img/defecto1.png"  width="40px"></td>';
         }else{
 
             echo '<td><img src="'.$resultado["foto"].'" class="img-thumbnail" width="40px"></td>';
@@ -112,7 +112,7 @@ class AdministracionC{
 
             }else{
                     
-                    echo '<img src="http://localhost/ViajesFyA/Vistas/img/defecto.png" width="200px" class="img-responsive">';
+                    echo '<img src="http://localhost/ViajesFyA/Vistas/img/defecto1.png" width="200px" class="img-responsive">';
             }
 
             
