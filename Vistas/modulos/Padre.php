@@ -62,27 +62,50 @@ if ($_SESSION["rol"] != "Administracion") {
             <form method="post">
                 <div class="modal-body">
                     <div class="box-body">
-                        <div class="form-group">
-                            <h2>Nombre del Trabajador:</h2>
-                            <input type="text" class="form-control input-lg" name="nyaC" value="" readonly>
-                            <input type="hidden" name="Did" value="" id="">
-                            <input type="hidden" name="Cid" value="" id="">
 
-                        </div>
+                        <?php
+
+                            $columna = "id";
+                            $valor = substr($_GET["url"], 6);
+                            $resultado = PadresC::PadreC($columna, $valor);
+
+                            echo '                         
+                            
+                            <div class="form-group">
+
+                                <h2>Nombre del Trabajador:</h2>
+                                <input type="text" class="form-control input-lg" name="nyaC" value="'.$_SESSION["nombre"].' '.$_SESSION["apellido"].'" readonly>
+                                <input type="hidden" name="Did" value="'.$resultado["id"].'">
+                                <input type="hidden" name="Pid" value="'.$_SESSION["id"].'" >
+                            
+                            </div>
 
                         <div class="form-group">
                             <h2>Documento:</h2>
-                            <input type="text" class="form-control input-lg" name="documentoC" value="" readonly>
-                        </div>
+                            <input type="text" class="form-control input-lg" name="documentoC" value="'.$_SESSION["documento"].'" readonly>
+                        </div>';
+
+                        $columna = "id";
+                        $valor = $resultado["id_consulta"];
+                        $consultorio = ConsultasC::VerConsultasC($columna, $valor);
+
+                        echo '                        
+                        <div class="form-group">
+                            <input type="hidden" name="Cid" value="'.$consultorio["id"].'" id="">
+                        </div>';
+
+                        ?>
+
+
 
                         <div class="form-group">
                             <h2>Fecha:</h2>
-                            <input type="text" class="form-control input-lg" name="fechaC" value="" readonly>
+                            <input type="text" class="form-control input-lg" id="fechaC" name="fechaC" value="" readonly>
                         </div>
 
                         <div class="form-group">
                             <h2>Hora:</h2>
-                            <input type="text" class="form-control input-lg" name="horaC" value="" readonly>
+                            <input type="text" class="form-control input-lg" id="horaC" name="horaC" value="" readonly>
                         </div>
 
                         <div class="form-group">

@@ -162,10 +162,28 @@ session_start();
     $('#calendar').fullCalendar({
 
       hiddenDays: [0, 6],
-      // defaultView: 'agendaWeek',
+      defaultView: 'agendaWeek',
 
       dayClick: function(date, jsEvent, view) {
         $('#CitaModal').modal();
+
+        var fecha = date.format();
+        var hora2 = ("01:00:00").split(":");
+
+        fecha = fecha.split("T");
+        var dia = fecha[0];
+
+        var hora = (fecha[1].split(":"));
+        var h1 = parseFloat(hora[0]);
+        var h2 = parseFloat(hora2[0]);
+        var horaF = h1 + h2;
+
+        $('#fechaC').val(dia);
+
+        $('#horaC').val(h1 + ":00:00");
+
+        $('#fyhIC').val(fecha[0] + " " + h1 + ":00:00");
+        $('#fyhFC').val(fecha[0] + " " + horaF + ":00:00");
       },
 
     })
