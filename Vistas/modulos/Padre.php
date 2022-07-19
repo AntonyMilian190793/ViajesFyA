@@ -112,6 +112,11 @@ if ($_SESSION["rol"] != "Administracion") {
                             <input type="hidden" class="form-control input-lg" name="fyhIC" id="fyhIC" readonly>
                             <input type="hidden" class="form-control input-lg" name="fyhFC" id="fyhFC" readonly>
                         </div>
+
+                        <div class="form-group">
+                            <h2>Comentario:</h2>
+                            <input type="text" class="form-control input-lg" id=""  value="" >
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">

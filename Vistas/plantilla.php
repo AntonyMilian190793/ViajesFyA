@@ -178,8 +178,7 @@ session_start();
                 id: "'.$value["id"].'",
                 title: "'.$value["nyaP"].'",
                 start: "'.$value["inicio"].'",
-                end: "'.$value["fin"].'",
-
+                end: "'.$value["fin"].'"
               },';
 
             }
