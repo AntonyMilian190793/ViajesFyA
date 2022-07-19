@@ -56,7 +56,7 @@ if ($_SESSION["rol"] != "Administracion") {
 
 </div>
 
-<div class="modal fade" role="dialog" id="CitaModal">
+<div class="modal fade" rol="dialog" id="CitaModal">
     <div class="modal-dialog">
         <div class="modal-content">
             <form method="post">
@@ -91,7 +91,7 @@ if ($_SESSION["rol"] != "Administracion") {
 
                         echo '                        
                         <div class="form-group">
-                            <input type="hidden" name="Cid" value="'.$consultorio["id"].'" id="">
+                            <input type="hidden" name="Cid" value="'.$consultorio["id"].'">
                         </div>';
 
                         ?>
@@ -100,17 +100,17 @@ if ($_SESSION["rol"] != "Administracion") {
 
                         <div class="form-group">
                             <h2>Fecha:</h2>
-                            <input type="text" class="form-control input-lg" id="fechaC" name="fechaC" value="" readonly>
+                            <input type="text" class="form-control input-lg" id="fechaC"  value="" readonly>
                         </div>
 
                         <div class="form-group">
                             <h2>Hora:</h2>
-                            <input type="text" class="form-control input-lg" id="horaC" name="horaC" value="" readonly>
+                            <input type="text" class="form-control input-lg" id="horaC"  value="" readonly>
                         </div>
 
                         <div class="form-group">
-                            <input type="hidden" class="form-control input-lg" name="fyhIC" value=""  id="fyhIC" readonly>
-                            <input type="hidden" class="form-control input-lg" name="fyhFC" value=""  id="fyhFC" readonly>
+                            <input type="hidden" class="form-control input-lg" name="fyhIC" id="fyhIC" readonly>
+                            <input type="hidden" class="form-control input-lg" name="fyhFC" id="fyhFC" readonly>
                         </div>
                     </div>
                 </div>
@@ -118,6 +118,13 @@ if ($_SESSION["rol"] != "Administracion") {
                     <button type="submit" class="btn btn-primary">Registrar</button>
                     <button type="button" class="btn btn-danger">Cancelar</button>
                 </div>
+
+                <?php
+                
+                    $enviarC = new CitasC();
+                    $enviarC->EnviarCitaC();
+                
+                ?>
             </form>
         </div>
     </div>
