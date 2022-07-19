@@ -164,6 +164,30 @@ session_start();
       hiddenDays: [0, 6],
       defaultView: 'agendaWeek',
 
+      events: [
+        <?php
+          
+          $resultado = CitasC::VerCitasC();
+
+          foreach ($resultado as $key => $value){
+
+            if($value["id_padre"] ==  substr($_GET["url"], 6)){
+
+              echo '{
+                
+                id: "'.$value["id"].'",
+                title: "'.$value["nyaP"].'",
+                start: "'.$value["inicio"].'",
+                end: "'.$value["fin"].'",
+
+              },';
+
+            }
+          }
+
+          ?>
+      ],
+
       dayClick: function(date, jsEvent, view) {
         $('#CitaModal').modal();
 

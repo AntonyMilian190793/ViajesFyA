@@ -20,6 +20,14 @@
                 }
             }
         }
+
+        //ver citas
+        public function VerCitasC(){
+
+            $tablaBD = "vuelos";
+            $resultado = CitasM::VerCitasM($tablaBD);
+            return $resultado;
+        }
     }
 
 
