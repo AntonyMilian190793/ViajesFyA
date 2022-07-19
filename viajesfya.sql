@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-07-2022 a las 05:28:50
+-- Tiempo de generación: 19-07-2022 a las 22:14:02
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -156,6 +156,36 @@ INSERT INTO `padres` (`id`, `id_consulta`, `apellido`, `nombre`, `foto`, `usuari
 (10, 5, 'Alania', 'Angela', '', 'aalania', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
 (11, 8, 'Milian', 'Jorge', '', 'jmilian', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `vuelos`
+--
+
+CREATE TABLE `vuelos` (
+  `id` int(11) NOT NULL,
+  `id_padre` int(11) NOT NULL,
+  `id_consulta` int(11) NOT NULL,
+  `id_administracion` int(11) NOT NULL,
+  `nyaP` text NOT NULL,
+  `documento` text NOT NULL,
+  `inicio` datetime NOT NULL,
+  `fin` datetime NOT NULL,
+  `comentario` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `vuelos`
+--
+
+INSERT INTO `vuelos` (`id`, `id_padre`, `id_consulta`, `id_administracion`, `nyaP`, `documento`, `inicio`, `fin`, `comentario`) VALUES
+(19, 2, 1, 5, 'Jorge Milian', '70311233', '2022-07-19 13:00:00', '2022-07-19 14:00:00', ''),
+(20, 2, 1, 5, 'Jorge Milian', '70311233', '2022-07-20 13:00:00', '2022-07-20 14:00:00', ''),
+(21, 2, 1, 5, 'Jorge Milian', '70311233', '2022-07-18 13:00:00', '2022-07-18 14:00:00', ''),
+(22, 2, 1, 5, 'Jorge Milian', '70311233', '0000-00-00 00:00:00', '0000-00-00 00:00:00', ''),
+(39, 2, 1, 5, 'Jorge Milian', '70311233', '2022-07-20 05:00:00', '2022-07-20 06:00:00', ''),
+(40, 2, 1, 1, 'Víctor Quijaite', '98716111', '2022-07-20 10:00:00', '2022-07-20 11:00:00', '');
+
 --
 -- Índices para tablas volcadas
 --
@@ -191,6 +221,12 @@ ALTER TABLE `padres`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `vuelos`
+--
+ALTER TABLE `vuelos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -223,6 +259,12 @@ ALTER TABLE `otrostrabajadores`
 --
 ALTER TABLE `padres`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT de la tabla `vuelos`
+--
+ALTER TABLE `vuelos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
