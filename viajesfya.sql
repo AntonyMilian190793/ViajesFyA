@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-07-2022 a las 16:55:16
+-- Tiempo de generación: 19-07-2022 a las 05:28:50
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -43,8 +43,8 @@ CREATE TABLE `administracion` (
 --
 
 INSERT INTO `administracion` (`id`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `clave`, `rol`) VALUES
-(1, 'Quijaite', 'Víctor', '9087611', 'Vistas/img/Administracion/administracion115.png', 'vquijaite123', '123', 'Administracion'),
-(2, 'Milian', 'Antony', '70311233', '', 'jmilian123', '123', 'Administracion');
+(1, 'Quijaite', 'Víctor', '98716111', 'Vistas/img/Administracion/administracion115.png', 'vquijaite123', '123', 'Administracion'),
+(5, 'Milian', 'Jorge', '70311233', '', 'jmilian', '123', 'Administracion');
 
 -- --------------------------------------------------------
 
@@ -120,7 +120,8 @@ CREATE TABLE `otrostrabajadores` (
 INSERT INTO `otrostrabajadores` (`id`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `clave`, `rol`) VALUES
 (1, 'Milian Montalvo', 'Jorge Antony', '70311233', '', 'antony123', '123', 'otrosTrabajadores'),
 (4, 'More', 'Alex', '70522122', '', 'alex123', '123', 'otrosTrabajadores'),
-(11, 'Esquivel', 'Hanns', '7088122', '', 'hans123', '123', 'otrosTrabajadores');
+(11, 'Esquivel', 'Hanns', '7088122', '', 'hans123', '123', 'otrosTrabajadores'),
+(15, 'asa', 'asas', 'sasaasas', '', 'asas', 'asassa', 'otrosTrabajadores');
 
 -- --------------------------------------------------------
 
@@ -197,7 +198,7 @@ ALTER TABLE `padres`
 -- AUTO_INCREMENT de la tabla `administracion`
 --
 ALTER TABLE `administracion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `consultas`
@@ -215,7 +216,7 @@ ALTER TABLE `otros`
 -- AUTO_INCREMENT de la tabla `otrostrabajadores`
 --
 ALTER TABLE `otrostrabajadores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `padres`
