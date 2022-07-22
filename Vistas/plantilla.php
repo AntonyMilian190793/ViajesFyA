@@ -64,7 +64,10 @@ session_start();
 
     }else if($_SESSION["rol"] == "Administracion"){
       include "modulos/menuAdministracion.php";
+    }else if($_SESSION["rol"] == "Padre"){
+      include "modulos/menuPadre.php";
     }
+  
 
     
 
@@ -98,11 +101,15 @@ session_start();
     }else if ($_GET["url"] == "ingreso-Administracion") {
 
       include "modulos/ingreso-Administracion.php";
-    }
+      
+    }else if ($_GET["url"] == "ingreso-Padre") {
+
+      include "modulos/ingreso-Padre.php";
   } else {
 
     include "modulos/seleccionar.php";
   }
+}
 
   ?>
 

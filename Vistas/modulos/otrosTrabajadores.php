@@ -1,6 +1,6 @@
 <?php
 
-if ($_SESSION["rol"] != "Otros") {
+if ($_SESSION["rol"] != "Otros" && $_SESSION["rol"] != "Padre") {
 
     echo '<script>
   
