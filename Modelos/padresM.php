@@ -119,6 +119,20 @@
 
         }
 
+        //ver perfil padres
+
+        static public function VerPerfilPadreM($tablaBD, $id){
+
+                $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, apellido, nombre, sexo, foto, rol, id, horarioE, horarioS, id_consulta FROM $tablaBD 
+                WHERE id = :id");
+
+                $pdo -> bindParam(":id", $id, PDO::PARAM_STR);
+                $pdo -> execute();
+                return $pdo -> fetch();
+                $pdo -> close();
+                $pdo = null;
+        }
+
     }
 
 

@@ -113,6 +113,52 @@
             }
         }
     }
+
+    //ver perfil padres
+    public function VerPerfilPadre(){
+
+        $tablaBD = "padres";
+        $id = $_SESSION["id"];
+        $resultado = PadresM::VerPerfilPadreM($tablaBD, $id);
+
+        echo '<tr>
+        <td>'.$resultado["usuario"].'</td>
+        <td>'.$resultado["clave"].'</td>
+        <td>'.$resultado["nombre"].'</td>
+        <td>'.$resultado["apellido"].'</td>';
+
+
+        if($resultado["foto"] == ""){
+
+            echo '<td><img src="Vistas/img/defecto1.png"  width="40px"></td>';
+        }else{
+
+            echo '<td><img src="'.$resultado["foto"].'" class="img-thumbnail" width="40px"></td>';
+        }
+
+        $columna = "id";
+        $valor = $resultado["id_consulta"];
+        $consulta = ConsultasC::VerConsultasC($columna, $valor);
+
+        echo '<td>'.$consulta["nombre"].'</td>';
+
+        
+
+        echo '<td>
+
+            Desde: '.$resultado["horarioE"].'
+            <br>
+            Hasta: '.$resultado["horarioS"].'
+
+        </td>
+        
+        <td>
+            <a href="http://localhost/ViajesFyA/perfil-Padre/'.$resultado["id"].'">
+                <button class="btn btn-success"><i class="fa fa-pencil"></i></button>
+            </a>
+        </td>
+    </tr>';
+    }
 }
 
 ?>    
