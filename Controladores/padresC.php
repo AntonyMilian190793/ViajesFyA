@@ -153,11 +153,74 @@
         </td>
         
         <td>
-            <a href="http://localhost/ViajesFyA/perfil-Padre/'.$resultado["id"].'">
+            <a href="http://localhost/ViajesFyA/perfil-P/'.$resultado["id"].'">
                 <button class="btn btn-success"><i class="fa fa-pencil"></i></button>
             </a>
         </td>
     </tr>';
+    }
+
+    public function EditarPerfilPadreC(){
+
+        $tablaBD = "padres";
+        $id = $_SESSION["id"];
+        $resultado = PadresM::VerPerfilPadreM($tablaBD, $id);
+
+        echo '            <form method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <h2>Nombre:</h2>
+                        <input type="text" class="input-lg" name="nombrePerfil" value="'.$resultado["nombre"].'">
+                        <input type="hidden" name="Did" value="'.$resultado["id"].'">
+
+                        <h2>Apellido:</h2>
+                        <input type="text" class="input-lg" name="apellidoPerfil" value="'.$resultado["apellido"].'">
+
+                        <h2>Usuario:</h2>
+                        <input type="text" class="input-lg" name="usuarioPerfil" value="'.$resultado["usuario"].'">
+
+                        <h2>Clave:</h2>
+                        <input type="text" class="input-lg" name="clavePerfil" value="'.$resultado["clave"].'">';
+
+                        $columna = "id";
+                        $valor = $resultado["id_consulta"];
+                        $consulta = ConsultasC::VerConsultasC($columna, $valor);
+
+                        echo '
+
+                        <h2>Área de trabajo actual: '.$consulta["nombre"].'</h2>
+                        <h3>Cambiar Área</h3>
+                        <select class="input-lg" name="consultaPerfil">';
+
+                        
+                        $columna = null;
+                        $valor = null;
+                        $consulta = ConsultasC::VerConsultasC($columna, $valor);
+
+
+                        foreach ($consulta as $key => $value){
+                            echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
+                        }
+
+                        echo '</select>
+
+                        <div class="form-group">
+                            <h2>Horario:</h2>
+                            Desde: <input type="time" class="input-lg" name="hePerfil" value="'.$resultado["horarioE"].'">
+                            Hasta: <input type="time" class="input-lg" name="hsPerfil" value="'.$resultado["horarioS"].'">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <br><br>
+                        <input type="file" name="imgPerfil">
+                        <br>
+                        <img src="http://localhost/ViajesFyA/Vistas/img/defecto1.png"  class="img-responsive" width="200px">
+                        <input type="hidden" name="imgActual" value="">
+                        <br><br>
+                        <button type="submit" class="btn btn-success">Guardar Cambios</button>
+                    </div>
+                </div>
+            </form>';
     }
 }
 
