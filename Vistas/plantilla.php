@@ -89,6 +89,7 @@ session_start();
     }
 
     echo '</div>';
+
   } else if (isset($_GET["url"])) {
 
     if ($_GET["url"] == "seleccionar") {
@@ -105,11 +106,12 @@ session_start();
     }else if ($_GET["url"] == "ingreso-Padre") {
 
       include "modulos/ingreso-Padre.php";
+    }
   } else {
 
     include "modulos/seleccionar.php";
   }
-}
+
 
   ?>
 
