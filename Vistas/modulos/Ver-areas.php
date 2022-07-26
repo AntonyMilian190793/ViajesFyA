@@ -29,6 +29,7 @@ if ($_SESSION["rol"] != "Administracion") {
 
                 $resultado = ConsultasC::VerConsultasC($columna, $valor);
 
+                //esta parte para cambiar colores
                 foreach ($resultado as $key => $value) {
                     echo '
                     <div class="col-lg-3 col-xs-6">

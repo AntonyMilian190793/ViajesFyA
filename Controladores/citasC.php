@@ -28,6 +28,25 @@
             $resultado = CitasM::VerCitasM($tablaBD);
             return $resultado;
         }
+
+        //pedir cita como Padre
+        public static function PedirCitaPadreC(){
+
+            if(isset($_POST["Did"])){
+
+                $tablaBD = "vuelos";
+                $Did = substr($_GET["url"], 7);
+                $datosC = array("Did"=>$_POST["Did"], "Cid"=>$_POST["Cid"], "nombreP"=>$_POST["nombreP"], "documentoP"=>$_POST["documentoP"],
+                "fyhIC"=>$_POST["fyhIC"], "fyhFC"=>$_POST["fyhFC"]);
+                $resultado = CitasM::PedirCitaPadreM($tablaBD, $datosC);
+
+                if($resultado == true){
+                    echo '<script>
+                    window.location = "Vuelos/"'.$Did.';
+                    </script>';
+                }
+            }
+        }
     }
 
 

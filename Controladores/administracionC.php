@@ -184,6 +184,15 @@ class AdministracionC{
             }
         }
     }
+
+    //ver administracion 
+    static public function VerAdministracionC($columna, $valor){
+
+        $tablaBD = "administracion";
+        $resultado = AdministracionM::VerAdministracionM($tablaBD, $columna, $valor);
+
+        return $resultado;
+    }
 }
 
 ?>

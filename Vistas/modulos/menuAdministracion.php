@@ -13,7 +13,7 @@
 
       <li>
         <a href="http://localhost/ViajesFyA/Ver-areas">
-          <i class="fa fa-address-book-o"></i>
+        <i class="fa fa-university" aria-hidden="true"></i>
           <span>Ver Áreas</span>
         </a>
       </li>
@@ -24,7 +24,7 @@
           echo '<a href="http://localhost/ViajesFyA/historial/'.$_SESSION["id"].'">';
 
         ?>
-          <i class="fa fa-calendar-check-o"></i>
+          <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
           <span>Historial</span>
         </a>
       </li>

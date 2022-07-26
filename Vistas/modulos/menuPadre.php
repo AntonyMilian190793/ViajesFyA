@@ -12,16 +12,21 @@
 
 
       <li>
-        <a href="http://localhost/ViajesFyA/Citas">
-          <i class="fa fa-address-book-o"></i>
-          <span>Vuelos</span>
+        <?php
+        
+          echo '<a href="http://localhost/ViajesFyA/Vuelos/'.$_SESSION["id"].'">';
+
+        ?>
+        
+          <i class="fa fa-plane" aria-hidden="true"></i>
+          <span>Viajes</span>
         </a>
       </li>
 
       <li>
         
           <a href="http://localhost/ViajesFyA/otrosTrabajadores">
-          <i class="fa fa-calendar-check-o"></i>
+          <i class="fa fa-user" aria-hidden="true"></i>
           <span>Trabajadores</span>
         </a>
       </li>
