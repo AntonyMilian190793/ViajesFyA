@@ -42,7 +42,7 @@
 
             $tablaBD = "sistemas";
             $id = $_SESSION["id"];
-            $resultado = SistemasM::VerPerfilSistemasM($tablaBD, $id);
+            $resultado = SistemasM::VerPefilSistemasM($tablaBD, $id);
 
             echo '
                 <tr>
@@ -59,11 +59,80 @@
                     }
                     
                     echo '<td>
-                        <a href="">
+                        <a href="http://localhost/ViajesFyA/perfil-S/'.$resultado["id"].'">
                             <button class="btn btn-success"><i class="fa fa-pencil"></i></button>
                         </a>
                     </td>
                 </tr>';
         }
+
+        //editar perfil sistemas
+        public function EditarPerfilSistemasC(){
+
+        $tablaBD = "sistemas";
+
+        $id = $_SESSION["id"];
+        $resultado = SistemasM::VerPefilSistemasM($tablaBD, $id);
+
+        echo 
+        '<form method="post" enctype="multipart/form-data">
+
+        <div class="row">
+
+            <div class="col-md-6 col-xs-12">
+
+                <h2>Nombre:</h2>
+                <input type="text" class="input-lg" name="nombreP" value="'.$resultado['nombre'].'">
+                <input type="hidden" class="input-lg" name="Sid" value="'.$resultado['id'].'">
+
+                <h2>Apellido:</h2>
+                <input type="text" class="input-lg" name="apellidoP" value="'.$resultado['apellido'].'">
+
+                <h2>Usuario:</h2>
+                <input type="text" class="input-lg" name="usuarioP" value="'.$resultado['usuario'].'">
+
+                <h2>Contraseña:</h2>
+                <input type="text" class="input-lg" name="claveP" value="'.$resultado['clave'].'">
+
+            </div>
+
+            <div class="col-md-6 col-xs-12">
+
+                <br><br>
+
+                <input type="file" name="imgP">
+                <br>';
+                
+                if($resultado['foto'] == ""){
+
+                    echo '<img src="http://localhost/ViajesFyA/Vistas/img/defecto1.png" width="200px;">';
+
+                }else{
+
+                    echo '<img src="http://localhost/ViajesFyA/'.$resultado["foto"].'" width="200px;">';
+
+                }
+                
+
+                
+
+                
+                echo '
+                <input type="hidden" name="imgActual" value="'.$resultado["foto"].'">
+
+                <br><br>
+
+                <button type="submit" class="btn btn-success">Guardar Cambios</button>
+
+
+
+            </div>
+
+        </div>
+
+    </form>';
+
+    }
+
     }
 ?>

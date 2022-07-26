@@ -19,7 +19,7 @@
         }
 
         //ver perfil sistemas
-        static public function VerPerfilSistemasM($tablaBD, $id){
+        static public function VerPefilSistemasM($tablaBD, $id){
 
             $pdo = ConexionBD::cBD()->prepare("SELECT id, usuario, clave, nombre, apellido, foto FROM $tablaBD WHERE id = :id");
 
@@ -29,6 +29,7 @@
             $pdo->close();
             $pdo = null;
         }
+
     }
 
 ?>
