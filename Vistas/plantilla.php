@@ -66,6 +66,8 @@ session_start();
       include "modulos/menuAdministracion.php";
     }else if($_SESSION["rol"] == "Padre"){
       include "modulos/menuPadre.php";
+    }else if($_SESSION["rol"] == "Sistemas"){
+      include "modulos/menuSistemas.php";
     }
   
 
@@ -107,6 +109,10 @@ session_start();
     }else if ($_GET["url"] == "ingreso-Padre") {
 
       include "modulos/ingreso-Padre.php";
+      
+    }else if ($_GET["url"] == "ingreso-Sistemas") {
+
+      include "modulos/ingreso-Sistemas.php";
     }
   } else {
 

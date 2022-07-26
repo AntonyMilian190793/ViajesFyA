@@ -20,5 +20,10 @@ require_once "Modelos/administracionM.php";
 require_once "Controladores/citasC.php";
 require_once "Modelos/citasM.php";
 
+require_once "Controladores/sistemasC.php";
+require_once "Modelos/sistemasM.php";
+
 $plantilla = new Plantilla();
 $plantilla -> LlamarPlantilla();
+
+?>
