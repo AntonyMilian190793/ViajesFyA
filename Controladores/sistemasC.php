@@ -134,5 +134,58 @@
 
     }
 
+    //actualizar perfil sistemas
+    public function ActualizarPerfilSistemasC(){
+
+            if(isset($_POST["Sid"])){
+
+            $rutaImg = $_POST["imgActual"];
+
+            if(isset($_FILES["imgP"]["tmp_name"]) && !empty($_FILES["imgP"]["tmp_name"])){
+
+				if(!empty($_POST["imgActual"])){
+					unlink($_POST["imgActual"]);
+				}
+
+                if($_FILES["imgP"]["type"] == "image/png"){
+
+                    $nombre = mt_rand(100,999).".png";
+                    $rutaImg = "Vistas/img/Sistemas/Sis-".$nombre.".png";
+                    $foto = imagecreatefrompng($_FILES["imgPerfil"]["tmp_name"]);
+                    imagepng($foto, $rutaImg);
+                }
+                
+                if($_FILES["imgP"]["type"] == "image/jpeg"){
+
+                    $nombre = mt_rand(100,999).".jpg";
+                    $rutaImg = "Vistas/img/Sistemas/Sis-".$nombre.".jpg";
+                    $foto = imagecreatefromjpeg($_FILES["imgP"]["tmp_name"]);
+                    imagejpeg($foto, $rutaImg);
+                }
+            }
+
+            $tablaBD = "sistemas";
+            $datosC = array(
+                "id" => $_POST['Sid'],
+                "nombre" => $_POST['nombreP'],
+                "apellido" => $_POST['apellidoP'],
+                "usuario" => $_POST['usuarioP'],
+                "clave" => $_POST['claveP'],
+                "foto" => $rutaImg
+            );
+
+            $resultado = SistemasM::ActualizarPerfilSistemasM($tablaBD, $datosC);
+
+            if($resultado == true){
+
+                echo '<script>
+                
+                    window.location = "http://localhost/ViajesFyA/perfil-S/'.$_SESSION["id"].'";
+                
+                </script>';
+            }
+        }
     }
+}
+
 ?>

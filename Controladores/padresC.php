@@ -281,7 +281,7 @@
 
                 echo '<script>
                 
-                    window.location = "http://localhost/ViajesFyA/perfil-P/'.$resultado["id"].'";
+                    window.location = "http://localhost/ViajesFyA/perfil-P/'.$_SESSION["id"].'";
                 
                 </script>';
             }
