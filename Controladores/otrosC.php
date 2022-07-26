@@ -215,8 +215,15 @@ class OtrosC{
         }
 
         }
-
     }
 
+    //mostrar secretaria
+    public function VerOtrosC(){
+
+        $tablaBD = "otros";
+        $resultado = OtrosM::VerOtrosM($tablaBD);
+
+        return $resultado;
+    }
 }
 ?>

@@ -82,7 +82,7 @@ session_start();
       if ($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "perfil-Otros" || $url[0] == "perfil-O" || $url[0] == "consultas"
        || $url[0] == "E-C" || $url[0] == "padres" || $url[0] == "otrosTrabajadores" || $url[0] == "perfil-Administracion" 
        || $url[0] == "perfil-A" || $url[0] == "Ver-areas" || $url[0] == "Padre" || $url[0] == "historial" || $url[0] == "perfil-Padre" 
-       || $url[0] == "perfil-P" || $url[0] == "Vuelos" | $url[0] == "perfil-Sistemas" || $url[0] == "perfil-S") {
+       || $url[0] == "perfil-P" || $url[0] == "Vuelos" | $url[0] == "perfil-Sistemas" || $url[0] == "perfil-S" || $url[0] == "perfil-S" || $url[0] == "secretarias") {
 
         include "modulos/" . $url[0] . ".php";
       }
