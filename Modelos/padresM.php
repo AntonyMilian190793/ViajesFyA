@@ -133,8 +133,29 @@
                 $pdo = null;
         }
 
+        //actualizar perfil padres
+        static public function ActualizarPerfilPadreM($tablaBD, $datosC){
+
+            $pdo = ConexionBD::cBD()->prepare("UPDATE $tablaBD SET id_consulta = :id_consulta, apellido = :apellido, nombre = :nombre, foto = :foto,
+            usuario = :usuario, clave = :clave, horarioE = :horarioE, horarioS = :horarioS WHERE id = :id");
+
+            $pdo->bindParam(":id", $datosC["id"], PDO::PARAM_INT);
+            $pdo->bindParam(":id_consulta", $datosC["id_consulta"], PDO::PARAM_INT);
+            $pdo->bindParam(":apellido", $datosC["apellido"], PDO::PARAM_STR);
+            $pdo->bindParam(":nombre", $datosC["nombre"], PDO::PARAM_STR);
+            $pdo->bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
+            $pdo->bindParam(":clave", $datosC["clave"], PDO::PARAM_STR);
+            $pdo->bindParam(":foto", $datosC["foto"], PDO::PARAM_STR);
+            $pdo->bindParam(":horarioE", $datosC["horarioE"], PDO::PARAM_STR);
+            $pdo->bindParam(":horarioS", $datosC["horarioS"], PDO::PARAM_STR);
+
+            if($pdo->execute()){
+                return true;
+            }
+
+            $pdo->close();
+            $pdo = null;
+        }
+
     }
-
-
-
 ?>

@@ -160,6 +160,7 @@
     </tr>';
     }
 
+    //editar perfil Padre
     public function EditarPerfilPadreC(){
 
         $tablaBD = "padres";
@@ -213,14 +214,78 @@
                     <div class="col-md-6 col-xs-12">
                         <br><br>
                         <input type="file" name="imgPerfil">
-                        <br>
-                        <img src="http://localhost/ViajesFyA/Vistas/img/defecto1.png"  class="img-responsive" width="200px">
-                        <input type="hidden" name="imgActual" value="">
+                        <br>';
+
+                        if($resultado["foto"] == ""){
+
+                            echo '<img src="http://localhost/ViajesFyA/Vistas/img/defecto1.png"  class="img-responsive" width="200px">';
+
+                        }else{
+                            echo '<img src="http://localhost/ViajesFyA/'.$resultado["foto"].'"  class="img-responsive" width="200px">';
+                        }
+                        
+                        echo '<input type="hidden" name="imgActual" value="'.$resultado["foto"].'">
                         <br><br>
                         <button type="submit" class="btn btn-success">Guardar Cambios</button>
                     </div>
                 </div>
             </form>';
+    }
+
+    //actualizar perfil Padre
+    public function ActualizarPerfilPadreC(){
+
+        if(isset($_POST["Did"])){
+
+            $rutaImg = $_POST["imgActual"];
+
+            if(isset($_FILES["imgPerfil"]["tmp_name"]) && !empty($_FILES["imgPerfil"]["tmp_name"])){
+
+                if(!empty($_POST["imgActual"])){
+                    unlink($_POST["imgActual"]);
+                }
+
+                if($_FILES["imgPerfil"]["type"] == "image/png"){
+
+                    $nombre = mt_rand(100,999).".png";
+                    $rutaImg = "Vistas/img/Padres/Pad-".$nombre.".png";
+                    $foto = imagecreatefrompng($_FILES["imgPerfil"]["tmp_name"]);
+                    imagepng($foto, $rutaImg);
+                }
+                
+                if($_FILES["imgPerfil"]["type"] == "image/jpeg"){
+
+                    $nombre = mt_rand(100,999).".jpg";
+                    $rutaImg = "Vistas/img/Padres/Pad-".$nombre.".jpg";
+                    $foto = imagecreatefromjpeg($_FILES["imgPerfil"]["tmp_name"]);
+                    imagejpeg($foto, $rutaImg);
+                }
+            }
+
+            $tablaBD = "padres";
+            $datosC = array(
+                "id" => $_POST['Did'],
+                "nombre" => $_POST['nombrePerfil'],
+                "apellido" => $_POST['apellidoPerfil'],
+                "usuario" => $_POST['usuarioPerfil'],
+                "clave" => $_POST['clavePerfil'],
+                "foto" => $rutaImg,
+                "id_consulta" => $_POST['consultaPerfil'],
+                "horarioE" => $_POST['hePerfil'],
+                "horarioS" => $_POST['hsPerfil']
+            );
+
+            $resultado = PadresM::ActualizarPerfilPadreM($tablaBD, $datosC);
+
+            if($resultado == true){
+
+                echo '<script>
+                
+                    window.location = "http://localhost/ViajesFyA/perfil-P/'.$resultado["id"].'";
+                
+                </script>';
+            }
+        }
     }
 }
 
