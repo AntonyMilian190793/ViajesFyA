@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-08-2022 a las 15:43:22
+-- Tiempo de generación: 01-08-2022 a las 23:08:45
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -95,7 +95,8 @@ CREATE TABLE `otros` (
 --
 
 INSERT INTO `otros` (`id`, `usuario`, `clave`, `nombre`, `apellido`, `foto`, `rol`) VALUES
-(1, 'mary', '123', 'María', 'Portilla', 'Vistas/img/Otros/O-94.jpg', 'Otros');
+(1, 'mary', '123', 'María', 'Portilla', 'Vistas/img/Otros/O-94.jpg', 'Otros'),
+(2, 'mcarhuajulca', '123', 'Milagros', 'Carhuajulca', '', 'Secretaria');
 
 -- --------------------------------------------------------
 
@@ -149,13 +150,17 @@ CREATE TABLE `padres` (
 --
 
 INSERT INTO `padres` (`id`, `id_consulta`, `apellido`, `nombre`, `foto`, `usuario`, `clave`, `sexo`, `horarioE`, `horarioS`, `rol`) VALUES
-(2, 1, 'Cavassa ', 'Ernesto', 'Vistas/img/Padres/Pad-997.png.png', 'ernesto123', '123', 'Masculino', '08:00:00', '18:00:00', 'Padre'),
-(3, 2, 'Piñeyro', 'Javier', '', 'javier123', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
-(6, 2, 'Morelli', 'Oscar', '', 'oscar123', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
-(8, 9, 'Liendo', 'Ada', '', 'aliendo', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
-(9, 7, 'Lancastre', 'Aba', '', 'alancastre', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
-(10, 5, 'Alania', 'Angela', '', 'aalania', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
-(11, 8, 'Milian', 'Jorge', '', 'jmilian', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre');
+(2, 1, 'Cavassa ', 'Ernesto', 'Vistas/img/Padres/Pad-199.png', 'ernesto123', '123', 'Masculino', '08:00:00', '18:00:00', 'Padre'),
+(3, 1, 'Piñeyro', 'Javier', 'Vistas/img/Padres/Pad-113.png', 'javier123', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
+(6, 1, 'Morelli', 'Oscar', 'Vistas/img/Padres/Pad-177.png', 'oscar123', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
+(15, 9, 'Liendo', 'Ada', '', 'aliendo', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
+(16, 8, 'Alacaste', 'Aba', '', 'aliendo', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
+(17, 10, 'Verano', 'Jhony', '', 'jverano', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
+(18, 5, 'Alania', 'Angela', '', 'aalania', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
+(19, 11, 'Vargas', 'Julia', '', 'jvargas', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
+(20, 7, 'Auqui', 'Hisela', '', 'jaqui', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
+(21, 12, 'Acero', 'Katheryn', '', 'kacero', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
+(22, 13, 'Portilla', 'Maria', '', 'mportilla', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre');
 
 -- --------------------------------------------------------
 
@@ -216,7 +221,8 @@ INSERT INTO `vuelos` (`id`, `id_padre`, `id_consulta`, `id_administracion`, `nya
 (64, 2, 1, 6, 'Jhony Verano', '7011233', '2022-08-03 16:00:00', '2022-08-03 17:00:00', ''),
 (67, 2, 1, 0, 'Katheryn Acero', '', '2022-07-28 14:00:00', '2022-07-28 15:00:00', ''),
 (68, 2, 1, 0, 'Hanns Esquivel', '', '2022-07-29 14:00:00', '2022-07-29 15:00:00', ''),
-(71, 2, 1, 0, 'Katheryn Acero', '', '2022-07-25 21:00:00', '2022-07-25 22:00:00', '');
+(71, 2, 1, 0, 'Katheryn Acero', '', '2022-07-25 21:00:00', '2022-07-25 22:00:00', ''),
+(72, 16, 8, 1, 'Víctor Quijaite', '98716111', '2022-08-01 12:00:00', '2022-08-01 13:00:00', '');
 
 --
 -- Índices para tablas volcadas
@@ -284,7 +290,7 @@ ALTER TABLE `consultas`
 -- AUTO_INCREMENT de la tabla `otros`
 --
 ALTER TABLE `otros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `otrostrabajadores`
@@ -296,7 +302,7 @@ ALTER TABLE `otrostrabajadores`
 -- AUTO_INCREMENT de la tabla `padres`
 --
 ALTER TABLE `padres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de la tabla `sistemas`
@@ -308,7 +314,7 @@ ALTER TABLE `sistemas`
 -- AUTO_INCREMENT de la tabla `vuelos`
 --
 ALTER TABLE `vuelos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
