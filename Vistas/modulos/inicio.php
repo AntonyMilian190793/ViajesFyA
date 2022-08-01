@@ -1,39 +1,51 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Blank page
-        <small>it all starts here</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Examples</a></li>
-        <li class="active">Blank page</li>
-      </ol>
-    </section>
+
 
     <!-- Main content -->
     <section class="content">
 
-      <!-- Default box -->
-      <div class="box">
-        <div class="box-header with-border">
-          <h3 class="box-title">Title</h3>
-
-          <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                    title="Collapse">
-              <i class="fa fa-minus"></i></button>
-            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-              <i class="fa fa-times"></i></button>
-          </div>
-        </div>
         <div class="box-body">
-          Start creating your amazing application!
+
+        <div class="col-md-6 bg-primary" style="margin-Top: 5%">
+
+        <h1>Bienvenido</h1>
+
+        <h3>Introducción</h3>
+
+        <hr>
+
+        <h2>Horario:</h2>
+        <h3>Desde: 7:00</h3>
+        <h3>Hasta: 20:00</h3>
+
+        <hr>
+
+        <h2>Dirección:</h2>
+        <h3>vencia 542</h3>
+
+        <hr>
+
+        <h2>Cotactos:</h2>
+        <h3>Telefojno: 993753004br <br>
+        Correo: jmilian@feyalegria.org.pe
+        </h3>
+        
+        
         </div>
-        <!-- /.box-body -->
+
+        <div class="col-md-6">
+          <img src="Vistas/img/logo.png" class="img-responsive">
+        </div>
+          
+        </div>
+        
+    
+
         <div class="box-footer">
-          Footer
+          <a href="">
+            <button class="btn btn-success btn-lg">Editar</button>
+          </a>
         </div>
         <!-- /.box-footer-->
       </div>
