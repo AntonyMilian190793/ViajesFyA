@@ -55,7 +55,7 @@ if ($_SESSION["rol"] != "Sistemas") {
 
                                 if($value["foto"] != ""){
 
-                                    echo '<td><img src="http://localhost/ViajesFyA/img/defecto1.png" class="img-responsive" width="40px"></td>';
+                                    echo '<td><img src="Vistas/img/defecto1.png" class="img-responsive" width="40px"></td>';
 
                                 }
                                 else{

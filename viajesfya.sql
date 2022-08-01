@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-07-2022 a las 05:24:28
+-- Tiempo de generación: 01-08-2022 a las 15:43:22
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -149,13 +149,36 @@ CREATE TABLE `padres` (
 --
 
 INSERT INTO `padres` (`id`, `id_consulta`, `apellido`, `nombre`, `foto`, `usuario`, `clave`, `sexo`, `horarioE`, `horarioS`, `rol`) VALUES
-(2, 1, 'Cavassa ', 'Ernesto', 'Vistas/img/Padres/Pad-296.png.png', 'ernesto123', '123', 'Masculino', '08:00:00', '18:00:00', 'Padre'),
+(2, 1, 'Cavassa ', 'Ernesto', 'Vistas/img/Padres/Pad-997.png.png', 'ernesto123', '123', 'Masculino', '08:00:00', '18:00:00', 'Padre'),
 (3, 2, 'Piñeyro', 'Javier', '', 'javier123', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
 (6, 2, 'Morelli', 'Oscar', '', 'oscar123', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
 (8, 9, 'Liendo', 'Ada', '', 'aliendo', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
 (9, 7, 'Lancastre', 'Aba', '', 'alancastre', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
 (10, 5, 'Alania', 'Angela', '', 'aalania', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
 (11, 8, 'Milian', 'Jorge', '', 'jmilian', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `sistemas`
+--
+
+CREATE TABLE `sistemas` (
+  `id` int(11) NOT NULL,
+  `usuario` text NOT NULL,
+  `clave` text NOT NULL,
+  `nombre` text NOT NULL,
+  `apellido` text NOT NULL,
+  `foto` text NOT NULL,
+  `rol` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `sistemas`
+--
+
+INSERT INTO `sistemas` (`id`, `usuario`, `clave`, `nombre`, `apellido`, `foto`, `rol`) VALUES
+(1, 'admin', '123', 'admin', 'admin', 'Vistas/img/Sistemas/Sis-458.jpg.jpg', 'Sistemas');
 
 -- --------------------------------------------------------
 
@@ -230,6 +253,12 @@ ALTER TABLE `padres`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `sistemas`
+--
+ALTER TABLE `sistemas`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `vuelos`
 --
 ALTER TABLE `vuelos`
@@ -268,6 +297,12 @@ ALTER TABLE `otrostrabajadores`
 --
 ALTER TABLE `padres`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT de la tabla `sistemas`
+--
+ALTER TABLE `sistemas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `vuelos`
