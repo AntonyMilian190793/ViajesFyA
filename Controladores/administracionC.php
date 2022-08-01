@@ -193,6 +193,15 @@ class AdministracionC{
 
         return $resultado;
     }
+
+    //ver trabajadores administracion
+    public function VerAdministracionTC(){
+
+        $tablaBD = "administracion";
+        $resultado = AdministracionM::VerAdministracionTM($tablaBD);
+
+        return $resultado;
+    }
 }
 
 ?>

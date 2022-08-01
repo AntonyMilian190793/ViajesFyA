@@ -24,6 +24,13 @@
         </a>
       </li>
 
+            <li>
+        <a href="http://localhost/ViajesFyA/administracion">
+          <i class="fa fa-address-book-o"></i>
+          <span>Administración</span>
+        </a>
+      </li>
+
       <li>
         <a href="http://localhost/ViajesFyA/consultas">
           <i class="fa fa-address-book-o"></i>

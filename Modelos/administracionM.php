@@ -71,6 +71,17 @@ require_once "ConexionBD.php";
         $pdo -> close();
         $pdo = null;
     }
+
+    //ver trabajadores administracion 
+    static public function VerAdministracionTM($tablaBD){
+            
+            $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD ORDER BY apellido ASC");
+            $pdo -> execute();
+            return $pdo -> fetchAll();
+            $pdo -> close();
+            $pdo = null;
+        
+    }
     }
 
 

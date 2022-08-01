@@ -57,7 +57,7 @@ if ($_SESSION["rol"] != "Otros" && $_SESSION["rol"] != "Sistemas") {
                             if($value["foto"] == ""){
                                 echo '<td><img src="Vistas/img/defecto1.png" width="40px"></td>';
                             }else{
-                                '<td><img src="'.$value["foto"].'" width="40px"></td>';
+                                echo '<td><img src="'.$value["foto"].'" width="40px"></td>';
                             }
 
                             $columna = "id";

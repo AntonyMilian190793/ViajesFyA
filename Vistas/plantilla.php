@@ -26,7 +26,7 @@ session_start();
   <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/dist/css/skins/_all-skins.min.css">
 
   <!-- Data Tables -->
-  <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.css">
+  <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/css/responsive.bootstrap.min.css">
   <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
 
 
@@ -82,7 +82,8 @@ session_start();
       if ($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "perfil-Otros" || $url[0] == "perfil-O" || $url[0] == "consultas"
        || $url[0] == "E-C" || $url[0] == "padres" || $url[0] == "otrosTrabajadores" || $url[0] == "perfil-Administracion" 
        || $url[0] == "perfil-A" || $url[0] == "Ver-areas" || $url[0] == "Padre" || $url[0] == "historial" || $url[0] == "perfil-Padre" 
-       || $url[0] == "perfil-P" || $url[0] == "Vuelos" | $url[0] == "perfil-Sistemas" || $url[0] == "perfil-S" || $url[0] == "perfil-S" || $url[0] == "secretarias") {
+       || $url[0] == "perfil-P" || $url[0] == "Vuelos" | $url[0] == "perfil-Sistemas" || $url[0] == "perfil-S" || $url[0] == "perfil-S" || $url[0] == "secretarias"
+       || $url[0] == "administracion") {
 
         include "modulos/" . $url[0] . ".php";
       }
@@ -153,8 +154,8 @@ session_start();
   <!-- DataTables -->
   <script src="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net/js/jquery.dataTables.js"></script>
   <script src="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-  <script src="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.js"></script>
-  <script src="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.min"></script>
+  <script src="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/js/dataTables.responsive.min.js"></script>
+  <script src="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 
 <!-- fullCalendar -->
 <script src="http://localhost/ViajesFyA/Vistas/bower_components/moment/moment.js"></script>

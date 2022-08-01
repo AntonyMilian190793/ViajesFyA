@@ -29,6 +29,7 @@
             return $resultado;
         }
 
+
         //editar Padres
         static public function PadreC($columna, $valor){
             $tablaBD = "padres";
@@ -247,7 +248,7 @@
 
                 if($_FILES["imgPerfil"]["type"] == "image/png"){
 
-                    $nombre = mt_rand(100,999).".png";
+                    $nombre = mt_rand(100,999);
                     $rutaImg = "Vistas/img/Padres/Pad-".$nombre.".png";
                     $foto = imagecreatefrompng($_FILES["imgPerfil"]["tmp_name"]);
                     imagepng($foto, $rutaImg);
@@ -255,7 +256,7 @@
                 
                 if($_FILES["imgPerfil"]["type"] == "image/jpeg"){
 
-                    $nombre = mt_rand(100,999).".jpg";
+                    $nombre = mt_rand(100,999);
                     $rutaImg = "Vistas/img/Padres/Pad-".$nombre.".jpg";
                     $foto = imagecreatefromjpeg($_FILES["imgPerfil"]["tmp_name"]);
                     imagejpeg($foto, $rutaImg);

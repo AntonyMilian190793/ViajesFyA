@@ -26,7 +26,7 @@ if ($_SESSION["rol"] != "Sistemas") {
 
             </div>
             <div class="box-body">
-                <table class="table -table-bordered table-hover table-striped DT">
+                <table class="table table-bordered table-hover table-striped DT">
                     <thead>
                         <tr>
                             <th>N°</th>

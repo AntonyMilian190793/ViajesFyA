@@ -34,7 +34,7 @@
                 if($columna != null){
     
                     $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD WHERE $columna = :$columna");
-                    $pdo->bindParam(":$columna", $valor, PDO::PARAM_STR);
+                    $pdo->bindParam(":" .$columna, $valor, PDO::PARAM_STR);
                     $pdo->execute();
                     return $pdo->fetchAll();
     

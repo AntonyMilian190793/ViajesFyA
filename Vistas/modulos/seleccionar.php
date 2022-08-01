@@ -24,7 +24,7 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>Padres</h3>
+              <h3>Jefe De Área</h3>
 
               <p>Iniciar Sesión</p>
             </div>
@@ -39,7 +39,7 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>Adminstración</h3>
+              <h3>Trabajadores</h3>
 
               <p>Iniciar Sesión</p>
             </div>
