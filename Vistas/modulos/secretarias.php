@@ -108,7 +108,7 @@ if ($_SESSION["rol"] != "Sistemas") {
                         <div class="form-group">
                             <h2>Apellidos:</h2>
                             <input type="text" class="form-control" name="apellido" required>
-                            <input type="hidden" name="rolP" value="Padre">
+                            <input type="hidden" name="rolS" value="Secretaria">
                         </div>
 
                         <div class="form-group">
@@ -135,8 +135,8 @@ if ($_SESSION["rol"] != "Sistemas") {
                 </div>
 
                 <?php
-                    $crear = new PadresC();
-                    $crear ->CrearPadreC();
+                    $crear = new OtrosC();
+                    $crear ->CrearSecretariaC();
                 ?>
             </form>
         </div>

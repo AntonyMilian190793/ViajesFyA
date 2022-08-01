@@ -225,5 +225,34 @@ class OtrosC{
 
         return $resultado;
     }
+
+    
+    //crear secretarias
+    public function CrearSecretariaC(){
+
+        if(isset($_POST["rolS"])){
+
+            $tablaBD = "otros";
+            $datosC = array(
+                "nombre" => $_POST["nombre"],
+                "apellido" => $_POST["apellido"],
+                "usuario" => $_POST["usuario"],
+                "clave" => $_POST["clave"],
+                "rol" => $_POST["rolS"]
+            );
+
+            $resultado = OtrosM::CrearSecretariaM($tablaBD, $datosC);
+
+            if($resultado == true){
+
+                echo '<script>
+
+                window.location = "secretarias";
+                
+                </script>';
+
+            }
+        }
+    }
 }
 ?>
