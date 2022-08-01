@@ -53,7 +53,7 @@ if ($_SESSION["rol"] != "Sistemas") {
                                 <td>'.$value["apellido"].'</td>
                                 <td>'.$value["nombre"].'</td>';
 
-                                if($value["foto"] != ""){
+                                if($value["foto"] == ""){
 
                                     echo '<td><img src="Vistas/img/defecto1.png" class="img-responsive" width="40px"></td>';
 
