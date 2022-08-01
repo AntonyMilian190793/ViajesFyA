@@ -77,7 +77,7 @@ if ($_SESSION["rol"] != "Sistemas") {
                                 
                                 
                                     <div class="btn-group">
-                                        <button class="btn btn-danger EliminarPadre" Did="'.$value["id"].'" imgD="'.$value["foto"].'">
+                                        <button class="btn btn-danger EliminarSecretaria" Sid="'.$value["id"].'" imgS="'.$value["foto"].'">
                                         <i class="fa fa-times"> Borrar</i></button>
                                     </div>
                                 
@@ -146,7 +146,7 @@ if ($_SESSION["rol"] != "Sistemas") {
 
 <?php
 
-    $borrarP = new PadresC();
-    $borrarP -> BorrarPadreC();
+    $borrarP = new OtrosC();
+    $borrarP -> BorrarSecretariaC();
 
 ?>

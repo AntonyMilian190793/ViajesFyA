@@ -76,7 +76,23 @@ require_once "ConexionBD.php";
         $pdo -> bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
         $pdo -> bindParam(":clave", $datosC["clave"], PDO::PARAM_STR);
         $pdo -> bindParam(":rol", $datosC["rol"], PDO::PARAM_STR);
-        
+
+        if($pdo -> execute()){
+            return true;
+        }
+        else{
+            return false;
+        }
+        $pdo -> close();
+        $pdo = null;
+    }
+
+    //eliminar secretaria
+    static public function BorrarSecretariaM($tablaBD, $id){
+        $pdo = ConexionBD::cBD()->prepare("DELETE FROM $tablaBD WHERE id = :id");
+
+        $pdo -> bindParam(":id", $id, PDO::PARAM_INT);
+
         if($pdo -> execute()){
             return true;
         }

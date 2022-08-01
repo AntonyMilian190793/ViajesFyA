@@ -163,6 +163,7 @@ session_start();
 
   <script src="http://localhost/ViajesFyA/Vistas/js/padres.js"></script>
   <script src="http://localhost/ViajesFyA/Vistas/js/otrosT.js"></script>
+  <script src="http://localhost/ViajesFyA/Vistas/js/secretarias.js"></script>
 
 
   <script>

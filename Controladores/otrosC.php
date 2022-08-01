@@ -254,5 +254,33 @@ class OtrosC{
             }
         }
     }
+
+    //borrar secretarias
+    public function BorrarSecretariaC(){
+
+        if($_GET["Sid"]){
+
+            $tablaBD = "otros";
+            $id = $_GET["Sid"];
+
+            if($_GET["imgS"] != ""){
+
+                unlink($_GET["imgS"]);
+            }
+
+            $resultado = OtrosM::BorrarSecretariaM($tablaBD, $id);
+
+            
+            if($resultado == true){
+
+                echo '<script>
+
+                window.location = "secretarias";
+                
+                </script>';
+            }
+        }
+    }
 }
+
 ?>
