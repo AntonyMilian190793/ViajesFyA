@@ -35,3 +35,9 @@
     </section>
     <!-- /.content -->
   </div>
+
+<footer class="main-footer cente">
+<center style="color:black;">© 2021 Antony Milian. Todos los Derechos Reservados</a>.</center>
+
+
+</footer>
