@@ -199,6 +199,16 @@
 		}
 
 	}
+
+    //
+    public function FaviconC(){
+
+        $tablaBD = "inicio";
+        $id = "1";
+        $resultado = InicioM::MostrarInicioM($tablaBD, $id);
+
+        echo '<link rel="icon" href="'.$resultado["favicon"].'">';
+    }
 }
 
 ?>

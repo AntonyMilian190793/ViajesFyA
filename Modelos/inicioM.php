@@ -43,7 +43,7 @@ require_once "ConexionBD.php";
 		$pdo = null;
 
 	}
-    }
+}
 
 
 
