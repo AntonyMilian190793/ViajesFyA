@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-08-2022 a las 23:08:45
+-- Tiempo de generación: 02-08-2022 a las 05:23:36
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -77,6 +77,31 @@ INSERT INTO `consultas` (`id`, `nombre`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `inicio`
+--
+
+CREATE TABLE `inicio` (
+  `id` int(11) NOT NULL,
+  `intro` text NOT NULL,
+  `horaE` time NOT NULL,
+  `horaS` time NOT NULL,
+  `telefono` text NOT NULL,
+  `correo` text NOT NULL,
+  `direccion` text NOT NULL,
+  `logo` text NOT NULL,
+  `favicon` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `inicio`
+--
+
+INSERT INTO `inicio` (`id`, `intro`, `horaE`, `horaS`, `telefono`, `correo`, `direccion`, `logo`, `favicon`) VALUES
+(1, 'introducción', '06:00:00', '21:00:00', '993753004', 'antonymilian@gmail.com', 'Jirón Cahuide 884 - Jesús María', 'Vistas/img/logo.png', 'Vistas/img/favicon.png');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `otros`
 --
 
@@ -122,8 +147,7 @@ CREATE TABLE `otrostrabajadores` (
 INSERT INTO `otrostrabajadores` (`id`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `clave`, `rol`) VALUES
 (1, 'Milian Montalvo', 'Jorge Antony', '70311233', '', 'antony123', '123', 'otrosTrabajadores'),
 (4, 'More', 'Alex', '70522122', '', 'alex123', '123', 'otrosTrabajadores'),
-(11, 'Esquivel', 'Hanns', '7088122', '', 'hans123', '123', 'otrosTrabajadores'),
-(16, 'Acero', 'Katheryn', '7087122', '', 'kacero', '123', 'otrosTrabajadores');
+(11, 'Esquivel', 'Hanns', '7088122', '', 'hans123', '123', 'otrosTrabajadores');
 
 -- --------------------------------------------------------
 
@@ -183,7 +207,7 @@ CREATE TABLE `sistemas` (
 --
 
 INSERT INTO `sistemas` (`id`, `usuario`, `clave`, `nombre`, `apellido`, `foto`, `rol`) VALUES
-(1, 'admin', '123', 'admin', 'admin', 'Vistas/img/Sistemas/Sis-458.jpg.jpg', 'Sistemas');
+(1, 'jmilian', 'jorgemilian19071993', 'Jorge Antony', 'Milian Montalvo', 'Vistas/img/Sistemas/Sis-432.jpg.jpg', 'Sistemas');
 
 -- --------------------------------------------------------
 
@@ -241,6 +265,12 @@ ALTER TABLE `consultas`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `inicio`
+--
+ALTER TABLE `inicio`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `otros`
 --
 ALTER TABLE `otros`
@@ -285,6 +315,12 @@ ALTER TABLE `administracion`
 --
 ALTER TABLE `consultas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT de la tabla `inicio`
+--
+ALTER TABLE `inicio`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `otros`
