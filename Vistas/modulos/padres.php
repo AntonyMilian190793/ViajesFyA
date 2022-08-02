@@ -14,7 +14,7 @@ if ($_SESSION["rol"] != "Otros" && $_SESSION["rol"] != "Sistemas") {
 <div class="content-wrapper">
 
     <section class="content-header">
-        <h1>Gestor de Padres</h1>
+        <h1>Gestor de Jefes de Área</h1>
     </section>
 
     <section class="content">
