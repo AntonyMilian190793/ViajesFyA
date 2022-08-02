@@ -33,14 +33,14 @@
                 
                 if($columna != null){
     
-                    $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD WHERE $columna = :$columna");
+                    $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD WHERE $columna = :$columna ORDER BY apellido ASC");
                     $pdo->bindParam(":" .$columna, $valor, PDO::PARAM_STR);
                     $pdo->execute();
                     return $pdo->fetchAll();
     
                 }else{
     
-                    $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD");
+                    $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD ORDER BY apellido ASC");
                     $pdo->execute();
                     return $pdo->fetchAll();
     
