@@ -26,7 +26,7 @@
 
             <li>
         <a href="http://localhost/ViajesFyA/administracion">
-          <i class="fa fa-address-book-o"></i>
+          <i class="fa fa-male" aria-hidden="true"></i>
           <span>Trabajadores</span>
         </a>
       </li>

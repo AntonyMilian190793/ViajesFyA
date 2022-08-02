@@ -202,6 +202,47 @@ class AdministracionC{
 
         return $resultado;
     }
+
+        //crear trabajadores Administracion
+        public function CrearAdministracionC(){
+
+            if(isset($_POST["rolA"])){
+
+                $tablaBD = "administracion";
+                $datosC = array("apellido"=>$_POST["apellido"],"nombre"=>$_POST["nombre"],"documento"=>$_POST["documento"],
+                "usuario"=>$_POST["usuario"],"clave"=>$_POST["clave"], "rol"=>$_POST["rolA"]);
+
+                $resultado = AdministracionM::CrearAdministracionM($tablaBD, $datosC);
+
+                if($resultado == true){
+                    echo 
+                    '<script>
+                            window.location = "administracion";
+                    </script>';
+            }   
+        }
+    }
+
+    //borrar trabajadores administracion
+        public function BorrarAdministracionC(){
+
+        if(isset($_GET["Aid"])){
+            $tablaBD = "administracion";
+            $id = $_GET["Aid"];
+
+            if($_GET["imgA"] != ""){
+                unlink($_GET["imgA"]);
+            }
+            $resultado = AdministracionM::BorrarAdministracionM($tablaBD, $id);
+
+            if($resultado == true){
+                echo 
+                '<script>
+                        window.location = "administracion";
+                </script>';
+            }  
+        }
+    }
 }
 
 ?>

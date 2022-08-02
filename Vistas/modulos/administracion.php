@@ -22,7 +22,7 @@ if ($_SESSION["rol"] != "Sistemas") {
             <div class="box-header">
 
 
-                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#CrearSecretaria">Crear Nombre</button>
+                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#CrearTrabajador">Crear Nombre</button>
 
             </div>
             <div class="box-body">
@@ -77,7 +77,7 @@ if ($_SESSION["rol"] != "Sistemas") {
                                 
                                 
                                     <div class="btn-group">
-                                        <button class="btn btn-danger EliminarSecretaria" Sid="'.$value["id"].'" imgS="'.$value["foto"].'">
+                                        <button class="btn btn-danger EliminarAdministracion" Aid="'.$value["id"].'" imgA="'.$value["foto"].'">
                                         <i class="fa fa-times"> Borrar</i></button>
                                     </div>
                                 
@@ -99,7 +99,7 @@ if ($_SESSION["rol"] != "Sistemas") {
 
 </div>
 
-<div class="modal fade" role="dialog" id="CrearSecretaria">
+<div class="modal fade" role="dialog" id="CrearTrabajador">
     <div class="modal-dialog">
         <div class="modal-content">
             <form method="post" role="form">
@@ -108,12 +108,17 @@ if ($_SESSION["rol"] != "Sistemas") {
                         <div class="form-group">
                             <h2>Apellidos:</h2>
                             <input type="text" class="form-control" name="apellido" required>
-                            <input type="hidden" name="rolS" value="Secretaria">
+                            <input type="hidden" name="rolA" value="Administracion">
                         </div>
 
                         <div class="form-group">
                             <h2>Nombres:</h2>
                             <input type="text" class="form-control" name="nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Documento:</h2>
+                            <input type="text" class="form-control" name="documento" required>
                         </div>
 
                         <div class="form-group">
@@ -135,8 +140,8 @@ if ($_SESSION["rol"] != "Sistemas") {
                 </div>
 
                 <?php
-                    $crear = new OtrosC();
-                    $crear ->CrearSecretariaC();
+                    $crear = new AdministracionC();
+                    $crear ->CrearAdministracionC();
                 ?>
             </form>
         </div>
@@ -146,7 +151,7 @@ if ($_SESSION["rol"] != "Sistemas") {
 
 <?php
 
-    $borrarP = new OtrosC();
-    $borrarP -> BorrarSecretariaC();
+    $borrarP = new AdministracionC();
+    $borrarP -> BorrarAdministracionC();
 
 ?>

@@ -101,7 +101,9 @@ if ($_SESSION["id"] != substr($_GET["url"], 7)) {
 
                                 $columna = null;
                                 $valor = null;
-                                $resultado	= OtrosTC::VerOtrosTC($columna, $valor);
+                                //$resultado	= OtrosTC::VerOtrosTC($columna, $valor);
+                                //$resultado	= OtrosC::VerOtrosTC($columna, $valor);
+                                $resultado	= AdministracionC::VerAdministracionC($columna, $valor);
 
                                 foreach ($resultado as $key => $value) {
 

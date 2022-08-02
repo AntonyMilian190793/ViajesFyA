@@ -82,7 +82,44 @@ require_once "ConexionBD.php";
             $pdo = null;
         
     }
+
+    //crear  trabajaores administracion
+    static public function CrearAdministracionM($tablaBD, $datosC){
+
+    $pdo = ConexionBD::cBD()->prepare("INSERT INTO $tablaBD(apellido, nombre, documento, usuario, clave, rol) VALUES 
+    (:apellido, :nombre, :documento, :usuario, :clave, :rol)");
+
+    $pdo -> bindParam(":apellido", $datosC["apellido"], PDO::PARAM_STR);
+    $pdo -> bindParam(":nombre", $datosC["nombre"], PDO::PARAM_STR);
+    $pdo -> bindParam(":documento", $datosC["documento"], PDO::PARAM_STR);
+    $pdo -> bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
+    $pdo -> bindParam(":clave", $datosC["clave"], PDO::PARAM_STR);
+    $pdo -> bindParam(":rol", $datosC["rol"], PDO::PARAM_STR);
+
+    if($pdo -> execute()){
+        return true;
     }
+
+    $pdo -> close();
+    $pdo = null;
+}
+
+    //eliminar trabajadore
+    static public function BorrarAdministracionM($tablaBD, $id){
+        $pdo = ConexionBD::cBD()->prepare("DELETE FROM $tablaBD WHERE id = :id");
+
+        $pdo -> bindParam(":id", $id, PDO::PARAM_INT);
+
+        if($pdo -> execute()){
+            return true;
+        }
+        else{
+            return false;
+        }
+        $pdo -> close();
+        $pdo = null;
+    }
+}
 
 
 ?>

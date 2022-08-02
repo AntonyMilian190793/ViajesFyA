@@ -13,7 +13,7 @@
       <li>
         <a href="http://localhost/ViajesFyA/padres">
           <i class="fa fa-user"></i>
-          <span>Padres</span>
+          <span>Jefes de Área</span>
         </a>
       </li>
 
