@@ -14,7 +14,7 @@ if ($_SESSION["rol"] != "Sistemas") {
 <div class="content-wrapper">
 
     <section class="content-header">
-        <h1>Gestor de Administración</h1>
+        <h1>Gestor de Trabajadores</h1>
     </section>
 
     <section class="content">

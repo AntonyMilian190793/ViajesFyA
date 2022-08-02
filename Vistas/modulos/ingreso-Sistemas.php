@@ -1,10 +1,10 @@
 <div class="login-box">
   <div class="login-logo">
-    <a href="#"><b>Viajes</b>FyA</a>
+    <a href="http://localhost/ViajesFyA"><b>Viajes</b>FyA</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Ingresar como Sistemas</p>
+    <p class="login-box-msg">Ingresar como Administrador del Sistema</p>
 
     <form method="post">
 

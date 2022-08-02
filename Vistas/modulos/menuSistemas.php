@@ -13,7 +13,7 @@
       <li>
         <a href="http://localhost/ViajesFyA/padres">
           <i class="fa fa-user"></i>
-          <span>Padres</span>
+          <span>Jefes de Área</span>
         </a>
       </li>
 
@@ -27,7 +27,7 @@
             <li>
         <a href="http://localhost/ViajesFyA/administracion">
           <i class="fa fa-address-book-o"></i>
-          <span>Administración</span>
+          <span>Trabajadores</span>
         </a>
       </li>
 

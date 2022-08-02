@@ -24,7 +24,7 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>Jefe De Área</h3>
+              <h3>Jefes De Área</h3>
 
               <p>Iniciar Sesión</p>
             </div>
