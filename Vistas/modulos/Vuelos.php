@@ -138,8 +138,9 @@ if ($_SESSION["id"] != substr($_GET["url"], 7)) {
 
                         <div class="form-group">
                             <h2>Comentario:</h2>
-                            <input type="text" class="form-control input-lg" id=""  value="" >
+                            <input type="text" class="form-control input-lg" name="comentarioC" value="">
                         </div>
+
                     </div>
                 </div>
                 <div class="modal-footer">
