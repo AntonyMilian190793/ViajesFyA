@@ -9,7 +9,7 @@
           <!-- small box -->
           <div class="small-box bg-maroon">
             <div class="inner">
-              <h3>Logística</h3>
+              <h3>Logistica</h3>
 
               <p>Inicio de Sesión</p>
             </div>
