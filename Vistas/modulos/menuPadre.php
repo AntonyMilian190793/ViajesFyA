@@ -23,13 +23,20 @@
         </a>
       </li>
 
-      <li>
+      <!-- <li>
         
           <a href="http://localhost/ViajesFyA/otrosTrabajadores">
           <i class="fa fa-user" aria-hidden="true"></i>
           <span>Trabajadores</span>
         </a>
-      </li>
+      </li> -->
+
+      <!-- <li>
+        <a href="http://localhost/ViajesFyA/Ver-areas">
+          <i class="fa fa-address-book-o"></i>
+          <span>Áreas</span>
+        </a>
+      </li> -->
 
     </ul>
       

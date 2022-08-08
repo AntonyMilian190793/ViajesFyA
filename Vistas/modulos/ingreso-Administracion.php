@@ -4,7 +4,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Ingresar como Trabajador</p>
+    <p class="login-box-msg">Ingresar como Colaborador</p>
 
     <form method="post">
 
