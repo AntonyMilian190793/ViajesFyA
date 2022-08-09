@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-08-2022 a las 21:33:12
+-- Tiempo de generación: 09-08-2022 a las 22:11:15
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -98,15 +98,15 @@ CREATE TABLE `inicio` (
 --
 
 INSERT INTO `inicio` (`id`, `intro`, `horaE`, `horaS`, `telefono`, `correo`, `direccion`, `logo`, `favicon`) VALUES
-(1, 'Bienvenidos al portal de viajes de Fe y Alegría el cual servirá para', '06:00:00', '01:00:00', '993753004', 'jmilian@feyalegria.org.pe', 'Jirón Cahuide 884 - Jesús María', 'Vistas/img/logo.png', 'Vistas/img/favicon.png');
+(1, 'sta página se utilizará para...', '06:00:00', '01:00:00', '993753004', 'jmilian@feyalegria.org.pe', 'Jirón Cahuide 884 - Jesús María', 'Vistas/img/logo.png', 'Vistas/img/favicon.png');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `otros`
+-- Estructura de tabla para la tabla `logistica`
 --
 
-CREATE TABLE `otros` (
+CREATE TABLE `logistica` (
   `id` int(11) NOT NULL,
   `usuario` text NOT NULL,
   `clave` text NOT NULL,
@@ -117,12 +117,12 @@ CREATE TABLE `otros` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `otros`
+-- Volcado de datos para la tabla `logistica`
 --
 
-INSERT INTO `otros` (`id`, `usuario`, `clave`, `nombre`, `apellido`, `foto`, `rol`) VALUES
+INSERT INTO `logistica` (`id`, `usuario`, `clave`, `nombre`, `apellido`, `foto`, `rol`) VALUES
 (1, 'mary', '123', 'María', 'Portilla', 'Vistas/img/Otros/O-94.jpg', 'Otros'),
-(2, 'mcarhuajulca', '123', 'Milagros', 'Carhuajulca', '', 'Secretaria');
+(15, 'aalania', '123', 'Angela', 'Alania', '', 'Logistica');
 
 -- --------------------------------------------------------
 
@@ -208,7 +208,7 @@ CREATE TABLE `sistemas` (
 --
 
 INSERT INTO `sistemas` (`id`, `usuario`, `clave`, `nombre`, `apellido`, `foto`, `rol`) VALUES
-(1, 'jmilian', 'jorgemilian19071993', 'Jorge Antony', 'Milian Montalvo', 'Vistas/img/Sistemas/Sis-432.jpg.jpg', 'Sistemas');
+(1, 'jmilian', '123', 'Jorge Antony', 'Milian Montalvo', 'Vistas/img/Sistemas/Sis-432.jpg.jpg', 'Sistemas');
 
 -- --------------------------------------------------------
 
@@ -253,7 +253,13 @@ INSERT INTO `vuelos` (`id`, `id_padre`, `id_consulta`, `id_administracion`, `nya
 (76, 2, 1, 1, 'Víctor Quijaite', '98716111', '2022-08-04 09:00:00', '2022-08-04 10:00:00', ''),
 (77, 2, 1, 9, 'Angela Alania', '7033122', '2022-08-04 16:00:00', '2022-08-04 17:00:00', ''),
 (91, 19, 11, 1, 'Víctor Quijaite', '98716111', '2022-08-02 10:00:00', '2022-08-02 11:00:00', ''),
-(92, 22, 13, 1, 'Víctor Quijaite', '98716111', '2022-08-04 23:00:00', '0000-00-00 00:00:00', '');
+(92, 22, 13, 1, 'Víctor Quijaite', '98716111', '2022-08-04 23:00:00', '0000-00-00 00:00:00', ''),
+(93, 2, 1, 0, 'Angela Alania', '', '2022-08-05 16:00:00', '2022-08-05 17:00:00', ''),
+(94, 2, 1, 0, 'Trabajador...', '', '2022-08-05 23:00:00', '0000-00-00 00:00:00', ''),
+(95, 2, 1, 0, 'Angela Alania', '', '2022-08-05 22:00:00', '2022-08-05 23:00:00', ''),
+(96, 17, 10, 0, 'Jorge Milian', '', '2022-08-05 10:00:00', '2022-08-05 11:00:00', ''),
+(97, 2, 1, 2, 'Ernesto Cavassa ', '', '2022-08-04 05:00:00', '2022-08-04 06:00:00', ''),
+(98, 2, 1, 2, 'Ernesto Cavassa ', '', '2022-08-08 12:00:00', '2022-08-08 13:00:00', '');
 
 --
 -- Índices para tablas volcadas
@@ -278,9 +284,9 @@ ALTER TABLE `inicio`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `otros`
+-- Indices de la tabla `logistica`
 --
-ALTER TABLE `otros`
+ALTER TABLE `logistica`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -330,10 +336,10 @@ ALTER TABLE `inicio`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `otros`
+-- AUTO_INCREMENT de la tabla `logistica`
 --
-ALTER TABLE `otros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+ALTER TABLE `logistica`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `otrostrabajadores`
@@ -345,7 +351,7 @@ ALTER TABLE `otrostrabajadores`
 -- AUTO_INCREMENT de la tabla `padres`
 --
 ALTER TABLE `padres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `sistemas`
@@ -357,7 +363,7 @@ ALTER TABLE `sistemas`
 -- AUTO_INCREMENT de la tabla `vuelos`
 --
 ALTER TABLE `vuelos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
