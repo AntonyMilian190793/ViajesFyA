@@ -10,7 +10,7 @@ class OtrosC{
 
             if(preg_match('/^[a-zA-Z0-9]+$/', $_POST["usuario-Ing"]) && preg_match('/^[a-zA-Z0-9]+$/', $_POST["clave-Ing"])){
 
-                $tablaBD = "otros";
+                $tablaBD = "logistica";
 
                 $datosC = array("usuario"=>$_POST["usuario-Ing"], "clave"=>$_POST["clave-Ing"]);
 
@@ -47,7 +47,7 @@ class OtrosC{
     //ver perfil otros
     public function VerPefilOtrosC(){
 
-        $tablaBD = "otros";
+        $tablaBD = "logistica";
 
         $id = $_SESSION["id"];
         $resultado = OtrosM::VerPefilOtrosC($tablaBD, $id);
@@ -72,7 +72,7 @@ class OtrosC{
 
 
         echo '<td>
-            <a href="http://localhost/ViajesFyA/perfil-O/'.$resultado["id"].'">
+            <a href="http://localhost/ViajesFyA/perfil-L/'.$resultado["id"].'">
                 <button class="btn btn-success"><i class="fa fa-pencil"></i></button>
             </a>
         </td>
@@ -84,7 +84,7 @@ class OtrosC{
 
     public function EditarPerfilOtrosC(){
 
-        $tablaBD = "otros";
+        $tablaBD = "logistica";
 
         $id = $_SESSION["id"];
         $resultado = OtrosM::VerPefilOtrosC($tablaBD, $id);
@@ -193,7 +193,7 @@ class OtrosC{
 
 			}
 
-        $tablaBD = "otros";
+        $tablaBD = "logistica";
 
         $datosC = array("id"=>$_POST["idP"], 
         "nombre"=>$_POST["nombreP"], 
@@ -208,7 +208,7 @@ class OtrosC{
 
             echo '<script>
 
-            window.location = "http://localhost/ViajesFyA/perfil-O/'.$_SESSION["id"].'";
+            window.location = "http://localhost/ViajesFyA/perfil-L/'.$_SESSION["id"].'";
             
             </script>';
 
@@ -220,7 +220,7 @@ class OtrosC{
     //mostrar secretaria
     public function VerOtrosC(){
 
-        $tablaBD = "otros";
+        $tablaBD = "logistica";
         $resultado = OtrosM::VerOtrosM($tablaBD);
 
         return $resultado;
@@ -232,7 +232,7 @@ class OtrosC{
 
         if(isset($_POST["rolS"])){
 
-            $tablaBD = "otros";
+            $tablaBD = "logistica";
             $datosC = array(
                 "nombre" => $_POST["nombre"],
                 "apellido" => $_POST["apellido"],
@@ -260,7 +260,7 @@ class OtrosC{
 
         if($_GET["Sid"]){
 
-            $tablaBD = "otros";
+            $tablaBD = "logistica";
             $id = $_GET["Sid"];
 
             if($_GET["imgS"] != ""){

@@ -16,7 +16,7 @@
             <div class="icon">
               <i class="fa fa-female"></i>
             </div>
-            <a href="ingreso-Secretarias" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="ingreso-Logistica" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 
@@ -47,7 +47,7 @@
             <div class="icon">
               <i class="fa fa-user"></i>
             </div>
-            <a href="ingreso-Padre" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="ingreso-JefeArea" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -62,7 +62,7 @@
             <div class="icon">
               <i class="fa fa-user-circle-o"></i>
             </div>
-            <a href="ingreso-Administracion" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="ingreso-Colaborador" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
