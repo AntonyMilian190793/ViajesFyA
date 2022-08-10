@@ -29,8 +29,8 @@
 
     <?php
 
-        $ingreso = new PadresC();
-        $ingreso -> IngresarPadreC();
+        $ingreso = new AdministracionC();
+        $ingreso -> IngresarAdministracionC();
     
     ?>
 

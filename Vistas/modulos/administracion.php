@@ -108,7 +108,7 @@ if ($_SESSION["rol"] != "Sistemas") {
                         <div class="form-group">
                             <h2>Apellidos:</h2>
                             <input type="text" class="form-control" name="apellido" required>
-                            <input type="hidden" name="rolA" value="Administracion">
+                            <input type="hidden" name="rolA" value="JefeArea">
                         </div>
 
                         <div class="form-group">

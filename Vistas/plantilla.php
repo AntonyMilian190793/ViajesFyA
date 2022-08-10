@@ -71,7 +71,7 @@ session_start();
 
       include "modulos/menuLogistica.php";
 
-    }else if($_SESSION["rol"] == "Administracion"){
+    }else if($_SESSION["rol"] == "JefeArea"){
       include "modulos/menuColaboradores.php";
     }else if($_SESSION["rol"] == "Directivo"){
       include "modulos/menuDirectivo.php";

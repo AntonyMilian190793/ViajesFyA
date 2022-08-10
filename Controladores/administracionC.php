@@ -10,7 +10,7 @@ class AdministracionC{
 
             if(preg_match('/^[a-zA-Z0-9]+$/' , $_POST["usuario-Ing"]) && preg_match('/^[a-zA-Z0-9]+$/' , $_POST["clave-Ing"])){
 
-                $tablaBD = "administracion";
+                $tablaBD = "jefesarea";
                 $datosC = array("usuario"=>$_POST["usuario-Ing"], "clave"=>$_POST["clave-Ing"]);
                 $resultado = AdministracionM::IngresarAdministracionM($tablaBD, $datosC);
 
@@ -42,7 +42,7 @@ class AdministracionC{
     //ver perfil administracion
     public function VerPefilAdministracionC(){
 
-        $tablaBD = "administracion";
+        $tablaBD = "jefesarea";
         $id = $_SESSION["id"];
         $resultado = AdministracionM::VerPefilAdministracionM($tablaBD, $id);
 
@@ -75,7 +75,7 @@ class AdministracionC{
     //editar perfil administracion
     public function EditarPerfilAdministracionC(){
 
-        $tablaBD = "administracion";
+        $tablaBD = "jefesarea";
         $id = $_SESSION["id"];
         $resultado = AdministracionM::VerPefilAdministracionM($tablaBD, $id);
 
@@ -170,7 +170,7 @@ class AdministracionC{
 
 			}
 
-            $tablaBD = "administracion";
+            $tablaBD = "jefesarea";
             $datosC = array("id" => $_POST["Pid"], "nombre" => $_POST["nombrePerfil"], "apellido" => $_POST["apellidoPerfil"], 
             "usuario" => $_POST["usuarioPerfil"], "clave" => $_POST["clavePerfil"], "documento" => $_POST["documentoPerfil"], 
             "foto" => $rutaImg);
@@ -188,7 +188,7 @@ class AdministracionC{
     //ver administracion 
     static public function VerAdministracionC($columna, $valor){
 
-        $tablaBD = "administracion";
+        $tablaBD = "jefesarea";
         $resultado = AdministracionM::VerAdministracionM($tablaBD, $columna, $valor);
 
         return $resultado;
@@ -197,7 +197,7 @@ class AdministracionC{
     //ver trabajadores administracion
     public function VerAdministracionTC(){
 
-        $tablaBD = "administracion";
+        $tablaBD = "jefesarea";
         $resultado = AdministracionM::VerAdministracionTM($tablaBD);
 
         return $resultado;
@@ -208,7 +208,7 @@ class AdministracionC{
 
             if(isset($_POST["rolA"])){
 
-                $tablaBD = "administracion";
+                $tablaBD = "jefesarea";
                 $datosC = array("apellido"=>$_POST["apellido"],"nombre"=>$_POST["nombre"],"documento"=>$_POST["documento"],
                 "usuario"=>$_POST["usuario"],"clave"=>$_POST["clave"], "rol"=>$_POST["rolA"]);
 
@@ -227,7 +227,7 @@ class AdministracionC{
         public function BorrarAdministracionC(){
 
         if(isset($_GET["Aid"])){
-            $tablaBD = "administracion";
+            $tablaBD = "jefesarea";
             $id = $_GET["Aid"];
 
             if($_GET["imgA"] != ""){

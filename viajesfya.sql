@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-08-2022 a las 06:49:03
+-- Tiempo de generación: 10-08-2022 a las 19:59:08
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -20,33 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `viajesfya`
 --
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `administracion`
---
-
-CREATE TABLE `administracion` (
-  `id` int(11) NOT NULL,
-  `apellido` text NOT NULL,
-  `nombre` text NOT NULL,
-  `documento` text NOT NULL,
-  `foto` text NOT NULL,
-  `usuario` text NOT NULL,
-  `clave` text NOT NULL,
-  `rol` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `administracion`
---
-
-INSERT INTO `administracion` (`id`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `clave`, `rol`) VALUES
-(1, 'Quijaite', 'Víctor', '98716111', 'Vistas/img/Administracion/administracion115.png', 'vquijaite123', '123', 'Administracion'),
-(5, 'Milian', 'Jorge', '70311233', '', 'jmilian', '123', 'Administracion'),
-(6, 'Verano', 'Jhony', '7011233', '', 'jverano', '123', 'Administracion'),
-(9, 'Alania', 'Angela', '7033122', 'Vistas/img/Administracion/administracion833.png', 'aalania', '123', 'Administracion');
 
 -- --------------------------------------------------------
 
@@ -128,6 +101,32 @@ CREATE TABLE `inicio` (
 
 INSERT INTO `inicio` (`id`, `intro`, `horaE`, `horaS`, `telefono`, `correo`, `direccion`, `logo`, `favicon`) VALUES
 (1, 'sta página se utilizará para...', '06:00:00', '01:00:00', '993753004', 'jmilian@feyalegria.org.pe', 'Jirón Cahuide 884 - Jesús María', 'Vistas/img/logo.png', 'Vistas/img/favicon.png');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `jefesarea`
+--
+
+CREATE TABLE `jefesarea` (
+  `id` int(11) NOT NULL,
+  `apellido` text NOT NULL,
+  `nombre` text NOT NULL,
+  `documento` text NOT NULL,
+  `foto` text NOT NULL,
+  `usuario` text NOT NULL,
+  `clave` text NOT NULL,
+  `rol` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `jefesarea`
+--
+
+INSERT INTO `jefesarea` (`id`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `clave`, `rol`) VALUES
+(1, 'Quijaite', 'Víctor', '98716111', 'Vistas/img/Administracion/administracion115.png', 'vquijaite123', '123', 'JefeArea'),
+(6, 'Verano', 'Jhony', '7011233', '', 'jverano', '123', 'JefeArea'),
+(9, 'Alania', 'Angela', '7033122', 'Vistas/img/Administracion/administracion833.png', 'aalania', '123', 'JefeArea');
 
 -- --------------------------------------------------------
 
@@ -264,12 +263,6 @@ INSERT INTO `vuelos` (`id`, `id_padre`, `id_consulta`, `id_administracion`, `nya
 --
 
 --
--- Indices de la tabla `administracion`
---
-ALTER TABLE `administracion`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indices de la tabla `consultas`
 --
 ALTER TABLE `consultas`
@@ -285,6 +278,12 @@ ALTER TABLE `directivos`
 -- Indices de la tabla `inicio`
 --
 ALTER TABLE `inicio`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `jefesarea`
+--
+ALTER TABLE `jefesarea`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -316,12 +315,6 @@ ALTER TABLE `vuelos`
 --
 
 --
--- AUTO_INCREMENT de la tabla `administracion`
---
-ALTER TABLE `administracion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
 -- AUTO_INCREMENT de la tabla `consultas`
 --
 ALTER TABLE `consultas`
@@ -338,6 +331,12 @@ ALTER TABLE `directivos`
 --
 ALTER TABLE `inicio`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `jefesarea`
+--
+ALTER TABLE `jefesarea`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `logistica`
