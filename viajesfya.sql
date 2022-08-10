@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-08-2022 a las 22:11:15
+-- Tiempo de generación: 10-08-2022 a las 06:49:03
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -74,6 +74,35 @@ INSERT INTO `consultas` (`id`, `nombre`) VALUES
 (11, 'Recursos Humanos'),
 (12, 'Legal'),
 (13, 'Secretaria');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `directivos`
+--
+
+CREATE TABLE `directivos` (
+  `id` int(11) NOT NULL,
+  `id_consulta` int(11) NOT NULL,
+  `apellido` text NOT NULL,
+  `nombre` text NOT NULL,
+  `foto` text NOT NULL,
+  `usuario` text NOT NULL,
+  `clave` text NOT NULL,
+  `sexo` text NOT NULL,
+  `horarioE` time NOT NULL,
+  `horarioS` time NOT NULL,
+  `rol` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `directivos`
+--
+
+INSERT INTO `directivos` (`id`, `id_consulta`, `apellido`, `nombre`, `foto`, `usuario`, `clave`, `sexo`, `horarioE`, `horarioS`, `rol`) VALUES
+(2, 1, 'Cavassa ', 'Ernesto', 'Vistas/img/Padres/Pad-199.png', 'ernesto', '123', 'Masculino', '08:00:00', '18:00:00', 'Directivo'),
+(3, 1, 'Piñeyro', 'Javier', 'Vistas/img/Padres/Pad-113.png', 'javier', '123', 'Masculino', '00:00:00', '00:00:00', 'Directivo'),
+(6, 1, 'Morelli', 'Oscar', 'Vistas/img/Padres/Pad-177.png', 'oscar', '123', 'Masculino', '00:00:00', '00:00:00', 'Directivo');
 
 -- --------------------------------------------------------
 
@@ -153,43 +182,6 @@ INSERT INTO `otrostrabajadores` (`id`, `apellido`, `nombre`, `documento`, `foto`
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `padres`
---
-
-CREATE TABLE `padres` (
-  `id` int(11) NOT NULL,
-  `id_consulta` int(11) NOT NULL,
-  `apellido` text NOT NULL,
-  `nombre` text NOT NULL,
-  `foto` text NOT NULL,
-  `usuario` text NOT NULL,
-  `clave` text NOT NULL,
-  `sexo` text NOT NULL,
-  `horarioE` time NOT NULL,
-  `horarioS` time NOT NULL,
-  `rol` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `padres`
---
-
-INSERT INTO `padres` (`id`, `id_consulta`, `apellido`, `nombre`, `foto`, `usuario`, `clave`, `sexo`, `horarioE`, `horarioS`, `rol`) VALUES
-(2, 1, 'Cavassa ', 'Ernesto', 'Vistas/img/Padres/Pad-199.png', 'ernesto123', '123', 'Masculino', '08:00:00', '18:00:00', 'Padre'),
-(3, 1, 'Piñeyro', 'Javier', 'Vistas/img/Padres/Pad-113.png', 'javier123', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
-(6, 1, 'Morelli', 'Oscar', 'Vistas/img/Padres/Pad-177.png', 'oscar123', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
-(15, 9, 'Liendo', 'Ada', '', 'aliendo', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
-(16, 8, 'Alacaste', 'Aba', '', 'aliendo', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
-(17, 10, 'Verano', 'Jhony', '', 'jverano', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
-(18, 5, 'Alania', 'Angela', '', 'aalania', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
-(19, 11, 'Vargas', 'Julia', '', 'jvargas', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
-(20, 7, 'Auqui', 'Hisela', '', 'jaqui', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
-(21, 12, 'Acero', 'Katheryn', '', 'kacero', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
-(22, 13, 'Portilla', 'Maria', '', 'mportilla', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre');
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `sistemas`
 --
 
@@ -259,7 +251,13 @@ INSERT INTO `vuelos` (`id`, `id_padre`, `id_consulta`, `id_administracion`, `nya
 (95, 2, 1, 0, 'Angela Alania', '', '2022-08-05 22:00:00', '2022-08-05 23:00:00', ''),
 (96, 17, 10, 0, 'Jorge Milian', '', '2022-08-05 10:00:00', '2022-08-05 11:00:00', ''),
 (97, 2, 1, 2, 'Ernesto Cavassa ', '', '2022-08-04 05:00:00', '2022-08-04 06:00:00', ''),
-(98, 2, 1, 2, 'Ernesto Cavassa ', '', '2022-08-08 12:00:00', '2022-08-08 13:00:00', '');
+(98, 2, 1, 2, 'Ernesto Cavassa ', '', '2022-08-08 12:00:00', '2022-08-08 13:00:00', ''),
+(99, 0, 0, 5, 'Jorge Milian', '70311233', '2022-08-09 13:00:00', '2022-08-09 14:00:00', ''),
+(100, 0, 0, 5, 'Jorge Milian', '70311233', '2022-08-09 08:00:00', '2022-08-09 09:00:00', ''),
+(101, 15, 9, 0, 'Jorge Milian', '', '2022-08-09 08:00:00', '2022-08-09 09:00:00', ''),
+(102, 2, 1, 2, 'Ernesto Cavassa ', '', '2022-08-09 15:00:00', '2022-08-09 16:00:00', ''),
+(103, 6, 1, 15, 'Angela Alania', '', '2022-08-09 19:00:00', '2022-08-09 20:00:00', ''),
+(104, 19, 11, 15, 'Angela Alania', '', '2022-08-09 19:00:00', '2022-08-09 20:00:00', '');
 
 --
 -- Índices para tablas volcadas
@@ -278,6 +276,12 @@ ALTER TABLE `consultas`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `directivos`
+--
+ALTER TABLE `directivos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `inicio`
 --
 ALTER TABLE `inicio`
@@ -293,12 +297,6 @@ ALTER TABLE `logistica`
 -- Indices de la tabla `otrostrabajadores`
 --
 ALTER TABLE `otrostrabajadores`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `padres`
---
-ALTER TABLE `padres`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -330,6 +328,12 @@ ALTER TABLE `consultas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
+-- AUTO_INCREMENT de la tabla `directivos`
+--
+ALTER TABLE `directivos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+--
 -- AUTO_INCREMENT de la tabla `inicio`
 --
 ALTER TABLE `inicio`
@@ -348,12 +352,6 @@ ALTER TABLE `otrostrabajadores`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT de la tabla `padres`
---
-ALTER TABLE `padres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
-
---
 -- AUTO_INCREMENT de la tabla `sistemas`
 --
 ALTER TABLE `sistemas`
@@ -363,7 +361,7 @@ ALTER TABLE `sistemas`
 -- AUTO_INCREMENT de la tabla `vuelos`
 --
 ALTER TABLE `vuelos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
