@@ -6,7 +6,7 @@
         public function CrearPadreC(){
 
             if(isset($_POST["rolP"])){
-                $tablaBD = "padres";
+                $tablaBD = "directivos";
                 $datosC = array("rol"=>$_POST["rolP"], "apellido"=>$_POST["apellido"], "nombre"=>$_POST["nombre"], 
                 "sexo"=>$_POST["sexo"], "id_consulta"=>$_POST["consulta"], "usuario"=>$_POST["usuario"], "clave"=>$_POST["clave"]);
 
@@ -23,7 +23,7 @@
 
         //mostar Padres
         static public function VerPadresC($columna, $valor){
-            $tablaBD = "padres";
+            $tablaBD = "directivos";
             $resultado = PadresM::VerPadresM($tablaBD, $columna, $valor);
 
             return $resultado;
@@ -32,7 +32,7 @@
 
         //editar Padres
         static public function PadreC($columna, $valor){
-            $tablaBD = "padres";
+            $tablaBD = "directivos";
             $resultado = PadresM::PadreM($tablaBD, $columna, $valor);
 
             return $resultado;
@@ -43,7 +43,7 @@
 
             if(isset($_POST["Pid"])){
 
-                $tablaBD = "padres";
+                $tablaBD = "directivos";
                 $datosC = array("id"=>$_POST["Pid"], "apellido"=>$_POST["apellidoE"], "nombre"=>$_POST["nombreE"], "sexo"=>$_POST["sexoE"],
                 "usuario"=>$_POST["usuarioE"], "clave"=>$_POST["claveE"]);
 
@@ -62,7 +62,7 @@
 
             if(isset($_GET["Pid"])){
 
-                $tablaBD = "padres";
+                $tablaBD = "directivos";
                 $id = $_GET["Pid"];
 
                 if($_GET["imgD"] != ""){
@@ -86,7 +86,7 @@
 
             if(preg_match('/^[a-zA-Z0-9]+$/' , $_POST["usuario-Ing"]) && preg_match('/^[a-zA-Z0-9]+$/' , $_POST["clave-Ing"])){
 
-                $tablaBD = "padres";
+                $tablaBD = "directivos";
                 $datosC = array("usuario"=>$_POST["usuario-Ing"], "clave"=>$_POST["clave-Ing"]);
                 $resultado = PadresM::IngresarPadreM($tablaBD, $datosC);
 
@@ -118,7 +118,7 @@
     //ver perfil padres
     public function VerPerfilPadre(){
 
-        $tablaBD = "padres";
+        $tablaBD = "directivos";
         $id = $_SESSION["id"];
         $resultado = PadresM::VerPerfilPadreM($tablaBD, $id);
 
@@ -164,7 +164,7 @@
     //editar perfil Padre
     public function EditarPerfilPadreC(){
 
-        $tablaBD = "padres";
+        $tablaBD = "directivos";
         $id = $_SESSION["id"];
         $resultado = PadresM::VerPerfilPadreM($tablaBD, $id);
 
@@ -263,7 +263,7 @@
                 }
             }
 
-            $tablaBD = "padres";
+            $tablaBD = "directivos";
             $datosC = array(
                 "id" => $_POST['Did'],
                 "nombre" => $_POST['nombrePerfil'],

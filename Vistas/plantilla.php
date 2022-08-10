@@ -73,7 +73,7 @@ session_start();
 
     }else if($_SESSION["rol"] == "Administracion"){
       include "modulos/menuColaboradores.php";
-    }else if($_SESSION["rol"] == "Padre"){
+    }else if($_SESSION["rol"] == "Directivo"){
       include "modulos/menuDirectivo.php";
     }else if($_SESSION["rol"] == "Sistemas"){
       include "modulos/menuSistemas.php";
