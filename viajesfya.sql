@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-08-2022 a las 17:59:29
+-- Tiempo de generación: 24-08-2022 a las 07:20:11
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -20,32 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `viajesfya`
 --
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `colaboradores`
---
-
-CREATE TABLE `colaboradores` (
-  `id` int(11) NOT NULL,
-  `apellido` text NOT NULL,
-  `nombre` text NOT NULL,
-  `documento` text NOT NULL,
-  `foto` text NOT NULL,
-  `usuario` text NOT NULL,
-  `clave` text NOT NULL,
-  `rol` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `colaboradores`
---
-
-INSERT INTO `colaboradores` (`id`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `clave`, `rol`) VALUES
-(1, 'Milian Montalvo', 'Jorge Antony', '70311233', '', 'antony123', '123', 'otrosTrabajadores'),
-(4, 'More', 'Alex', '70522122', '', 'alex123', '123', 'otrosTrabajadores'),
-(11, 'Esquivel', 'Hanns', '7088122', '', 'hans123', '123', 'otrosTrabajadores');
 
 -- --------------------------------------------------------
 
@@ -180,6 +154,32 @@ INSERT INTO `logistica` (`id`, `usuario`, `clave`, `nombre`, `apellido`, `foto`,
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `otrostrabajadores`
+--
+
+CREATE TABLE `otrostrabajadores` (
+  `id` int(11) NOT NULL,
+  `apellido` text NOT NULL,
+  `nombre` text NOT NULL,
+  `documento` text NOT NULL,
+  `foto` text NOT NULL,
+  `usuario` text NOT NULL,
+  `clave` text NOT NULL,
+  `rol` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `otrostrabajadores`
+--
+
+INSERT INTO `otrostrabajadores` (`id`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `clave`, `rol`) VALUES
+(1, 'Milian Montalvo', 'Jorge Antony', '70311233', '', 'jmilian', '123', 'otrosTrabajadores'),
+(4, 'More', 'Alex', '70522122', '', 'alex123', '123', 'otrosTrabajadores'),
+(11, 'Esquivel', 'Hanns', '7088122', '', 'hans123', '123', 'otrosTrabajadores');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `sistemas`
 --
 
@@ -262,12 +262,6 @@ INSERT INTO `vuelos` (`id`, `id_padre`, `id_consulta`, `id_administracion`, `nya
 --
 
 --
--- Indices de la tabla `colaboradores`
---
-ALTER TABLE `colaboradores`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indices de la tabla `consultas`
 --
 ALTER TABLE `consultas`
@@ -298,6 +292,12 @@ ALTER TABLE `logistica`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `otrostrabajadores`
+--
+ALTER TABLE `otrostrabajadores`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `sistemas`
 --
 ALTER TABLE `sistemas`
@@ -312,12 +312,6 @@ ALTER TABLE `vuelos`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
-
---
--- AUTO_INCREMENT de la tabla `colaboradores`
---
-ALTER TABLE `colaboradores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `consultas`
@@ -348,6 +342,12 @@ ALTER TABLE `jefesarea`
 --
 ALTER TABLE `logistica`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT de la tabla `otrostrabajadores`
+--
+ALTER TABLE `otrostrabajadores`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `sistemas`

@@ -68,15 +68,15 @@ session_start();
     include "modulos/cabecera.php";
 
     if($_SESSION["rol"] == "Logistica"){
-
       include "modulos/menuLogistica.php";
-
     }else if($_SESSION["rol"] == "JefeArea"){
       include "modulos/menuColaboradores.php";
     }else if($_SESSION["rol"] == "Directivo"){
       include "modulos/menuDirectivo.php";
     }else if($_SESSION["rol"] == "Sistemas"){
       include "modulos/menuSistemas.php";
+    }else if($_SESSION["rol"] == "otrosTrabajadores"){
+      include "modulos/menuColaboradores.php";
     }
     
   
@@ -93,8 +93,9 @@ session_start();
        || $url[0] == "E-C" || $url[0] == "padres" || $url[0] == "otrosTrabajadores" || $url[0] == "perfil-Administracion" 
        || $url[0] == "perfil-A" || $url[0] == "Ver-areas" || $url[0] == "Padre" || $url[0] == "historial" || $url[0] == "perfil-Padre" 
        || $url[0] == "perfil-P" || $url[0] == "Vuelos" | $url[0] == "perfil-Sistemas" || $url[0] == "perfil-S" || $url[0] == "perfil-S" 
-       || $url[0] == "secretarias" || $url[0] == "administracion" || $url[0] == "inicio-editar" || $url[0] == "perfil-Directivo" || $url[0] == "perfil-Logistica"
-       || $url[0] == "perfil-L") {
+       || $url[0] == "secretarias" || $url[0] == "administracion" || $url[0] == "inicio-editar" || $url[0] == "perfil-Directivo" 
+       || $url[0] == "perfil-Logistica" || $url[0] == "perfil-L" || $url[0] == "perfil-otrosTrabajadores" || $url[0] == "perfil-oT"
+       || $url[0] == "perfil-Directivo" || $url[0] == "perfil-D") {
 
         include "modulos/" . $url[0] . ".php";
       }

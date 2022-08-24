@@ -29,8 +29,8 @@
 
     <?php
 
-        $ingreso = new AdministracionC();
-        $ingreso -> IngresarAdministracionC();
+        $ingreso = new ColaboradorC();
+        $ingreso -> IngresoColaboradorC();
     
     ?>
 
