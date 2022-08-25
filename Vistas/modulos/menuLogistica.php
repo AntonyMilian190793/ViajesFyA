@@ -11,13 +11,6 @@
       </li>
 
       <li>
-        <a href="http://localhost/ViajesFyA/padres">
-          <i class="fa fa-user"></i>
-          <span>Jefes de Área</span>
-        </a>
-      </li>
-
-      <li>
         <a href="http://localhost/ViajesFyA/consultas">
           <i class="fa fa-address-book-o"></i>
           <span>Áreas</span>
@@ -25,9 +18,16 @@
       </li>
 
       <li>
+        <a href="http://localhost/ViajesFyA/padres">
+          <i class="fa fa-user"></i>
+          <span>Directivos</span>
+        </a>
+      </li>
+
+      <li>
         <a href="http://localhost/ViajesFyA/otrosTrabajadores">
           <i class="fa fa-users"></i>
-          <span>Otros Trabajadores</span>
+          <span>Colaboradores</span>
         </a>
       </li>
 

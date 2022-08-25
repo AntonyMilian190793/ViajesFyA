@@ -70,7 +70,7 @@ session_start();
     if($_SESSION["rol"] == "Logistica"){
       include "modulos/menuLogistica.php";
     }else if($_SESSION["rol"] == "JefeArea"){
-      include "modulos/menuColaboradores.php";
+      include "modulos/menuJefeArea.php";
     }else if($_SESSION["rol"] == "Directivo"){
       include "modulos/menuDirectivo.php";
     }else if($_SESSION["rol"] == "Sistemas"){
