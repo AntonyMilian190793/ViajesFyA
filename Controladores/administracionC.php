@@ -243,6 +243,15 @@ class AdministracionC{
             }  
         }
     }
+
+    
+        //calendario jefea area
+        static public function PadreC($columna, $valor){
+            $tablaBD = "jefesarea";
+            $resultado = AdministracionM::PadreM($tablaBD, $columna, $valor);
+
+            return $resultado;
+        }
 }
 
 ?>
