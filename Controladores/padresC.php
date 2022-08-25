@@ -154,7 +154,7 @@
         </td>
         
         <td>
-            <a href="http://localhost/ViajesFyA/perfil-P/'.$resultado["id"].'">
+            <a href="http://localhost/ViajesFyA/perfil-D/'.$resultado["id"].'">
                 <button class="btn btn-success"><i class="fa fa-pencil"></i></button>
             </a>
         </td>
@@ -282,7 +282,7 @@
 
                 echo '<script>
                 
-                    window.location = "http://localhost/ViajesFyA/perfil-P/'.$_SESSION["id"].'";
+                    window.location = "http://localhost/ViajesFyA/perfil-D/'.$_SESSION["id"].'";
                 
                 </script>';
             }
