@@ -196,7 +196,7 @@ session_start();
 
     $('#calendar').fullCalendar({
 
-      hiddenDays: [0, 6],
+      // hiddenDays: [0, 6],
       defaultView: 'agendaWeek',
 
       events: [

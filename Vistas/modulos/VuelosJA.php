@@ -66,8 +66,8 @@ if ($_SESSION["id"] != substr($_GET["url"], 9)) {
                         <?php
 
                             $columna = "id";
-                            $valor = substr($_GET["url"], 7);
-                            $resultado = PadresC::PadreC($columna, $valor);
+                            $valor = substr($_GET["url"], 9);
+                            $resultado = AdministracionC::VerAdministracionC($columna, $valor);
 
                             echo '                         
                             
@@ -101,9 +101,9 @@ if ($_SESSION["id"] != substr($_GET["url"], 9)) {
 
                                 $columna = null;
                                 $valor = null;
-                                //$resultado	= OtrosTC::VerOtrosTC($columna, $valor);
+                                $resultado	= OtrosTC::VerOtrosTC($columna, $valor);
                                 //$resultado	= OtrosC::VerOtrosTC($columna, $valor);
-                                $resultado	= AdministracionC::VerAdministracionC($columna, $valor);
+                                //$resultado	= AdministracionC::VerAdministracionC($columna, $valor);
 
                                 foreach ($resultado as $key => $value) {
 
