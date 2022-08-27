@@ -188,8 +188,8 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                 </div>
 
                 <?php
-                // $actualizar = new PadresC();
-                // $actualizar ->ActualizarPadreC();
+                    $actualizar = new OtrosTC();
+                    $actualizar ->ActualizarOtrosTC();
                 ?>
             </form>
         </div>
