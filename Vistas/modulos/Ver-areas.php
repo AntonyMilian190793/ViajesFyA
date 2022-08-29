@@ -1,6 +1,6 @@
 <?php
 
-if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "JefeArea") {
+if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "JefeArea" && $_SESSION["rol"] != "otrosTrabajadores") {
 
     echo '<script>
   
@@ -45,7 +45,6 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
                                 echo ' <a href="Padre/'.$value["id"].'" style="color:black;"><p>'.$value["apellido"].' '.$value["nombre"].'</p></a>';
                             }
 
-                           
                         echo '</div>
                     </div>
                     

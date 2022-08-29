@@ -10,26 +10,26 @@
         </a>
       </li>
 
-      <li>
+      <!-- <li>
         <a href="http://localhost/ViajesFyA/consultas">
           <i class="fa fa-address-book-o"></i>
           <span>Áreas</span>
         </a>
-      </li>
+      </li> -->
 
-      <li>
+      <!-- <li>
         <a href="http://localhost/ViajesFyA/padres">
           <i class="fa fa-user"></i>
           <span>Directivos</span>
         </a>
-      </li>
+      </li> -->
 
-      <li>
+      <!-- <li>
         <a href="http://localhost/ViajesFyA/otrosTrabajadores">
           <i class="fa fa-users"></i>
           <span>Colaboradores</span>
         </a>
-      </li>
+      </li> -->
 
       <li>
         <a href="http://localhost/ViajesFyA/Ver-areas">
@@ -38,12 +38,12 @@
         </a>
       </li>
 
-      <li>
+      <!-- <li>
         <a href="http://localhost/ViajesFyA/Ver-areas">
           <i class="fa fa-address-book-o"></i>
           <span>Áreas</span>
         </a>
-      </li>
+      </li> -->
 
     </ul>
 

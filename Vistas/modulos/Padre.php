@@ -1,6 +1,6 @@
 <?php
 
-if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "JefeArea") {
+if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "JefeArea" && $_SESSION["rol"] != "otrosTrabajadores") {
 
     echo '<script>
   
@@ -77,13 +77,29 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
                                 <input type="text" class="form-control input-lg" name="nyaC" value="'.$_SESSION["nombre"].' '.$_SESSION["apellido"].'" readonly>
                                 <input type="hidden" name="Did" value="'.$resultado["id"].'">
                                 <input type="hidden" name="Pid" value="'.$_SESSION["id"].'" >
+                                
                             
                             </div>
 
                         <div class="form-group">
                             <h2>Documento:</h2>
                             <input type="text" class="form-control input-lg" name="documentoC" value="'.$_SESSION["documento"].'" readonly>
+                        </div>
+                        
+                        <div class="form-group">
+                            <h2>Seleccionar trabajador:</h2>
+                            <select class="form-control input-lg" name="nombreP">
+                                <option>Trabajador...</option>
                         </div>';
+
+                                $columna = null;
+                                $valor = null;
+                                $resultado	= OtrosTC::VerOtrosTC($columna, $valor);
+
+                                foreach ($resultado as $key => $value) {
+
+                                    echo '<option value="'.$value["nombre"].' '.$value["apellido"].'">'.$value["apellido"].' '.$value["nombre"].'</option>';
+                                }
 
                         $columna = "id";
                         $valor = $resultado["id_consulta"];
