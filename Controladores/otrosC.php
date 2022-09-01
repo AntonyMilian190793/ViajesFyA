@@ -281,6 +281,16 @@ class OtrosC{
             }
         }
     }
+
+    
+    //ver logistica 
+    static public function VerOtroC($columna, $valor){
+
+        $tablaBD = "logistica";
+        $resultado = OtrosM::VerOtroM($tablaBD, $columna, $valor);
+
+        return $resultado;
+    }
 }
 
 ?>

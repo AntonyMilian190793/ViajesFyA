@@ -21,7 +21,7 @@
         <li>
         <?php
         
-          echo '<a href="http://localhost/ViajesFyA/Vuelos/'.$_SESSION["id"].'">';
+          echo '<a href="http://localhost/ViajesFyA/VuelosJA/'.$_SESSION["id"].'">';
 
         ?>
         

@@ -70,6 +70,15 @@
             }  
         }
     }
+
+        //ver logistica 
+    static public function VerOtroTC($columna, $valor){
+
+        $tablaBD = "otrosTrabajadores";
+        $resultado = OtrosTM::VerOtroTM($tablaBD, $columna, $valor);
+
+        return $resultado;
+    }
 }
 
 ?>
