@@ -73,8 +73,8 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
                             
                             <div class="form-group">
 
-                                <h2>Nombre del Trabajador:</h2>
-                                <input type="text" class="form-control input-lg" name="nyaC" value="'.$_SESSION["nombre"].' '.$_SESSION["apellido"].'" readonly>
+                                <h2>Usted es...</h2>
+                                <input type="hiden" class="form-control input-lg" name="nyaC" value="'.$_SESSION["nombre"].' '.$_SESSION["apellido"].'" readonly >
                                 <input type="hidden" name="Did" value="'.$resultado["id"].'">
                                 <input type="hidden" name="Pid" value="'.$_SESSION["id"].'" >
                                 
@@ -82,7 +82,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
                             </div>
 
                         <div class="form-group">
-                            <h2>Documento:</h2>
+                            <h2>Su documento es...</h2>
                             <input type="text" class="form-control input-lg" name="documentoC" value="'.$_SESSION["documento"].'" readonly>
                         </div>
                         

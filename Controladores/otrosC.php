@@ -24,6 +24,7 @@ class OtrosC{
                     $_SESSION["usuario"] = $resultado["usuario"];
                     $_SESSION["nombre"] = $resultado["nombre"];
                     $_SESSION["apellido"] = $resultado["apellido"];
+                    $_SESSION["documento"] = $resultado["documento"];
                     $_SESSION["foto"] = $resultado["foto"];
                     $_SESSION["rol"] = $resultado["rol"];
 
@@ -50,7 +51,7 @@ class OtrosC{
         $tablaBD = "logistica";
 
         $id = $_SESSION["id"];
-        $resultado = OtrosM::VerPefilOtrosC($tablaBD, $id);
+        $resultado = OtrosM::VerPefilOtrosM($tablaBD, $id);
 
         echo 
         '<tr>
@@ -70,8 +71,10 @@ class OtrosC{
 
         }
 
+        echo '<td>'.$resultado["documento"].'</td>
 
-        echo '<td>
+
+        <td>
             <a href="http://localhost/ViajesFyA/perfil-L/'.$resultado["id"].'">
                 <button class="btn btn-success"><i class="fa fa-pencil"></i></button>
             </a>
@@ -87,7 +90,7 @@ class OtrosC{
         $tablaBD = "logistica";
 
         $id = $_SESSION["id"];
-        $resultado = OtrosM::VerPefilOtrosC($tablaBD, $id);
+        $resultado = OtrosM::VerPefilOtrosM($tablaBD, $id);
 
         echo 
         '<form method="post" enctype="multipart/form-data">
@@ -105,6 +108,9 @@ class OtrosC{
 
                 <h2>Usuario:</h2>
                 <input type="text" class="input-lg" name="usuarioP" value="'.$resultado['usuario'].'">
+
+                <h2>Documento:</h2>
+                <input type="text" class="input-lg" name="documentoP" value="'.$resultado['documento'].'">
 
                 <h2>Contraseña:</h2>
                 <input type="text" class="input-lg" name="claveP" value="'.$resultado['clave'].'">
@@ -198,7 +204,8 @@ class OtrosC{
         $datosC = array("id"=>$_POST["idP"], 
         "nombre"=>$_POST["nombreP"], 
         "apellido"=>$_POST["apellidoP"], 
-        "usuario"=>$_POST["usuarioP"], 
+        "usuario"=>$_POST["usuarioP"],
+        "documento"=>$_POST["documentoP"], 
         "clave"=>$_POST["claveP"], 
         "foto"=>$rutaImg);
 
@@ -238,6 +245,7 @@ class OtrosC{
                 "apellido" => $_POST["apellido"],
                 "usuario" => $_POST["usuario"],
                 "clave" => $_POST["clave"],
+                "documento" => $_POST["documento"],
                 "rol" => $_POST["rolS"]
             );
 

@@ -7,7 +7,7 @@ require_once "ConexionBD.php";
         
         static public function IngresarOtrosM($tablaBD, $datosC){
 
-            $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, nombre, apellido, foto, rol, id FROM $tablaBD 
+            $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, nombre, documento ,apellido, foto, rol, id FROM $tablaBD 
             WHERE usuario = :usuario");
 
             $pdo -> bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
@@ -21,8 +21,8 @@ require_once "ConexionBD.php";
 
 
     //ver perfil otros
-    static public function VerPefilOtrosC($tablaBD, $id){
-        $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, nombre, apellido, foto, rol, id FROM $tablaBD 
+    static public function VerPefilOtrosM($tablaBD, $id){
+        $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, nombre, documento ,apellido, foto, rol, id FROM $tablaBD 
         WHERE id = :id");
 
         $pdo -> bindParam(":id", $id, PDO::PARAM_INT);
@@ -36,12 +36,13 @@ require_once "ConexionBD.php";
 
     static public  function ActualizarPerfilOtroM($tablaBD, $datosC){
         $pdo = ConexionBD::cBD()->prepare("UPDATE $tablaBD SET usuario = :usuario, clave = :clave, nombre = :nombre, 
-        apellido = :apellido, foto = :foto  WHERE id = :id");
+        documento = :documento, apellido = :apellido, foto = :foto  WHERE id = :id");
 
         $pdo -> bindParam(":id", $datosC["id"], PDO::PARAM_INT);
         $pdo -> bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
         $pdo -> bindParam(":clave", $datosC["clave"], PDO::PARAM_STR);
         $pdo -> bindParam(":nombre", $datosC["nombre"], PDO::PARAM_STR);
+        $pdo -> bindParam(":documento", $datosC["documento"], PDO::PARAM_STR);
         $pdo -> bindParam(":apellido", $datosC["apellido"], PDO::PARAM_STR);
         $pdo -> bindParam(":foto", $datosC["foto"], PDO::PARAM_STR);
 
@@ -69,9 +70,10 @@ require_once "ConexionBD.php";
 
     static public function CrearSecretariaM($tablaBD, $datosC){
 
-        $pdo = ConexionBD::cBD()->prepare("INSERT INTO $tablaBD (nombre, apellido, usuario, clave, rol) VALUES (:nombre, :apellido, :usuario, :clave, :rol)");
+        $pdo = ConexionBD::cBD()->prepare("INSERT INTO $tablaBD (nombre, apellido, usuario, documento, clave, rol) VALUES (:nombre, :apellido, :usuario, :documento, :clave, :rol)");
 
         $pdo -> bindParam(":nombre", $datosC["nombre"], PDO::PARAM_STR);
+        $pdo -> bindParam(":documento", $datosC["documento"], PDO::PARAM_STR);
         $pdo -> bindParam(":apellido", $datosC["apellido"], PDO::PARAM_STR);
         $pdo -> bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
         $pdo -> bindParam(":clave", $datosC["clave"], PDO::PARAM_STR);

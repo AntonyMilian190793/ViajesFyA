@@ -122,6 +122,11 @@ if ($_SESSION["rol"] != "Sistemas") {
                         </div>
 
                         <div class="form-group">
+                            <h2>Documento:</h2>
+                            <input type="text" class="form-control" name="documento" required>
+                        </div>
+
+                        <div class="form-group">
                             <h2>Contraseña:</h2>
                             <input type="text" class="form-control" name="clave" required>
                         </div>
