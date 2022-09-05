@@ -7,7 +7,7 @@
 
             if(isset($_POST["rolP"])){
                 $tablaBD = "directivos";
-                $datosC = array("rol"=>$_POST["rolP"], "apellido"=>$_POST["apellido"], "nombre"=>$_POST["nombre"], 
+                $datosC = array("rol"=>$_POST["rolP"], "apellido"=>$_POST["apellido"], "nombre"=>$_POST["nombre"], "documento"=>$_POST["documento"],
                 "sexo"=>$_POST["sexo"], "id_consulta"=>$_POST["consulta"], "usuario"=>$_POST["usuario"], "clave"=>$_POST["clave"]);
 
                 $resultado = PadresM::CrearPadresM($tablaBD, $datosC);
@@ -143,7 +143,7 @@
 
         echo '<td>'.$consulta["nombre"].'</td>';
 
-        
+        echo '<td>'.$resultado["documento"].'</td>';
 
         echo '<td>
 
@@ -153,6 +153,8 @@
 
         </td>
         
+        
+
         <td>
             <a href="http://localhost/ViajesFyA/perfil-D/'.$resultado["id"].'">
                 <button class="btn btn-success"><i class="fa fa-pencil"></i></button>
@@ -180,6 +182,9 @@
 
                         <h2>Usuario:</h2>
                         <input type="text" class="input-lg" name="usuarioPerfil" value="'.$resultado["usuario"].'">
+
+                        <h2>Documento:</h2>
+                        <input type="text" class="input-lg" name="documentoPerfil" value="'.$resultado["documento"].'">
 
                         <h2>Clave:</h2>
                         <input type="text" class="input-lg" name="clavePerfil" value="'.$resultado["clave"].'">';
@@ -270,6 +275,7 @@
                 "apellido" => $_POST['apellidoPerfil'],
                 "usuario" => $_POST['usuarioPerfil'],
                 "clave" => $_POST['clavePerfil'],
+                "documento" => $_POST['documentoPerfil'],
                 "foto" => $rutaImg,
                 "id_consulta" => $_POST['consultaPerfil'],
                 "horarioE" => $_POST['hePerfil'],

@@ -56,7 +56,8 @@ if ($_SESSION["id"] != substr($_GET["url"], 9)) {
 
 </div>
 
-<div class="modal fade" rol="dialog" id="CitaModal">
+<div class="modal fade" rol="dialog" id=""> 
+<!-- CitaModal -->
     <div class="modal-dialog">
         <div class="modal-content">
             <form method="post">

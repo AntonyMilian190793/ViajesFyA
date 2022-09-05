@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-09-2022 a las 03:24:15
+-- Tiempo de generación: 05-09-2022 a las 04:49:37
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -190,7 +190,7 @@ CREATE TABLE `otrostrabajadores` (
 INSERT INTO `otrostrabajadores` (`id`, `id_consulta`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `sexo`, `clave`, `rol`) VALUES
 (1, 1, 'Milian Montalvo', 'Jorge Antony', '70311233', '', 'jmilian', 'Masculino', '123', 'otrosTrabajadores'),
 (20, 1, 'Acero', 'Katheryn', '703221231', '', 'kacero', 'Femenino', '123', 'otrosTrabajadores'),
-(21, 0, 'Quijiate', 'Víctor', '79881122', '', 'vquijaite', '', '123', 'otrosTrabajadores'),
+(21, 1, 'Quijiate', 'Víctor', '79881122', '', 'vquijaite', '', '123', 'otrosTrabajadores'),
 (22, 1, 'Verano', 'Jhoyn', '8735332', '', 'jverano', 'Masculino', '123', 'otrosTrabajadores'),
 (23, 2, 'Cavassa', 'Ernesto', '8474633', '', 'ecavassa', '', '123', 'otrosTrabajadores'),
 (24, 0, 'Portilla', 'Maria', '098761', '', 'mportilla', '', '123', 'otrosTrabajadores'),
@@ -351,7 +351,28 @@ INSERT INTO `vuelos` (`id`, `id_padre`, `id_consulta`, `id_administracion`, `nya
 (194, 30, 0, 15, 'Angela Alania', '', '2022-09-01 17:00:00', '2022-09-01 18:00:00', ''),
 (195, 30, 0, 15, 'Angela Alania', '', '2022-09-01 17:00:00', '2022-09-01 18:00:00', ''),
 (196, 30, 0, 15, 'Angela Alania', '', '2022-09-01 17:00:00', '2022-09-01 18:00:00', ''),
-(197, 3, 0, 15, 'Angela Alania', '70541233', '2022-09-04 12:00:00', '2022-09-04 13:00:00', '');
+(197, 3, 0, 15, 'Angela Alania', '70541233', '2022-09-04 12:00:00', '2022-09-04 13:00:00', ''),
+(198, 2, 0, 15, 'Angela Alania', '70541233', '2022-09-04 03:00:00', '2022-09-04 04:00:00', ''),
+(199, 2, 0, 15, 'Angela Alania', '70541233', '2022-09-04 03:00:00', '2022-09-04 04:00:00', ''),
+(200, 2, 0, 15, 'Angela Alania', '70541233', '2022-09-04 03:00:00', '2022-09-04 04:00:00', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `vueloslogistica`
+--
+
+CREATE TABLE `vueloslogistica` (
+  `id` int(11) NOT NULL,
+  `id_padre` int(11) NOT NULL,
+  `id_consulta` int(11) NOT NULL,
+  `id_logistica` int(11) NOT NULL,
+  `nyaP` text NOT NULL,
+  `documento` text NOT NULL,
+  `comentario` text NOT NULL,
+  `inicio` datetime NOT NULL,
+  `fin` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Índices para tablas volcadas
@@ -406,6 +427,12 @@ ALTER TABLE `vuelos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `vueloslogistica`
+--
+ALTER TABLE `vueloslogistica`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -419,7 +446,7 @@ ALTER TABLE `consultas`
 -- AUTO_INCREMENT de la tabla `directivos`
 --
 ALTER TABLE `directivos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT de la tabla `inicio`
@@ -455,7 +482,13 @@ ALTER TABLE `sistemas`
 -- AUTO_INCREMENT de la tabla `vuelos`
 --
 ALTER TABLE `vuelos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=198;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201;
+
+--
+-- AUTO_INCREMENT de la tabla `vueloslogistica`
+--
+ALTER TABLE `vueloslogistica`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -7,11 +7,12 @@
         //crear padres
         static public function CrearPadresM($tablaBD, $datosC){
 
-            $pdo = ConexionBD::cBD()->prepare("INSERT INTO $tablaBD (apellido, nombre, sexo, id_consulta, usuario, clave, rol) VALUES 
-            (:apellido, :nombre, :sexo, :id_consulta, :usuario, :clave, :rol)");
+            $pdo = ConexionBD::cBD()->prepare("INSERT INTO $tablaBD (apellido, nombre, documento ,sexo, id_consulta, usuario, clave, rol) VALUES 
+            (:apellido, :nombre, :documento, :sexo, :id_consulta, :usuario, :clave, :rol)");
 
             $pdo->bindParam(":apellido", $datosC["apellido"], PDO::PARAM_STR);
             $pdo->bindParam(":nombre", $datosC["nombre"], PDO::PARAM_STR);
+            $pdo->bindParam(":documento", $datosC["documento"], PDO::PARAM_STR);
             $pdo->bindParam(":sexo", $datosC["sexo"], PDO::PARAM_STR);
             $pdo->bindParam(":id_consulta", $datosC["id_consulta"], PDO::PARAM_STR);
             $pdo->bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
@@ -70,12 +71,13 @@
         //actualizar Padres
         static public function ActualizarPadresM($tablaBD, $datosC){
 
-            $pdo = ConexionBD::cBD()->prepare("UPDATE $tablaBD SET apellido = :apellido, nombre = :nombre, sexo = :sexo, 
+            $pdo = ConexionBD::cBD()->prepare("UPDATE $tablaBD SET apellido = :apellido, nombre = :nombre, documento = :documento, sexo = :sexo, 
             usuario = :usuario, clave = :clave WHERE id = :id");
 
             $pdo->bindParam(":id", $datosC["id"], PDO::PARAM_INT);
             $pdo->bindParam(":apellido", $datosC["apellido"], PDO::PARAM_STR);
             $pdo->bindParam(":nombre", $datosC["nombre"], PDO::PARAM_STR);
+            $pdo->bindParam(":documento", $datosC["documento"], PDO::PARAM_STR);
             $pdo->bindParam(":sexo", $datosC["sexo"], PDO::PARAM_STR);
             $pdo->bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
             $pdo->bindParam(":clave", $datosC["clave"], PDO::PARAM_STR);
@@ -107,7 +109,7 @@
         //ingreso padres
         static public function IngresarPadreM($tablaBD, $datosC){
                 
-                $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, apellido, nombre, sexo, foto, rol, id FROM $tablaBD 
+                $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, apellido, nombre, documento, sexo, foto, rol, id FROM $tablaBD 
                 WHERE usuario = :usuario");
     
                 $pdo -> bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
@@ -123,7 +125,7 @@
 
         static public function VerPerfilPadreM($tablaBD, $id){
 
-                $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, apellido, nombre, sexo, foto, rol, id, horarioE, horarioS, id_consulta FROM $tablaBD 
+                $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, apellido, nombre, documento, sexo, foto, rol, id, horarioE, horarioS, id_consulta FROM $tablaBD 
                 WHERE id = :id");
 
                 $pdo -> bindParam(":id", $id, PDO::PARAM_STR);
@@ -136,13 +138,14 @@
         //actualizar perfil padres
         static public function ActualizarPerfilPadreM($tablaBD, $datosC){
 
-            $pdo = ConexionBD::cBD()->prepare("UPDATE $tablaBD SET id_consulta = :id_consulta, apellido = :apellido, nombre = :nombre, foto = :foto,
-            usuario = :usuario, clave = :clave, horarioE = :horarioE, horarioS = :horarioS WHERE id = :id");
+            $pdo = ConexionBD::cBD()->prepare("UPDATE $tablaBD SET id_consulta = :id_consulta, apellido = :apellido, nombre = :nombre, documento = :documento,
+            foto = :foto,usuario = :usuario, clave = :clave, horarioE = :horarioE, horarioS = :horarioS WHERE id = :id");
 
             $pdo->bindParam(":id", $datosC["id"], PDO::PARAM_INT);
             $pdo->bindParam(":id_consulta", $datosC["id_consulta"], PDO::PARAM_INT);
             $pdo->bindParam(":apellido", $datosC["apellido"], PDO::PARAM_STR);
             $pdo->bindParam(":nombre", $datosC["nombre"], PDO::PARAM_STR);
+            $pdo->bindParam(":documento", $datosC["documento"], PDO::PARAM_STR);
             $pdo->bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
             $pdo->bindParam(":clave", $datosC["clave"], PDO::PARAM_STR);
             $pdo->bindParam(":foto", $datosC["foto"], PDO::PARAM_STR);

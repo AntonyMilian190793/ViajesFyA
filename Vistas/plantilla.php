@@ -225,6 +225,14 @@ session_start();
                 start: "'.$value["inicio"].'",
                 end: "'.$value["fin"].'"
               },';
+            }else if($value["id_padre"] ==  substr($_GET["url"], 9)){
+              echo '{
+                
+                id: "'.$value["id"].'",
+                title: "'.$value["nyaP"].'",
+                start: "'.$value["inicio"].'",
+                end: "'.$value["fin"].'"
+              },';
             }
           }
 
