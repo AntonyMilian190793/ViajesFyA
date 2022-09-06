@@ -19,7 +19,7 @@ if ($_SESSION["id"] != substr($_GET["url"], 9)) {
         $columna = "id";
         $valor = substr($_GET["url"], 9);
 
-        $resultado = OtrosTC::VerOtroTC($columna, $valor);
+        $resultado = AdministracionC::AdministracionnC($columna, $valor);
 
         if($resultado["sexo"] == "Femenino"){
             echo '<h1>Trabajadora: '.$resultado["apellido"].' '.$resultado["nombre"].'</h1>';

@@ -120,7 +120,7 @@ require_once "ConexionBD.php";
         $pdo = null;
     }
 
-    static public function PadreM($tablaBD, $columna, $valor){
+    static public function AdministracionnM($tablaBD, $columna, $valor){
                 
             if($columna != null){
 

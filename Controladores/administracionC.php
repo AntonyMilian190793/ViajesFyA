@@ -246,9 +246,9 @@ class AdministracionC{
 
     
         //calendario jefea area
-        static public function PadreC($columna, $valor){
+        static public function AdministracionnC($columna, $valor){
             $tablaBD = "jefesarea";
-            $resultado = AdministracionM::PadreM($tablaBD, $columna, $valor);
+            $resultado = AdministracionM::AdministracionnM($tablaBD, $columna, $valor);
 
             return $resultado;
         }
