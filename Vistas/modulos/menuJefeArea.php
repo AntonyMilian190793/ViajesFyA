@@ -11,12 +11,6 @@
       </li>
 
 
-      <li>
-        <a href="http://localhost/ViajesFyA/Ver-areas">
-        <i class="fa fa-university" aria-hidden="true"></i>
-          <span>Ver Áreas</span>
-        </a>
-      </li>
 
       <!-- <li>
         <?php
@@ -29,7 +23,7 @@
         </a>
       </li> -->
 
-            <li>
+      <li>
         <?php
         
           echo '<a href="http://localhost/ViajesFyA/VuelosJA/'.$_SESSION["id"].'">';
@@ -40,6 +34,7 @@
           <span>Viajes</span>
         </a>
       </li>
+
 
     </ul>
       

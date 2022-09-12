@@ -31,12 +31,14 @@
         </a>
       </li> -->
 
+
       <li>
         <a href="http://localhost/ViajesFyA/Ver-areas">
-          <i class="fa fa-address-book-o"></i>
-          <span>Áreas</span>
+        <i class="fa fa-university" aria-hidden="true"></i>
+          <span>Ver Áreas</span>
         </a>
       </li>
+
 
     </ul>
       

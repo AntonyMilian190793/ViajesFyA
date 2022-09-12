@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-09-2022 a las 04:49:37
+-- Tiempo de generación: 12-09-2022 a las 04:14:25
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -77,7 +77,7 @@ INSERT INTO `directivos` (`id`, `id_consulta`, `apellido`, `nombre`, `documento`
 (2, 1, 'Cavassa ', 'Ernesto', '90909991', 'Vistas/img/Padres/Pad-199.png', 'ecavassa', '123', 'Masculino', '08:00:00', '18:00:00', 'Directivo'),
 (3, 8, 'Piñeyro', 'Javier', '', 'Vistas/img/Padres/Pad-113.png', 'jpineyro', '123', 'Masculino', '00:00:00', '00:00:00', 'Directivo'),
 (6, 2, 'Morelli', 'Oscar', '', 'Vistas/img/Padres/Pad-177.png', 'oscar', '123', 'Masculino', '00:00:00', '00:00:00', 'Directivo'),
-(29, 10, 'Verano Bonifacio', 'Jhony', '', '', 'jverano', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
+(29, 10, 'Verano', 'Jhony', '', '', 'jverano', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
 (30, 9, 'Guevara', 'Carlos', '', '', 'cguevara', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
 (31, 11, 'Vargas', 'Julia', '', '', 'jvargas', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
 (32, 5, 'Alania', 'Angela', '', '', 'aalania', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
@@ -135,7 +135,7 @@ CREATE TABLE `jefesarea` (
 
 INSERT INTO `jefesarea` (`id`, `id_consulta`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `clave`, `rol`, `sexo`) VALUES
 (1, 1, 'Quijaite', 'Víctor', '98716111', 'Vistas/img/Administracion/administracion115.png', 'vquijaite', '123', 'JefeArea', 'Masculino'),
-(11, 10, 'Verano', 'Jhony', '89765122', '', 'jverano', '123', 'JefeArea', 'Masculino');
+(10, 10, 'Verano', 'Jhony', '89765122', '', 'jverano', '123', 'JefeArea', 'Masculino');
 
 -- --------------------------------------------------------
 
@@ -188,10 +188,10 @@ CREATE TABLE `otrostrabajadores` (
 --
 
 INSERT INTO `otrostrabajadores` (`id`, `id_consulta`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `sexo`, `clave`, `rol`) VALUES
-(1, 1, 'Milian Montalvo', 'Jorge Antony', '70311233', '', 'jmilian', 'Masculino', '123', 'otrosTrabajadores'),
+(1, 10, 'Milian Montalvo', 'Jorge Antony', '70311233', '', 'jmilian', 'Masculino', '123', 'otrosTrabajadores'),
 (20, 1, 'Acero', 'Katheryn', '703221231', '', 'kacero', 'Femenino', '123', 'otrosTrabajadores'),
 (21, 1, 'Quijiate', 'Víctor', '79881122', '', 'vquijaite', '', '123', 'otrosTrabajadores'),
-(22, 1, 'Verano', 'Jhoyn', '8735332', '', 'jverano', 'Masculino', '123', 'otrosTrabajadores'),
+(22, 1, 'Verano', 'Jhony', '8735332', '', 'jverano', 'Masculino', '123', 'otrosTrabajadores'),
 (23, 2, 'Cavassa', 'Ernesto', '8474633', '', 'ecavassa', '', '123', 'otrosTrabajadores'),
 (24, 0, 'Portilla', 'Maria', '098761', '', 'mportilla', '', '123', 'otrosTrabajadores'),
 (25, 0, 'Atausupa', 'Víctor', '89766122', '', 'vatausupa', '', '123', 'otrosTrabajadores'),
@@ -350,11 +350,7 @@ INSERT INTO `vuelos` (`id`, `id_padre`, `id_consulta`, `id_administracion`, `nya
 (193, 30, 0, 15, 'Angela Alania', '', '2022-09-01 17:00:00', '2022-09-01 18:00:00', ''),
 (194, 30, 0, 15, 'Angela Alania', '', '2022-09-01 17:00:00', '2022-09-01 18:00:00', ''),
 (195, 30, 0, 15, 'Angela Alania', '', '2022-09-01 17:00:00', '2022-09-01 18:00:00', ''),
-(196, 30, 0, 15, 'Angela Alania', '', '2022-09-01 17:00:00', '2022-09-01 18:00:00', ''),
-(197, 3, 0, 15, 'Angela Alania', '70541233', '2022-09-04 12:00:00', '2022-09-04 13:00:00', ''),
-(198, 2, 0, 15, 'Angela Alania', '70541233', '2022-09-04 03:00:00', '2022-09-04 04:00:00', ''),
-(199, 2, 0, 15, 'Angela Alania', '70541233', '2022-09-04 03:00:00', '2022-09-04 04:00:00', ''),
-(200, 2, 0, 15, 'Angela Alania', '70541233', '2022-09-04 03:00:00', '2022-09-04 04:00:00', '');
+(196, 30, 0, 15, 'Angela Alania', '', '2022-09-01 17:00:00', '2022-09-01 18:00:00', '');
 
 -- --------------------------------------------------------
 
@@ -373,6 +369,21 @@ CREATE TABLE `vueloslogistica` (
   `inicio` datetime NOT NULL,
   `fin` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `vueloslogistica`
+--
+
+INSERT INTO `vueloslogistica` (`id`, `id_padre`, `id_consulta`, `id_logistica`, `nyaP`, `documento`, `comentario`, `inicio`, `fin`) VALUES
+(14, 2, 1, 15, 'Víctor Atausupa', '121221', '', '2022-09-11 08:00:00', '2022-09-11 09:00:00'),
+(15, 2, 1, 0, 'Katheryn Acero', '70511222', '', '2022-09-11 12:00:00', '2022-09-11 13:00:00'),
+(16, 2, 1, 15, 'Fabiola Casas', '70411233', 'No se fue de viaje', '2022-09-11 20:00:00', '2022-09-11 21:00:00'),
+(17, 30, 1, 15, 'Fabiola Chávez', '878787', '', '2022-09-11 17:00:00', '2022-09-11 18:00:00'),
+(19, 2, 1, 15, 'Nataly Egoavil', '121221', '', '2022-09-11 23:00:00', '0000-00-00 00:00:00'),
+(20, 2, 1, 15, 'Maria Portilla', '121`2122', '', '2022-09-11 01:00:00', '2022-09-11 02:00:00'),
+(22, 29, 10, 15, 'Jorge Antony Milian Montalvo', '70311233', '', '2022-09-11 19:00:00', '2022-09-11 20:00:00'),
+(23, 2, 1, 0, 'Ernesto Cavassa', '122112', '', '2022-09-11 18:00:00', '2022-09-11 19:00:00'),
+(26, 29, 10, 0, 'Jorge Antony Milian Montalvo', 'asaassa', '', '2022-09-11 23:00:00', '0000-00-00 00:00:00');
 
 --
 -- Índices para tablas volcadas
@@ -482,13 +493,13 @@ ALTER TABLE `sistemas`
 -- AUTO_INCREMENT de la tabla `vuelos`
 --
 ALTER TABLE `vuelos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=203;
 
 --
 -- AUTO_INCREMENT de la tabla `vueloslogistica`
 --
 ALTER TABLE `vueloslogistica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

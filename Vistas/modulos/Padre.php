@@ -1,6 +1,6 @@
 <?php
 
-if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "JefeArea" && $_SESSION["rol"] != "otrosTrabajadores") {
+if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "JefeArea") {
 
     echo '<script>
   
@@ -63,46 +63,11 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
                 <div class="modal-body">
                     <div class="box-body">
 
-                        <?php
-
-                            $columna = "id";
-                            $valor = substr($_GET["url"], 6);
-                            $resultado = PadresC::PadreC($columna, $valor);
-
-                            echo '                         
-                            
-                            <div class="form-group">
-
-                                <h2>Usted es...</h2>
-                                <input type="hiden" class="form-control input-lg" name="nyaC" value="'.$_SESSION["nombre"].' '.$_SESSION["apellido"].'" readonly >
-                                <input type="hidden" name="Did" value="'.$resultado["id"].'">
-                                <input type="hidden" name="Pid" value="'.$_SESSION["id"].'" >
-                                
-                            
-                            </div>
-
-                        <div class="form-group">
-                            <h2>Su documento es...</h2>
-                            <input type="text" class="form-control input-lg" name="documentoC" value="'.$_SESSION["documento"].'" readonly>
-                        </div>
-                        
-                        <div class="form-group">
-                            <h2>Seleccionar trabajador:</h2>
-                            <select class="form-control input-lg" name="nombreP">
-                                <option>Trabajador...</option>
-                        </div>';
-
-                                $columna = null;
-                                $valor = null;
-                                $resultado	= OtrosTC::VerOtrosTC($columna, $valor);
-
-                                foreach ($resultado as $key => $value) {
-
-                                    echo '<option value="'.$value["nombre"].' '.$value["apellido"].'">'.$value["apellido"].' '.$value["nombre"].'</option>';
-                                }
+                    <?php
 
                         $columna = "id";
                         $valor = $resultado["id_consulta"];
+
                         $consultorio = ConsultasC::VerConsultasC($columna, $valor);
 
                         echo '                        
@@ -112,8 +77,60 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
 
                         ?>
 
+                        <?php
+
+                            $columna = "id";
+                            $valor = substr($_GET["url"], 6);
+                            $resultado = PadresC::PadreC($columna, $valor);
+                            //<input type="hidden" name="Pid" value="'.$_SESSION["id"].'" >
+                            echo '                         
+                            
+                            <div class="form-group">
+
+                                <h2>Usted es...</h2>
+                                <input type="hiden" class="form-control input-lg" name="nyaC" value="'.$_SESSION["nombre"].' '.$_SESSION["apellido"].'" readonly >
+                                <input type="hidden" name="Did" value="'.$resultado["id"].'">
+                                
+                                
+                            
+                            </div>';
+
+                        echo '<div class="form-group">
+                            <h2>Su documento es...</h2>
+                            <input type="text" class="form-control input-lg" name="documentoC" value="'.$_SESSION["documento"].'" readonly>
+                        </div>
+                        
+                        <div class="form-group">
+                            <h2>Seleccionar trabajador:</h2>
+                            <select class="form-control input-lg" name="nombreP">
+                                <option>Trabajador...</option>
+                        </div>';
+                        
+
+                        
+                        
+
+                        $columna = null;
+                        $valor = null;
+                        $resultado	= OtrosTC::VerOtrosTC($columna, $valor);
+
+                        foreach ($resultado as $key => $value) {
+
+                            echo '<option value="'.$value["nombre"].' '.$value["apellido"].'">'.$value["nombre"].' '.$value["apellido"].'</option>';
+                        }
+                        ?>
 
 
+
+
+                        <div class="form-group">
+                            <h2>Documento del Trabajador:</h2>
+                            <input type="text" class="form-control input-lg" name="documentoP">
+                        </div>  
+
+                        
+                        
+                        
                         <div class="form-group">
                             <h2>Fecha:</h2>
                             <input type="text" class="form-control input-lg" id="fechaC"  value="" readonly>
@@ -131,7 +148,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
 
                         <div class="form-group">
                             <h2>Comentario:</h2>
-                            <input type="text" class="form-control input-lg" id=""  value="" >
+                            <input type="text" class="form-control input-lg" name="comentario">
                         </div>
                     </div>
                 </div>
@@ -143,7 +160,8 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
                 <?php
                 
                     $enviarC = new CitasC();
-                    $enviarC->EnviarCitaC();
+                    //$enviarC->EnviarCitaC();
+                    $enviarC->PedirCitaLogisticaC();
                 
                 ?>
             </form>

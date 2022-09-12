@@ -24,7 +24,7 @@
         //ver citas
         public function VerCitasC(){
 
-            $tablaBD = "vuelos";
+            $tablaBD = "vueloslogistica";
             $resultado = CitasM::VerCitasM($tablaBD);
             return $resultado;
         }
@@ -45,6 +45,29 @@
                     window.location = "Vuelos/"'.$Did.';
                     </script>';
                 }
+            }
+        }
+
+        //pedir cita logistica
+        public function PedirCitaLogisticaC(){
+            
+            if(isset($_POST["Did"])){
+
+                $tablaBD = "vueloslogistica";
+                $Did = substr($_GET["url"], 6);
+                $datosC = array("Did"=>$_POST["Did"], "Cid"=>$_POST["Cid"], "nombreP"=>$_POST["nombreP"], "documentoP"=>$_POST["documentoP"],
+                "fyhIC"=>$_POST["fyhIC"], "fyhFC"=>$_POST["fyhFC"], "comentario"=>$_POST["comentario"]);
+
+
+                $resultado = CitasM::PedirCitaLogisticaM($tablaBD, $datosC);
+
+                
+                if($resultado == true){
+                    echo '<script>
+                    window.location = "Padre/"'.$Did.';
+                    </script>';
+                }
+
             }
         }
     }

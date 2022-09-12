@@ -91,7 +91,7 @@ session_start();
 
       if ($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "perfil-Otros" || $url[0] == "perfil-O" || $url[0] == "consultas"
        || $url[0] == "E-C" || $url[0] == "padres" || $url[0] == "otrosTrabajadores" || $url[0] == "perfil-Administracion" 
-       || $url[0] == "perfil-A" || $url[0] == "Ver-areas" || $url[0] == "Padre" || $url[0] == "historial" || $url[0] == "perfil-Padre" 
+       || $url[0] == "perfil-A" || $url[0] == "Ver-areas" || $url[0] == "Padre" || $url[0] == "Directivoss" || $url[0] == "historial" || $url[0] == "perfil-Padre" 
        || $url[0] == "perfil-P" || $url[0] == "Vuelos" || $url[0] == "VuelosJA" || $url[0] == "perfil-Sistemas" || $url[0] == "perfil-S" || $url[0] == "perfil-S" 
        || $url[0] == "secretarias" || $url[0] == "administracion" || $url[0] == "inicio-editar" || $url[0] == "perfil-Directivo" 
        || $url[0] == "perfil-Logistica" || $url[0] == "perfil-L" || $url[0] == "perfil-otrosTrabajadores" || $url[0] == "perfil-oT"
@@ -212,6 +212,7 @@ session_start();
                 
                 id: "'.$value["id"].'",
                 title: "'.$value["nyaP"].'",
+                description: "'.$value["comentario"].'",
                 start: "'.$value["inicio"].'",
                 end: "'.$value["fin"].'"
               },';
@@ -225,7 +226,7 @@ session_start();
                 start: "'.$value["inicio"].'",
                 end: "'.$value["fin"].'"
               },';
-            }else if($value["id_padre"] ==  substr($_GET["url"], 9)){
+            }else if($value["id_consulta"] ==  substr($_GET["url"], 9)){
               echo '{
                 
                 id: "'.$value["id"].'",
