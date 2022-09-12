@@ -210,7 +210,7 @@ class AdministracionC{
 
                 $tablaBD = "jefesarea";
                 $datosC = array("apellido"=>$_POST["apellido"],"nombre"=>$_POST["nombre"],"documento"=>$_POST["documento"],
-                "usuario"=>$_POST["usuario"],"clave"=>$_POST["clave"], "rol"=>$_POST["rolA"]);
+                "usuario"=>$_POST["usuario"], "sexo"=>$_POST["sexo"],"clave"=>$_POST["clave"], "id_consulta"=>$_POST["consulta"], "rol"=>$_POST["rolA"]);
 
                 $resultado = AdministracionM::CrearAdministracionM($tablaBD, $datosC);
 

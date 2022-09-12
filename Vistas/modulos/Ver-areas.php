@@ -1,6 +1,6 @@
 <?php
 
-if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "JefeArea" && $_SESSION["rol"] != "otrosTrabajadores") {
+if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "JefeArea") {
 
     echo '<script>
   
@@ -42,7 +42,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
                             $padres = PadresC::VerPadresC($columna, $valor);
 
                             foreach ($padres as $key => $value) {
-                                echo ' <a href="Padre/'.$value["id"].'" style="color:black;"><p>'.$value["apellido"].' '.$value["nombre"].'</p></a>';
+                                echo ' <a href="Padre/'.$value["id"].'" style="color:black;"><p>'.$value["nombre"].' '.$value["apellido"].'</p></a>';
                             }
 
                         echo '</div>

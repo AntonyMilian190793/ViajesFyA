@@ -14,7 +14,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Sistemas") {
 <div class="content-wrapper">
 
     <section class="content-header">
-        <h1>Gestor de Jefes de Área</h1>
+        <h1>Gestor Directivos</h1>
     </section>
 
     <section class="content">

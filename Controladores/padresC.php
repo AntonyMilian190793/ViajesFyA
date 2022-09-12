@@ -6,6 +6,7 @@
         public function CrearPadreC(){
 
             if(isset($_POST["rolP"])){
+                
                 $tablaBD = "directivos";
                 $datosC = array("rol"=>$_POST["rolP"], "apellido"=>$_POST["apellido"], "nombre"=>$_POST["nombre"], "documento"=>$_POST["documento"],
                 "sexo"=>$_POST["sexo"], "id_consulta"=>$_POST["consulta"], "usuario"=>$_POST["usuario"], "clave"=>$_POST["clave"]);

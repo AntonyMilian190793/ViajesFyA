@@ -14,7 +14,7 @@ if ($_SESSION["rol"] != "Sistemas") {
 <div class="content-wrapper">
 
     <section class="content-header">
-        <h1>Gestor de Trabajadores</h1>
+        <h1>Gestor Jefes de Área</h1>
     </section>
 
     <section class="content">
@@ -119,6 +119,35 @@ if ($_SESSION["rol"] != "Sistemas") {
                         <div class="form-group">
                             <h2>Documento:</h2>
                             <input type="text" class="form-control" name="documento" required>
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Sexo:</h2>
+                            <select class="form-control input-lg" name="sexo">
+                                <option>Seleccionar...</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Área:</h2>
+                            <select class="form-control input-lg" name="consulta">
+                                <option>Seleccionar...</option>
+
+                                <?php
+
+                                    $columna = null;
+                                    $valor = null;
+
+                                    $resultado = ConsultasC::VerConsultasC($columna, $valor);
+
+                                    foreach ($resultado as $key => $value) {
+                                        echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
+                                    }
+
+                                ?>
+                            </select>
                         </div>
 
                         <div class="form-group">
