@@ -107,7 +107,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                             <h2>Nombres:</h2>
                             <input type="text" class="form-control" name="nombre" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <h2>Apellidos:</h2>
                             <input type="text" class="form-control" name="apellido" required>
@@ -115,9 +115,39 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                         </div>
 
 
+
                         <div class="form-group">
                             <h2>Documento:</h2>
                             <input type="text" class="form-control" name="documento" required>
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Sexo:</h2>
+                            <select class="form-control input-lg" name="sexo">
+                                <option>Seleccionar...</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Área:</h2>
+                            <select class="form-control input-lg" name="consulta">
+                                <option>Seleccionar...</option>
+
+                                <?php
+
+                                    $columna = null;
+                                    $valor = null;
+
+                                    $resultado = ConsultasC::VerConsultasC($columna, $valor);
+
+                                    foreach ($resultado as $key => $value) {
+                                        echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
+                                    }
+
+                                ?>
+                            </select>
                         </div>
 
                         <div class="form-group">

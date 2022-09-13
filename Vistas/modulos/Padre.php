@@ -75,9 +75,6 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
                             <input type="hidden" name="Cid" value="'.$consultorio["id"].'">
                         </div>';
 
-                        ?>
-
-                        <?php
 
                             $columna = "id";
                             $valor = substr($_GET["url"], 6);
@@ -104,10 +101,9 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
                             <h2>Seleccionar trabajador:</h2>
                             <select class="form-control input-lg" name="nombreP">
                                 <option>Trabajador...</option>
-                        </div>';
-                        
 
-                        
+                                
+                        </div>';
                         
 
                         $columna = null;
@@ -122,14 +118,15 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
 
 
 
+                        <div class="form-group">
+                            <h2></h2>
+                            <input type="hidden" class="form-control input-lg" name="">
+                        </div>  
 
                         <div class="form-group">
                             <h2>Documento del Trabajador:</h2>
                             <input type="text" class="form-control input-lg" name="documentoP">
                         </div>  
-
-                        
-                        
                         
                         <div class="form-group">
                             <h2>Fecha:</h2>

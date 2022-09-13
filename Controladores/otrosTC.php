@@ -8,8 +8,8 @@
             if(isset($_POST["rolOT"])){
 
                 $tablaBD = "otrosTrabajadores";
-                $datosC = array("apellido"=>$_POST["apellido"],"nombre"=>$_POST["nombre"],"documento"=>$_POST["documento"],
-                "usuario"=>$_POST["usuario"],"clave"=>$_POST["clave"], "rol"=>$_POST["rolOT"]);
+                $datosC = array("id_consulta"=>$_POST["consulta"] ,"apellido"=>$_POST["apellido"],"nombre"=>$_POST["nombre"],"documento"=>$_POST["documento"],
+                "usuario"=>$_POST["usuario"],"clave"=>$_POST["clave"], "sexo"=>$_POST["sexo"],"rol"=>$_POST["rolOT"]);
 
                 $resultado = OtrosTM::CrearOtrosTM($tablaBD, $datosC);
 

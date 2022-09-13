@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-09-2022 a las 04:14:25
+-- Tiempo de generación: 13-09-2022 a las 02:54:37
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -82,7 +82,7 @@ INSERT INTO `directivos` (`id`, `id_consulta`, `apellido`, `nombre`, `documento`
 (31, 11, 'Vargas', 'Julia', '', '', 'jvargas', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
 (32, 5, 'Alania', 'Angela', '', '', 'aalania', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
 (34, 12, 'Acero Cáceres', 'Katheryn', '', '', 'kacero', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
-(35, 7, 'alencastre', 'Ava', '', '', 'aalencastre', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
+(35, 7, 'Alencastre', 'Ava', '', '', 'aalencastre', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
 (36, 13, 'Portilla', 'María', '', '', 'mportilla', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre');
 
 -- --------------------------------------------------------
@@ -135,7 +135,15 @@ CREATE TABLE `jefesarea` (
 
 INSERT INTO `jefesarea` (`id`, `id_consulta`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `clave`, `rol`, `sexo`) VALUES
 (1, 1, 'Quijaite', 'Víctor', '98716111', 'Vistas/img/Administracion/administracion115.png', 'vquijaite', '123', 'JefeArea', 'Masculino'),
-(10, 10, 'Verano', 'Jhony', '89765122', '', 'jverano', '123', 'JefeArea', 'Masculino');
+(10, 10, 'Verano', 'Jhony', '89765122', '', 'jverano', '123', 'JefeArea', 'Masculino'),
+(12, 12, 'Acero', 'Katheryn', '70511233', '', 'kacero', '123', 'JefeArea', 'Femenino'),
+(15, 9, 'Guevara', 'Carlos', '0987611', '', 'cguevara', '123', 'JefeArea', 'Masculino'),
+(16, 8, 'Piñeyro ', 'Javier', '0987112', '', 'jpineyro', '123', 'JefeArea', 'Masculino'),
+(17, 7, 'Alencastre ', 'Ava', '09871122', '', 'aalencastre', '123', 'JefeArea', 'Femenino'),
+(18, 2, 'Morelli ', 'Oscar', '0987122', '', 'omorelli', '123', 'JefeArea', 'Masculino'),
+(19, 5, 'Alania ', 'Angela', '7876122', '', 'aalania', '123', 'JefeArea', 'Femenino'),
+(20, 11, 'Vargas', ' Julia', '0987122', '', 'jvargas', '123', 'JefeArea', 'Femenino'),
+(21, 13, 'Portilla', 'María', '09871211', '', 'mportilla', '123', 'JefeArea', 'Femenino');
 
 -- --------------------------------------------------------
 
@@ -383,7 +391,11 @@ INSERT INTO `vueloslogistica` (`id`, `id_padre`, `id_consulta`, `id_logistica`, 
 (20, 2, 1, 15, 'Maria Portilla', '121`2122', '', '2022-09-11 01:00:00', '2022-09-11 02:00:00'),
 (22, 29, 10, 15, 'Jorge Antony Milian Montalvo', '70311233', '', '2022-09-11 19:00:00', '2022-09-11 20:00:00'),
 (23, 2, 1, 0, 'Ernesto Cavassa', '122112', '', '2022-09-11 18:00:00', '2022-09-11 19:00:00'),
-(26, 29, 10, 0, 'Jorge Antony Milian Montalvo', 'asaassa', '', '2022-09-11 23:00:00', '0000-00-00 00:00:00');
+(26, 29, 10, 0, 'Jorge Antony Milian Montalvo', 'asaassa', '', '2022-09-11 23:00:00', '0000-00-00 00:00:00'),
+(27, 29, 10, 0, 'Jorge Antony Milian Montalvo', '70311233', '', '2022-09-12 18:00:00', '2022-09-12 19:00:00'),
+(28, 34, 12, 0, 'Katheryn Acero', 'assasa', '', '2022-09-12 07:00:00', '2022-09-12 08:00:00'),
+(29, 2, 1, 0, 'Fabiola Casas', 'assaas', '', '2022-09-13 08:00:00', '2022-09-13 09:00:00'),
+(30, 2, 1, 0, 'Maria Portilla', '09781511', 'Todo bien!', '2022-09-14 08:00:00', '2022-09-14 09:00:00');
 
 --
 -- Índices para tablas volcadas
@@ -457,7 +469,7 @@ ALTER TABLE `consultas`
 -- AUTO_INCREMENT de la tabla `directivos`
 --
 ALTER TABLE `directivos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT de la tabla `inicio`
@@ -469,7 +481,7 @@ ALTER TABLE `inicio`
 -- AUTO_INCREMENT de la tabla `jefesarea`
 --
 ALTER TABLE `jefesarea`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `logistica`
@@ -481,7 +493,7 @@ ALTER TABLE `logistica`
 -- AUTO_INCREMENT de la tabla `otrostrabajadores`
 --
 ALTER TABLE `otrostrabajadores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT de la tabla `sistemas`
@@ -499,7 +511,7 @@ ALTER TABLE `vuelos`
 -- AUTO_INCREMENT de la tabla `vueloslogistica`
 --
 ALTER TABLE `vueloslogistica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
