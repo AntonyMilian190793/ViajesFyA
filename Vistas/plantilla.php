@@ -226,7 +226,7 @@ session_start();
                 start: "'.$value["inicio"].'",
                 end: "'.$value["fin"].'"
               },';
-            }else if($value["id_consulta"] ==  substr($_GET["url"], 8)){
+            }else if($value["id_consulta"] ==  substr($_GET["url"], 9)){
               echo '{
                 
                 id: "'.$value["id"].'",
@@ -234,7 +234,7 @@ session_start();
                 start: "'.$value["inicio"].'",
                 end: "'.$value["fin"].'"
               },';
-            }else if($value["id_consulta"] ==  substr($_GET["url"], 7)){
+            }else if($value["id_consulta"] ==  substr($_GET["url"], 8)){
               echo '{
                 
                 id: "'.$value["id"].'",

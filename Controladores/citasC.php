@@ -72,7 +72,7 @@
         }
 
         //pedir cita Colaboradores
-        public function PedirColaboradoresC(){
+        public function PedirCitaColaboradoresC(){
             
             if(isset($_POST["Did"])){
 

@@ -1,6 +1,6 @@
 <?php
 
-if ($_SESSION["id"] != substr($_GET["url"], 7)) {
+if ($_SESSION["id"] != substr($_GET["url"], 8)) {
 
     echo '<script>
   
@@ -17,7 +17,7 @@ if ($_SESSION["id"] != substr($_GET["url"], 7)) {
         <?php
 
         $columna = "id";
-        $valor = substr($_GET["url"], 7);
+        $valor = substr($_GET["url"], 8);
 
         $resultado = PadresC::PadreC($columna, $valor);
 
@@ -67,7 +67,7 @@ if ($_SESSION["id"] != substr($_GET["url"], 7)) {
                         <?php
 
                             $columna = "id";
-                            $valor = substr($_GET["url"], 7);
+                            $valor = substr($_GET["url"], 8);
                             $resultado = PadresC::PadreC($columna, $valor);
 
                             echo '                         
