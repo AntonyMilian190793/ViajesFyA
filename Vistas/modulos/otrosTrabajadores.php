@@ -102,16 +102,18 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
             <form method="post" role="form">
                 <div class="modal-body">
                     <div class="box-body">
+
+                    <div class="form-group">
+                            <h2>Nombres:</h2>
+                            <input type="text" class="form-control" name="nombre" required>
+                        </div>
+                        
                         <div class="form-group">
                             <h2>Apellidos:</h2>
                             <input type="text" class="form-control" name="apellido" required>
                             <input type="hidden" name="rolOT" value="otrosTrabajadores">
                         </div>
 
-                        <div class="form-group">
-                            <h2>Nombres:</h2>
-                            <input type="text" class="form-control" name="nombre" required>
-                        </div>
 
                         <div class="form-group">
                             <h2>Documento:</h2>
