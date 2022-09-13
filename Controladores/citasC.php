@@ -70,6 +70,29 @@
 
             }
         }
+
+        //pedir cita Colaboradores
+        public function PedirColaboradoresC(){
+            
+            if(isset($_POST["Did"])){
+
+                $tablaBD = "vueloslogistica";
+                $Did = substr($_GET["url"], 8);
+                $datosC = array("Did"=>$_POST["Did"], "Cid"=>$_POST["Cid"], "nombreP"=>$_POST["nombreP"], "documentoP"=>$_POST["documentoP"],
+                "fyhIC"=>$_POST["fyhIC"], "fyhFC"=>$_POST["fyhFC"], "comentario"=>$_POST["comentario"]);
+
+
+                $resultado = CitasM::PedirCitaColaboradoresM($tablaBD, $datosC);
+
+                
+                if($resultado == true){
+                    echo '<script>
+                    window.location = "VuelosC/"'.$Did.';
+                    </script>';
+                }
+
+            }
+        }
     }
 
 

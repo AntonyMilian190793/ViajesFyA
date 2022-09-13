@@ -87,6 +87,31 @@
 
             
         }
+
+                ////pedir cita colaboradores
+        static public function PedirCitaColaboradoresM($tablaBD, $datosC){
+
+            $pdo = ConexionBD::cBD()->prepare("INSERT INTO $tablaBD (id_padre, id_consulta, nyaP, documento, inicio, fin, comentario)
+            VALUES (:id_padre, :id_consulta, :nyaP, :documento, :inicio, :fin, :comentario)");
+
+            $pdo->bindParam(":id_padre", $datosC["Did"], PDO::PARAM_INT);
+            $pdo->bindParam(":id_consulta", $datosC["Cid"], PDO::PARAM_INT);
+
+            $pdo->bindParam(":nyaP", $datosC["nombreP"], PDO::PARAM_STR);
+            $pdo->bindParam(":documento", $datosC["documentoP"], PDO::PARAM_STR);
+            $pdo->bindParam(":inicio", $datosC["fyhIC"], PDO::PARAM_STR);
+            $pdo->bindParam(":fin", $datosC["fyhFC"], PDO::PARAM_STR);
+            $pdo->bindParam(":comentario", $datosC["comentario"], PDO::PARAM_STR);
+
+            if($pdo->execute()){
+                return true;
+            }
+
+            $pdo -> close();
+            $pdo = null;
+
+            
+        }
     }    
 
 
