@@ -151,7 +151,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Registrar</button>
-                    <button type="button" class="btn btn-danger">Cancelar</button>
+                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                 </div>
 
                 <?php
@@ -161,6 +161,52 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
                     $enviarC->PedirCitaLogisticaC();
                 
                 ?>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" rol="dialog" id="CalendarioModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post">
+                <div class="modal-body">
+                    <div class="box-body">
+
+                        <div class="form-group">
+                          
+                            <input type="hidden" class="form-control input-lg" name="idC" id="idC" readonly>
+                        </div>  
+
+                        <div class="form-group">
+                            <h2>Nombre de Trabajador:</h2>
+                            <input type="text" class="form-control input-lg" id="titleC" name="titleC" readonly>
+                        </div>  
+                        
+
+
+                        <div class="form-group">
+                            <h2>Hora Inicio:</h2>
+                            <input type="text" class="form-control input-lg" id="horaS"  name="horaS" value="" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Hora Fin:</h2>
+                            <input type="text" class="form-control input-lg" id="horaF"  name="horaF" value="" readonly>
+                        </div>
+
+   
+
+                        <div class="form-group">
+                            <h2>Comentario:</h2>
+                            <input type="text" class="form-control input-lg" id="description" name="description" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
             </form>
         </div>
     </div>

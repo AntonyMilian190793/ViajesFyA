@@ -247,6 +247,20 @@ session_start();
 
           ?>
       ],
+      eventClick: function (info, jsEvent, view){
+        $('#CalendarioModal').modal();
+        console.log(info);
+       
+        $('#idC').val(info.id);
+        $('#titleC').val(info.title);
+        $('#horaS').val(info.start);
+        $('#horaF').val(info.end);
+        $('#description').val(info.description);
+        // console.log(info.title);
+        // console.log(info.start);
+        // console.log(info.end);
+        // console.log(info.description);
+        },
 
       dayClick: function(date, jsEvent, view) {
         $('#CitaModal').modal();
@@ -270,7 +284,7 @@ session_start();
         $('#fyhFC').val(fecha[0] + " " + horaF + ":00:00");
       },
 
-    })
+    });
   </script>
 </body>
 

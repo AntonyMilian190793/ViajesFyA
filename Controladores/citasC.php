@@ -93,6 +93,13 @@
 
             }
         }
+
+        public function CitaC($columna, $valor){
+            $tablaBD = "vueloslogistica";
+            $resultado = CitasM::CitaM($tablaBD, $columna, $valor);
+
+            return $resultado;
+        }
     }
 
 
