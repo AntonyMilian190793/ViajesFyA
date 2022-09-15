@@ -197,7 +197,12 @@ session_start();
     $('#calendar').fullCalendar({
 
       // hiddenDays: [0, 6],
-      defaultView: 'agendaWeek',
+             header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'agendaDay, agendaWeek, month,'
+        },
+      
 
       events: [
         <?php
@@ -214,7 +219,10 @@ session_start();
                 title: "'.$value["nyaP"].'",
                 description: "'.$value["comentario"].'",
                 start: "'.$value["inicio"].'",
-                end: "'.$value["fin"].'"
+                end: "'.$value["fin"].'",
+                color: "'.$value["color"].'",
+                editable: true //para editar o mover los eventos creados
+
               },';
 
             }else if($value["id_padre"] ==  substr($_GET["url"], 7)){
@@ -224,7 +232,8 @@ session_start();
                 id: "'.$value["id"].'",
                 title: "'.$value["nyaP"].'",
                 start: "'.$value["inicio"].'",
-                end: "'.$value["fin"].'"
+                end: "'.$value["fin"].'",
+                color: "'.$value["color"].'"
               },';
             }else if($value["id_consulta"] ==  substr($_GET["url"], 9)){
               echo '{
@@ -232,7 +241,8 @@ session_start();
                 id: "'.$value["id"].'",
                 title: "'.$value["nyaP"].'",
                 start: "'.$value["inicio"].'",
-                end: "'.$value["fin"].'"
+                end: "'.$value["fin"].'",
+                color: "'.$value["color"].'"
               },';
             }else if($value["id_consulta"] ==  substr($_GET["url"], 8)){
               echo '{
@@ -240,13 +250,17 @@ session_start();
                 id: "'.$value["id"].'",
                 title: "'.$value["nyaP"].'",
                 start: "'.$value["inicio"].'",
-                end: "'.$value["fin"].'"
+                end: "'.$value["fin"].'",
+                color: "'.$value["color"].'"
               },';
           }
         }
 
           ?>
       ],
+
+       
+
       eventClick: function (info, jsEvent, view){
         $('#CalendarioModal').modal();
         console.log(info);
@@ -256,6 +270,7 @@ session_start();
         $('#horaS').val(info.start);
         $('#horaF').val(info.end);
         $('#description').val(info.description);
+        
         // console.log(info.title);
         // console.log(info.start);
         // console.log(info.end);

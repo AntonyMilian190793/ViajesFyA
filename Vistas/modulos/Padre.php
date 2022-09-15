@@ -147,6 +147,14 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
                             <h2>Comentario:</h2>
                             <input type="text" class="form-control input-lg" name="comentario">
                         </div>
+
+                        <div class="form-group">
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="color" type="color" name="color">
+                                <label for="color" class="form-label">Color</label>
+                        </div>
+                        
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -168,7 +176,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
 
 
 <div class="modal fade" rol="dialog" id="CalendarioModal">
-    <div class="modal-dialog">
+    <div class="">
         <div class="modal-content">
             <form method="post">
                 <div class="modal-body">
