@@ -197,7 +197,7 @@ session_start();
     $('#calendar').fullCalendar({
 
       // hiddenDays: [0, 6],
-             header: {
+        header: {
           left: 'prev,next today',
           center: 'title',
           right: 'agendaDay, agendaWeek, month,'
@@ -279,8 +279,10 @@ session_start();
 
       dayClick: function(date, jsEvent, view) {
         $('#CitaModal').modal();
-
+        console.log(date);
         var fecha = date.format();
+
+        //las horas en el calendario
         var hora2 = ("01:00:00").split(":");
 
         fecha = fecha.split("T");
@@ -290,7 +292,7 @@ session_start();
         var h1 = parseFloat(hora[0]);
         var h2 = parseFloat(hora2[0]);
         var horaF = h1 + h2;
-
+        
         $('#fechaC').val(dia);
 
         $('#horaC').val(h1 + ":00:00");

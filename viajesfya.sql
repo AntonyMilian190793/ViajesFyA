@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-09-2022 a las 02:54:37
+-- Tiempo de generación: 15-09-2022 a las 23:41:19
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -197,15 +197,15 @@ CREATE TABLE `otrostrabajadores` (
 
 INSERT INTO `otrostrabajadores` (`id`, `id_consulta`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `sexo`, `clave`, `rol`) VALUES
 (1, 10, 'Milian Montalvo', 'Jorge Antony', '70311233', '', 'jmilian', 'Masculino', '123', 'otrosTrabajadores'),
+(3, 1, 'Verano', 'Jhony', '8735332', '', 'jverano', 'Masculino', '123', 'otrosTrabajadores'),
+(10, 1, 'Quijiate', 'Víctor', '79881122', '', 'vquijaite', '', '123', 'otrosTrabajadores'),
 (20, 1, 'Acero', 'Katheryn', '703221231', '', 'kacero', 'Femenino', '123', 'otrosTrabajadores'),
-(21, 1, 'Quijiate', 'Víctor', '79881122', '', 'vquijaite', '', '123', 'otrosTrabajadores'),
-(22, 1, 'Verano', 'Jhony', '8735332', '', 'jverano', 'Masculino', '123', 'otrosTrabajadores'),
 (23, 2, 'Cavassa', 'Ernesto', '8474633', '', 'ecavassa', '', '123', 'otrosTrabajadores'),
 (24, 0, 'Portilla', 'Maria', '098761', '', 'mportilla', '', '123', 'otrosTrabajadores'),
 (25, 0, 'Atausupa', 'Víctor', '89766122', '', 'vatausupa', '', '123', 'otrosTrabajadores'),
 (26, 0, 'Egoavil', 'Nataly', '09871622', '', 'negoavil', '', '123', 'otrosTrabajadores'),
-(27, 0, 'Casas', 'Fabiola', '87611211', '', 'fcasas', '', '123', 'otrosTrabajadores'),
-(28, 0, 'Chávez', 'Fabiola', '098711611', '', 'fchavez', '', '123', 'otrosTrabajadores');
+(27, 9, 'Casas', 'Fabiola', '87611211', '', 'fcasas', '', '123', 'otrosTrabajadores'),
+(28, 9, 'Chávez', 'Fabiola', '098711611', '', 'fchavez', '', '123', 'otrosTrabajadores');
 
 -- --------------------------------------------------------
 
@@ -375,27 +375,49 @@ CREATE TABLE `vueloslogistica` (
   `documento` text NOT NULL,
   `comentario` text NOT NULL,
   `inicio` datetime NOT NULL,
-  `fin` datetime NOT NULL
+  `fin` datetime NOT NULL,
+  `color` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `vueloslogistica`
 --
 
-INSERT INTO `vueloslogistica` (`id`, `id_padre`, `id_consulta`, `id_logistica`, `nyaP`, `documento`, `comentario`, `inicio`, `fin`) VALUES
-(14, 2, 1, 15, 'Víctor Atausupa', '121221', '', '2022-09-11 08:00:00', '2022-09-11 09:00:00'),
-(15, 2, 1, 0, 'Katheryn Acero', '70511222', '', '2022-09-11 12:00:00', '2022-09-11 13:00:00'),
-(16, 2, 1, 15, 'Fabiola Casas', '70411233', 'No se fue de viaje', '2022-09-11 20:00:00', '2022-09-11 21:00:00'),
-(17, 30, 1, 15, 'Fabiola Chávez', '878787', '', '2022-09-11 17:00:00', '2022-09-11 18:00:00'),
-(19, 2, 1, 15, 'Nataly Egoavil', '121221', '', '2022-09-11 23:00:00', '0000-00-00 00:00:00'),
-(20, 2, 1, 15, 'Maria Portilla', '121`2122', '', '2022-09-11 01:00:00', '2022-09-11 02:00:00'),
-(22, 29, 10, 15, 'Jorge Antony Milian Montalvo', '70311233', '', '2022-09-11 19:00:00', '2022-09-11 20:00:00'),
-(23, 2, 1, 0, 'Ernesto Cavassa', '122112', '', '2022-09-11 18:00:00', '2022-09-11 19:00:00'),
-(26, 29, 10, 0, 'Jorge Antony Milian Montalvo', 'asaassa', '', '2022-09-11 23:00:00', '0000-00-00 00:00:00'),
-(27, 29, 10, 0, 'Jorge Antony Milian Montalvo', '70311233', '', '2022-09-12 18:00:00', '2022-09-12 19:00:00'),
-(28, 34, 12, 0, 'Katheryn Acero', 'assasa', '', '2022-09-12 07:00:00', '2022-09-12 08:00:00'),
-(29, 2, 1, 0, 'Fabiola Casas', 'assaas', '', '2022-09-13 08:00:00', '2022-09-13 09:00:00'),
-(30, 2, 1, 0, 'Maria Portilla', '09781511', 'Todo bien!', '2022-09-14 08:00:00', '2022-09-14 09:00:00');
+INSERT INTO `vueloslogistica` (`id`, `id_padre`, `id_consulta`, `id_logistica`, `nyaP`, `documento`, `comentario`, `inicio`, `fin`, `color`) VALUES
+(14, 2, 1, 15, 'Víctor Atausupa', '121221', '', '2022-09-11 08:00:00', '2022-09-11 09:00:00', ''),
+(15, 2, 1, 0, 'Katheryn Acero', '70511222', '', '2022-09-11 12:00:00', '2022-09-11 13:00:00', ''),
+(16, 2, 1, 15, 'Fabiola Casas', '70411233', 'No se fue de viaje', '2022-09-11 20:00:00', '2022-09-11 21:00:00', ''),
+(17, 30, 1, 15, 'Fabiola Chávez', '878787', '', '2022-09-11 17:00:00', '2022-09-11 18:00:00', ''),
+(19, 2, 1, 15, 'Nataly Egoavil', '121221', '', '2022-09-11 23:00:00', '0000-00-00 00:00:00', ''),
+(20, 2, 1, 15, 'Maria Portilla', '121`2122', '', '2022-09-11 01:00:00', '2022-09-11 02:00:00', ''),
+(22, 29, 10, 15, 'Jorge Antony Milian Montalvo', '70311233', '', '2022-09-11 19:00:00', '2022-09-11 20:00:00', ''),
+(23, 2, 1, 0, 'Ernesto Cavassa', '122112', '', '2022-09-11 18:00:00', '2022-09-11 19:00:00', ''),
+(26, 29, 10, 0, 'Jorge Antony Milian Montalvo', 'asaassa', '', '2022-09-11 23:00:00', '0000-00-00 00:00:00', ''),
+(27, 29, 10, 0, 'Jorge Antony Milian Montalvo', '70311233', '', '2022-09-12 18:00:00', '2022-09-12 19:00:00', ''),
+(28, 34, 12, 0, 'Katheryn Acero', 'assasa', '', '2022-09-12 07:00:00', '2022-09-12 08:00:00', ''),
+(29, 2, 1, 0, 'Fabiola Casas', 'assaas', '', '2022-09-13 08:00:00', '2022-09-13 09:00:00', ''),
+(30, 2, 1, 0, 'Maria Portilla', '09781511', 'Todo bien!', '2022-09-14 08:00:00', '2022-09-14 09:00:00', ''),
+(31, 2, 1, 0, 'Jhony Verano', '09871233', 'Salió bien', '2022-09-15 08:00:00', '2022-09-15 09:00:00', ''),
+(32, 29, 10, 0, 'Jorge Antony Milian Montalvo', '70311233', '', '2022-09-13 06:00:00', '2022-09-13 07:00:00', ''),
+(33, 2, 1, 0, 'Víctor Quijiate', '98711233', '', '2022-09-16 08:00:00', '2022-09-16 09:00:00', ''),
+(34, 2, 1, 0, 'Víctor Atausupa', '78901233', '', '2022-09-17 08:00:00', '2022-09-17 09:00:00', ''),
+(38, 2, 1, 0, 'Jorge Antony Milian Montalvo', '70311233', 'En proceso', '2022-09-15 11:00:00', '2022-09-15 12:00:00', '#a6a919'),
+(40, 2, 1, 0, 'Ernesto Cavassa', '1212', 'qwqw', '2022-09-16 11:00:00', '2022-09-16 12:00:00', '#dc1818'),
+(41, 29, 10, 0, 'Jorge Antony Milian Montalvo', '70311233', '', '2022-09-15 06:00:00', '2022-09-15 07:00:00', '#7ba40a'),
+(42, 29, 10, 0, 'Nataly Egoavil', '098122', '', '2022-09-16 05:00:00', '2022-09-16 06:00:00', '#000000'),
+(43, 29, 10, 0, 'Víctor Atausupa', '1211212', '', '2022-09-17 05:00:00', '2022-09-17 06:00:00', '#1411ee'),
+(44, 2, 1, 0, 'Katheryn Acero', '12', '12', '2022-09-16 11:00:00', '2022-09-16 12:00:00', '#beb823'),
+(45, 2, 1, 0, 'Víctor Atausupa', '70311233', '', '2022-09-16 11:00:00', '2022-09-16 12:00:00', '#491cc4'),
+(47, 2, 1, 0, 'Katheryn Acero', '111', '11', '2022-09-15 12:00:00', '2022-09-15 13:00:00', '#000000'),
+(48, 2, 1, 0, 'Jorge Antony Milian Montalvo', '1212', '', '2022-09-15 12:00:00', '2022-09-15 13:00:00', '#cea946'),
+(49, 29, 10, 0, 'Ernesto Cavassa', 'asaa', '', '2022-09-16 05:00:00', '2022-09-16 06:00:00', '#1a52d5'),
+(50, 2, 1, 0, 'Víctor Atausupa', 'asas', 'as', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '#000000'),
+(51, 2, 1, 0, 'Jorge Antony Milian Montalvo', '121212', '12', '2022-09-15 12:00:00', '2022-09-15 13:00:00', '#f40b0b'),
+(52, 2, 1, 0, 'Víctor Atausupa', '8888888', '', '2022-09-16 11:00:00', '2022-09-16 12:00:00', '#edcf07'),
+(53, 2, 1, 0, 'Fabiola Chávez', '999999', '', '2022-09-16 11:00:00', '2022-09-16 12:00:00', '#000000'),
+(54, 2, 1, 0, 'Nataly Egoavil', '09012091212', 'No se fue!', '2022-09-15 13:00:00', '2022-09-15 14:00:00', '#e1c50e'),
+(55, 2, 1, 0, 'Víctor Atausupa', '1111', '', '2022-09-17 12:00:00', '2022-09-17 13:00:00', '#000000'),
+(56, 2, 1, 0, 'Jorge Antony Milian Montalvo', '70331232', 'Va!', '2022-09-18 08:00:00', '2022-09-18 09:00:00', '#dea712');
 
 --
 -- Índices para tablas volcadas
@@ -511,7 +533,7 @@ ALTER TABLE `vuelos`
 -- AUTO_INCREMENT de la tabla `vueloslogistica`
 --
 ALTER TABLE `vueloslogistica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

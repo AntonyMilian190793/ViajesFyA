@@ -129,18 +129,23 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
                         </div>  
                         
                         <div class="form-group">
-                            <h2>Fecha:</h2>
+                            <h2>Fecha Inicio:</h2>
                             <input type="text" class="form-control input-lg" id="fechaC"  value="" readonly>
+                            <input type="text" class="form-control input-lg" name="fyhIC" id="fyhIC" readonly>
                         </div>
 
                         <div class="form-group">
-                            <h2>Hora:</h2>
+                            <h2>Fecha Fin:</h2>
+                            <input type="date" class="form-control input-lg" id="fechaF"  value="" >
+                            <input type="text" class="form-control input-lg" name="fyhFC" id="fyhFC" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Hora Inicio:</h2>
                             <input type="text" class="form-control input-lg" id="horaC"  value="" readonly>
                         </div>
 
                         <div class="form-group">
-                            <input type="hidden" class="form-control input-lg" name="fyhIC" id="fyhIC" readonly>
-                            <input type="hidden" class="form-control input-lg" name="fyhFC" id="fyhFC" readonly>
                         </div>
 
                         <div class="form-group">
@@ -149,6 +154,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
                         </div>
 
                         <div class="form-group">
+                            <h2>Seleccionar color del Evento:</h2>
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="color" type="color" name="color">
                                 <label for="color" class="form-label">Color</label>
@@ -176,7 +182,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
 
 
 <div class="modal fade" rol="dialog" id="CalendarioModal">
-    <div class="">
+    <div class="modal-dialog">
         <div class="modal-content">
             <form method="post">
                 <div class="modal-body">
