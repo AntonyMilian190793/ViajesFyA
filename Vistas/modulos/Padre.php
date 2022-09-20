@@ -224,7 +224,10 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
                             <input type="text" class="form-control input-lg" id="titleC" name="titleC" readonly>
                         </div>  
                         
-
+                        <div class="form-group">
+                            <h2>Colegio:</h2>
+                            <input type="text" class="form-control input-lg" id="colegioC" name="colegioC" value="" readonly>
+                        </div> 
 
                         <div class="form-group">
                             <h2>Hora Inicio:</h2>
@@ -236,7 +239,6 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
                             <input type="text" class="form-control input-lg" id="horaF"  name="horaF" value="" readonly>
                         </div>
 
-   
 
                         <div class="form-group">
                             <h2>Comentario:</h2>

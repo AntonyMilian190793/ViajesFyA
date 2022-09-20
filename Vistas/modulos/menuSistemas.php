@@ -19,7 +19,7 @@
 
       <li>
         <a href="http://localhost/ViajesFyA/colegios">
-          <i class="fa fa-address-book-o"></i>
+          <i class="fa fa-university" aria-hidden="true"></i>
           <span>Colegios</span>
         </a>
       </li>

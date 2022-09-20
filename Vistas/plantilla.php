@@ -200,7 +200,7 @@ session_start();
         header: {
           left: 'prev,next today',
           center: 'title',
-          right: 'agendaDay, agendaWeek, month, list,'
+          right: 'agendaDay, agendaWeek, month, list',
         },
       
 
@@ -218,6 +218,7 @@ session_start();
                 id: "'.$value["id"].'",
                 title: "'.$value["nyaP"].'",
                 description: "'.$value["comentario"].'",
+                colegioC: "'.$value["colegio"].'",
                 start: "'.$value["inicio"].'",
                 end: "'.$value["fin"].'",
                 color: "'.$value["color"].'",
@@ -264,9 +265,11 @@ session_start();
       eventClick: function (info, jsEvent, view){
         $('#CalendarioModal').modal();
         console.log(info);
+
        
         $('#idC').val(info.id);
         $('#titleC').val(info.title);
+        $('#colegioC').val(info.colegioC);
         $('#horaS').val(info.start);
         $('#horaF').val(info.end);
         $('#description').val(info.description);
@@ -300,7 +303,7 @@ session_start();
 
         $('#fyhIC').val(fecha[0] + " " + h1 + ":00:00");
         $('#fyhFC').val(fecha[0] + " " + horaF + ":00:00");
-        
+
       },
 
     });

@@ -56,7 +56,7 @@
                 $tablaBD = "vueloslogistica";
                 $Did = substr($_GET["url"], 6);
                 $datosC = array("Did"=>$_POST["Did"], "Cid"=>$_POST["Cid"], "nombreP"=>$_POST["nombreP"], "documentoP"=>$_POST["documentoP"],
-                "fyhIC"=>$_POST["fyhIC"], "fyhFC"=>$_POST["fyhFC"], "comentario"=>$_POST["comentario"], "color"=>$_POST["color"]);
+                "fyhIC"=>$_POST["fyhIC"], "fyhFC"=>$_POST["fyhFC"],"nombreCo"=>$_POST["nombreCo"], "comentario"=>$_POST["comentario"], "color"=>$_POST["color"]);
 
 
                 $resultado = CitasM::PedirCitaLogisticaM($tablaBD, $datosC);
@@ -79,7 +79,7 @@
                 $tablaBD = "vueloslogistica";
                 $Did = substr($_GET["url"], 8);
                 $datosC = array("Did"=>$_POST["Did"], "Cid"=>$_POST["Cid"], "nombreP"=>$_POST["nombreP"], "documentoP"=>$_POST["documentoP"],
-                "fyhIC"=>$_POST["fyhIC"], "fyhFC"=>$_POST["fyhFC"], "comentario"=>$_POST["comentario"], "color"=>$_POST["color"]);
+                "fyhIC"=>$_POST["fyhIC"], "fyhFC"=>$_POST["fyhFC"],"nombreCo"=>$_POST["nombreCo"], "comentario"=>$_POST["comentario"], "color"=>$_POST["color"]);
 
 
                 $resultado = CitasM::PedirCitaColaboradoresM($tablaBD, $datosC);

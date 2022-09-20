@@ -23,7 +23,7 @@
 
         static public function VerColegiosM($tablaBD, $columna, $valor){
             if($columna == null){
-                $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD ORDER BY nombre ASC");
+                $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD ORDER BY id ASC");
                 $pdo -> execute();
                 return $pdo -> fetchAll();
             }else{
