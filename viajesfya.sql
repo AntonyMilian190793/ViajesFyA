@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-09-2022 a las 23:41:19
+-- Tiempo de generación: 20-09-2022 a las 20:51:27
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `viajesfya`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `colegios`
+--
+
+CREATE TABLE `colegios` (
+  `id` int(11) NOT NULL,
+  `nombre` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `colegios`
+--
+
+INSERT INTO `colegios` (`id`, `nombre`) VALUES
+(5, 'Fe y Alegría 1 - Lima - San Martín de Porres'),
+(6, 'Fe y Alegría 3 - Lima - San Martín de Porres'),
+(7, 'Fe y Alegría 2 - Lima - San Juan de Miraflores'),
+(9, 'Fe y Alegría 4 - Lima - San Juan de Lurigancho'),
+(10, 'Fe y Alegría 5 - Lima - San Juan de Lurigancho');
 
 -- --------------------------------------------------------
 
@@ -46,7 +68,8 @@ INSERT INTO `consultas` (`id`, `nombre`) VALUES
 (10, 'Sistemas'),
 (11, 'Recursos Humanos'),
 (12, 'Legal'),
-(13, 'Secretaria');
+(13, 'Secretaria'),
+(17, 'asassassa');
 
 -- --------------------------------------------------------
 
@@ -416,12 +439,23 @@ INSERT INTO `vueloslogistica` (`id`, `id_padre`, `id_consulta`, `id_logistica`, 
 (52, 2, 1, 0, 'Víctor Atausupa', '8888888', '', '2022-09-16 11:00:00', '2022-09-16 12:00:00', '#edcf07'),
 (53, 2, 1, 0, 'Fabiola Chávez', '999999', '', '2022-09-16 11:00:00', '2022-09-16 12:00:00', '#000000'),
 (54, 2, 1, 0, 'Nataly Egoavil', '09012091212', 'No se fue!', '2022-09-15 13:00:00', '2022-09-15 14:00:00', '#e1c50e'),
-(55, 2, 1, 0, 'Víctor Atausupa', '1111', '', '2022-09-17 12:00:00', '2022-09-17 13:00:00', '#000000'),
-(56, 2, 1, 0, 'Jorge Antony Milian Montalvo', '70331232', 'Va!', '2022-09-18 08:00:00', '2022-09-18 09:00:00', '#dea712');
+(56, 2, 1, 0, 'Jorge Antony Milian Montalvo', '70331232', 'Va!', '2022-09-18 08:00:00', '2022-09-18 09:00:00', '#dea712'),
+(82, 2, 1, 0, 'Fabiola Casas', 'assasa', 'asasas', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '#000000'),
+(83, 2, 1, 0, 'Fabiola Casas', 'assasa', 'asasas', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '#000000'),
+(84, 2, 1, 0, 'Fabiola Casas', '2323', '2332', '2022-09-19 01:00:00', '2022-09-19 02:00:00', '#ffde0a'),
+(85, 2, 1, 0, 'Jorge Antony Milian Montalvo', '212121', '1212212', '2022-09-19 23:00:00', '0000-00-00 00:00:00', '#1e0ca7'),
+(86, 2, 1, 0, 'Ernesto Cavassa', 'AA', '1', '2022-09-20 07:00:00', '2022-09-20 08:00:00', '#a445a5'),
+(125, 2, 1, 0, 'Jorge Antony Milian Montalvo', '70311233', 'Se va mañana', '2022-09-20 11:00:00', '2022-09-24 12:00:00', '#b61b1b');
 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `colegios`
+--
+ALTER TABLE `colegios`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `consultas`
@@ -482,10 +516,16 @@ ALTER TABLE `vueloslogistica`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `colegios`
+--
+ALTER TABLE `colegios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT de la tabla `consultas`
 --
 ALTER TABLE `consultas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `directivos`
@@ -533,7 +573,7 @@ ALTER TABLE `vuelos`
 -- AUTO_INCREMENT de la tabla `vueloslogistica`
 --
 ALTER TABLE `vueloslogistica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
