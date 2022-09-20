@@ -147,6 +147,32 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
 
                         <div class="form-group">
                         </div>
+                        
+                        <?php
+                                                
+                        echo '<div class="form-group">
+                            <h2>Seleccionar Colegio:</h2>
+                            <select class="form-control input-lg" name="nombreCo">
+                                <option>Colegio...</option>
+
+                                
+                        </div>';
+
+                        $columna = null;
+                        $valor = null;
+                        $resultado	= ColegiosC::VerColegiosC($columna, $valor);
+
+                        foreach ($resultado as $key => $value) {
+
+                            echo '<option value="'.$value["nombre"].' '.$value["apellido"].'">'.$value["nombre"].' '.$value["apellido"].'</option>';
+                        }
+
+                        ?>
+
+                        <div class="form-group">
+                            <h2></h2>
+                            <input type="hidden" class="form-control input-lg" name="">
+                        </div>  
 
                         <div class="form-group">
                             <h2>Comentario:</h2>

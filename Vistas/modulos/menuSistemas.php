@@ -10,10 +10,17 @@
         </a>
       </li>
 
-      <li>
+        <li>
         <a href="http://localhost/ViajesFyA/consultas">
           <i class="fa fa-address-book-o"></i>
           <span>Áreas</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="http://localhost/ViajesFyA/colegios">
+          <i class="fa fa-address-book-o"></i>
+          <span>Colegios</span>
         </a>
       </li>
 
