@@ -200,10 +200,22 @@ session_start();
         header: {
           left: 'prev,next today',
           center: 'title',
-          right: 'agendaDay, agendaWeek, month, list',
+          right: 'agendaDay, agendaWeek, month, listWeek, listMonth',
         },
-      
 
+        height: 800,
+        contentHeight: 780,
+        aspectRatio: 3,
+        nowIndicator: true,
+        
+      views: {
+        listWeek:{"buttonText": "Eventos Semanales"},
+        listMonth:{"buttonText": "Eventos Mensuales"},
+    },
+    
+      dayMaxEvents: true,
+      navLinks: true,
+    
       events: [
         <?php
           
@@ -225,6 +237,7 @@ session_start();
                 editable: true //para editar o mover los eventos creados
 
               },';
+              
 
             }else if($value["id_padre"] ==  substr($_GET["url"], 7)){
               
@@ -258,15 +271,15 @@ session_start();
         }
 
           ?>
+
+          
       ],
 
-       
 
       eventClick: function (info, jsEvent, view){
         $('#CalendarioModal').modal();
         console.log(info);
 
-       
         $('#idC').val(info.id);
         $('#titleC').val(info.title);
         $('#colegioC').val(info.colegioC);
@@ -305,6 +318,8 @@ session_start();
         $('#fyhFC').val(fecha[0] + " " + horaF + ":00:00");
 
       },
+
+      
 
     });
   </script>

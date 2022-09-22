@@ -40,7 +40,12 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
             <h1>Área de : '.$consultorio["nombre"].'</h1>';
         ?>
 
+        <br>
+            <div class="crow g-3">
+                    <input type="text" class="form-control" name="caja_busqueda" id="caja_busqueda" placeholder="Búsqueda">
+            </div>
         
+
         
 
     </section>
@@ -55,6 +60,8 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
     </section>
 
 </div>
+
+
 
 <div class="modal fade" rol="dialog" id="CitaModal">
     <div class="modal-dialog">
