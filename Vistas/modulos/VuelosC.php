@@ -22,9 +22,9 @@ if ($_SESSION["id"] != substr($_GET["url"], 8)) {
         $resultado = OtrosTC::OtroTC($columna, $valor);
 
         if($resultado["sexo"] == "Femenino"){
-            echo '<h1>Trabajadora: '.$resultado["apellido"].' '.$resultado["nombre"].'</h1>';
+            echo '<h1>Trabajadora: '.$resultado["nombre"].' '.$resultado["apellido"].'</h1>';
         }else{
-            echo '<h1>Trabajador: '.$resultado["apellido"].' '.$resultado["nombre"].'</h1>';
+            echo '<h1>Trabajador: '.$resultado["nombre"].' '.$resultado["apellido"].'</h1>';
         }
 
 

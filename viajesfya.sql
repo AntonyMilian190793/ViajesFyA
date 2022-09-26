@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-09-2022 a las 03:04:04
+-- Tiempo de generación: 26-09-2022 a las 06:37:31
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -162,15 +162,13 @@ CREATE TABLE `jefesarea` (
 
 INSERT INTO `jefesarea` (`id`, `id_consulta`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `clave`, `rol`, `sexo`) VALUES
 (1, 1, 'Quijaite', 'Víctor', '98716111', 'Vistas/img/Administracion/administracion115.png', 'vquijaite', '123', 'JefeArea', 'Masculino'),
+(2, 2, 'Morelli ', 'Oscar', '0987122', '', 'omorelli', '123', 'JefeArea', 'Masculino'),
+(7, 7, 'Alencastre ', 'Ava', '09871122', '', 'aalencastre', '123', 'JefeArea', 'Femenino'),
+(8, 8, 'Piñeyro ', 'Javier', '0987112', '', 'jpineyro', '123', 'JefeArea', 'Masculino'),
+(9, 9, 'Guevara', 'Carlos', '0987611', '', 'cguevara', '123', 'JefeArea', 'Masculino'),
 (10, 10, 'Verano', 'Jhony', '89765122', '', 'jverano', '123', 'JefeArea', 'Masculino'),
-(12, 12, 'Acero', 'Katheryn', '70511233', '', 'kacero', '123', 'JefeArea', 'Femenino'),
-(15, 9, 'Guevara', 'Carlos', '0987611', '', 'cguevara', '123', 'JefeArea', 'Masculino'),
-(16, 8, 'Piñeyro ', 'Javier', '0987112', '', 'jpineyro', '123', 'JefeArea', 'Masculino'),
-(17, 7, 'Alencastre ', 'Ava', '09871122', '', 'aalencastre', '123', 'JefeArea', 'Femenino'),
-(18, 2, 'Morelli ', 'Oscar', '0987122', '', 'omorelli', '123', 'JefeArea', 'Masculino'),
-(19, 5, 'Alania ', 'Angela', '7876122', '', 'aalania', '123', 'JefeArea', 'Femenino'),
-(20, 11, 'Vargas', ' Julia', '0987122', '', 'jvargas', '123', 'JefeArea', 'Femenino'),
-(21, 13, 'Portilla', 'María', '09871211', '', 'mportilla', '123', 'JefeArea', 'Femenino');
+(11, 11, 'Vargas', ' Julia', '0987122', '', 'jvargas', '123', 'JefeArea', 'Femenino'),
+(12, 12, 'Acero', 'Katheryn', '70511233', '', 'kacero', '123', 'JefeArea', 'Femenino');
 
 -- --------------------------------------------------------
 
@@ -231,7 +229,8 @@ INSERT INTO `otrostrabajadores` (`id`, `id_consulta`, `apellido`, `nombre`, `doc
 (25, 0, 'Atausupa', 'Víctor', '89766122', '', 'vatausupa', '', '123', 'otrosTrabajadores'),
 (26, 0, 'Egoavil', 'Nataly', '09871622', '', 'negoavil', '', '123', 'otrosTrabajadores'),
 (27, 1, 'Casas', 'Fabiola', '87611211', '', 'fcasas', '', '123', 'otrosTrabajadores'),
-(28, 1, 'Chávez', 'Fabiola', '098711611', '', 'fchavez', '', '123', 'otrosTrabajadores');
+(28, 1, 'Chávez', 'Fabiola', '098711611', '', 'fchavez', '', '123', 'otrosTrabajadores'),
+(34, 2, '1212', '1222', '12121', '', '123', 'Masculino', '123', 'otrosTrabajadores');
 
 -- --------------------------------------------------------
 
@@ -465,7 +464,13 @@ INSERT INTO `vueloslogistica` (`id`, `id_padre`, `id_consulta`, `id_logistica`, 
 (148, 2, 1, 0, 'Víctor Quijiate', '70311233', 'Fe y Alegría 6 - Lima - San Martín de Porres ', 'se va urgente', '2022-09-25 18:35:00', '2022-09-30 18:36:00', '#baa01c'),
 (149, 31, 11, 0, 'Maria Portilla', '70331223', 'Fe y Alegría 9 - Lima - Comas ', 'Se va!', '2022-09-25 19:30:00', '2022-09-29 19:30:00', '#c5af1b'),
 (150, 29, 10, 0, 'Víctor Atausupa', 'asassa', 'Fe y Alegría 2 - Lima - San Martín de Porres ', '', '2022-09-25 19:46:00', '2022-09-26 19:46:00', '#5dd930'),
-(151, 31, 11, 0, 'Katheryn Acero', 'qwqwqw', 'Fe y Alegría 2 - Lima - San Martín de Porres ', '', '2022-09-26 19:59:00', '2022-09-29 19:59:00', '#000000');
+(151, 31, 11, 0, 'Katheryn Acero', 'qwqwqw', 'Fe y Alegría 2 - Lima - San Martín de Porres ', '', '2022-09-26 19:59:00', '2022-09-29 19:59:00', '#000000'),
+(152, 34, 12, 0, 'Katheryn Acero', '76544321', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '11111', '2022-09-25 21:35:00', '2022-09-27 21:35:00', '#16d813'),
+(154, 6, 2, 0, 'Jorge Antony Milian Montalvo', '98112111', 'Fe y Alegría 5 - Lima - San Juan de Lurigancho ', '', '2022-09-26 07:30:00', '2022-09-28 08:00:00', '#00ff80'),
+(155, 6, 2, 0, '1222 1212', '12121', 'Fe y Alegría 3 - Lima - San Juan de Miraflores ', '12', '2022-09-25 22:49:00', '2022-09-28 22:49:00', '#2977b3'),
+(156, 6, 2, 0, '1222 1212', '12121212', 'Fe y Alegría 4 - Lima - San Juan de Lurigancho ', '1212', '2022-09-27 22:52:00', '2022-09-29 22:52:00', '#16d1e9'),
+(157, 6, 2, 0, '1222 1212', '12122121', 'Fe y Alegría 7 - Lima - Comas ', 'aaa', '2022-09-25 22:53:00', '2022-09-28 22:53:00', '#df1616'),
+(158, 30, 9, 0, 'Fabiola Chávez', '11111', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '111', '2022-09-25 23:21:00', '2022-09-30 23:21:00', '#0ac70e');
 
 --
 -- Índices para tablas volcadas
@@ -575,7 +580,7 @@ ALTER TABLE `logistica`
 -- AUTO_INCREMENT de la tabla `otrostrabajadores`
 --
 ALTER TABLE `otrostrabajadores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT de la tabla `sistemas`
@@ -593,7 +598,7 @@ ALTER TABLE `vuelos`
 -- AUTO_INCREMENT de la tabla `vueloslogistica`
 --
 ALTER TABLE `vueloslogistica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=152;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
