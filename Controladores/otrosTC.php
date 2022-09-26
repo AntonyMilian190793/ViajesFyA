@@ -79,6 +79,13 @@
 
         return $resultado;
     }
+
+    static public function OtroTC($columna, $valor){
+        $tablaBD = "otrosTrabajadores";
+        $resultado = OtrosTM::OtroTM($tablaBD, $columna, $valor);
+
+        return $resultado;
+    }
 }
 
 ?>

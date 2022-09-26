@@ -249,7 +249,7 @@ session_start();
                 end: "'.$value["fin"].'",
                 color: "'.$value["color"].'"
               },';
-            }else if($value["id_consulta"] ==  substr($_GET["url"], 9)){
+            }else if($value["id_padre"] ==  substr($_GET["url"], 9)){
               echo '{
                 
                 id: "'.$value["id"].'",
@@ -258,7 +258,7 @@ session_start();
                 end: "'.$value["fin"].'",
                 color: "'.$value["color"].'"
               },';
-            }else if($value["id_consulta"] ==  substr($_GET["url"], 8)){
+            }else if($value["id_padre"] ==  substr($_GET["url"], 8)){
               echo '{
                 
                 id: "'.$value["id"].'",
@@ -293,31 +293,31 @@ session_start();
         // console.log(info.description);
         },
 
-      dayClick: function(date, jsEvent, view) {
+      // dayClick: function(date, jsEvent, view) {
 
-        $('#CitaModal').modal();
-        console.log(date);
-        var fecha = date.format();
+      //   $('#CitaModal').modal();
+      //   console.log(date);
+      //   var fecha = date.format();
 
-        //las horas en el calendario
-        var hora2 = ("01:00:00").split(":");
+      //   //las horas en el calendario
+      //   var hora2 = ("01:00:00").split(":");
 
-        fecha = fecha.split("T");
-        var dia = fecha[0];
+      //   fecha = fecha.split("T");
+      //   var dia = fecha[0];
 
-        var hora = (fecha[1].split(":"));
-        var h1 = parseFloat(hora[0]);
-        var h2 = parseFloat(hora2[0]);
-        var horaF = h1 + h2;
+      //   var hora = (fecha[1].split(":"));
+      //   var h1 = parseFloat(hora[0]);
+      //   var h2 = parseFloat(hora2[0]);
+      //   var horaF = h1 + h2;
         
-        $('#fechaC').val(dia);
+      //   $('#fechaC').val(dia);
 
-        $('#horaC').val(h1 + ":00:00");
+      //   $('#horaC').val(h1 + ":00:00");
 
-        $('#fyhIC').val(fecha[0] + " " + h1 + ":00:00");
-        $('#fyhFC').val(fecha[0] + " " + horaF + ":00:00");
+      //   $('#fyhIC').val(fecha[0] + " " + h1 + ":00:00");
+      //   $('#fyhFC').val(fecha[0] + " " + horaF + ":00:00");
 
-      },
+      // },
 
       
 

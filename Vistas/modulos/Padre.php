@@ -22,9 +22,9 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
         $resultado = PadresC::PadreC($columna, $valor);
 
         if($resultado["sexo"] == "Femenino"){
-            echo '<h1>Trabajadora: '.$resultado["apellido"].' '.$resultado["nombre"].'</h1>';
+            echo '<h1>Jefa: '.$resultado["nombre"].' '.$resultado["apellido"].'</h1>';
         }else{
-            echo '<h1>Trabajador: '.$resultado["apellido"].' '.$resultado["nombre"].'</h1>';
+            echo '<h1>Jefe: '.$resultado["nombre"].' '.$resultado["apellido"].'</h1>';
         }
 
 
@@ -40,12 +40,21 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
             <h1>Área de : '.$consultorio["nombre"].'</h1>';
         ?>
 
-        <br>
+
+        <?php
+        if($_SESSION["rol"] == "Logistica"){
+            echo '            
+            <div class="box-header">
+                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#CitaModal">Crear Evento</button>
+            </div>';
+        }
+        ?>
+
+        
+        <!-- <br>
             <div class="crow g-3">
                     <input type="text" class="form-control" name="caja_busqueda" id="caja_busqueda" placeholder="Búsqueda">
-            </div>
-        
-
+            </div> -->
         
 
     </section>
@@ -137,20 +146,20 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
                         
                         <div class="form-group">
                             <h2>Fecha Inicio:</h2>
-                            <input type="text" class="form-control input-lg" id="fechaC"  value="" readonly>
-                            <input type="text" class="form-control input-lg" name="fyhIC" id="fyhIC" readonly>
+                            <input type="datetime-local" class="form-control input-lg" name="inicio" value="" >
+                            <!-- <input type="text" class="form-control input-lg" name="fyhIC" id="fyhIC" readonly> -->
                         </div>
 
                         <div class="form-group">
                             <h2>Fecha Fin:</h2>
-                            <input type="date" class="form-control input-lg" id="fechaF"  value="" >
-                            <input type="text" class="form-control input-lg" name="fyhFC" id="fyhFC" readonly>
+                            <input type="datetime-local" class="form-control input-lg" name="fin"  value="" >
+                            <!-- <input type="text" class="form-control input-lg" name="fyhFC" id="fyhFC" readonly> -->
                         </div>
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <h2>Hora Inicio:</h2>
                             <input type="text" class="form-control input-lg" id="horaC"  value="" readonly>
-                        </div>
+                        </div> -->
 
                         <div class="form-group">
                         </div>

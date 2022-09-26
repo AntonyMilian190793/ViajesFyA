@@ -74,8 +74,8 @@
 
             $pdo->bindParam(":nyaP", $datosC["nombreP"], PDO::PARAM_STR);
             $pdo->bindParam(":documento", $datosC["documentoP"], PDO::PARAM_STR);
-            $pdo->bindParam(":inicio", $datosC["fyhIC"], PDO::PARAM_STR);
-            $pdo->bindParam(":fin", $datosC["fyhFC"], PDO::PARAM_STR);
+            $pdo->bindParam(":inicio", $datosC["inicio"], PDO::PARAM_STR);
+            $pdo->bindParam(":fin", $datosC["fin"], PDO::PARAM_STR);
             $pdo->bindParam(":colegio", $datosC["nombreCo"], PDO::PARAM_STR);
             $pdo->bindParam(":comentario", $datosC["comentario"], PDO::PARAM_STR);
             $pdo->bindParam(":color", $datosC["color"], PDO::PARAM_STR);

@@ -19,7 +19,7 @@ if ($_SESSION["id"] != substr($_GET["url"], 8)) {
         $columna = "id";
         $valor = substr($_GET["url"], 8);
 
-        $resultado = PadresC::PadreC($columna, $valor);
+        $resultado = OtrosTC::OtroTC($columna, $valor);
 
         if($resultado["sexo"] == "Femenino"){
             echo '<h1>Trabajadora: '.$resultado["apellido"].' '.$resultado["nombre"].'</h1>';
@@ -57,7 +57,7 @@ if ($_SESSION["id"] != substr($_GET["url"], 8)) {
 </div>
 
 <div class="modal fade" rol="dialog" id="">
-<!-- CitaModal -->
+
     <div class="modal-dialog">
         <div class="modal-content">
             <form method="post">
@@ -67,8 +67,8 @@ if ($_SESSION["id"] != substr($_GET["url"], 8)) {
                         <?php
 
                             $columna = "id";
-                            $valor = substr($_GET["url"], 8);
-                            $resultado = PadresC::PadreC($columna, $valor);
+                            $valor = substr($_GET["url"], 9);
+                            $resultado = OtrosTC::OtroTC($columna, $valor);
 
                             echo '                         
                             
