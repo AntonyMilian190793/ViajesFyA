@@ -49,6 +49,7 @@ session_start();
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+  
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -91,7 +92,7 @@ session_start();
 
       if ($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "perfil-Otros" || $url[0] == "perfil-O" || $url[0] == "consultas"
        || $url[0] == "E-C" || $url[0] == "padres" || $url[0] == "otrosTrabajadores" || $url[0] == "perfil-Administracion" 
-       || $url[0] == "perfil-A" || $url[0] == "Ver-areas" || $url[0] == "Ver-Areas-JA" || $url[0] == "Padre" || $url[0] == "Directivoss" || $url[0] == "historial" || $url[0] == "perfil-Padre" 
+       || $url[0] == "perfil-A" || $url[0] == "Ver-areas" || $url[0] == "Ver-Areas-JA" || $url[0] == "Ver-Areas-C"  || $url[0] == "Padre" || $url[0] == "Directivoss" || $url[0] == "historial" || $url[0] == "perfil-Padre" 
        || $url[0] == "perfil-P" || $url[0] == "Vuelos" || $url[0] == "VuelosJA" || $url[0] == "VuelosC" || $url[0] == "perfil-Sistemas" || $url[0] == "perfil-S" || $url[0] == "perfil-S" 
        || $url[0] == "secretarias" || $url[0] == "administracion" || $url[0] == "inicio-editar" || $url[0] == "perfil-Directivo" 
        || $url[0] == "perfil-Logistica" || $url[0] == "perfil-L" || $url[0] == "perfil-otrosTrabajadores" || $url[0] == "perfil-oT"
@@ -194,7 +195,7 @@ session_start();
         m    = date.getMonth(),
         y    = date.getFullYear()
 
-    $('#calendar').fullCalendar({
+    $('#calendar').fullCalendar({   
 
       // hiddenDays: [0, 6],
         header: {
@@ -255,6 +256,8 @@ session_start();
             
         }
       }
+
+      
 
 
         //         $columna = null;
