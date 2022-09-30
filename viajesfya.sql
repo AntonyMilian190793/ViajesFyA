@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-09-2022 a las 06:37:31
+-- Tiempo de generación: 30-09-2022 a las 19:50:30
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -194,7 +194,6 @@ CREATE TABLE `logistica` (
 --
 
 INSERT INTO `logistica` (`id`, `id_consulta`, `usuario`, `clave`, `nombre`, `documento`, `apellido`, `foto`, `rol`, `sexo`) VALUES
-(1, 1, 'mary', '123', 'María', '', 'Portilla', 'Vistas/img/Otros/O-94.jpg', 'Otros', ''),
 (15, 1, 'aalania', '123', 'Angela', '70541233', 'Alania', '', 'Logistica', 'Femino');
 
 -- --------------------------------------------------------
@@ -226,11 +225,10 @@ INSERT INTO `otrostrabajadores` (`id`, `id_consulta`, `apellido`, `nombre`, `doc
 (10, 1, 'Quijiate', 'Víctor', '79881122', '', 'vquijaite', '', '123', 'otrosTrabajadores'),
 (20, 12, 'Acero', 'Katheryn', '703221231', '', 'kacero', 'Femenino', '123', 'otrosTrabajadores'),
 (24, 0, 'Portilla', 'Maria', '098761', '', 'mportilla', '', '123', 'otrosTrabajadores'),
-(25, 0, 'Atausupa', 'Víctor', '89766122', '', 'vatausupa', '', '123', 'otrosTrabajadores'),
 (26, 0, 'Egoavil', 'Nataly', '09871622', '', 'negoavil', '', '123', 'otrosTrabajadores'),
-(27, 1, 'Casas', 'Fabiola', '87611211', '', 'fcasas', '', '123', 'otrosTrabajadores'),
-(28, 1, 'Chávez', 'Fabiola', '098711611', '', 'fchavez', '', '123', 'otrosTrabajadores'),
-(34, 2, '1212', '1222', '12121', '', '123', 'Masculino', '123', 'otrosTrabajadores');
+(27, 9, 'Casas', 'Fabiola', '87611211', '', 'fcasas', '', '123', 'otrosTrabajadores'),
+(28, 9, 'Chávez', 'Fabiola', '098711611', '', 'fchavez', '', '123', 'otrosTrabajadores'),
+(34, 2, 'López', 'José ', '12121', '', '123', 'Masculino', '123', 'otrosTrabajadores');
 
 -- --------------------------------------------------------
 
@@ -470,7 +468,14 @@ INSERT INTO `vueloslogistica` (`id`, `id_padre`, `id_consulta`, `id_logistica`, 
 (155, 6, 2, 0, '1222 1212', '12121', 'Fe y Alegría 3 - Lima - San Juan de Miraflores ', '12', '2022-09-25 22:49:00', '2022-09-28 22:49:00', '#2977b3'),
 (156, 6, 2, 0, '1222 1212', '12121212', 'Fe y Alegría 4 - Lima - San Juan de Lurigancho ', '1212', '2022-09-27 22:52:00', '2022-09-29 22:52:00', '#16d1e9'),
 (157, 6, 2, 0, '1222 1212', '12122121', 'Fe y Alegría 7 - Lima - Comas ', 'aaa', '2022-09-25 22:53:00', '2022-09-28 22:53:00', '#df1616'),
-(158, 30, 9, 0, 'Fabiola Chávez', '11111', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '111', '2022-09-25 23:21:00', '2022-09-30 23:21:00', '#0ac70e');
+(158, 30, 9, 0, 'Fabiola Chávez', '11111', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '111', '2022-09-25 23:21:00', '2022-09-30 23:21:00', '#0ac70e'),
+(159, 2, 1, 0, '1222 1212', '123', 'Fe y Alegría 2 - Lima - San Martín de Porres ', '1212', '2022-09-26 08:17:00', '2022-09-28 08:17:00', '#000000'),
+(160, 30, 9, 15, 'Fabiola Chávez', '12221122', 'Fe y Alegría 8 - Lima - Comas ', '112', '2022-09-26 09:03:00', '2022-09-29 12:06:00', '#c624a9'),
+(161, 29, 10, 0, 'Katheryn Acero', '121212', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '1212', '2022-09-26 09:36:00', '2022-09-28 09:36:00', '#cfc90c'),
+(162, 31, 11, 0, 'Jorge Antony Milian Montalvo', '7022133', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '', '2022-09-28 08:06:00', '2022-10-02 08:06:00', '#9d1cd9'),
+(163, 31, 11, 0, 'Jorge Antony Milian Montalvo', '70311233', 'Fe y Alegría 7 - Lima - Comas ', 'listo!', '2022-10-01 11:46:00', '2022-10-03 11:47:00', '#000000'),
+(164, 31, 11, 0, 'Fabiola Casas', '12112121', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '', '2022-09-30 11:47:00', '2022-10-08 11:47:00', '#dd2cbc'),
+(165, 29, 10, 0, 'Jorge Antony Milian Montalvo', '78788787', 'Fe y Alegría 7 - Lima - Comas ', '', '2022-09-30 11:48:00', '2022-10-01 11:48:00', '#1d3181');
 
 --
 -- Índices para tablas volcadas
@@ -598,7 +603,7 @@ ALTER TABLE `vuelos`
 -- AUTO_INCREMENT de la tabla `vueloslogistica`
 --
 ALTER TABLE `vueloslogistica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=166;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

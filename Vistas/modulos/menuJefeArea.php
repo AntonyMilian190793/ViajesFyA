@@ -10,6 +10,14 @@
         </a>
       </li>
 
+      
+      <li>
+        <a href="http://localhost/ViajesFyA/Ver-Areas-JA">
+          <i class="fa fa-address-book-o"></i>
+          <span>Área</span>
+        </a>
+      </li>
+
 
 
       <!-- <li>
@@ -22,7 +30,7 @@
           <span>Historial</span>
         </a>
       </li> -->
-
+<!-- 
       <li>
         <?php
         
@@ -33,7 +41,7 @@
           <i class="fa fa-plane" aria-hidden="true"></i>
           <span>Viajes</span>
         </a>
-      </li>
+      </li> -->
 
 
     </ul>
