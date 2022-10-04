@@ -10,7 +10,7 @@
         </a>
       </li>
 
-      <li>
+      <!-- <li>
         <?php
         
           echo '<a href="http://localhost/ViajesFyA/VuelosJA/'.$_SESSION["id"].'">';
@@ -20,15 +20,15 @@
           <i class="fa fa-plane" aria-hidden="true"></i>
           <span>Viajes</span>
         </a>
-      </li>
+      </li> -->
 
       
-      <!-- <li>
-        <a href="http://localhost/ViajesFyA/Ver-Areas-JA">
+      <li>
+        <a href="http://localhost/ViajesFyA/Ver-Area-JA">
           <i class="fa fa-address-book-o"></i>
           <span>Área</span>
         </a>
-      </li> -->
+      </li>
 
 
 

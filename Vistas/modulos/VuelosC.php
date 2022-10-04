@@ -1,6 +1,6 @@
 <?php
 
-if ($_SESSION["id"] != substr($_GET["url"], 8)) {
+if ($_SESSION["rol"] != "otrosTrabajadores") {
 
     echo '<script>
   
@@ -56,105 +56,48 @@ if ($_SESSION["id"] != substr($_GET["url"], 8)) {
 
 </div>
 
-<div class="modal fade" rol="dialog" id="">
-
+<div class="modal fade" rol="dialog" id="CalendarioModal">
     <div class="modal-dialog">
         <div class="modal-content">
             <form method="post">
                 <div class="modal-body">
                     <div class="box-body">
 
-                        <?php
-
-                            $columna = "id";
-                            $valor = substr($_GET["url"], 9);
-                            $resultado = OtrosTC::OtroTC($columna, $valor);
-
-                            echo '                         
-                            
-                            <div class="form-group">
-
-                                <h2>Nombre del Trabajador:</h2>
-                                <input type="text" class="form-control input-lg" name="nyaC" value="'.$_SESSION["nombre"].' '.$_SESSION["apellido"].'" readonly>
-                                <input type="hidden" name="Did" value="'.$resultado["id"].'">
-                                
-                            
-                            </div>';
-
-                        $columna = "id";
-                        $valor = $resultado["id_consulta"];
-                        $consultorio = ConsultasC::VerConsultasC($columna, $valor);
-
-                        echo '                        
                         <div class="form-group">
-                            <input type="hidden" name="Cid" value="'.$consultorio["id"].'">
-                        </div>';
-
-                        ?>
+                          
+                            <input type="hidden" class="form-control input-lg" name="idC" id="idC" readonly>
+                        </div>  
 
                         <div class="form-group">
-                            <h2>Seleccionar trabajador:</h2>
-                            <?php
-                            
-                                echo '
-                                <select class="form-control input-lg" name="nombreP">
-                                    <option>Trabajador...</option>';
+                            <h2>Nombre de Trabajador:</h2>
+                            <input type="text" class="form-control input-lg" id="titleC" name="titleC" readonly>
+                        </div>  
+                        
+                        <div class="form-group">
+                            <h2>Colegio:</h2>
+                            <input type="text" class="form-control input-lg" id="colegioC" name="colegioC" value="" readonly>
+                        </div> 
 
-                                $columna = null;
-                                $valor = null;
-                                $resultado	= OtrosTC::VerOtrosTC($columna, $valor);
-                                //$resultado	= OtrosC::VerOtrosTC($columna, $valor);
-                                //$resultado	= AdministracionC::VerAdministracionC($columna, $valor);
-
-                                foreach ($resultado as $key => $value) {
-
-                                    echo '<option value="'.$value["nombre"].' '.$value["apellido"].'">'.$value["apellido"].' '.$value["nombre"].'</option>';
-                                }
-                            
-                            ?>
-
-                                
-                            </select>
+                        <div class="form-group">
+                            <h2>Hora Inicio:</h2>
+                            <input type="text" class="form-control input-lg" id="horaS"  name="horaS" value="" readonly>
                         </div>
 
                         <div class="form-group">
-                            <!-- <h2>Documento:</h2> -->
-                            <input type="hidden" class="form-control input-lg" name="documentoP"  value="" >
+                            <h2>Hora Fin:</h2>
+                            <input type="text" class="form-control input-lg" id="horaF"  name="horaF" value="" readonly>
                         </div>
 
-                        <div class="form-group">
-                            <h2>Fecha:</h2>
-                            <input type="text" class="form-control input-lg" id="fechaC"  value="" readonly>
-                        </div>
-
-                        <div class="form-group">
-                            <h2>Hora:</h2>
-                            <input type="text" class="form-control input-lg" id="horaC"  value="" readonly>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="hidden" class="form-control input-lg" name="fyhIC" id="fyhIC" readonly>
-                            <input type="hidden" class="form-control input-lg" name="fyhFC" id="fyhFC" readonly>
-                        </div>
 
                         <div class="form-group">
                             <h2>Comentario:</h2>
-                            <input type="text" class="form-control input-lg" name="comentarioC" value="">
+                            <input type="text" class="form-control input-lg" id="description" name="description" readonly>
                         </div>
-
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Registrar</button>
-                    <button type="button" class="btn btn-danger">Cancelar</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                 </div>
-
-                <?php
-                
-                    $enviarC = new CitasC();
-                    $enviarC->PedirCitaPadreC();
-                
-                ?>
             </form>
         </div>
     </div>

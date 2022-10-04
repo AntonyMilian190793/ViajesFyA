@@ -11,17 +11,24 @@
       </li>
 
 
-        <li>
+        <!-- <li>
         <?php
         
-          echo '<a href="http://localhost/ViajesFyA/VuelosC/'.$_SESSION["id"].'">';
+          echo '<a href="http://localhost/ViajesFyA/OtrosT/'.$_SESSION["id"].'">';
 
         ?>
         
           <i class="fa fa-plane" aria-hidden="true"></i>
           <span>Viajes</span>
         </a>
-      </li> 
+      </li>  -->
+
+            <li>
+        <a href="http://localhost/ViajesFyA/Ver-Area-OT">
+        <i class="fa fa-university" aria-hidden="true"></i>
+          <span>Ver su Área</span>
+        </a>
+      </li>
 
       <!-- <li>
         
