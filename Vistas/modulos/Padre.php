@@ -1,6 +1,6 @@
 <?php
 
-if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "JefeArea" && $_SESSION["rol"] != "Sistemas" && $_SESSION["rol"] != "otrosTrabajadores") {
+if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SESSION["rol"] !="JefeArea" && $_SESSION["rol"] != "Sistemas") {
 
     echo '<script>
   
@@ -192,16 +192,28 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
 
                         <div class="form-group">
                             <h2>Comentario:</h2>
-                            <input type="text" class="form-control input-lg" name="comentario">
+                            <input type="text" class="form-control input-lg" name="comentario" >
                         </div>
 
                         <div class="form-group">
-                            <h2>Seleccionar color del Evento:</h2>
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="color" type="color" name="color">
-                                <label for="color" class="form-label">Color</label>
-                        </div>
-                        
+                        <h2>Seleccionar color del Evento:</h2>
+                        <select name="color" class="form-control input-lg" id="color" required>
+					        <option value="">Seleccionar...</option>
+
+                            <option style="color:#D50000" value="#D50000">&#9724; Tomate</option>
+                            <option style="color:#E67C73" value="#E67C73">&#9724; Rosa chicle</option>
+                            <option style="color:#F4511E" value="#F4511E">&#9724; Mandarina</option>						  
+                            <option style="color:#F6BF26" value="#F6BF26">&#9724; Amarillo huevo</option>
+                            <option style="color:#33B679" value="#33B679">&#9724; Verde esmeralda</option>
+                            <option style="color:#0B8043" value="#0B8043">&#9724; Verde musgo</option>
+                            <option style="color:#039BE5" value="#039BE5">&#9724; Azul turquesa</option>
+                            <option style="color:#3F51B5" value="#3F51B5">&#9724; Azul arándano</option>
+                            <option style="color:#7986CB" value="#7986CB">&#9724; Lavanda</option>
+                            <option style="color:#8E24AA" value="#8E24AA">&#9724; Morado intenso</option>
+                            <option style="color:#616161" value="#616161">&#9724; Grafito</option>
+
+						</select>
+                         
                         </div>
                     </div>
                 </div>
