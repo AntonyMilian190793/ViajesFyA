@@ -51,10 +51,10 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
         ?>
 
         
-        <!-- <br>
+        <br>
             <div class="crow g-3">
                     <input type="text" class="form-control" name="caja_busqueda" id="caja_busqueda" placeholder="Búsqueda">
-            </div> -->
+            </div>
         
 
     </section>
@@ -192,12 +192,12 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
 
                         <div class="form-group">
                             <h2>Comentario:</h2>
-                            <input type="text" class="form-control input-lg" name="comentario" >
+                            <input type="text" class="form-control input-lg" name="comentario" required>
                         </div>
 
                         <div class="form-group">
                         <h2>Seleccionar color del Evento:</h2>
-                        <select name="color" class="form-control input-lg" id="color" required>
+                        <select name="color" class="form-control input-lg" id="color" >
 					        <option value="">Seleccionar...</option>
 
                             <option style="color:#D50000" value="#D50000">&#9724; Tomate</option>
