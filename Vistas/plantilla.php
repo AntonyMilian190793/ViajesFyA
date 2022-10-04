@@ -93,7 +93,7 @@ session_start();
       if ($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "perfil-Otros" || $url[0] == "perfil-O" || $url[0] == "consultas"
        || $url[0] == "E-C" || $url[0] == "padres" || $url[0] == "otrosTrabajadores" || $url[0] == "perfil-Administracion" 
        || $url[0] == "perfil-A" || $url[0] == "Ver-areas" || $url[0] == "Padre" || $url[0] == "Directivoss" || $url[0] == "historial" || $url[0] == "perfil-Padre" 
-       || $url[0] == "perfil-P" || $url[0] == "Vuelos" || $url[0] == "VuelosJA" || $url[0] == "VuelosC" || $url[0] == "perfil-Sistemas" || $url[0] == "perfil-S" 
+       || $url[0] == "perfil-P" || $url[0] == "Vuelos" || $url[0] == "VuelosJA" || $url[0] == "VuelosC" || $url[0] == "perfil-Sistemas" || $url[0] == "perfil-S" || $url[0] == "perfil-S" 
        || $url[0] == "secretarias" || $url[0] == "administracion" || $url[0] == "inicio-editar" || $url[0] == "perfil-Directivo" 
        || $url[0] == "perfil-Logistica" || $url[0] == "perfil-L" || $url[0] == "perfil-otrosTrabajadores" || $url[0] == "perfil-oT"
        || $url[0] == "perfil-Directivo" || $url[0] == "perfil-D" || $url[0] == "perfil-JefeArea" || $url[0] == "perfil-JA" || $url[0] == "colegios" || $url[0] == "E-Co") {
@@ -254,30 +254,6 @@ session_start();
                 editable: true //para editar o mover los eventos creados
               },';
             
-          }else if($value["id_padre"] ==  substr($_GET["url"], 8)){
-            echo '{
-                
-            id: "'.$value["id"].'",
-            title: "'.$value["nyaP"].'",
-            description: "'.$value["comentario"].'",
-            colegioC: "'.$value["colegio"].'",
-            start: "'.$value["inicio"].'",
-            end: "'.$value["fin"].'",
-            color: "'.$value["color"].'",
-            editable: true //para editar o mover los eventos creados
-          },';
-          }else if($value["id_padre"] ==  substr($_GET["url"], 9)){
-            echo '{
-                
-            id: "'.$value["id"].'",
-            title: "'.$value["nyaP"].'",
-            description: "'.$value["comentario"].'",
-            colegioC: "'.$value["colegio"].'",
-            start: "'.$value["inicio"].'",
-            end: "'.$value["fin"].'",
-            color: "'.$value["color"].'",
-            editable: true //para editar o mover los eventos creados
-          },';
         }
       }
 
