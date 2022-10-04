@@ -291,7 +291,7 @@ session_start();
                 editable: true //para editar o mover los eventos creados
               },';
             }
-      }
+        }
           ?>
 
           
