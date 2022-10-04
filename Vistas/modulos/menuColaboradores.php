@@ -11,14 +11,14 @@
       </li>
 
 
-      <li>
+      <!-- <li>
         <a href="http://localhost/ViajesFyA/Ver-Areas-C">
         <i class="fa fa-university" aria-hidden="true"></i>
           <span>Áreas</span>
         </a>
-      </li>
+      </li> -->
 
-        <!-- <li>
+        <li>
         <?php
         
           echo '<a href="http://localhost/ViajesFyA/VuelosC/'.$_SESSION["id"].'">';
@@ -28,9 +28,9 @@
           <i class="fa fa-plane" aria-hidden="true"></i>
           <span>Viajes</span>
         </a>
-      </li>  -->
+      </li> 
 
-      <!-- <li>
+      <li>
         
         <?php
         
@@ -40,7 +40,7 @@
           <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
           <span>Historial</span>
         </a>
-      </li> -->
+      </li>
 
     </ul>
       
