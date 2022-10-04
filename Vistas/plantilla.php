@@ -203,6 +203,7 @@ session_start();
           center: 'title',
           right: 'agendaDay, agendaWeek, month, listWeek, listMonth',
         },
+        
 
         height: 800,
         contentHeight: 780,
@@ -214,8 +215,17 @@ session_start();
         listMonth:{"buttonText": "Eventos Mensuales"},
     },
     
-      dayMaxEvents: true,
+      dayMaxEvents: false,
       navLinks: true,
+
+      //para que me salga el + en los eventos
+        eventLimit: true, // for all non-agenda views
+          views: {
+          agenda: {
+        eventLimit: 6 // adjust to 6 only for agendaWeek/agendaDay
+      }
+    },
+      
     
       events: [
         <?php
@@ -254,54 +264,34 @@ session_start();
                 editable: true //para editar o mover los eventos creados
               },';
             
-        }
+        }else if($value["id_padre"] ==  substr($_GET["url"], 8)){
+              
+              echo '{
+                
+                id: "'.$value["id"].'",
+                title: "'.$value["nyaP"].'",
+                description: "'.$value["comentario"].'",
+                colegioC: "'.$value["colegio"].'",
+                start: "'.$value["inicio"].'",
+                end: "'.$value["fin"].'",
+                color: "'.$value["color"].'",
+                editable: true //para editar o mover los eventos creados
+              },';
+            }else if($value["id_padre"] ==  substr($_GET["url"], 9)){
+              
+              echo '{
+                
+                id: "'.$value["id"].'",
+                title: "'.$value["nyaP"].'",
+                description: "'.$value["comentario"].'",
+                colegioC: "'.$value["colegio"].'",
+                start: "'.$value["inicio"].'",
+                end: "'.$value["fin"].'",
+                color: "'.$value["color"].'",
+                editable: true //para editar o mover los eventos creados
+              },';
+            }
       }
-
-      
-
-
-        //         $columna = null;
-        //         $valor = null;
-
-        //         $resultado = ConsultasC::VerConsultasC($columna, $valor);
-
-
-                
-        //         $columna = "id_consulta";
-        //         $valor = $value["id"];
-
-        //         $resultado22 = CitasC::VerCitasC();
-
-        //         foreach ($resultado as $key => $value){
-
-        // if($value["id_consulta"] ==  substr($_GET["url"], 9)){
-        //       echo '{
-                
-        //         id: "'.$value["id"].'",
-        //         title: "'.$value["nyaP"].'",
-        //         description: "'.$value["comentario"].'",
-        //         colegioC: "'.$value["colegio"].'",
-        //         start: "'.$value["inicio"].'",
-        //         end: "'.$value["fin"].'",
-        //         color: "'.$value["color"].'",
-        //         editable: true //para editar o mover los eventos creados
-        //       },';
-        //     }else if($value["id_consulta"] ==  substr($_GET["url"], 8)){
-        //       echo '{
-                
-        //         id: "'.$value["id"].'",
-        //         title: "'.$value["nyaP"].'",
-        //         description: "'.$value["comentario"].'",
-        //         colegioC: "'.$value["colegio"].'",
-        //         start: "'.$value["inicio"].'",
-        //         end: "'.$value["fin"].'",
-        //         color: "'.$value["color"].'",
-        //         editable: true //para editar o mover los eventos creados
-        //       },';
-
-        //     }
-        //   }
-
           ?>
 
           
