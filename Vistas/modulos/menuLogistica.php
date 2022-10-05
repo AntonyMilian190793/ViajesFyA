@@ -38,6 +38,13 @@
         </a>
       </li>
 
+            <li>
+        <a href="http://localhost/ViajesFyA/busqueda">
+          <i class="fa fa-address-book-o"></i>
+          <span>Búsqueda</span>
+        </a>
+      </li>
+
       <!-- <li>
         <a href="http://localhost/ViajesFyA/Ver-areas">
           <i class="fa fa-address-book-o"></i>
