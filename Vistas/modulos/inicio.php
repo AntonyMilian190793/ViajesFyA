@@ -37,7 +37,7 @@
   </div>
 
 <footer class="main-footer cente">
-<center>© 2021 Antony Milian. Todos los Derechos Reservados</a>.</center>
+<center>© 2022 Jorge Antony Milian Montalvo. Todos los Derechos Reservados</a>.</center>
 
 
 </footer>

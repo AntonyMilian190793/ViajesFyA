@@ -30,7 +30,7 @@
               <p>Iniciar Sesión</p>
             </div>
             <div class="icon">
-              <i class="fa fa-user"></i>
+             <i class="fa fa-male"></i>
             </div>
             <a href="ingreso-Directivo" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -45,7 +45,7 @@
               <p>Iniciar Sesión</p>
             </div>
             <div class="icon">
-              <i class="fa fa-user"></i>
+              <i class="fa fa-user-circle-o"></i>
             </div>
             <a href="ingreso-JefeArea" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -60,7 +60,7 @@
               <p>Iniciar Sesión</p>
             </div>
             <div class="icon">
-              <i class="fa fa-user-circle-o"></i>
+            <i class="fa fa-user"></i>
             </div>
             <a href="ingreso-Colaborador" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
           </div>
