@@ -44,11 +44,9 @@ if ($_SESSION["rol"] != "JefeArea" ) {
 
                             foreach ($padres as $key => $value) {
 
-                            if($_SESSION["id"] == "1") {
-
                                 echo ' <a href="JefeArea/'.$value["id"].'" style="color:black;"><p>'.$value["nombre"].' '.$value["apellido"].'</p></a>';
                                     }
-                            }
+                            
 
                         echo '</div>
                     </div>
