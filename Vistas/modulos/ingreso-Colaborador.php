@@ -10,12 +10,12 @@
 
       <div class="form-group has-feedback">
 
-        <input type="text" class="form-control" name="usuario-Ing" placeholder="Usuario">
+        <input type="text" class="form-control" name="usuario-Ing" placeholder="Usuario" required>
 
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" name="clave-Ing" placeholder="Contraseña">
+        <input type="password" class="form-control" name="clave-Ing" placeholder="Contraseña" required>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
