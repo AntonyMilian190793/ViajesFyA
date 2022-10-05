@@ -44,11 +44,10 @@ if ($_SESSION["rol"] != "otrosTrabajadores" ) {
 
                             foreach ($padres as $key => $value) {
 
-                            if($_SESSION["id"] == "1") {
 
                                 echo ' <a href="OtrosT/'.$value["id"].'" style="color:black;"><p>'.$value["nombre"].' '.$value["apellido"].'</p></a>';
                                     }
-                            }
+
 
                         echo '</div>
                     </div>
