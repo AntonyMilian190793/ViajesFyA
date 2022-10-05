@@ -11,7 +11,7 @@
       </li>
 
 
-      <li>
+      <!-- <li>
         <?php
         
           echo '<a href="http://localhost/ViajesFyA/Vuelos/'.$_SESSION["id"].'">';
@@ -21,7 +21,7 @@
           <i class="fa fa-plane" aria-hidden="true"></i>
           <span>Viajes</span>
         </a>
-      </li>
+      </li> -->
 
       <!-- <li>
         
