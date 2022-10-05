@@ -32,7 +32,7 @@ class AdministracionC{
 					</script>';
                 }else{
 
-                    echo '<div class="alert alert-danger">Usuario y/o Contraseña incorrecta.</div>';
+                    echo '<div class="alert alert-danger">¡Usuario y/o contraseña incorrecta!</div>';
 
                 }
             }

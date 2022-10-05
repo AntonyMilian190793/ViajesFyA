@@ -13,7 +13,7 @@
                     $datosC = array("usuario"=>$_POST["usuario-Ing"], "clave"=>$_POST["clave-Ing"]);
                     $resultado = SistemasM::IngresarSistemasM($tablaBD, $datosC);
 
-                    if($resultado["usuario"] == $_POST["usuario-Ing"] && $resultado["clave"] == $_POST["clave-Ing"]){
+                    if(is_array($resultado) && $resultado["usuario"] == $_POST["usuario-Ing"] && $resultado["clave"] == $_POST["clave-Ing"]){
                         
                         $_SESSION["Ingresar"] = true;
 
