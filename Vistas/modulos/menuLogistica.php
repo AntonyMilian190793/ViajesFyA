@@ -39,7 +39,7 @@
       </li>
 
             <li>
-        <a href="http://localhost/ViajesFyA/busqueda">
+        <a href="busqueda.html">
           <i class="fa fa-address-book-o"></i>
           <span>Búsqueda</span>
         </a>
