@@ -7,7 +7,7 @@ $query = "SELECT * FROM vueloslogistica ORDER BY id";
 
 if(isset($_POST['consulta'])){
     $q = $mysqli->real_escape_string($_POST['consulta']);
-    $query = "SELECT id, nyaP, documento, colegio, inicio, fin FROM vueloslogistica WHERE nyaP LIKE '%" . $q . "%' OR nyaP LIKE '%" . $q . "%' 
+    $query = "SELECT nombre ,nyaP, documento, colegio, inicio, fin FROM vueloslogistica INNER JOIN consultas ON vueloslogistica.id_consulta = consultas.id WHERE nyaP LIKE '%" . $q . "%' OR nyaP LIKE '%" . $q . "%' 
     OR documento LIKE '%" . $q . "%'";
 }
 
@@ -32,6 +32,7 @@ if(isset($_POST['consulta'])){
         <td>". $fila['colegio']."</td>
         <td>". $fila['inicio']."</td>
         <td>". $fila['fin']."</td>
+        <td>". $fila['id']."</td>
         </tr>";
         }
 

@@ -10,7 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(#534f8a, #695be6);
+    background: linear-gradient(#00C0EF, #00C0EF);
 }
 
 .buscar {
@@ -37,7 +37,7 @@ body {
     top: 0;
     right: 0;
     position: absolute;
-    background: #440088;
+    background: #00C0EF;
     text-align: center;
     color: white;
     font-size: 18px;
