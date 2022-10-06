@@ -18,12 +18,7 @@ if(isset($_POST['consulta'])){
         $salida.="<table class='tabla_datos table -table-bordered table-hover table-striped DT'>
         <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Documento</th>
-                    <th>Colegio</th>
-                    <th>Inicio</th>
-                    <th>Fin</th>
+
                 </tr>
                 </thead>
                 <tbody>";
