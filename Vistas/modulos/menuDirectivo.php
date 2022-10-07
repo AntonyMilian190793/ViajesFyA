@@ -39,6 +39,13 @@
         </a>
       </li>
 
+      <li>
+        <a href="http://localhost/ViajesFyA/VuelosTabla">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <span>Buscar</span>
+        </a>
+      </li>
+
 
     </ul>
       
