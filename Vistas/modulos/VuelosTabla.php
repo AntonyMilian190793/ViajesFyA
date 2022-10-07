@@ -16,7 +16,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo") {
 <div class="content-wrapper">
 
     <section class="content-header">
-        <h1>Gestor de otros Trabajadores</h1>
+        <h1>Buscar Trabajadores</h1>
     </section>
 
     <section class="content">
