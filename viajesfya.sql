@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-09-2022 a las 19:50:30
+-- Tiempo de generación: 07-10-2022 a las 23:49:39
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -135,7 +135,7 @@ CREATE TABLE `inicio` (
 --
 
 INSERT INTO `inicio` (`id`, `intro`, `horaE`, `horaS`, `telefono`, `correo`, `direccion`, `logo`, `favicon`) VALUES
-(1, 'Está página se utilizará para...', '06:00:00', '05:00:00', '993753004', 'jmilian@feyalegria.org.pe', 'Jirón Cahuide 884 - Jesús María', 'Vistas/img/logo.png', 'Vistas/img/favicon.png');
+(1, 'Está página se utilizará para poder guardar los eventos de la institución Fe y Alegría', '06:00:00', '05:00:00', '993753004', 'jmilian@feyalegria.org.pe', 'Jirón Cahuide 884 - Jesús María', 'Vistas/img/logo.jpeg', 'Vistas/img/favicon.png');
 
 -- --------------------------------------------------------
 
@@ -194,7 +194,7 @@ CREATE TABLE `logistica` (
 --
 
 INSERT INTO `logistica` (`id`, `id_consulta`, `usuario`, `clave`, `nombre`, `documento`, `apellido`, `foto`, `rol`, `sexo`) VALUES
-(15, 1, 'aalania', '123', 'Angela', '70541233', 'Alania', '', 'Logistica', 'Femino');
+(15, 1, 'aalania', '123', 'Angela', '70541233', 'Alania', 'Vistas/img/Otros/O-55.jpg', 'Logistica', 'Femino');
 
 -- --------------------------------------------------------
 
@@ -223,7 +223,6 @@ INSERT INTO `otrostrabajadores` (`id`, `id_consulta`, `apellido`, `nombre`, `doc
 (1, 10, 'Milian Montalvo', 'Jorge Antony', '70311233', '', 'jmilian', 'Masculino', '123', 'otrosTrabajadores'),
 (3, 10, 'Verano', 'Jhony', '8735332', '', 'jverano', 'Masculino', '123', 'otrosTrabajadores'),
 (10, 1, 'Quijiate', 'Víctor', '79881122', '', 'vquijaite', '', '123', 'otrosTrabajadores'),
-(20, 12, 'Acero', 'Katheryn', '703221231', '', 'kacero', 'Femenino', '123', 'otrosTrabajadores'),
 (24, 0, 'Portilla', 'Maria', '098761', '', 'mportilla', '', '123', 'otrosTrabajadores'),
 (26, 0, 'Egoavil', 'Nataly', '09871622', '', 'negoavil', '', '123', 'otrosTrabajadores'),
 (27, 9, 'Casas', 'Fabiola', '87611211', '', 'fcasas', '', '123', 'otrosTrabajadores'),
@@ -408,44 +407,6 @@ CREATE TABLE `vueloslogistica` (
 --
 
 INSERT INTO `vueloslogistica` (`id`, `id_padre`, `id_consulta`, `id_logistica`, `nyaP`, `documento`, `colegio`, `comentario`, `inicio`, `fin`, `color`) VALUES
-(14, 2, 1, 15, 'Víctor Atausupa', '121221', '0', '', '2022-09-11 08:00:00', '2022-09-11 09:00:00', ''),
-(15, 2, 1, 0, 'Katheryn Acero', '70511222', '0', '', '2022-09-11 12:00:00', '2022-09-11 13:00:00', ''),
-(16, 2, 1, 15, 'Fabiola Casas', '70411233', '0', 'No se fue de viaje', '2022-09-11 20:00:00', '2022-09-11 21:00:00', ''),
-(17, 30, 1, 15, 'Fabiola Chávez', '878787', '0', '', '2022-09-11 17:00:00', '2022-09-11 18:00:00', ''),
-(19, 2, 1, 15, 'Nataly Egoavil', '121221', '0', '', '2022-09-11 23:00:00', '0000-00-00 00:00:00', ''),
-(20, 2, 1, 15, 'Maria Portilla', '121`2122', '0', '', '2022-09-11 01:00:00', '2022-09-11 02:00:00', ''),
-(22, 29, 10, 15, 'Jorge Antony Milian Montalvo', '70311233', '0', '', '2022-09-11 19:00:00', '2022-09-11 20:00:00', ''),
-(23, 2, 1, 0, 'Ernesto Cavassa', '122112', '0', '', '2022-09-11 18:00:00', '2022-09-11 19:00:00', ''),
-(26, 29, 10, 0, 'Jorge Antony Milian Montalvo', 'asaassa', '0', '', '2022-09-11 23:00:00', '0000-00-00 00:00:00', ''),
-(27, 29, 10, 0, 'Jorge Antony Milian Montalvo', '70311233', '0', '', '2022-09-12 18:00:00', '2022-09-12 19:00:00', ''),
-(28, 34, 12, 0, 'Katheryn Acero', 'assasa', '0', '', '2022-09-12 07:00:00', '2022-09-12 08:00:00', ''),
-(29, 2, 1, 0, 'Fabiola Casas', 'assaas', '0', '', '2022-09-13 08:00:00', '2022-09-13 09:00:00', ''),
-(30, 2, 1, 0, 'Maria Portilla', '09781511', '0', 'Todo bien!', '2022-09-14 08:00:00', '2022-09-14 09:00:00', ''),
-(31, 2, 1, 0, 'Jhony Verano', '09871233', '0', 'Salió bien', '2022-09-15 08:00:00', '2022-09-15 09:00:00', ''),
-(32, 29, 10, 0, 'Jorge Antony Milian Montalvo', '70311233', '0', '', '2022-09-13 06:00:00', '2022-09-13 07:00:00', ''),
-(33, 2, 1, 0, 'Víctor Quijiate', '98711233', '0', '', '2022-09-16 08:00:00', '2022-09-16 09:00:00', ''),
-(34, 2, 1, 0, 'Víctor Atausupa', '78901233', '0', '', '2022-09-17 08:00:00', '2022-09-17 09:00:00', ''),
-(38, 2, 1, 0, 'Jorge Antony Milian Montalvo', '70311233', '0', 'En proceso', '2022-09-15 11:00:00', '2022-09-15 12:00:00', '#a6a919'),
-(40, 2, 1, 0, 'Ernesto Cavassa', '1212', '0', 'qwqw', '2022-09-16 11:00:00', '2022-09-16 12:00:00', '#dc1818'),
-(41, 29, 10, 0, 'Jorge Antony Milian Montalvo', '70311233', '0', '', '2022-09-15 06:00:00', '2022-09-15 07:00:00', '#7ba40a'),
-(42, 29, 10, 0, 'Nataly Egoavil', '098122', '0', '', '2022-09-16 05:00:00', '2022-09-16 06:00:00', '#000000'),
-(43, 29, 10, 0, 'Víctor Atausupa', '1211212', '0', '', '2022-09-17 05:00:00', '2022-09-17 06:00:00', '#1411ee'),
-(44, 2, 1, 0, 'Katheryn Acero', '12', '0', '12', '2022-09-16 11:00:00', '2022-09-16 12:00:00', '#beb823'),
-(45, 2, 1, 0, 'Víctor Atausupa', '70311233', '0', '', '2022-09-16 11:00:00', '2022-09-16 12:00:00', '#491cc4'),
-(47, 2, 1, 0, 'Katheryn Acero', '111', '0', '11', '2022-09-15 12:00:00', '2022-09-15 13:00:00', '#000000'),
-(48, 2, 1, 0, 'Jorge Antony Milian Montalvo', '1212', '0', '', '2022-09-15 12:00:00', '2022-09-15 13:00:00', '#cea946'),
-(49, 29, 10, 0, 'Ernesto Cavassa', 'asaa', '0', '', '2022-09-16 05:00:00', '2022-09-16 06:00:00', '#1a52d5'),
-(50, 2, 1, 0, 'Víctor Atausupa', 'asas', '0', 'as', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '#000000'),
-(51, 2, 1, 0, 'Jorge Antony Milian Montalvo', '121212', '0', '12', '2022-09-15 12:00:00', '2022-09-15 13:00:00', '#f40b0b'),
-(52, 2, 1, 0, 'Víctor Atausupa', '8888888', '0', '', '2022-09-16 11:00:00', '2022-09-16 12:00:00', '#edcf07'),
-(53, 2, 1, 0, 'Fabiola Chávez', '999999', '0', '', '2022-09-16 11:00:00', '2022-09-16 12:00:00', '#000000'),
-(54, 2, 1, 0, 'Nataly Egoavil', '09012091212', '0', 'No se fue!', '2022-09-15 13:00:00', '2022-09-15 14:00:00', '#e1c50e'),
-(56, 2, 1, 0, 'Jorge Antony Milian Montalvo', '70331232', '0', 'Va!', '2022-09-18 08:00:00', '2022-09-18 09:00:00', '#dea712'),
-(82, 2, 1, 0, 'Fabiola Casas', 'assasa', '0', 'asasas', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '#000000'),
-(83, 2, 1, 0, 'Fabiola Casas', 'assasa', '0', 'asasas', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '#000000'),
-(84, 2, 1, 0, 'Fabiola Casas', '2323', '0', '2332', '2022-09-19 01:00:00', '2022-09-19 02:00:00', '#ffde0a'),
-(85, 2, 1, 0, 'Jorge Antony Milian Montalvo', '212121', '0', '1212212', '2022-09-19 23:00:00', '0000-00-00 00:00:00', '#1e0ca7'),
-(86, 2, 1, 0, 'Ernesto Cavassa', 'AA', '0', '1', '2022-09-20 07:00:00', '2022-09-20 08:00:00', '#a445a5'),
 (127, 2, 1, 0, 'Jorge Antony Milian Montalvo', '70311233', 'Fe y Alegría 5 - Lima - San Juan de Lurigancho ', 'Es importante el vuelo!', '2022-09-20 12:00:00', '2022-09-23 13:00:00', '#183367'),
 (128, 2, 1, 0, 'Ernesto Cavassa', '098711233', 'Fe y Alegría 6 - Lima - San Martín de Porres ', 'Urgente!', '2022-09-20 16:00:00', '2022-09-22 17:00:00', '#e811c1'),
 (129, 2, 1, 0, 'Jhony Verano', '98171122', 'Fe y Alegría 5 - Lima - San Juan de Lurigancho ', '', '2022-09-20 02:00:00', '2022-09-20 03:00:00', '#4337e6'),
@@ -475,7 +436,9 @@ INSERT INTO `vueloslogistica` (`id`, `id_padre`, `id_consulta`, `id_logistica`, 
 (162, 31, 11, 0, 'Jorge Antony Milian Montalvo', '7022133', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '', '2022-09-28 08:06:00', '2022-10-02 08:06:00', '#9d1cd9'),
 (163, 31, 11, 0, 'Jorge Antony Milian Montalvo', '70311233', 'Fe y Alegría 7 - Lima - Comas ', 'listo!', '2022-10-01 11:46:00', '2022-10-03 11:47:00', '#000000'),
 (164, 31, 11, 0, 'Fabiola Casas', '12112121', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '', '2022-09-30 11:47:00', '2022-10-08 11:47:00', '#dd2cbc'),
-(165, 29, 10, 0, 'Jorge Antony Milian Montalvo', '78788787', 'Fe y Alegría 7 - Lima - Comas ', '', '2022-09-30 11:48:00', '2022-10-01 11:48:00', '#1d3181');
+(170, 2, 1, 0, 'Jorge Antony Milian Montalvo', '1122', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '1212', '2022-10-07 10:54:00', '2022-10-14 10:54:00', '#8E24AA'),
+(171, 2, 1, 0, 'Jhony Verano', '12112121', 'Fe y Alegría 3 - Lima - San Juan de Miraflores ', '121212', '2022-10-07 14:56:00', '2022-10-15 14:56:00', '#33B679'),
+(172, 35, 7, 0, 'Jorge Antony Milian Montalvo', '70341122', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '1212', '2022-10-07 15:36:00', '2022-10-15 15:36:00', '#F6BF26');
 
 --
 -- Índices para tablas volcadas
@@ -603,7 +566,7 @@ ALTER TABLE `vuelos`
 -- AUTO_INCREMENT de la tabla `vueloslogistica`
 --
 ALTER TABLE `vueloslogistica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=166;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=176;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
