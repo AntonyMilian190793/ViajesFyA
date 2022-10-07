@@ -49,12 +49,6 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
             </div>';
         }
         ?>
-
-        
-        <br>
-            <div class="crow g-3">
-                    <input type="text" class="form-control" name="caja_busqueda" id="caja_busqueda" placeholder="Búsqueda">
-            </div>
         
 
     </section>
