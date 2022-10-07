@@ -185,7 +185,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
 
                         <div class="form-group">
                             <h2>Comentario:</h2>
-                            <input type="text" class="form-control input-lg" name="comentario" required>
+                            <input type="text" class="form-control input-lg" name="comentario" >
                         </div>
 
                         <div class="form-group">
