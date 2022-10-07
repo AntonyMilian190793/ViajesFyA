@@ -100,6 +100,19 @@
 
             return $resultado;
         }
+
+
+        public function ModificarCita(){
+            $tablaBD = "vueloslogistica";
+            $resultado = CitasM::ModificarCita($tablaBD);
+        }
+
+
+        public function VerVuelosLogisticaC(){
+            $tablaBD = "vueloslogistica";
+            $resultado = CitasM::VerVuelosLogisticaM($tablaBD);
+            return $resultado;
+        }
     }
 
 

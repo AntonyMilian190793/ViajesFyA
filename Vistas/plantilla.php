@@ -98,7 +98,7 @@ session_start();
         || $url[0] == "secretarias" || $url[0] == "administracion" || $url[0] == "inicio-editar" || $url[0] == "perfil-Directivo" 
         || $url[0] == "perfil-Logistica" || $url[0] == "perfil-L" || $url[0] == "perfil-otrosTrabajadores" || $url[0] == "perfil-oT"
         || $url[0] == "perfil-Directivo" || $url[0] == "perfil-D" || $url[0] == "perfil-JefeArea" || $url[0] == "perfil-JA" || $url[0] == "colegios" || $url[0] == "E-Co"
-        || $url[0] == "busqueda") {
+        || $url[0] == "busqueda" || $url[0] == "VuelosTabla") {
 
         include "modulos/" . $url[0] . ".php";
       }
@@ -181,7 +181,8 @@ session_start();
 <script src="http://localhost/ViajesFyA/Vistas/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
 <script src="http://localhost/ViajesFyA/Vistas/bower_components/fullcalendar/dist/locale/es.js"></script>
 
-  <script src="http://localhost/ViajesFyA/Vistas/js/padres.js"></script>
+  <script src="http://localhost/ViajesFyA/Vistas/js/editarCitas.js"></script>
+   <script src="http://localhost/ViajesFyA/Vistas/js/padres.js"></script>
   <script src="http://localhost/ViajesFyA/Vistas/js/otrosT.js"></script>
   <script src="http://localhost/ViajesFyA/Vistas/js/secretarias.js"></script>
   <script src="http://localhost/ViajesFyA/Vistas/js/trabajadores.js"></script>

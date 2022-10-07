@@ -130,6 +130,34 @@
             $pdo = null;
 
         }
+
+
+        static public function EditarCitasM($tablaBD){
+            $pdo = ConexionBD::cBD()->prepare("UPDATE $tablaBD inicio = :inicio, fin = :fin, comentario = :comentario WHERE id = :id");
+            $pdo -> bindParam(":id", $datosC["id"], PDO::PARAM_INT);
+            $pdo -> bindParam(":inicio", $datosC["inicio"], PDO::PARAM_STR);
+            $pdo -> bindParam(":fin", $datosC["fin"], PDO::PARAM_STR);
+            $pdo -> bindParam(":comentario", $datosC["icomentariod"], PDO::PARAM_STR);
+
+        if($pdo -> execute()){
+            return true;
+        }
+
+        $pdo -> close();
+        $pdo = null;
+        }
+
+
+         static public function VerVuelosLogisticaM($tablaBD){
+            
+            $pdo = ConexionBD::cBD()->prepare("SELECT id ,nyaP, documento, colegio, inicio, fin FROM $tablaBD");
+            $pdo->execute();
+            return $pdo->fetchAll();
+    
+            $pdo -> close();
+            $pdo = null;
+    
+        }
     }    
 
 

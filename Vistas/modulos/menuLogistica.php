@@ -38,10 +38,17 @@
         </a>
       </li>
 
-            <li>
+            <!-- <li>
         <a href="busqueda.html">
           <i class="fa fa-address-book-o"></i>
           <span>Búsqueda</span>
+        </a>
+      </li> -->
+
+            <li>
+        <a href="http://localhost/ViajesFyA/VuelosTabla">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <span>Buscar</span>
         </a>
       </li>
 
