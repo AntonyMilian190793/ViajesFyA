@@ -113,6 +113,25 @@
             $resultado = CitasM::VerVuelosLogisticaM($tablaBD);
             return $resultado;
         }
+
+        //eliminar vueloslogistica
+        public function BorrarCitasC(){
+
+            if(isset($_GET["Pid"])){
+
+                $tablaBD = "vueloslogistica";
+                $id = $_GET["Pid"];
+
+                $resultado = CitasM::BorrarCitasM($tablaBD, $id);
+
+                if($resultado == true){
+                    echo '<script>
+                        window.location = "VuelosTabla";
+                    </script>';
+                }
+            }
+        }
+
     }
 
 

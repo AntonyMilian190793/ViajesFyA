@@ -61,11 +61,8 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo") {
                             <div class="btn-group">
                                 <button class="btn btn-success"><i class="fa fa-pencil"> 
                                 Editar</i></button>
-
                                 
-                                
-
-                                        <button class="btn btn-danger">
+                                        <button class="btn btn-danger EliminarVuelo" Pid="'.$value["id"].'">
                                         <i class="fa fa-times"> Borrar</i></button>
                                     </div>
                             </td>
@@ -80,3 +77,10 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo") {
     </section>
 
 </div>
+
+<?php
+
+    $borrarP = new CitasC();
+    $borrarP -> BorrarCitasC();
+
+?>
