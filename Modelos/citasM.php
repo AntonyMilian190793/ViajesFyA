@@ -150,7 +150,7 @@
 
          static public function VerVuelosLogisticaM($tablaBD){
             
-            $pdo = ConexionBD::cBD()->prepare("SELECT id ,nyaP, documento, colegio, inicio, fin FROM $tablaBD");
+            $pdo = ConexionBD::cBD()->prepare("SELECT id ,nyaP, documento, colegio, DATE_FORMAT(inicio, '%W %d de %M de %Y') AS inicio, DATE_FORMAT(inicio, '%h:%m:%s %p') AS Hora_Inicio, DATE_FORMAT(fin, '%W %d de %M de %Y') AS fin, DATE_FORMAT(fin, '%h:%m:%s %p') AS Hora_Fin   FROM $tablaBD");
             $pdo->execute();
             return $pdo->fetchAll();
     
