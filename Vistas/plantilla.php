@@ -225,7 +225,8 @@ session_start();
         eventLimit: true, // for all non-agenda views
           views: {
           agenda: {
-        eventLimit: 6 // adjust to 6 only for agendaWeek/agendaDay
+          eventLimit: 6,
+           // adjust to 6 only for agendaWeek/agendaDay
       }
     },
       
@@ -299,6 +300,7 @@ session_start();
 
           
       ],
+      timeFormat: 'h(:mm)t',
 
 
       eventClick: function (info, jsEvent, view){
