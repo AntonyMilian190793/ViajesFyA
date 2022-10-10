@@ -305,11 +305,16 @@ session_start();
         $('#CalendarioModal').modal();
         console.log(info);
 
+        // var dateString = (info.start);
+        // moment(dateString).format('YYYY-MM-DD HH:mm');
+        // alert(dateString.toDateString);
+
+
         $('#idC').val(info.id);
         $('#titleC').val(info.title);
         $('#colegioC').val(info.colegioC);
-        $('#horaS').val(info.start);
-        $('#horaF').val(info.end);
+        $('#horaS').val(moment(info.start).format('DD-MM-YYYY / HH:mm'));
+        $('#horaF').val(moment(info.end).format('DD-MM-YYYY / HH:mm'));
         $('#description').val(info.description);
         
         // console.log(info.title);
