@@ -5,10 +5,10 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>VIAJES FyA</title>
   <!-- Tell the browser to be responsive to screen width -->
@@ -207,6 +207,7 @@ session_start();
           right: 'agendaDay, agendaWeek, month, listWeek, listMonth',
         },
         
+        
 
         height: 800,
         contentHeight: 780,
@@ -300,7 +301,18 @@ session_start();
 
           
       ],
-      timeFormat: 'h(:mm)t',
+
+      //solo se borra esto y se arregla todo
+      slotLabelFormat:{
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: true,
+      meridiem: 'short'
+      },
+      
+
+      defaultView : "month",
+      timeFormat: 'H(:mm)t',
 
 
       eventClick: function (info, jsEvent, view){
