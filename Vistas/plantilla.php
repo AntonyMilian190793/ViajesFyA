@@ -181,7 +181,7 @@ session_start();
 <script src="http://localhost/ViajesFyA/Vistas/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
 <script src="http://localhost/ViajesFyA/Vistas/bower_components/fullcalendar/dist/locale/es.js"></script>
 
-  <script src="http://localhost/ViajesFyA/Vistas/js/editarCitas.js"></script>
+  <script src="http://localhost/ViajesFyA/Vistas/js/citas.js"></script>
    <script src="http://localhost/ViajesFyA/Vistas/js/padres.js"></script>
   <script src="http://localhost/ViajesFyA/Vistas/js/otrosT.js"></script>
   <script src="http://localhost/ViajesFyA/Vistas/js/secretarias.js"></script>
