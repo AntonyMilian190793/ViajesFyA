@@ -32,16 +32,16 @@
 
 
 
-      <!-- <li>
+      <li>
         <?php
         
-          echo '<a href="http://localhost/ViajesFyA/historial/'.$_SESSION["id"].'">';
+          echo '<a href="http://localhost/ViajesFyA/historialJA/'.$_SESSION["id"].'">';
 
         ?>
           <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
           <span>Historial</span>
         </a>
-      </li> -->
+      </li>
 
 
     </ul>
