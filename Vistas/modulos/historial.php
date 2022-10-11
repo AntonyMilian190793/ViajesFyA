@@ -26,9 +26,9 @@ if ($_SESSION["id"] != substr($_GET["url"], 10)) {
                             <th>N°</th>
                             <th>Nombre y Apellido</th>
                             <th>Inicio de Viaje</th>
-                             <th>Fin de Viajes</th>
-                             <th>Colegio al que visita</th>
-                             <th>Comentario</th>
+                            <th>Fin de Viajes</th>
+                            <th>Colegio al que visita</th>
+                            <th>Comentario</th>
                             <th>Jefe del Área</th>
                             <th>Área</th>
                         </tr>
@@ -49,8 +49,7 @@ if ($_SESSION["id"] != substr($_GET["url"], 10)) {
                                     <td>'.$value["inicio"].'</td>
                                     <td>'.$value["fin"].'</td>
                                     <td>'.$value["colegio"].'</td>
-                                    <td>'.$value["comentario"].'</td>
-                                      ';
+                                    <td>'.$value["comentario"].'</td>';
 
                                     $columna = "id";
                                     $valor = $value["id_padre"];
