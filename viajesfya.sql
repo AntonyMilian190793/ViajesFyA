@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-10-2022 a las 22:58:35
+-- Tiempo de generación: 11-10-2022 a las 22:13:42
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -221,13 +221,8 @@ CREATE TABLE `otrostrabajadores` (
 
 INSERT INTO `otrostrabajadores` (`id`, `id_consulta`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `sexo`, `clave`, `rol`) VALUES
 (1, 10, 'Milian Montalvo', 'Jorge Antony', '70311233', '', 'jmilian', 'Masculino', '123', 'otrosTrabajadores'),
-(3, 10, 'Verano', 'Jhony', '8735332', '', 'jverano', 'Masculino', '123', 'otrosTrabajadores'),
-(10, 1, 'Quijiate', 'Víctor', '79881122', '', 'vquijaite', '', '123', 'otrosTrabajadores'),
-(24, 0, 'Portilla', 'Maria', '098761', '', 'mportilla', '', '123', 'otrosTrabajadores'),
-(26, 0, 'Egoavil', 'Nataly', '09871622', '', 'negoavil', '', '123', 'otrosTrabajadores'),
-(27, 9, 'Casas', 'Fabiola', '87611211', '', 'fcasas', '', '123', 'otrosTrabajadores'),
-(28, 9, 'Chávez', 'Fabiola', '098711611', '', 'fchavez', '', '123', 'otrosTrabajadores'),
-(34, 2, 'López', 'José ', '12121', '', '123', 'Masculino', '123', 'otrosTrabajadores');
+(35, 9, 'Chávez', 'Fabiola', '70431211', '', 'fchavez', 'Femenino', '123', 'otrosTrabajadores'),
+(36, 10, 'Verano', 'Jhony', '89765122', '', 'jverano', 'Masculino', '123', 'otrosTrabajadores');
 
 -- --------------------------------------------------------
 
@@ -413,36 +408,31 @@ INSERT INTO `vueloslogistica` (`id`, `id_padre`, `id_consulta`, `id_logistica`, 
 (130, 29, 10, 0, 'Jorge Antony Milian Montalvo', '12331111', 'Fe y Alegría 3 - Lima - San Juan de Miraflores ', '1', '2022-09-20 09:00:00', '2022-09-20 10:00:00', '#782b2b'),
 (131, 29, 10, 0, 'Nataly Egoavil', '5444222', 'Fe y Alegría 9 - Lima - Comas ', '123', '2022-09-20 11:00:00', '2022-09-20 12:00:00', '#d1311f'),
 (132, 2, 1, 0, 'Jorge Antony Milian Montalvo', '70311233', 'Fe y Alegría 6 - Lima - San Martín de Porres ', 'Ya fue!', '2022-09-22 05:00:00', '2022-09-22 06:00:00', '#b8ab1e'),
-(133, 29, 10, 0, 'Katheryn Acero', 'asasa', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '#000000'),
-(134, 29, 10, 0, 'Fabiola Casas', 'asassa', 'Fe y Alegría 3 - Lima - San Juan de Miraflores ', 'sass', '2022-09-22 12:00:00', '2022-09-22 13:00:00', '#20d924'),
 (137, 2, 1, 0, 'Víctor Quijiate', '121212', 'Fe y Alegría 7 - Lima - Comas ', '1212', '2022-10-03 15:00:00', '2022-10-03 16:00:00', '#000000'),
-(145, 2, 1, 0, 'Katheryn Acero', 'assasa', 'Colegio...', 'saassa', '2022-09-25 18:04:00', '2022-09-28 18:04:00', '#084414'),
 (146, 2, 1, 0, 'Jorge Antony Milian Montalvo', '70311233', 'Fe y Alegría 6 - Lima - San Martín de Porres ', 'Es urgente!', '2022-09-26 20:00:00', '2022-09-29 20:00:00', '#bc9015'),
-(147, 29, 10, 0, 'Jorge Antony Milian Montalvo', '', 'Fe y Alegría 9 - Lima - Comas ', '', '2022-09-25 18:08:00', '2022-09-27 22:12:00', '#db0a0a'),
 (148, 2, 1, 0, 'Víctor Quijiate', '70311233', 'Fe y Alegría 6 - Lima - San Martín de Porres ', 'se va urgente', '2022-09-25 18:35:00', '2022-09-30 18:36:00', '#baa01c'),
-(149, 31, 11, 0, 'Maria Portilla', '70331223', 'Fe y Alegría 9 - Lima - Comas ', 'Se va!', '2022-09-25 19:30:00', '2022-09-29 19:30:00', '#c5af1b'),
-(150, 29, 10, 0, 'Víctor Atausupa', 'asassa', 'Fe y Alegría 2 - Lima - San Martín de Porres ', '', '2022-09-25 19:46:00', '2022-09-26 19:46:00', '#5dd930'),
-(151, 31, 11, 0, 'Katheryn Acero', 'qwqwqw', 'Fe y Alegría 2 - Lima - San Martín de Porres ', '', '2022-09-26 19:59:00', '2022-09-29 19:59:00', '#000000'),
 (152, 34, 12, 0, 'Katheryn Acero', '76544321', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '11111', '2022-09-25 21:35:00', '2022-09-27 21:35:00', '#16d813'),
 (154, 6, 2, 0, 'Jorge Antony Milian Montalvo', '98112111', 'Fe y Alegría 5 - Lima - San Juan de Lurigancho ', '', '2022-09-26 07:30:00', '2022-09-28 08:00:00', '#00ff80'),
-(155, 6, 2, 0, '1222 1212', '12121', 'Fe y Alegría 3 - Lima - San Juan de Miraflores ', '12', '2022-09-25 22:49:00', '2022-09-28 22:49:00', '#2977b3'),
-(156, 6, 2, 0, '1222 1212', '12121212', 'Fe y Alegría 4 - Lima - San Juan de Lurigancho ', '1212', '2022-09-27 22:52:00', '2022-09-29 22:52:00', '#16d1e9'),
-(157, 6, 2, 0, '1222 1212', '12122121', 'Fe y Alegría 7 - Lima - Comas ', 'aaa', '2022-09-25 22:53:00', '2022-09-28 22:53:00', '#df1616'),
 (158, 30, 9, 0, 'Fabiola Chávez', '11111', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '111', '2022-09-25 23:21:00', '2022-09-30 23:21:00', '#0ac70e'),
-(159, 2, 1, 0, '1222 1212', '123', 'Fe y Alegría 2 - Lima - San Martín de Porres ', '1212', '2022-09-26 08:17:00', '2022-09-28 08:17:00', '#000000'),
 (160, 30, 9, 15, 'Fabiola Chávez', '12221122', 'Fe y Alegría 8 - Lima - Comas ', '112', '2022-09-26 09:03:00', '2022-09-29 12:06:00', '#c624a9'),
 (161, 29, 10, 0, 'Katheryn Acero', '121212', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '1212', '2022-09-26 09:36:00', '2022-09-28 09:36:00', '#cfc90c'),
 (162, 31, 11, 0, 'Jorge Antony Milian Montalvo', '7022133', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '', '2022-09-28 08:06:00', '2022-10-02 08:06:00', '#9d1cd9'),
 (163, 31, 11, 0, 'Jorge Antony Milian Montalvo', '70311233', 'Fe y Alegría 7 - Lima - Comas ', 'listo!', '2022-10-01 11:46:00', '2022-10-03 11:47:00', '#000000'),
 (164, 31, 11, 0, 'Fabiola Casas', '12112121', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '', '2022-09-30 11:47:00', '2022-10-08 11:47:00', '#dd2cbc'),
-(170, 2, 1, 0, 'Jorge Antony Milian Montalvo', '1122', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '1212', '2022-10-07 10:54:00', '2022-10-14 10:54:00', '#8E24AA'),
 (171, 2, 1, 0, 'Jhony Verano', '12112121', 'Fe y Alegría 3 - Lima - San Juan de Miraflores ', '121212', '2022-10-07 14:56:00', '2022-10-15 14:56:00', '#33B679'),
 (176, 2, 1, 0, 'Jorge Antony Milian Montalvo', '12122112', 'Fe y Alegría 5 - Lima - San Juan de Lurigancho ', '12', '2022-10-10 09:49:00', '2022-10-11 14:49:00', '#8E24AA'),
 (177, 2, 1, 0, 'Jorge Antony Milian Montalvo', '12121212', 'Fe y Alegría 7 - Lima - Comas ', '', '2022-10-10 09:58:00', '2022-10-14 09:58:00', '#039BE5'),
 (178, 2, 1, 0, 'Nataly Egoavil', '12121212', 'Fe y Alegría 2 - Lima - San Martín de Porres ', '', '2022-10-10 10:03:00', '2022-10-15 10:03:00', '#D50000'),
 (180, 29, 10, 0, 'Jorge Antony Milian Montalvo', '7031123', 'Fe y Alegría 6 - Lima - San Martín de Porres ', '', '2022-10-10 10:11:00', '2022-10-13 14:15:00', '#039BE5'),
 (181, 29, 10, 0, 'Jorge Antony Milian Montalvo', '01010101', 'Fe y Alegría 6 - Lima - San Martín de Porres ', '', '2022-10-10 11:15:00', '2022-10-15 10:14:00', '#E67C73'),
-(182, 2, 1, 0, 'Nataly Egoavil', '121212', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '12', '2022-10-10 11:33:00', '2022-10-12 11:33:00', '#3F51B5');
+(182, 2, 1, 0, 'Nataly Egoavil', '121212', 'Fe y Alegría 1 - Lima - San Martín de Porres ', '12', '2022-10-10 11:33:00', '2022-10-12 11:33:00', '#3F51B5'),
+(185, 29, 10, 0, 'Jorge Antony Milian Montalvo', '12121212', 'Fe y Alegría 5 - Lima - San Juan de Lurigancho ', '', '2022-10-11 12:00:00', '2022-10-13 13:11:00', '#8E24AA'),
+(186, 29, 10, 0, 'Jorge Antony Milian Montalvo', '70311233', 'Fe y Alegría 9 - Lima - Comas ', '', '2022-10-11 11:01:00', '2022-10-12 11:01:00', '#039BE5'),
+(187, 2, 1, 0, 'Jorge Antony Milian Montalvo', '70311233', 'Fe y Alegría 9 - Lima - Comas ', '', '2022-10-11 11:11:00', '2022-10-27 11:11:00', '#039BE5'),
+(188, 29, 10, 0, 'Jorge Antony Milian Montalvo', '70311233', 'Fe y Alegría 6 - Lima - San Martín de Porres ', 'URGENTE!', '2022-10-12 11:11:00', '2022-10-14 11:01:00', '#3F51B5'),
+(191, 30, 9, 0, 'Fabiola Chávez', '70431211', 'Fe y Alegría 5 - Lima - San Juan de Lurigancho ', '', '2022-10-11 09:34:00', '2022-10-15 09:34:00', '#F6BF26'),
+(193, 29, 10, 0, 'Jhony Verano', '89765122', 'Fe y Alegría 10 - Lima - Comas ', '', '2022-10-11 12:09:00', '2022-10-13 12:09:00', '#8E24AA'),
+(194, 2, 1, 0, 'Jhony Verano', '89765122', 'Fe y Alegría 2 - Lima - San Martín de Porres ', 'asaas', '2022-10-11 12:10:00', '2022-10-15 12:10:00', '#8E24AA');
 
 --
 -- Índices para tablas volcadas
@@ -552,7 +542,7 @@ ALTER TABLE `logistica`
 -- AUTO_INCREMENT de la tabla `otrostrabajadores`
 --
 ALTER TABLE `otrostrabajadores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT de la tabla `sistemas`
@@ -570,7 +560,7 @@ ALTER TABLE `vuelos`
 -- AUTO_INCREMENT de la tabla `vueloslogistica`
 --
 ALTER TABLE `vueloslogistica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=185;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=195;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
