@@ -26,7 +26,7 @@ if ($_SESSION["id"] != substr($_GET["url"], 10)) {
                             <th>N°</th>
                             <th>Nombre y Apellido</th>
                             <th>Inicio de Viaje</th>
-                            <th>Fin de Viajes</th>
+                            <th>Fin de Viaje</th>
                             <th>Colegio al que visita</th>
                             <th>Comentario</th>
                             <th>Jefe del Área</th>
