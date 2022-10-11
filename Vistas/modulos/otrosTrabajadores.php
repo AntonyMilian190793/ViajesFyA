@@ -118,7 +118,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
 
                         <div class="form-group">
                             <h2>Documento:</h2>
-                            <input type="text" class="form-control" name="documento" required>
+                            <input type="text" class="form-control input-lg" name="documento" minlength="0" maxlength="8" pattern="[0-9]+" required>
                         </div>
 
                         <div class="form-group">
@@ -132,7 +132,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
 
                         <div class="form-group">
                             <h2>Área:</h2>
-                            <select class="form-control input-lg" name="consulta">
+                            <select class="form-control input-lg" name="consulta" required>
                                 <option>Seleccionar...</option>
 
                                 <?php
