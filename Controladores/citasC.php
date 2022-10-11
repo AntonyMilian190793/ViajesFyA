@@ -29,6 +29,15 @@
             return $resultado;
         }
 
+        //ver citas detallado
+        public function VerCitasDetalladoC(){
+
+            $tablaBD = "vueloslogistica";
+            $resultado = CitasM::VerCitasDetalladoM($tablaBD);
+            return $resultado;
+        }
+
+
         //pedir cita como Padre
         public static function PedirCitaPadreC(){
 

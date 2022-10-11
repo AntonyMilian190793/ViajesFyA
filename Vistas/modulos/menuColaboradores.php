@@ -30,7 +30,7 @@
         </a>
       </li>
 
-      <!-- <li>
+      <li>
         
         <?php
         
@@ -40,7 +40,7 @@
           <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
           <span>Historial</span>
         </a>
-      </li> -->
+      </li>
 
     </ul>
       

@@ -40,6 +40,19 @@
     
         }
 
+        //ver citas detallado
+        static public function VerCitasDetalladoM($tablaBD){
+            
+            $pdo = ConexionBD::cBD()->prepare("SELECT id, id_padre, id_consulta, id_logistica ,nyaP, documento, colegio, comentario, DATE_FORMAT(inicio, '%W %d de %M de %Y') AS inicio, DATE_FORMAT(inicio, '%h:%m:%s %p') AS Hora_Inicio, DATE_FORMAT(fin, '%W %d de %M de %Y') AS fin, DATE_FORMAT(fin, '%h:%m:%s %p') AS Hora_Fin, color FROM $tablaBD");
+            $pdo->execute();
+            return $pdo->fetchAll();
+    
+            $pdo -> close();
+            $pdo = null;
+    
+        }
+
+
         //pedir citas de Padre
         static public function PedirCitaPadreM($tablaBD, $datosC){
 

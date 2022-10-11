@@ -14,7 +14,7 @@ if ($_SESSION["id"] != substr($_GET["url"], 10)) {
 <div class="content-wrapper">
 
     <section class="content-header">
-        <h1>Historial de Viajes</h1>
+        <h1>Su historial de viajes</h1>
     </section>
 
     <section class="content">
@@ -23,9 +23,13 @@ if ($_SESSION["id"] != substr($_GET["url"], 10)) {
                 <table class="table -table-bordered table-hover table-striped DT">
                     <thead>
                         <tr>
-                            
-                            <th>Fecha y Hora de Viaje</th>
-                            <th>Jefe</th>
+                            <th>N°</th>
+                            <th>Nombre y Apellido</th>
+                            <th>Inicio de Viaje</th>
+                             <th>Fin de Viajes</th>
+                             <th>Colegio al que visita</th>
+                             <th>Comentario</th>
+                            <th>Jefe del Área</th>
                             <th>Área</th>
                         </tr>
                     </thead>
@@ -33,22 +37,27 @@ if ($_SESSION["id"] != substr($_GET["url"], 10)) {
 
                         <?php
 
-                            $resultado = CitasC::VerCitasC();
+                            $resultado = CitasC::VerCitasDetalladoC();
 
                             foreach ($resultado as $key => $value){
 
                                 if($_SESSION["documento"] == $value["documento"]){
                                     
-                                echo '                        
-                                <tr>
-                                    <td>'.$value["inicio"].'</td>';
+                                echo '<tr>
+                                    <td>'.($key+1).'</td>
+                                    <td>'.$value["nyaP"].'</td>
+                                    <td>'.$value["inicio"].'</td>
+                                    <td>'.$value["fin"].'</td>
+                                    <td>'.$value["colegio"].'</td>
+                                    <td>'.$value["comentario"].'</td>
+                                      ';
 
                                     $columna = "id";
                                     $valor = $value["id_padre"];
 
                                     $padre = PadresC::PadreC($columna, $valor);
 
-                                    echo '<td>'.$padre["apellido"].' '.$padre["nombre"].'</td>';
+                                    echo '<td>'.$padre["nombre"].' '.$padre["apellido"].'</td>';
 
                                     
 
