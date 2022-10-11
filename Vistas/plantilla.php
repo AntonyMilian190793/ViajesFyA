@@ -303,12 +303,12 @@ session_start();
       ],
 
       //solo se borra esto y se arregla todo
-      slotLabelFormat:{
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: true,
-      meridiem: 'short'
-      },
+      // slotLabelFormat:{
+      // hour: '2-digit',
+      // minute: '2-digit',
+      // hour12: true,
+      // meridiem: 'short'
+      // },
       
 
       defaultView : "month",
