@@ -35,8 +35,9 @@ session_start();
   <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/dist/css/skins/_all-skins.css">
 
   <!-- Data Tables -->
-  <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/css/responsive.bootstrap.min.css">
-  <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/css/responsive.bootstrap.min.css">
+  <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"> -->
+   <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/bower_components/DataTables/dataTables.min.css">
 
 
     <!-- fullCalendar -->
@@ -170,11 +171,21 @@ session_start();
   <!-- AdminLTE for demo purposes -->
   <script src="http://localhost/ViajesFyA/Vistas/dist/js/demo.js"></script>
 
-  <!-- DataTables -->
+  <!-- DataTables
   <script src="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net/js/jquery.dataTables.js"></script>
   <script src="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
   <script src="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/js/dataTables.responsive.min.js"></script>
-  <script src="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+  <script src="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script> -->
+
+
+
+  <script type="text/javascript" src="http://localhost/ViajesFyA/Vistas/bower_components/DataTables/dataTables.min.js"></script> 
+      <!-- para usar botones en datatables JS -->  
+    <script src="http://localhost/ViajesFyA/Vistas/bower_components/DataTables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>  
+    <script src="http://localhost/ViajesFyA/Vistas/bower_components/DataTables/JSZip-2.5.0/jszip.min.js"></script>    
+    <script src="http://localhost/ViajesFyA/Vistas/bower_components/DataTables/pdfmake.min.js"></script>    
+    <script src="http://localhost/ViajesFyA/Vistas/bower_components/DataTables/pdfmake-0.1.36/vfs_fonts.js"></script>
+    <script src="http://localhost/ViajesFyA/Vistas/bower_components/DataTables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
 
 <!-- fullCalendar -->
 <script src="http://localhost/ViajesFyA/Vistas/bower_components/moment/moment.js"></script>
@@ -182,7 +193,7 @@ session_start();
 <script src="http://localhost/ViajesFyA/Vistas/bower_components/fullcalendar/dist/locale/es.js"></script>
 
   <script src="http://localhost/ViajesFyA/Vistas/js/citas.js"></script>
-   <script src="http://localhost/ViajesFyA/Vistas/js/padres.js"></script>
+  <script src="http://localhost/ViajesFyA/Vistas/js/padres.js"></script>
   <script src="http://localhost/ViajesFyA/Vistas/js/otrosT.js"></script>
   <script src="http://localhost/ViajesFyA/Vistas/js/secretarias.js"></script>
   <script src="http://localhost/ViajesFyA/Vistas/js/trabajadores.js"></script>

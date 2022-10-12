@@ -6,6 +6,17 @@ $(".DTE").on("click", ".EliminarVuelo", function() {
 
 
 $(".DTE").DataTable({
+        
+// "lengthMenu": [ 5, 10, 25, 75, 100],//mostramos el menú de registros a revisar
+    "aProcessing": true, //activamos el procesamiento de databbles
+    "aServerSide": true, //paginacion y filtrado realizadosp por el servidor
+    dom: '<Bl<f>rtip>', //definimos los elementos del control de la tabla
+    buttons: [
+        'copyHtml5',
+        'excelHtml5',
+        'csvHtml5',
+        'pdf'
+    ],
     "language": {
         sSearch: "Buscar:",
         sEmptyTable: "No hay datos disponibles",
@@ -20,6 +31,6 @@ $(".DTE").DataTable({
             sPrevious: "Anterior"
         },
         sLoadingRecords: "Cargando...",
-        sLengthMenu: "Mostrar _MENU_ Registros",
-    }
+        sLengthMenu: "Mostrar _MENU_ Registros",}
+
 });
