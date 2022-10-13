@@ -279,20 +279,6 @@ session_start();
                 color: "'.$value["color"].'",
                 editable: true //para editar o mover los eventos creados
               },';
-            
-        }else if($value["id_padre"] ==  substr($_GET["url"], 8)){
-              
-              echo '{
-                
-                id: "'.$value["id"].'",
-                title: "'.$value["nyaP"].'",
-                description: "'.$value["comentario"].'",
-                colegioC: "'.$value["colegio"].'",
-                start: "'.$value["inicio"].'",
-                end: "'.$value["fin"].'",
-                color: "'.$value["color"].'",
-                editable: true //para editar o mover los eventos creados
-              },';
             }else if($value["id_padre"] ==  substr($_GET["url"], 9)){
               
               echo '{
