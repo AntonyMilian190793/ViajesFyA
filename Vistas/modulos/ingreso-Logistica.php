@@ -1,6 +1,6 @@
 <div class="login-box">
   <div class="login-logo">
-    <a href="http://localhost/ViajesFyA"><b>Thakhi</b>Kusikuywan</a>
+    <a href="http://localhost/ViajesFyA"><b>Viajes</b>FyA</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
