@@ -245,7 +245,7 @@ class OtrosC{
                 "apellido" => $_POST["apellido"],
                 "usuario" => $_POST["usuario"],
                 "clave" => $_POST["clave"],
-                "documento" => $_POST["clave"],
+                "documento" => $_POST["documento"],
                 "rol" => $_POST["rolS"]
             );
 
