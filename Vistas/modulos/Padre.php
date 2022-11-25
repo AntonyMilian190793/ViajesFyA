@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="http://localhost/ViajesFyA/select2/select2.min.css">
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+	<script src="http://localhost/ViajesFyA/select2/select2.min.js"></script>
+</head>
+<body>
+    
+</body>
+</html>
 <?php
 
 if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SESSION["rol"] !="JefeArea" && $_SESSION["rol"] != "Sistemas") {
@@ -108,12 +122,11 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                         
                         <div class="form-group">
                             <h2>Seleccionar trabajador:</h2>
-                            <select class="form-control input-lg" name="nombreP">
-                                <option>Trabajador...</option>
-
+                            <select class="form-control input-lg" id="controlBuscador" name="nombreP" style="width: 100%">
+                             <option>Seleccione trabajador...</option>
                                 
                         </div>';
-                        
+                        	
 
                         $columna = null;
                         $valor = null;
@@ -124,6 +137,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                             echo '<option value="'.$value["nombre"].' '.$value["apellido"].'">'.$value["nombre"].' '.$value["apellido"].'</option>';
                         }
                         ?>
+
 
 
 
@@ -161,7 +175,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                                 
                         echo '<div class="form-group">
                             <h2>Seleccionar Colegio:</h2>
-                            <select class="form-control input-lg" name="nombreCo">
+                            <select class="form-control input-lg" id="controlBuscadora" name="nombreCo" style="width: 100%">
                                 <option>Colegio...</option>
 
                                 
@@ -274,3 +288,17 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
         </div>
     </div>
 </div>
+
+
+
+<script>
+$('#controlBuscador').select2({
+        dropdownParent: $('#CitaModal .modal-body')
+    });
+</script>
+
+<script>
+$('#controlBuscadora').select2({
+        dropdownParent: $('#CitaModal .modal-body')
+    });
+</script>
