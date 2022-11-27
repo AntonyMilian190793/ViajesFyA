@@ -12,6 +12,8 @@
     
 </body>
 </html>
+
+
 <?php
 
 if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SESSION["rol"] !="JefeArea" && $_SESSION["rol"] != "Sistemas") {

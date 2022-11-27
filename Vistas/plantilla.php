@@ -99,7 +99,7 @@ session_start();
         || $url[0] == "perfil-S" || $url[0] == "secretarias" || $url[0] == "administracion" || $url[0] == "inicio-editar" || $url[0] == "perfil-Directivo" 
         || $url[0] == "perfil-Logistica" || $url[0] == "perfil-L" || $url[0] == "perfil-otrosTrabajadores" || $url[0] == "perfil-oT"
         || $url[0] == "perfil-Directivo" || $url[0] == "perfil-D" || $url[0] == "perfil-JefeArea" || $url[0] == "perfil-JA" || $url[0] == "colegios" || $url[0] == "E-Co"
-        || $url[0] == "busqueda" || $url[0] == "VuelosTabla") {
+        || $url[0] == "busqueda" || $url[0] == "VuelosTabla" || $url[0] == "CalendarioG") {
 
         include "modulos/" . $url[0] . ".php";
       }
@@ -266,7 +266,7 @@ session_start();
               },';
               
 
-            }else if($value["id_padre"] ==  substr($_GET["url"], 7)){
+            }else if($value["id_logistica"] ==  substr($_GET["url"], 7)){
               
               echo '{
                 
@@ -294,6 +294,35 @@ session_start();
               },';
             }
       }
+          ?>
+
+          
+          <?php
+          
+          $resultado = CitasC::VerCitasCompleto();
+
+          foreach ($resultado as $key => $value){
+
+            if($value["id_padre"] ==  substr($_GET["url"], 12)){
+
+              echo '{
+                
+                id: "'.$value["id"].'",
+                title: "'.$value["nyaP"].'",
+                description: "'.$value["comentario"].'",
+                colegioC: "'.$value["colegio"].'",
+                start: "'.$value["inicio"].'",
+                end: "'.$value["fin"].'",
+                color: "'.$value["color"].'",
+                editable: true //para editar o mover los eventos creados
+
+              },';
+              
+
+            }
+
+          }
+          
           ?>
 
           

@@ -11,7 +11,7 @@
       </li>
 
 
-      <!-- <li>
+      <li>
         <?php
         
           echo '<a href="http://localhost/ViajesFyA/Vuelos/'.$_SESSION["id"].'">';
@@ -21,7 +21,7 @@
           <i class="fa fa-plane" aria-hidden="true"></i>
           <span>Viajes</span>
         </a>
-      </li> -->
+      </li> 
 
       <!-- <li>
         
@@ -36,6 +36,13 @@
         <a href="http://localhost/ViajesFyA/Ver-areas">
         <i class="fa fa-university" aria-hidden="true"></i>
           <span>Ver Áreas</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="http://localhost/ViajesFyA/CalendarioG">
+        <i class="fa fa-university" aria-hidden="true"></i>
+          <span>Calendario Global</span>
         </a>
       </li>
 

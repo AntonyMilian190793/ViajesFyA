@@ -40,6 +40,18 @@
     
         }
 
+        //ver citas
+        static public function VerCitasCompletoM($tablaBD){
+    
+            $pdo = ConexionBD::cBD()->prepare("SELECT id, id_padre, id_consulta, id_logistica ,nyaP, documento, colegio, comentario FROM $tablaBD");
+            $pdo->execute();
+            return $pdo->fetchAll();
+    
+            $pdo -> close();
+            $pdo = null;
+    
+        }
+
         //ver citas detallado
         static public function VerCitasDetalladoM($tablaBD){
             
@@ -103,7 +115,7 @@
             
         }
 
-                ////pedir cita colaboradores
+        //pedir cita colaboradores
         static public function PedirCitaColaboradoresM($tablaBD, $datosC){
 
             $pdo = ConexionBD::cBD()->prepare("INSERT INTO $tablaBD (id_padre, id_consulta, nyaP, documento, inicio, fin, colegio, comentario, color)
