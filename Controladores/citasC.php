@@ -119,10 +119,10 @@
         }
 
 
-        public function ModificarCita(){
-            $tablaBD = "vueloslogistica";
-            $resultado = CitasM::ModificarCita($tablaBD);
-        }
+        //public function ModificarCita(){
+          //  $tablaBD = "vueloslogistica";
+           // $resultado = CitasM::ModificarCita($tablaBD);
+        //}
 
 
         public function VerVuelosLogisticaC(){

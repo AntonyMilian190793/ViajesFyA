@@ -266,7 +266,7 @@ session_start();
               },';
               
 
-            }else if($value["id_logistica"] ==  substr($_GET["url"], 7)){
+            }else if($value["id_padre"] ==  substr($_GET["url"], 7)){
               
               echo '{
                 
@@ -303,7 +303,7 @@ session_start();
 
           foreach ($resultado as $key => $value){
 
-            if($value["id_padre"] ==  substr($_GET["url"], 12)){
+            if($value["id"] ==  substr($_GET["url"], 12)){
 
               echo '{
                 

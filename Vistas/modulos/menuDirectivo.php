@@ -40,11 +40,16 @@
       </li>
 
       <li>
-        <a href="http://localhost/ViajesFyA/CalendarioG">
-        <i class="fa fa-university" aria-hidden="true"></i>
-          <span>Calendario Global</span>
+        <?php
+        
+          echo '<a href="http://localhost/ViajesFyA/CalendarioG/'.$_SESSION["id"].'">';
+
+        ?>
+        
+          <i class="fa fa-plane" aria-hidden="true"></i>
+          <span>Calendario Total</span>
         </a>
-      </li>
+      </li> 
 
       <li>
         <a href="http://localhost/ViajesFyA/VuelosTabla">
