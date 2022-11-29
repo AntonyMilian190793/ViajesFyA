@@ -303,7 +303,7 @@ session_start();
 
           foreach ($resultado as $key => $value){
 
-            if($value["id"] ==  substr($_GET["url"], 12)){
+            if($value["id_padre"] ==  substr($_GET["url"], 12)){
 
               echo '{
                 
