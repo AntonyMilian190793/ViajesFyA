@@ -105,6 +105,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                             $valor = substr($_GET["url"], 6);
                             $resultado = PadresC::PadreC($columna, $valor);
                             //<input type="hidden" name="Pid" value="'.$_SESSION["id"].'" >
+
                             echo '                         
                             
                             <div class="form-group">
@@ -128,7 +129,8 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                              <option>Seleccione trabajador...</option>
                                 
                         </div>';
-                        	
+
+
 
                         $columna = null;
                         $valor = null;
@@ -136,22 +138,22 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
 
                         foreach ($resultado as $key => $value) {
 
-                            echo '<option value="'.$value["nombre"].' '.$value["apellido"].'">'.$value["nombre"].' '.$value["apellido"].'</option>';
+                            echo '<option value="'.$value["nombre"].' '.$value["apellido"].' '.$value["documento"].'">'.$value["nombre"].' '.$value["apellido"].'</option>';
                         }
+
                         ?>
 
-
-
-
                         <div class="form-group">
-                            <h2></h2>
-                            <input type="hidden" class="form-control input-lg" name="">
-                        </div>  
+                        <h2></h2>
+                        <input type="hidden" class="form-control input-lg" name="">
+                        
+                    </div>  
+                    
+                    <div class="form-group">
+                    <h2>Documento del Trabajador:</h2>
+                    <input type="text" class="form-control input-lg" name="documentoP"  id="documento" readonly>
+                    </div> 
 
-                        <div class="form-group">
-                            <h2>Documento del Trabajador:</h2>
-                            <input type="text" class="form-control input-lg" name="documentoP" minlength="0" maxlength="8" pattern="[0-9]+" required>
-                        </div>  
                         
                         <div class="form-group">
                             <h2>Fecha Inicio:</h2>
@@ -303,4 +305,26 @@ $('#controlBuscador').select2({
 $('#controlBuscadora').select2({
         dropdownParent: $('#CitaModal .modal-body')
     });
+</script>
+
+
+
+<script>
+
+document.getElementById('controlBuscador').onchange = function() {
+  /* Referencia al option seleccionado */
+  var mOption = this.options[this.selectedIndex];
+  /* Referencia a los atributos data de la opción seleccionada */
+  var mData = mOption.dataset;
+
+  /* Referencia a los input */
+  var elDni = document.getElementById('documento');
+
+
+  /* Asignamos cada dato a su input*/
+  elDni.value = this.value;
+
+
+};
+
 </script>
