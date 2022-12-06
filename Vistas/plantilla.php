@@ -290,7 +290,7 @@ session_start();
                 start: "'.$value["inicio"].'",
                 end: "'.$value["fin"].'",
                 color: "'.$value["color"].'",
-                editable: true //para editar o mover los eventos creados
+                editable: true //para editar o mover los eventos creadossssssssssssssss
               },';
             }
       }
