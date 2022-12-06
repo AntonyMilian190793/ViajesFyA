@@ -136,7 +136,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
 
                         foreach ($resultado as $key => $value) {
 
-                            echo '<option value="'.$value["nombre"].' '.$value["apellido"].'">'.$value["nombre"].' '.$value["apellido"].'</option>';
+                            echo '<option value="'.$value["nombre"].' '.$value["apellido"].' '.$value["documento"].'">'.$value["nombre"].' '.$value["apellido"].'</option>';
                         }
 
                         ?>
