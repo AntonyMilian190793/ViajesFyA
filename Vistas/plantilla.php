@@ -296,34 +296,7 @@ session_start();
       }
           ?>
 
-          
-          <?php
-          
-          $resultado = CitasC::VerCitasCompleto();
-
-          foreach ($resultado as $key => $value){
-
-            if($value["id_padre"] ==  substr($_GET["url"], 12)){
-
-              echo '{
-                
-                id: "'.$value["id"].'",
-                title: "'.$value["nyaP"].'",
-                description: "'.$value["comentario"].'",
-                colegioC: "'.$value["colegio"].'",
-                start: "'.$value["inicio"].'",
-                end: "'.$value["fin"].'",
-                color: "'.$value["color"].'",
-                editable: true //para editar o mover los eventos creados
-
-              },';
-              
-
-            }
-
-          }
-          
-          ?>
+  
 
           
       ],
@@ -390,6 +363,19 @@ session_start();
       // },
 
       
+
+    });
+
+    $('#calendarG').fullCalendar({   
+
+
+      header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'agendaDay, agendaWeek, month',
+        },
+        
+
 
     });
   </script>

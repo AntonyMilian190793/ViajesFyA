@@ -22,7 +22,7 @@ if ($_SESSION["rol"] != "Directivo") {
 <section class="content">
     <div class="box">
         <div class="box-body">
-            <div id="calendar"></div>
+            <div id="calendarG"></div>
         </div>
     </div>
 </section>
