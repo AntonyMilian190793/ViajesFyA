@@ -377,6 +377,31 @@ session_start();
         
 
 
+        events: [
+
+          <?php
+            
+            foreach ($resultado as $key => $value){
+
+               echo '{
+                
+                id: "'.$value["id"].'",
+                title: "'.$value["nyaP"].'",
+                description: "'.$value["comentario"].'",
+                colegioC: "'.$value["colegio"].'",
+                start: "'.$value["inicio"].'",
+                end: "'.$value["fin"].'",
+                color: "'.$value["color"].'",
+                editable: true //para editar o mover los eventos creados
+              },';
+            }
+
+          ?>
+
+
+          ],
+
+
     });
   </script>
 </body>

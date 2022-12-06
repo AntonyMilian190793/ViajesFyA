@@ -30,7 +30,7 @@
         }
 
         //ver citas completo
-        public function VerCitasCompleto(){
+        public function VerCitasCompletoC(){
 
             $tablaBD = "vueloslogistica";
             $resultado = CitasM::VerCitasCompletoM($tablaBD);
