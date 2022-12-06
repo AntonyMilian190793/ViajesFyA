@@ -386,13 +386,13 @@ session_start();
       navLinks: true,
 
       //para que me salga el + en el calendario
-        eventLimit: true, // for all non-agenda views
-          views: {
-          agenda: {
-          eventLimit: 6,
-           // adjust to 6 only for agendaWeek/agendaDay
-      }
-    },
+    //     eventLimit: true, // for all non-agenda views
+    //       views: {
+    //       agenda: {
+    //       eventLimit: 6,
+    //        // adjust to 6 only for agendaWeek/agendaDay
+    //   }
+    // },
         
 
 
@@ -420,8 +420,18 @@ session_start();
           ?>
           ],
 
+  eventRender: function(eventObj, $el) {
+    $el.popover({
+      title: eventObj.title,
+      content: eventObj.description,
+      trigger: 'hover',
+      placement: 'top',
+      container: 'body'
+    });
+  },
 
-              defaultView : "month",
+
+      defaultView : "month",
       timeFormat: 'H(:mm)t',
 
 
