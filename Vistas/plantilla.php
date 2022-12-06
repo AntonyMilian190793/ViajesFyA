@@ -295,12 +295,18 @@ session_start();
             }
       }
           ?>
-
-  
-
           
       ],
 
+      eventRender: function(eventObj, $el) {
+      $el.popover({
+      title: eventObj.title,
+      content: eventObj.description,
+      trigger: 'hover',
+      placement: 'top',
+      container: 'body'
+    });
+  },
       //solo se borra esto y se arregla todo
       // slotLabelFormat:{
       // hour: '2-digit',
