@@ -113,9 +113,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                 <h2>Usted es...</h2>
                                 <input type="hiden" class="form-control input-lg" name="nyaC" value="'.$_SESSION["nombre"].' '.$_SESSION["apellido"].'" readonly >
                                 <input type="hidden" name="Did" value="'.$resultado["id"].'">
-                                
-                                
-                            
+                                   
                             </div>';
 
                         echo '<div class="form-group">
@@ -138,7 +136,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
 
                         foreach ($resultado as $key => $value) {
 
-                            echo '<option value="'.$value["nombre"].' '.$value["apellido"].' '.$value["documento"].'">'.$value["nombre"].' '.$value["apellido"].'</option>';
+                            echo '<option value="'.$value["nombre"].' '.$value["apellido"].'">'.$value["nombre"].' '.$value["apellido"].'</option>';
                         }
 
                         ?>
@@ -318,11 +316,11 @@ document.getElementById('controlBuscador').onchange = function() {
   var mData = mOption.dataset;
 
   /* Referencia a los input */
-  var elDni = document.getElementById('documento');
+  var elDocumento = document.getElementById('documento');
 
 
   /* Asignamos cada dato a su input*/
-  elDni.value = this.value;
+  elDocumento.value = this.value;
 
 
 };

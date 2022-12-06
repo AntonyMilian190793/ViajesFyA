@@ -369,11 +369,30 @@ session_start();
     $('#calendarG').fullCalendar({   
 
 
-      header: {
+        header: {
           left: 'prev,next today',
           center: 'title',
           right: 'agendaDay, agendaWeek, month',
         },
+        
+        
+
+        height: 800,
+        contentHeight: 780,
+        aspectRatio: 3,
+        nowIndicator: true,
+
+              dayMaxEvents: false,
+      navLinks: true,
+
+      //para que me salga el + en el calendario
+        eventLimit: true, // for all non-agenda views
+          views: {
+          agenda: {
+          eventLimit: 6,
+           // adjust to 6 only for agendaWeek/agendaDay
+      }
+    },
         
 
 
@@ -399,9 +418,34 @@ session_start();
             }
 
           ?>
-
-
           ],
+
+
+              defaultView : "month",
+      timeFormat: 'H(:mm)t',
+
+
+      eventClick: function (info, jsEvent, view){
+        $('#CalendarioModal').modal();
+        console.log(info);
+
+        // var dateString = (info.start);
+        // moment(dateString).format('YYYY-MM-DD HH:mm');
+        // alert(dateString.toDateString);
+
+
+        $('#idC').val(info.id);
+        $('#titleC').val(info.title);
+        $('#colegioC').val(info.colegioC);
+        $('#horaS').val(moment(info.start).format('DD-MM-YYYY / HH:mm'));
+        $('#horaF').val(moment(info.end).format('DD-MM-YYYY / HH:mm'));
+        $('#description').val(info.description);
+        
+        // console.log(info.title);
+        // console.log(info.start);
+        // console.log(info.end);
+        // console.log(info.description);
+        },  
 
 
     });
