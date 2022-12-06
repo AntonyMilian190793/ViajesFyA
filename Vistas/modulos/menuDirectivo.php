@@ -10,7 +10,7 @@
         </a>
       </li>
 
-
+<!-- 
       <li>
         <?php
         
@@ -21,7 +21,7 @@
           <i class="fa fa-plane" aria-hidden="true"></i>
           <span>Viajes</span>
         </a>
-      </li> 
+      </li>  -->
 
       <!-- <li>
         
