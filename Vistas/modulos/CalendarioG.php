@@ -14,12 +14,13 @@ if ($_SESSION["rol"] != "Directivo") {
 
 <?php
 
+
 $pdo = new PDO("mysql:host=localhost; dbname=viajesfya;","root","");
 $query=$pdo->prepare("SELECT id, id_padre, id_consulta, nyaP, documento, colegio, comentario, inicio, fin FROM vueloslogistica WHERE id_consulta != 0");
 $query->execute();
 
 $resultado=$query->fetchAll(PDO::FETCH_ASSOC);
-echo json_encode($resultado);
+
 ?>
 
 <div class="content-wrapper">

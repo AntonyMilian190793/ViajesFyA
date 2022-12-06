@@ -380,7 +380,9 @@ session_start();
         events: [
 
           <?php
-            
+
+
+
             foreach ($resultado as $key => $value){
 
                echo '{

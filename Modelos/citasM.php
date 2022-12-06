@@ -43,7 +43,7 @@
         //ver citas
         static public function VerCitasCompletoM($tablaBD){
     
-            $pdo = ConexionBD::cBD()->prepare("SELECT id, id_padre, id_consulta, id_logistica ,nyaP, documento, colegio, comentario, inicio, fin FROM $tablaBD");
+            $pdo = ConexionBD::cBD()->prepare("SELECT id, id_padre, id_consulta, id_logistica ,nyaP, documento, colegio, comentario FROM $tablaBD");
             $pdo->execute();
             return $pdo->fetchAll();
     
