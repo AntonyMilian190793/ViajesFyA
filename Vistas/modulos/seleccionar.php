@@ -35,32 +35,36 @@
             <a href="ingreso-Directivo" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
+
+        <!-- ./col -->
+
+            <!-- <div class="col-lg-3 col-xs-6"> -->
+          <!-- small box -->
+          <!-- <div class="small-box bg-green"> -->
+            <!-- <div class="inner"> -->
+              <!-- <h3>Jefes De Área</h3>
+
+              <p>Iniciar Sesión</p> -->
+            <!-- </div>
+            <div class="icon">
+              <i class="fa fa-user-circle-o"></i>
+            </div> -->
+            <!-- <a href="ingreso-JefeArea" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div> -->
+
+
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>Jefes De Área</h3>
+              <h3>Trabajadores</h3>
 
               <p>Iniciar Sesión</p>
             </div>
             <div class="icon">
-              <i class="fa fa-user-circle-o"></i>
-            </div>
-            <a href="ingreso-JefeArea" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <h3>Colaboradores</h3>
-
-              <p>Iniciar Sesión</p>
-            </div>
-            <div class="icon">
-            <i class="fa fa-user"></i>
+            <i class="fa fa-users"></i>
             </div>
             <a href="ingreso-Colaborador" class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -86,3 +90,4 @@
       <!-- Main row -->
 
     </section>
+
