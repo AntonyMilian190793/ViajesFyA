@@ -207,8 +207,59 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                         <div class="form-group">
                         <h2>Seleccionar color del Evento:</h2>
                         <select name="color" class="form-control input-lg" id="color" >
-					        <option value="">Seleccionar...</option>
+					       
 
+                            <?php
+                                        $columna = "id";
+                                        $valor = substr($_GET["url"], 6);
+                                        $resultado = PadresC::PadreC($columna, $valor);
+                                        $columna = "id";
+                                        $valor = $resultado["id_consulta"];
+                                        $consultorio = ConsultasC::VerConsultasC($columna, $valor);
+
+
+  
+                                        if($consultorio["nombre"] == "Administración"){
+                                            echo'<option style="color:#D50000" value="#D50000">&#9724; Tomate</option>';
+                                        }
+                                        
+                                        if($consultorio["nombre"] == "Logística"){
+                                            echo'<option style="color:#E67C73" value="#E67C73">&#9724; Rosa</option>';
+                                        }
+                                        
+                                        if($consultorio["nombre"] == "EBR"){
+                                            echo'<option style="color:#F6BF26" value="#F6BF26">&#9724; Amarillo</option>';
+                                        }
+                                        
+                                        if($consultorio["nombre"] == "EBA"){
+                                            echo'<option style="color:#33B679" value="#33B679">&#9724; Verde esmeralda</option>';
+                                        }
+                                        
+                                        if($consultorio["nombre"] == "Contabilidad"){
+                                            echo'<option style="color:#0B8043" value="#0B8043">&#9724; Verde musgo</option>';
+                                        }
+                                        
+                                        if($consultorio["nombre"] == "Sistemas"){
+                                            echo'<option style="color:#616161" value="#616161">&#9724; Grafito</option>';
+                                        }
+                                        
+                                        if($consultorio["nombre"] == "Recursos Humanos"){
+                                            echo'<option style="color:#8E24AA" value="#8E24AA">&#9724; Morado intenso</option>';
+                                        }
+                                        
+                                        if($consultorio["nombre"] == "Legal"){
+                                            echo'<option style="color:#3F51B5" value="#3F51B5">&#9724; Azul arándano</option>';
+                                        }
+                                        
+                                        if($consultorio["nombre"] == "Secretaria"){
+                                            echo'<option style="color:#7986CB" value="#7986CB">&#9724; Lavanda</option>';
+                                        }
+
+
+                                        ?>
+
+
+<!-- 
                             <option style="color:#D50000" value="#D50000">&#9724; Tomate</option>
                             <option style="color:#E67C73" value="#E67C73">&#9724; Rosa chicle</option>
                             <option style="color:#F4511E" value="#F4511E">&#9724; Mandarina</option>						  
@@ -219,7 +270,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                             <option style="color:#3F51B5" value="#3F51B5">&#9724; Azul arándano</option>
                             <option style="color:#7986CB" value="#7986CB">&#9724; Lavanda</option>
                             <option style="color:#8E24AA" value="#8E24AA">&#9724; Morado intenso</option>
-                            <option style="color:#616161" value="#616161">&#9724; Grafito</option>
+                            <option style="color:#616161" value="#616161">&#9724; Grafito</option> -->
 
 						</select>
                          
