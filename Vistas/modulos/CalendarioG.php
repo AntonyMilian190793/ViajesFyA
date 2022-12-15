@@ -89,3 +89,38 @@ $resultado=$query->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </div>
 </div>
+
+
+
+
+<div class="content-wrapper">
+
+    <section class="content-header">
+
+
+    </section>
+
+
+<section class="content">
+    <div class="box">
+        <div class="box-body">
+            <div>
+                <legend>Leyenda de áreas</legend>
+                <div style="display: inline-block; margin-top: 50px;"> Administracion <span><input type="color" value="#ff0000"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">Administracion <span><input type="color" value="#ff0000"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">Administracion <span><input type="color" value="#ff0000"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">Administracion <span><input type="color" value="#ff0000"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">Administracion <span><input type="color" value="#ff0000"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">Administracion <span><input type="color" value="#ff0000"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">Administracion <span><input type="color" value="#ff0000"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">Administracion <span><input type="color" value="#ff0000"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">Administracion <span><input type="color" value="#ff0000"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">Administracion <span><input type="color" value="#ff0000"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">Administracion <span><input type="color" value="#ff0000"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">Administracion <span><input type="color" value="#ff0000"></span> </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
