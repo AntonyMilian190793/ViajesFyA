@@ -217,23 +217,9 @@ session_start();
           center: 'title',
           right: 'agendaDay, agendaWeek, month, listWeek, listMonth',
         },
+        locale: 'es',
         
-        
-
-        height: 800,
-        contentHeight: 780,
-        aspectRatio: 3,
-        nowIndicator: true,
-        
-      views: {
-        listWeek:{"buttonText": "Eventos Semanales"},
-        listMonth:{"buttonText": "Eventos Mensuales"},
-    },
-    
-      dayMaxEvents: false,
-      navLinks: true,
-
-      //para que me salga el + en el calendario
+              //para que me salga el + en el calendario
         eventLimit: true, // for all non-agenda views
           views: {
           agenda: {
@@ -241,6 +227,23 @@ session_start();
            // adjust to 6 only for agendaWeek/agendaDay
       }
     },
+
+        height: 800,
+        contentHeight: 780,
+        aspectRatio: 3,
+        nowIndicator: true,
+
+              dayMaxEvents: false,
+      navLinks: true,
+        
+      views: {
+        listWeek:{"buttonText": "Eventos Semanales"},
+        listMonth:{"buttonText": "Eventos Anuales"},
+    },
+    
+
+
+
       
     
       events: [
