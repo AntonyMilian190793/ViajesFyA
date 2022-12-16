@@ -30,8 +30,6 @@ if ($_SESSION["rol"] != "otrosTrabajadores") {
 
 
 
-
-
 <div class="modal fade" rol="dialog" id="CalendarioModal">
     <div class="modal-dialog">
         <div class="modal-content">
