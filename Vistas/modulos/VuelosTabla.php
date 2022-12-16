@@ -38,6 +38,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo") {
                             <th>Hora Inicio</th>
                             <th>Fecha Fin</th>
                             <th>Fecha Fin</th>
+                            <th>Comentario</th>
                             <th>Editar / Borrar</th>
                         </tr>
                     </thead>
@@ -61,6 +62,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo") {
                             <td>'.$value["Hora_Inicio"].'</td>
                             <td>'.$value["fin"].'</td>
                             <td>'.$value["Hora_Fin"].'</td>
+                            <td>'.$value["comentario"].'</td>
                             <td>
                             <div class="btn-group">
                                 <button class="btn btn-success"><i class="fa fa-pencil"> 
