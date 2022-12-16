@@ -32,7 +32,7 @@ if ($_SESSION["rol"] != "otrosTrabajadores" ) {
                 //esta parte para cambiar colores
                 foreach ($resultado as $key => $value) {
                     echo '
-                    <div class="col-lg-3 col-xs-6">
+                    <div class="col-lg-6 col-xs-6">
                         <div class="small-box bg-aqua">
                         <div class="inner">';
 
