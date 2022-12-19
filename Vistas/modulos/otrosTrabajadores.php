@@ -118,7 +118,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
 
                         <div class="form-group">
                             <h2>Documento:</h2>
-                            <input type="text" class="form-control input-lg" name="documento" minlength="0" maxlength="8" pattern="[0-9]+" required>
+                                <input type="text" class="form-control" name="documento" required pattern="[0-9]{8}" placeholder="8 dígitos">
                         </div>
 
                         <div class="form-group">
