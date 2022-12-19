@@ -106,7 +106,7 @@ $resultado=$query->fetchAll(PDO::FETCH_ASSOC);
         <div class="box-body">
             <div>
                 <legend>Leyenda de áreas</legend>
-                <div style="display: inline-block; margin-top: 50px;"> Administracion <span><input type="color" value="#D50000"></span> </div>
+                <div style="display: inline-block; margin-top: 50px;"> Administración <span><input type="color" value="#D50000"></span> </div>
                 <div style="display: inline-block; margin-top: 50px; ">Logística <span><input type="color" value="#E67C73"></span> </div>
                 <div style="display: inline-block; margin-top: 50px; ">EBR <span><input type="color" value="#F6BF26"></span> </div>
                 <div style="display: inline-block; margin-top: 50px; ">EBA <span><input type="color" value="#33B679"></span> </div>
