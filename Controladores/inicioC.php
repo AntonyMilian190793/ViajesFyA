@@ -31,7 +31,7 @@
     
             <hr>
     
-            <h2>Cotactos:</h2>
+            <h2>Contacto:</h2>
             <h3>Teléfono: '.$resultado["telefono"].' <br>
             Correo: '.$resultado["correo"].'
             </h3>

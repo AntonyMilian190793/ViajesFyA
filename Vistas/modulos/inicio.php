@@ -26,8 +26,11 @@
     ?>
 
         
-    
-
+    <br>
+  <footer style="position: absolute; footer: 15px; left: 350px;">
+    <p><a>© 2022 Jorge Antony Milian Montalvo. Todos los Derechos Reservados</a>.</p>
+  </footer>
+  
         <!-- /.box-footer-->
       </div>
       <!-- /.box -->
@@ -36,8 +39,3 @@
     <!-- /.content -->
   </div>
 
-<footer class="main-footer cente">
-<center>© 2022 Jorge Antony Milian Montalvo. Todos los Derechos Reservados</a>.</center>
-
-
-</footer>
