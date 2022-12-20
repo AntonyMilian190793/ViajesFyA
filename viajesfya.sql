@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-12-2022 a las 16:13:15
--- Versión del servidor: 10.4.27-MariaDB
--- Versión de PHP: 7.4.33
+-- Tiempo de generación: 20-12-2022 a las 22:14:36
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `colegios` (
   `id` int(11) NOT NULL,
   `nombre` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `colegios`
@@ -57,7 +57,7 @@ INSERT INTO `colegios` (`id`, `nombre`) VALUES
 CREATE TABLE `consultas` (
   `id` int(11) NOT NULL,
   `nombre` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `consultas`
@@ -96,25 +96,25 @@ CREATE TABLE `directivos` (
   `horarioE` time NOT NULL,
   `horarioS` time NOT NULL,
   `rol` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `directivos`
 --
 
 INSERT INTO `directivos` (`id`, `id_consulta`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `clave`, `sexo`, `horarioE`, `horarioS`, `rol`) VALUES
-(2, 1, 'Cavassa ', 'Ernesto', '90909991', 'Vistas/img/Padres/Pad-199.png', 'ecavassa', '123', 'Masculino', '08:00:00', '18:00:00', 'Directivo'),
-(29, 10, 'Verano', 'Jhony', '', '', 'jverano', '123', 'Masculino', '00:00:00', '00:00:00', 'Directivo'),
-(30, 9, 'Guevara', 'Carlos', '', '', 'cguevara', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
+(2, 1, 'Cavassa', 'Ernesto', '90909991', 'Vistas/img/Padres/Pad-199.png', 'ecavassa', '123', 'Masculino', '00:00:00', '00:00:00', 'Directivo'),
+(29, 10, 'Verano', 'Jhony', '21223455', '', 'jverano', '123', 'Masculino', '00:00:00', '00:00:00', 'Directivo'),
+(30, 9, 'Guevara', 'Carlos', '12344567', '', 'cguevara', '123', 'Masculino', '00:00:00', '00:00:00', 'Directivo'),
 (31, 11, 'Vargas', 'Julia', '7033122', '', 'jvargas', '123', 'Femenino', '08:00:00', '23:00:00', 'Directivo'),
-(32, 5, 'Alania', 'Angela', '', '', 'aalania', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
-(34, 12, 'Acero Cáceres', 'Katheryn', '', '', 'kacero', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
-(39, 2, 'Alencastre', 'Ava', '87112333', '', 'aalencastre', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
-(40, 8, 'Arana', 'Alicia', '78733211', '', 'aarana', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
-(41, 13, 'Tapia', 'Edgar', '98171122', '', 'etapia', '123', 'Masculino', '00:00:00', '00:00:00', 'Padre'),
-(42, 18, 'Caminada', 'Nancy', '17612311', '', 'ncaminada', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
-(43, 19, 'Reque', 'Gladys', '98711233', '', 'greque', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre'),
-(44, 7, 'Helfer', 'Susana', '', '', 'shelfer', '123', 'Femenino', '00:00:00', '00:00:00', 'Padre');
+(32, 5, 'Alania', 'Angela', '12098611', '', 'aalania', '123', 'Femenino', '00:00:00', '00:00:00', 'Directivo'),
+(34, 12, 'Acero Cáceres', 'Katheryn', '23123455', '', 'kacero', '123', 'Femenino', '00:00:00', '00:00:00', 'Directivo'),
+(39, 2, 'Alencastre', 'Ava', '87112333', '', 'aalencastre', '123', 'Femenino', '00:00:00', '00:00:00', 'Directivo'),
+(40, 8, 'Arana', 'Alicia', '78733211', '', 'aarana', '123', 'Femenino', '00:00:00', '00:00:00', 'Directivo'),
+(41, 13, 'Tapia', 'Edgar', '98171122', '', 'etapia', '123', 'Masculino', '00:00:00', '00:00:00', 'Directivo'),
+(42, 18, 'Caminada', 'Nancy', '17612311', '', 'ncaminada', '123', 'Femenino', '00:00:00', '00:00:00', 'Directivo'),
+(43, 19, 'Reque', 'Gladys', '98711233', '', 'greque', '123', 'Femenino', '00:00:00', '00:00:00', 'Directivo'),
+(44, 7, 'Helfer', 'Susana', '87611221', '', 'shelfer', '123', 'Femenino', '00:00:00', '00:00:00', 'Directivo');
 
 -- --------------------------------------------------------
 
@@ -132,14 +132,14 @@ CREATE TABLE `inicio` (
   `direccion` text NOT NULL,
   `logo` text NOT NULL,
   `favicon` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `inicio`
 --
 
 INSERT INTO `inicio` (`id`, `intro`, `horaE`, `horaS`, `telefono`, `correo`, `direccion`, `logo`, `favicon`) VALUES
-(1, 'Está página se utilizará para poder guardar los eventos de la institución Fe y Alegría', '06:00:00', '05:00:00', '993753004', 'jmilian@feyalegria.org.pe', 'Jirón Cahuide 884 - Jesús María', 'Vistas/img/logo.jpeg', 'Vistas/img/favicon.png');
+(1, 'antony', '00:00:00', '00:00:00', '993753004', 'jmilian@feyalegria.org.pe', 'Jirón Cahuide 884 - Jesús María', 'Vistas/img/logo.jpeg', 'Vistas/img/favicon.png');
 
 -- --------------------------------------------------------
 
@@ -158,7 +158,7 @@ CREATE TABLE `jefesarea` (
   `clave` text NOT NULL,
   `rol` text NOT NULL,
   `sexo` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `jefesarea`
@@ -191,7 +191,7 @@ CREATE TABLE `logistica` (
   `foto` text NOT NULL,
   `rol` text NOT NULL,
   `sexo` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `logistica`
@@ -199,7 +199,7 @@ CREATE TABLE `logistica` (
 
 INSERT INTO `logistica` (`id`, `id_consulta`, `usuario`, `clave`, `nombre`, `documento`, `apellido`, `foto`, `rol`, `sexo`) VALUES
 (15, 1, 'aalania', '123', 'Angela', '70541233', 'Alania', 'Vistas/img/Otros/O-55.jpg', 'Logistica', 'Femino'),
-(20, 0, 'jvargas', '123', 'Julia', '68726221', 'Vargas', '', 'Logistica', '');
+(20, 1, 'jvargas', '123', 'Julia', '68726221', 'Vargas', '', 'Logistica', '');
 
 -- --------------------------------------------------------
 
@@ -218,7 +218,7 @@ CREATE TABLE `otrostrabajadores` (
   `sexo` text NOT NULL,
   `clave` text NOT NULL,
   `rol` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `otrostrabajadores`
@@ -244,20 +244,22 @@ INSERT INTO `otrostrabajadores` (`id`, `id_consulta`, `apellido`, `nombre`, `doc
 
 CREATE TABLE `sistemas` (
   `id` int(11) NOT NULL,
+  `id_consulta` int(11) NOT NULL,
   `usuario` text NOT NULL,
   `clave` text NOT NULL,
   `nombre` text NOT NULL,
   `apellido` text NOT NULL,
+  `documento` text NOT NULL,
   `foto` text NOT NULL,
   `rol` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `sistemas`
 --
 
-INSERT INTO `sistemas` (`id`, `usuario`, `clave`, `nombre`, `apellido`, `foto`, `rol`) VALUES
-(1, 'jmilian', '123', 'Jorge Antony', 'Milian Montalvo', 'Vistas/img/Sistemas/Sis-432.jpg.jpg', 'Sistemas');
+INSERT INTO `sistemas` (`id`, `id_consulta`, `usuario`, `clave`, `nombre`, `apellido`, `documento`, `foto`, `rol`) VALUES
+(1, 10, 'jmilian', '123', 'Jorge Antony', 'Milian Montalvo', '70311233', 'Vistas/img/Sistemas/Sis-432.jpg.jpg', 'Sistemas');
 
 -- --------------------------------------------------------
 
@@ -275,7 +277,7 @@ CREATE TABLE `vuelos` (
   `inicio` datetime NOT NULL,
   `fin` datetime NOT NULL,
   `comentario` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `vuelos`
@@ -407,7 +409,7 @@ CREATE TABLE `vueloslogistica` (
   `inicio` datetime NOT NULL,
   `fin` datetime NOT NULL,
   `color` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `vueloslogistica`
@@ -536,7 +538,7 @@ ALTER TABLE `consultas`
 -- AUTO_INCREMENT de la tabla `directivos`
 --
 ALTER TABLE `directivos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT de la tabla `inicio`
@@ -560,7 +562,7 @@ ALTER TABLE `logistica`
 -- AUTO_INCREMENT de la tabla `otrostrabajadores`
 --
 ALTER TABLE `otrostrabajadores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT de la tabla `sistemas`
@@ -578,7 +580,7 @@ ALTER TABLE `vuelos`
 -- AUTO_INCREMENT de la tabla `vueloslogistica`
 --
 ALTER TABLE `vueloslogistica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=202;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=208;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
