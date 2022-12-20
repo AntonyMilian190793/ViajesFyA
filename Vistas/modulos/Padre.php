@@ -60,6 +60,11 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
             <div class="box-header">
                 <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#CitaModal">Crear Evento</button>
             </div>';
+        }else if($_SESSION["rol"] == "Sistemas"){
+                        echo '            
+            <div class="box-header">
+                <button class="btn btn-warning btn-lg" data-toggle="modal" data-target="#CitaModal">Crear Evento</button>
+            </div>';
         }
         ?>
 
@@ -103,6 +108,8 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                             $resultado = PadresC::PadreC($columna, $valor);
                             //<input type="hidden" name="Pid" value="'.$_SESSION["id"].'" >
 
+                            
+
                             echo '                         
                             
                             <div class="form-group">
@@ -113,12 +120,18 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                    
                             </div>';
 
+                        if($_SESSION["rol"] == "Logistica"){
                         echo '<div class="form-group">
                             <h2>Su documento es...</h2>
                             <input type="text" class="form-control input-lg" name="documentoC" value="'.$_SESSION["documento"].'" readonly>
-                        </div>
-                        
-                        <div class="form-group">
+                        </div>';
+                        }else if($_SESSION["rol"] == "Sistemas"){
+
+                        }
+
+
+
+                        echo '<div class="form-group">
                             <h2>Seleccionar trabajador:</h2>
                             <select class="form-control input-lg" id="controlBuscador" name="nombreP" style="width: 100%">
                              <option>Seleccione trabajador...</option>
@@ -133,7 +146,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
 
                         foreach ($resultado as $key => $value) {
 
-                            echo '<option value="'.$value["nombre"].' '.$value["apellido"].' '.$value["documento"].'">'.$value["nombre"].' '.$value["apellido"].'</option>';
+                            echo '<option value="'.$value["nombre"].' '.$value["apellido"].' - '.$value["documento"].'">'.$value["nombre"].' '.$value["apellido"].'</option>';
                         }
 
                         ?>
@@ -315,12 +328,12 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                         </div> 
 
                         <div class="form-group">
-                            <h2>Hora Inicio:</h2>
+                            <h2>Fecha Inicio:</h2>
                             <input type="text" class="form-control input-lg" id="horaS"  name="horaS" value="" readonly>
                         </div>
 
                         <div class="form-group">
-                            <h2>Hora Fin:</h2>
+                            <h2>Fecha Fin:</h2>
                             <input type="text" class="form-control input-lg" id="horaF"  name="horaF" value="" readonly>
                         </div>
 

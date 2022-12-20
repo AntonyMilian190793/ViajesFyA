@@ -66,12 +66,12 @@ $resultado=$query->fetchAll(PDO::FETCH_ASSOC);
                         </div> 
 
                         <div class="form-group">
-                            <h2>Hora Inicio:</h2>
+                            <h2>Fecha Inicio:</h2>
                             <input type="text" class="form-control input-lg" id="horaS"  name="horaS" value="" readonly>
                         </div>
 
                         <div class="form-group">
-                            <h2>Hora Fin:</h2>
+                            <h2>Fecha Fin:</h2>
                             <input type="text" class="form-control input-lg" id="horaF"  name="horaF" value="" readonly>
                         </div>
 
