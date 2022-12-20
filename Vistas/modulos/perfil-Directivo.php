@@ -36,7 +36,6 @@
                     <th>Foto</th>
                     <th>Área</th>
                     <th>Documento</th>
-                    <th>Disponibilidad</th>
                     <th>Editar</th>
                 </tr>
             </thead>

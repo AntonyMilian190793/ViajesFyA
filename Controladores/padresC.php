@@ -146,17 +146,10 @@
 
         echo '<td>'.$resultado["documento"].'</td>';
 
+        
+        
+
         echo '<td>
-
-            Desde: '.$resultado["horarioE"].'
-            <br>
-            Hasta: '.$resultado["horarioS"].'
-
-        </td>
-        
-        
-
-        <td>
             <a href="http://localhost/ViajesFyA/perfil-D/'.$resultado["id"].'">
                 <button class="btn btn-success"><i class="fa fa-pencil"></i></button>
             </a>
@@ -212,11 +205,7 @@
 
                         echo '</select>
 
-                        <div class="form-group">
-                            <h2>Horario:</h2>
-                            Desde: <input type="time" class="input-lg" name="hePerfil" value="'.$resultado["horarioE"].'">
-                            Hasta: <input type="time" class="input-lg" name="hsPerfil" value="'.$resultado["horarioS"].'">
-                        </div>
+
                     </div>
                     <div class="col-md-6 col-xs-12">
                         <br><br>
@@ -278,9 +267,7 @@
                 "clave" => $_POST['clavePerfil'],
                 "documento" => $_POST['documentoPerfil'],
                 "foto" => $rutaImg,
-                "id_consulta" => $_POST['consultaPerfil'],
-                "horarioE" => $_POST['hePerfil'],
-                "horarioS" => $_POST['hsPerfil']
+                "id_consulta" => $_POST['consultaPerfil']
             );
 
             $resultado = PadresM::ActualizarPerfilPadreM($tablaBD, $datosC);

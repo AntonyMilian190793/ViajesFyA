@@ -117,7 +117,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Sistemas") {
                         <div class="form-group">
                             <h2>Apellidos:</h2>
                             <input type="text" class="form-control" name="apellido" required>
-                            <input type="hidden" name="rolP" value="Padre">
+                            <input type="hidden" name="rolP" value="Directivo">
                         </div>
 
                         <div class="form-group">
