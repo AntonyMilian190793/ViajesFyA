@@ -45,9 +45,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
 
 
         $columna = "id";
-
         $valor = $resultado["id_consulta"];
-
         $consultorio = ConsultasC::VerConsultasC($columna, $valor);
 
 
