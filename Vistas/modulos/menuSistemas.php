@@ -11,9 +11,16 @@
       </li>
 
         <li>
-        <a href="http://localhost/ViajesFyA/consultas">
+        <a href="http://localhost/ViajesFyA/Ver-areas">
           <i class="fa fa-address-book-o"></i>
           <span>Áreas</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="http://localhost/ViajesFyA/CalendarioG">
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+          <span>Calendario Global</span>
         </a>
       </li>
 

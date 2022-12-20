@@ -80,6 +80,10 @@ if ($_SESSION["id"] != substr($_GET["url"], 10)) {
                     </tbody>
                 </table>
             </div>
+                        <br>
+    <footer style="position: absolute; footer: 15px; left: 550px;">
+        <p><a>© 2022 Jorge Antony Milian Montalvo. Todos los Derechos Reservados</a>.</p>
+    </footer>
         </div>
     </section>
 
