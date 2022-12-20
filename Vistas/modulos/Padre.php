@@ -148,7 +148,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                     </div>  
                     
                     <div class="form-group">
-                    <h2>Documento del Trabajador:</h2>
+                    <h2>Datos del Trabajador:</h2>
                     <input type="text" class="form-control input-lg" name="documentoP"  id="documento" readonly>
                     </div> 
 
