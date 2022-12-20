@@ -19,7 +19,7 @@ class ColaboradorM extends ConexionBD{
 
     //ver perfil colaborador
     static public function VerPerfilColaboradorM($tablaBD, $id){
-        $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, nombre, apellido, documento, foto, rol, id FROM $tablaBD 
+        $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, nombre, apellido, documento, foto, rol, id, id_consulta FROM $tablaBD 
         WHERE id = :id");
 
         $pdo -> bindParam(":id", $id, PDO::PARAM_INT);

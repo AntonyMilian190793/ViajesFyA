@@ -21,7 +21,7 @@
         //ver perfil sistemas
         static public function VerPefilSistemasM($tablaBD, $id){
 
-            $pdo = ConexionBD::cBD()->prepare("SELECT id, usuario, clave, nombre, apellido, foto FROM $tablaBD WHERE id = :id");
+            $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, nombre, apellido, foto, documento, id, id_consulta FROM $tablaBD WHERE id = :id");
 
             $pdo -> bindParam(":id", $id, PDO::PARAM_INT);
             $pdo->execute();

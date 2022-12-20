@@ -35,6 +35,7 @@
                     <th>Apellido</th>
                     <th>Foto</th>
                     <th>Documento</th>
+                    <th>Área</th>
                     <th>Editar</th>
                 </tr>
             </thead>

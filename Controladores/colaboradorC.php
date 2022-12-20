@@ -65,6 +65,12 @@ class ColaboradorC{
 
         }
 
+        $columna = "id";
+        $valor = $resultado["id_consulta"];
+        $consulta = ConsultasC::VerConsultasC($columna, $valor);
+
+        echo '<td>'.$consulta["nombre"].'</td>';
+
 
         echo '<td>
             <a href="http://localhost/ViajesFyA/perfil-oT/'.$resultado["id"].'">

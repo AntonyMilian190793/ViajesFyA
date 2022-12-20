@@ -57,6 +57,13 @@
                     }else{
                         echo '<td><img src="http://localhost/ViajesFyA/Vistas/img/defecto1.png" class="img-responsive" width="40px"></td>';
                     }
+
+                $columna = "id";
+                $valor = $resultado["id_consulta"];
+                $consulta = ConsultasC::VerConsultasC($columna, $valor);
+
+                    echo '<td>'.$consulta["nombre"].'</td>';
+                    echo '<td>'.$resultado["documento"].'</td>';
                     
                     echo '<td>
                         <a href="http://localhost/ViajesFyA/perfil-S/'.$resultado["id"].'">

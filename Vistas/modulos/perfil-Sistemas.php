@@ -34,6 +34,8 @@
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Foto</th>
+                    <th>Área</th>
+                    <th>Documento</th>
                     <th>Editar</th>
                 </tr>
             </thead>
