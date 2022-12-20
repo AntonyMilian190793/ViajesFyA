@@ -21,7 +21,7 @@
 
 </section>
 
-<section class="conten">
+<section class="content">
 
     <div class="box">
         <div class="box-body">

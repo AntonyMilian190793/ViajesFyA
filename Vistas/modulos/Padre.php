@@ -34,7 +34,6 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
 
         $columna = "id";
         $valor = substr($_GET["url"], 6);
-
         $resultado = PadresC::PadreC($columna, $valor);
 
         if($resultado["sexo"] == "Femenino"){
