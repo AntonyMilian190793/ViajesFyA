@@ -11,7 +11,7 @@
       </li>
 
         <li>
-        <a href="http://localhost/ViajesFyA/Ver-areas">
+        <a href="http://localhost/ViajesFyA/consultas">
           <i class="fa fa-address-book-o"></i>
           <span>Áreas</span>
         </a>
