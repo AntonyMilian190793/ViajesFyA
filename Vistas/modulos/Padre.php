@@ -215,7 +215,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                         </div>
 
                         <div class="form-group">
-                        <h2>Seleccionar color del Evento:</h2>
+                        <h2>Color del Evento:</h2>
                         <select name="color" class="form-control input-lg" id="color" >
 					       
 
