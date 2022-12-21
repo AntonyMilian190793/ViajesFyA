@@ -30,8 +30,8 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                     <thead>
                         <tr>
                             <th>N°</th>
-                            <th>Apellidos</th>
                             <th>Nombres</th>
+                            <th>Área</th>
                             <th>Documento</th>
                             <th>Foto</th>
                             <th>Usuario</th>
@@ -52,8 +52,8 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
 
                             echo '<tr>
                             <td>'.($key+1).'</td>
-                            <td>'.$value["apellido"].'</td>
                             <td>'.$value["nombre"].'</td>
+                            <td>'.$value["apellido"].'</td>
                             <td>'.$value["documento"].'</td>';
 
                             if($value["foto"] == ""){
