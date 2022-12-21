@@ -104,7 +104,30 @@ class ColaboradorC{
                 <input type="text" class="input-lg" name="clavePerfil" value="'.$resultado["clave"].'">
 
                 <h2>Documento:</h2>
-                <input type="text" class="input-lg" name="documentoPerfil" value="'.$resultado["documento"].'">
+                <input type="text" class="input-lg" name="documentoPerfil" value="'.$resultado["documento"].'">';
+
+                $columna = "id";
+                $valor = $resultado["id_consulta"];
+                $consulta = ConsultasC::VerConsultasC($columna, $valor);
+
+                echo '
+
+                <h2>Área de trabajo actual: '.$consulta["nombre"].'</h2>
+                <h3>Cambiar Área</h3>
+                <select class="input-lg" name="consultaPerfil">';
+
+                
+                $columna = null;
+                $valor = null;
+                $consulta = ConsultasC::VerConsultasC($columna, $valor);
+
+
+                foreach ($consulta as $key => $value){
+                    echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
+                }
+
+                echo '</select>
+                
             </div>
 
             <div class="col-md-6 col-xs-12">
@@ -179,9 +202,15 @@ class ColaboradorC{
                 }
     
                 $tablaBD = "otrosTrabajadores";
-                $datosC = array("id" => $_POST["Pid"], "nombre" => $_POST["nombrePerfil"], "apellido" => $_POST["apellidoPerfil"], 
-                "usuario" => $_POST["usuarioPerfil"], "clave" => $_POST["clavePerfil"], "documento" => $_POST["documentoPerfil"], 
-                "foto" => $rutaImg);
+                $datosC = array("id" => $_POST["Pid"], 
+                "nombre" => $_POST["nombrePerfil"], 
+                "apellido" => $_POST["apellidoPerfil"], 
+                "usuario" => $_POST["usuarioPerfil"], 
+                "clave" => $_POST["clavePerfil"], 
+                "documento" => $_POST["documentoPerfil"], 
+                "foto" => $rutaImg,
+                "id_consulta" => $_POST['consultaPerfil']
+            );
                 $resultado = ColaboradorM::ActualizarPerfilColaboradorM($tablaBD, $datosC);
     
                 if($resultado == true){

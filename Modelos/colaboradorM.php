@@ -7,7 +7,7 @@ class ColaboradorM extends ConexionBD{
     //ingreso colaborador
     static public function IngresarColaboradorM($tablaBD, $datosC){
             
-            $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, apellido, nombre, documento, foto, rol, id FROM $tablaBD 
+            $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, apellido, nombre, documento, foto, rol, id, id_consulta FROM $tablaBD 
             WHERE usuario = :usuario");
 
             $pdo -> bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
@@ -32,10 +32,11 @@ class ColaboradorM extends ConexionBD{
            //actualizar perfil colaborador
            static public function ActualizarPerfilColaboradorM($tablaBD, $datosC){
 
-            $pdo = ConexionBD::cBD()->prepare("UPDATE $tablaBD SET usuario = :usuario, clave = :clave, apellido = :apellido, 
+            $pdo = ConexionBD::cBD()->prepare("UPDATE $tablaBD SET id_consulta = :id_consulta, usuario = :usuario, clave = :clave, apellido = :apellido, 
             nombre = :nombre, foto = :foto WHERE id = :id");
     
             $pdo -> bindParam(":id", $datosC["id"], PDO::PARAM_INT);
+            $pdo->bindParam(":id_consulta", $datosC["id_consulta"], PDO::PARAM_INT);
             $pdo -> bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
             $pdo -> bindParam(":clave", $datosC["clave"], PDO::PARAM_STR);
             $pdo -> bindParam(":apellido", $datosC["apellido"], PDO::PARAM_STR);
