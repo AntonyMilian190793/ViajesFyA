@@ -189,14 +189,14 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">
-                            <h2>Apellidos:</h2>
-                            <input type="text" class="form-control" id="apellidoE" name="apellidoE" required>
-                            <input type="hidden" id="Pid" name="Pid">
+                            <h2>Nombres:</h2>
+                            <input type="text" class="form-control" id="nombreE" name="nombreE" required>
                         </div>
 
                         <div class="form-group">
-                            <h2>Nombres:</h2>
-                            <input type="text" class="form-control" id="nombreE" name="nombreE" required>
+                            <h2>Apellidos:</h2>
+                            <input type="text" class="form-control" id="apellidoE" name="apellidoE" required>
+                            <input type="hidden" id="Pid" name="Pid">
                         </div>
 
                         <div class="form-group">
