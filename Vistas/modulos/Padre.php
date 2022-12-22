@@ -230,7 +230,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
 
   
                                         if($consultorio["nombre"] == "Contabilidad"){
-                                            echo'<option style="color:#D50000" value="#D50000">&#9724; Tomate</option>';
+                                            echo'<option style="color:#D50000" value="#D50000">&#x1F534; Tomate</option>';
                                         }
                                         
                                         if($consultorio["nombre"] == "Directivos"){
@@ -238,11 +238,11 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                         }
                                         
                                         if($consultorio["nombre"] == "EBA"){
-                                            echo'<option style="color:#F4511E" value="#F4511E">&#9724; Mandarina</option>';
+                                            echo'<option style="color:#F4511E" value="#F4511E">&#x1F7E0; Mandarina</option>';
                                         }
                                         
                                         if($consultorio["nombre"] == "EBR Urbano - EBR Rural"){
-                                            echo'<option style="color:#F6BF26" value="#F6BF26">&#9724; Amarillo huevo</option>';
+                                            echo'<option style="color:#F6BF26" value="#F6BF26">&#x1F7E1; Amarillo huevo</option>';
                                         }
                                         
                                         if($consultorio["nombre"] == "EPTT"){
@@ -250,11 +250,11 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                         }
                                         
                                         if($consultorio["nombre"] == "FyA Digítal"){
-                                            echo'<option style="color:#0B8043" value="#0B8043">&#9724; Verde musgo</option>';
+                                            echo'<option style="color:#0B8043" value="#0B8043">&#x1F7E2; Verde musgo</option>';
                                         }
                                         
                                         if($consultorio["nombre"] == "Legal"){
-                                            echo'<option style="color:#039BE5" value="#039BE5">&#9724; Azul turquesa</option>';
+                                            echo'<option style="color:#039BE5" value="#039BE5">&#x1F535; Azul turquesa</option>';
                                         }
                                         
                                         if($consultorio["nombre"] == "Logística"){
@@ -266,7 +266,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                         }
 
                                         if($consultorio["nombre"] == "Recaudo y Voluntariado"){
-                                            echo'<option style="color:#8E24AA" value="#8E24AA">&#9724; Morado intenso</option>';
+                                            echo'<option style="color:#8E24AA" value="#8E24AA">&#x1F7E3; Morado intenso</option>';
                                         }
 
                                         if($consultorio["nombre"] == "Recursos Humanos"){
