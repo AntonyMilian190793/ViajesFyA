@@ -56,7 +56,7 @@ $resultado=$query->fetchAll(PDO::FETCH_ASSOC);
                         </div>  
 
                         <div class="form-group">
-                            <h2>Nombre de Trabajador:</h2>
+                            <h2>Datos del Trabajador:</h2>
                             <input type="text" class="form-control input-lg" id="titleC" name="titleC" readonly>
                         </div>  
                         

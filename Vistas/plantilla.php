@@ -301,10 +301,16 @@ session_start();
           
       ],
 
-      eventRender: function(eventObj, $el) {
-      $el.popover({
-      title: eventObj.title,
-      content: eventObj.description,
+  eventRender: function(eventObj, $el) {
+    $el.popover({
+      placement : 'top',
+      html : true,
+      trigger : 'hover',
+      title: eventObj.title + ' <a href="#" class="close" data-dismiss="alert">×</a>',
+      content: eventObj.colegioC + 
+      '<br> ' + eventObj.description + '</br>' + 
+      '<p>' + eventObj.start.format('h:mm a ddd MMM Do YYYY') +
+      '<p>' + eventObj.end.format('h:mm a ddd MMM Do YYYY'),
       trigger: 'hover',
       placement: 'top',
       container: 'body'
@@ -431,8 +437,14 @@ session_start();
 
   eventRender: function(eventObj, $el) {
     $el.popover({
-      title: eventObj.title,
-      content: eventObj.description,
+      placement : 'top',
+      html : true,
+      trigger : 'hover',
+      title: eventObj.title + ' <a href="#" class="close" data-dismiss="alert">×</a>',
+      content: eventObj.colegioC + 
+      '<br> ' + eventObj.description + '</br>' + 
+      '<p>' + eventObj.start.format('h:mm a ddd MMM Do YYYY') +
+      '<p>' + eventObj.end.format('h:mm a ddd MMM Do YYYY'),
       trigger: 'hover',
       placement: 'top',
       container: 'body'
