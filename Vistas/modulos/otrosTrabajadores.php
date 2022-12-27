@@ -24,21 +24,17 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
 
                 <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#CrearOtrosT">Crear Nombre</button>
 
- <div class="row">
-    <div class="col-md-7">
-      <form action="archivosCVS/recibe_excel_validando.php" method="POST" enctype="multipart/form-data"/>
+<hr>
+<h3>Subir datos con CVS</h3>
+    <form action="archivosCVS/recibe_excel_validando.php" method="POST" enctype="multipart/form-data"/>
         <div class="file-input text-center">
             <input  type="file" name="dataCliente" id="file-input" class="file-input__input"/>
             <label class="file-input__label" for="file-input">
-              <i class="zmdi zmdi-upload zmdi-hc-2x"></i>
-              <span>Elegir Archivo Excel</span></label
-            >
-          </div>
-      <div class="text-center mt-5">
-          <input type="submit" name="subir" class="btn-enviar" value="Subir Excel"/>
-      </div>
-      </form>
-    </div>
+        
+
+        <button class="btn btn-success btn-lg" type="submit" name="subir" class="btn-enviar" value="Subir Excel">Subir Excel</button>
+    
+    </form>
 
             </div>
             <div class="box-body">
