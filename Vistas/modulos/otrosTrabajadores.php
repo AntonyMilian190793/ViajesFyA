@@ -25,14 +25,14 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                 <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#CrearOtrosT">Crear Nombre</button>
 
 <hr>
-<h3>Subir datos con CVS</h3>
+<h3>Subir datos con CSV</h3>
     <form action="archivosCVS/recibe_excel_validando.php" method="POST" enctype="multipart/form-data"/>
         <div class="file-input text-center">
             <input  type="file" name="dataCliente" id="file-input" class="file-input__input"/>
             <label class="file-input__label" for="file-input">
         
 
-        <button class="btn btn-success btn-lg" type="submit" name="subir" class="btn-enviar" value="Subir Excel">Subir Excel</button>
+        <button class="btn btn-success btn-lg" type="submit" name="subir" class="btn-enviar" value="Subir Excel">Subir CSV</button>
     
     </form>
 
