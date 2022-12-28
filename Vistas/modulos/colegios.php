@@ -20,13 +20,13 @@ if ($_SESSION["rol"] != "Sistemas" ) {
     <section class="content">
         <div class="box">
             <div class="box-header">
-                corregir esta parte para subir los archivos CSV
-                <form method="post">
+                <!-- corregir esta parte para subir los archivos CSV -->
+                <!-- <form method="post">
                     <div class="col-md-6 col-xs-12">
                         <input type="text" class="form-control" name="consultasN" placeholder="Ingrese Nueva Consulta" required>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Crear Colegio </button>
+                    <button type="submit" class="btn btn-primary">Crear Colegio </button> -->
 
                     <hr>
 <h3>Subir datos con CSV</h3>
@@ -47,7 +47,7 @@ if ($_SESSION["rol"] != "Sistemas" ) {
                 ?>
             </div>
             <div class="box-body">
-                <table class="table -table-bordered table-hover table-striped">
+                <table class="table -table-bordered table-hover table-striped DTE">
                     <thead>
                         <tr>
                             <th>N°</th>
