@@ -206,7 +206,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                         </div>
 
                         <div class="form-group">
-                            <h2>Apellidos:</h2>
+                            <h2>Área:</h2>
                             <input type="text" class="form-control" id="apellidoE" name="apellidoE" required>
                             <input type="hidden" id="Pid" name="Pid">
                         </div>
