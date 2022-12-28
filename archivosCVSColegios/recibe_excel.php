@@ -35,4 +35,4 @@ foreach ($lineas as $linea) {
 
 ?>
 
-<a href="index.php">Atras</a>
+<a href="http://localhost/ViajesFyA/colegios">Archivo subido con éxito</a>
