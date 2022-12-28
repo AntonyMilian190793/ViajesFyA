@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-12-2022 a las 22:14:36
+-- Tiempo de generación: 28-12-2022 a las 16:51:42
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -75,7 +75,9 @@ INSERT INTO `consultas` (`id`, `nombre`) VALUES
 (12, 'Legal'),
 (13, 'Recaudo y Voluntariado'),
 (18, 'Proyectos'),
-(19, 'FyA Digítal');
+(19, 'FyA Digítal'),
+(25, 'Identidad y Misión'),
+(26, 'Comunicación e Incidencia ');
 
 -- --------------------------------------------------------
 
@@ -114,7 +116,9 @@ INSERT INTO `directivos` (`id`, `id_consulta`, `apellido`, `nombre`, `documento`
 (41, 13, 'Tapia', 'Edgar', '98171122', '', 'etapia', '123', 'Masculino', '00:00:00', '00:00:00', 'Directivo'),
 (42, 18, 'Caminada', 'Nancy', '17612311', '', 'ncaminada', '123', 'Femenino', '00:00:00', '00:00:00', 'Directivo'),
 (43, 19, 'Reque', 'Gladys', '98711233', '', 'greque', '123', 'Femenino', '00:00:00', '00:00:00', 'Directivo'),
-(44, 7, 'Helfer', 'Susana', '87611221', '', 'shelfer', '123', 'Femenino', '00:00:00', '00:00:00', 'Directivo');
+(44, 7, 'Helfer', 'Susana', '87611221', '', 'shelfer', '123', 'Femenino', '00:00:00', '00:00:00', 'Directivo'),
+(47, 25, 'Quiros Piñeyro', 'Luis Javier', '29707416', '', 'jquiros', '123', 'Masculino', '00:00:00', '00:00:00', 'Directivo'),
+(48, 26, 'Culqui Julca', 'Juana Hisela', '09556035', '', 'hculqui', '123', 'Femenino', '00:00:00', '00:00:00', 'Directivo');
 
 -- --------------------------------------------------------
 
@@ -139,7 +143,7 @@ CREATE TABLE `inicio` (
 --
 
 INSERT INTO `inicio` (`id`, `intro`, `horaE`, `horaS`, `telefono`, `correo`, `direccion`, `logo`, `favicon`) VALUES
-(1, 'antony', '00:00:00', '00:00:00', '993753004', 'jmilian@feyalegria.org.pe', 'Jirón Cahuide 884 - Jesús María', 'Vistas/img/logo.jpeg', 'Vistas/img/favicon.png');
+(1, 'Bienvenido comunidad de Fe y Alegría, esta plataforma tiene como finalidad ...', '00:00:00', '00:00:00', '993753004', 'jmilian@feyalegria.org.pe', 'Jirón Cahuide 884 - Jesús María', 'Vistas/img/logo.jpeg', 'Vistas/img/favicon.png');
 
 -- --------------------------------------------------------
 
@@ -225,16 +229,73 @@ CREATE TABLE `otrostrabajadores` (
 --
 
 INSERT INTO `otrostrabajadores` (`id`, `id_consulta`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `sexo`, `clave`, `rol`) VALUES
-(1, 10, 'Milian Montalvo', 'Jorge Antony', '70311233', '', 'jmilian', 'Masculino', '123', 'otrosTrabajadores'),
-(35, 9, 'Chávez', 'Fabiola', '70431211', '', 'fchavez', 'Femenino', '123', 'otrosTrabajadores'),
-(36, 10, 'Verano', 'Jhony', '89765122', '', 'jverano', 'Masculino', '123', 'otrosTrabajadores'),
-(37, 1, 'Dirección de Gestión', 'P.Nino', '87611233', '', 'svasquez', 'Femenino', '123', 'otrosTrabajadores'),
-(38, 1, 'Directora de Planificación', 'Susana Helfer', '87611233', '', 'shelfer', 'Femenino', '123', 'otrosTrabajadores'),
-(39, 1, 'Administrador', 'Víctor Quijaite', '87611233', '', 'vquijaite', 'Masculino', '123', 'otrosTrabajadores'),
-(40, 1, 'Directora de Propuesta Pedagogíca', 'Mirella Uehara', '98711233', '', 'mhuehara', 'Femenino', '123', 'otrosTrabajadores'),
-(41, 1, 'Secretario General', 'P. Oscar', '98711244', '', 'omorelli', 'Femenino', '123', 'otrosTrabajadores'),
-(42, 1, 'Coordinador de Identidad y Misión', 'P. Javier', '98711233', '', 'jquiros', 'Femenino', '123', 'otrosTrabajadores'),
-(43, 1, 'Coordinadora de Cominiación e Incidencia', 'Hísela Culqui', '87661122', '', 'hculqui', 'Femenino', '123', 'otrosTrabajadores');
+(115, 1, 'Directivos', 'Ernesto Marco Julio Cavassa Canessa', '07806170', '', 'ecavassa', 'Masculino', '07806170', 'otrosTrabajadores'),
+(116, 1, 'Directivos', 'Victor Alberto Quijaite Agurto', '07503892', '', 'vquijaite', 'Masculino', '07503892', 'otrosTrabajadores'),
+(117, 1, 'Directivos', 'Saturnino Vasquez Carranza', '05645468', '', 'svasquez', 'Masculino', '05645468', 'otrosTrabajadores'),
+(118, 1, 'Directivos', 'Ana Mirella Uehara Shiroma', '10573832', '', 'auehara', 'Femenino', '10573832', 'otrosTrabajadores'),
+(119, 1, 'Directivos', 'Susana Carola Helfer Llerena', '29290328', '', 'shelfer', 'Femenino', '29290328', 'otrosTrabajadores'),
+(120, 1, 'Directivos', 'Maria Arminda Portilla Bustamante', '09206130', '', 'mportilla', 'Femenino', '09206130', 'otrosTrabajadores'),
+(121, 2, 'EPTT', 'Ava Valentina Alencastre Begazo', '07459258', '', 'aalencastre', 'Femenino', '07459258', 'otrosTrabajadores'),
+(122, 2, 'EPTT', 'Flor Edith Laura Salinas', '10297742', '', 'flaura', 'Femenino', '10297742', 'otrosTrabajadores'),
+(123, 2, 'EPTT', 'Miriam Andrea Aguilar Chipane', '43243396', '', 'maguilar', 'Femenino', '43243396', 'otrosTrabajadores'),
+(124, 2, 'EPTT', 'Vladimir Unapillco Champi', '41236561', '', 'vunapillco', 'Masculino', '41236561', 'otrosTrabajadores'),
+(125, 2, 'EPTT', 'Yovana Rosario Caso Escobar', '10254260', '', 'ycaso', 'Femenino', '10254260', 'otrosTrabajadores'),
+(126, 2, 'EPTT', 'Katherine Patricia Oriundo Nu?ez', '45675506', '', 'koriundo', 'Femenino', '45675506', 'otrosTrabajadores'),
+(127, 2, 'EPTT', 'Leoncio Bermeo Tuesta', '10325111', '', 'lbermeo', 'Masculino', '10325111', 'otrosTrabajadores'),
+(128, 2, 'EPTT', 'Jose Augusto Aguedo Villacorta', '02846853', '', 'jaguedo', 'Masculino', '02846853', 'otrosTrabajadores'),
+(129, 5, 'Logistica', 'Moises Ulpiano Moreno Caceres', '07815981', '', 'mmoreno', 'Masculino', '07815981', 'otrosTrabajadores'),
+(130, 5, 'Logistica', 'Sinecio Ocampo Tafur', '07190700', '', 'socampo', 'Masculino', '07190700', 'otrosTrabajadores'),
+(131, 5, 'Logistica', 'Raul Ceron Salazar', '41616558', '', 'rceron', 'Masculino', '41616558', 'otrosTrabajadores'),
+(132, 5, 'Logistica', 'Rosa De La Cruz Espinoza', '40270249', '', 'rcruz', 'Femenino', '40270249', 'otrosTrabajadores'),
+(133, 5, 'Logistica', 'Pedro Ocampo Tafur', '10834533', '', 'pocampo', 'Masculino', '10834533', 'otrosTrabajadores'),
+(134, 5, 'Logistica', 'Miguel Angel Leandro Rojas', '09967572', '', 'mleandro', 'Masculino', '09967572', 'otrosTrabajadores'),
+(135, 5, 'Logistica', 'Jaharixa Rosario Paucar Tamayo', '74294689', '', 'jpaucar', 'Femenino', '74294689', 'otrosTrabajadores'),
+(136, 5, 'Logistica', 'Anaiz Angela  Alania Malqui', '71381607', '', 'aalania', 'Femenino', '71381607', 'otrosTrabajadores'),
+(137, 7, 'EBR Urbano - EBR Rural', 'Cecilia Ines Villegas Kanashiro', '06748732', '', 'cvillegas', 'Femenino', '06748732', 'otrosTrabajadores'),
+(138, 7, 'EBR Urbano - EBR Rural', 'Alina Otilia Anglas Carpena', '09670126', '', 'aanglas', 'Femenino', '09670126', 'otrosTrabajadores'),
+(139, 7, 'EBR Urbano - EBR Rural', 'Peggi Rocio Monzon Ponce', '09652698', '', 'pmonzon', 'Femenino', '09652698', 'otrosTrabajadores'),
+(140, 7, 'EBR Urbano - EBR Rural', 'Isolino Juan Velasquez Pacci', '80391197', '', 'ivelasquez', 'Masculino', '80391197', 'otrosTrabajadores'),
+(141, 7, 'EBR Urbano - EBR Rural', 'Maricruz Daniela Cerro Acha', '40048651', '', 'mcerro', 'Femenino', '40048651', 'otrosTrabajadores'),
+(142, 7, 'EBR Urbano - EBR Rural', 'Rosa Elvira Vilchez De Sanchez', '03561221', '', 'rvilchez', 'Femenino', '03561221', 'otrosTrabajadores'),
+(143, 7, 'EBR Urbano - EBR Rural', 'Consuelo Maribel Cordova Sanchez', '19098773', '', 'ccordova', 'Femenino', '19098773', 'otrosTrabajadores'),
+(144, 7, 'EBR Urbano - EBR Rural', 'David Julio Cuenca Chamorro', '09978128', '', 'dcuenca', 'Masculino', '09978128', 'otrosTrabajadores'),
+(145, 7, 'EBR Urbano - EBR Rural', 'Patricia Carmen Huarez Sosa', '08684899', '', 'phuarez', 'Femenino', '08684899', 'otrosTrabajadores'),
+(146, 7, 'EBR Urbano - EBR Rural', 'Yliana Cecilia Galdos Rodriguez', '25567688', '', 'ygaldos', 'Femenino', '25567688', 'otrosTrabajadores'),
+(147, 7, 'EBR Urbano - EBR Rural', 'Cynthia Selena See Wu Rodriguez', '02867558', '', 'cseewu', 'Femenino', '02867558', 'otrosTrabajadores'),
+(148, 7, 'EBR Urbano - EBR Rural', 'Luz Marina Loayza Polo', '24464584', '', 'lloayza', 'Femenino', '24464584', 'otrosTrabajadores'),
+(149, 7, 'EBR Urbano - EBR Rural', 'Irma Lucia Mariño Vargas ', '06757955', '', 'imarino', 'Femenino', '06757955', 'otrosTrabajadores'),
+(150, 7, 'EBR Urbano - EBR Rural', 'Rocio Edith Garcia Palma', '15721524', '', 'rgarcia', 'Femenino', '15721524', 'otrosTrabajadores'),
+(151, 7, 'EBR Urbano - EBR Rural', 'Gloria Tuse Llacsahuanga', '02840593', '', 'gtuse', 'Femenino', '02840593', 'otrosTrabajadores'),
+(152, 7, 'EBR Urbano - EBR Rural', 'Alyson Lisset Rosales Huaynate', '47856266', '', 'arosales', 'Femenino', '47856266', 'otrosTrabajadores'),
+(153, 8, 'EBA', 'Alicia Maria Arana Wimpon', '07960819', '', 'aarana', 'Femenino', '07960819', 'otrosTrabajadores'),
+(154, 8, 'EBA', 'Maria Gladys Trujillo Bolivar', '09241676', '', 'gtrujillo', 'Femenino', '09241676', 'otrosTrabajadores'),
+(155, 8, 'EBA', 'Brigitte Mercedes Vasquez Carhuaricra', '73711756', '', 'bvasquez', 'Femenino', '73711756', 'otrosTrabajadores'),
+(156, 8, 'EBA', 'Rina Eufemia Fenandez Collado', '06264398', '', 'rfenandez', 'Femenino', '06264398', 'otrosTrabajadores'),
+(157, 9, 'Contabilidad ', 'Carlos Enrique Guevara Quispe', '10670262', '', 'cguevara', 'Masculino', '10670262', 'otrosTrabajadores'),
+(158, 9, 'Contabilidad ', 'Ada Rosa Liendo Moran', '10585949', '', 'aliendo', 'Femenino', '10585949', 'otrosTrabajadores'),
+(159, 9, 'Contabilidad ', 'Fabiola Medalith Casas Espilco', '46145906', '', 'fcasas', 'Femenino', '46145906', 'otrosTrabajadores'),
+(160, 9, 'Contabilidad ', 'Fabiola Maricela Chavez Palomino', '73188050', '', 'fchavez', 'Femenino', '73188050', 'otrosTrabajadores'),
+(161, 10, 'Sistemas', 'Jhony Verano Bonifacio', '20051781', '', 'jverano', 'Masculino', '20051781', 'otrosTrabajadores'),
+(162, 10, 'Sistemas', 'Jorge Antony Milian Montalvo ', '70311233', '', 'jmilian', 'Masculino', '70311233', 'otrosTrabajadores'),
+(163, 11, 'Recursos Humanos ', 'Julia Maria E. Vargas Barbieri', '08668154', '', 'jvargas', 'Femenino', '08668154', 'otrosTrabajadores'),
+(164, 11, 'Recursos Humanos ', 'Nataly Grecia Egoavil Cuadrado', '75129856', '', 'negoavil', 'Femenino', '75129856', 'otrosTrabajadores'),
+(165, 12, 'Legal', 'Katheryn Allison Acero Caceres', '70125476', '', 'kacero', 'Femenino', '70125476', 'otrosTrabajadores'),
+(166, 13, 'Recaudo Y Voluntariado', 'Oscar Francisco Morelli Müller', '29730740', '', 'omorelli', 'Masculino', '29730740', 'otrosTrabajadores'),
+(167, 13, 'Recaudo Y Voluntariado', 'Edgar Omar Tapia Burgos', '07621393', '', 'etapia', 'Masculino', '07621393', 'otrosTrabajadores'),
+(168, 13, 'Recaudo Y Voluntariado', 'Stephany Angelica Aguilar Rodriguez', '47214884', '', 'saguilar', 'Femenino', '47214884', 'otrosTrabajadores'),
+(169, 13, 'Recaudo Y Voluntariado', 'Fabiola Trelles Thorne ', '25838877', '', 'ftrelles', 'Femenino', '25838877', 'otrosTrabajadores'),
+(170, 13, 'Recaudo Y Voluntariado', 'Jose Luis Gonzales Solis ', '45169420', '', 'jgonzales', 'Masculino', '45169420', 'otrosTrabajadores'),
+(171, 18, 'Proyectos', 'Nancy Georgina Caminada Bravo', '23850784', '', 'ncaminada', 'Femenino', '23850784', 'otrosTrabajadores'),
+(172, 18, 'Proyectos', 'Cesar Marcaquispe Ore', '42423205', '', 'cmarcaquispe', 'Masculino', '42423205', 'otrosTrabajadores'),
+(173, 18, 'Proyectos', 'Jorge Osvaldo Nuñez Mendoza', '25773809', '', 'jnunez', 'Masculino', '25773809', 'otrosTrabajadores'),
+(174, 18, 'Proyectos', 'Ricardo Arturo Torralba Casas', '06774930', '', 'rtorralba', 'Masculino', '06774930', 'otrosTrabajadores'),
+(175, 19, 'FyA Digital', 'Gladys Reque Garcia', '09282796', '', 'greque', 'Femenino', '09282796', 'otrosTrabajadores'),
+(176, 19, 'FyA Digital', 'Alberto Martin Chocano Saldiva', '06660992', '', 'mchocano', 'Masculino', '06660992', 'otrosTrabajadores'),
+(177, 19, 'FyA Digital', 'Jorge Fernando Tagle Villanueva', '07530813', '', 'jtagle', 'Masculino', '07530813', 'otrosTrabajadores'),
+(178, 26, 'Comunicacion E Incidencia ', 'Jose Ruben Yeren Cassina', '25798003', '', 'jyeren', 'Masculino', '25798003', 'otrosTrabajadores'),
+(179, 26, 'Comunicacion E Incidencia ', 'Juana Hisela Culqui Julca', '09556035', '', 'hculqui', 'Femenino', '09556035', 'otrosTrabajadores'),
+(180, 25, 'Identidad Y Mision ', 'Luis Javier Quiros Pi?eyro', '29707416', '', 'jquiros', 'Masculino', '29707416', 'otrosTrabajadores'),
+(181, 25, 'Identidad Y Mision ', 'Maria Teresa Izquierdo Rojas', '07203021', '', 'mizquierdo', 'Femenino', '07203021', 'otrosTrabajadores');
 
 -- --------------------------------------------------------
 
@@ -259,7 +320,7 @@ CREATE TABLE `sistemas` (
 --
 
 INSERT INTO `sistemas` (`id`, `id_consulta`, `usuario`, `clave`, `nombre`, `apellido`, `documento`, `foto`, `rol`) VALUES
-(1, 10, 'jmilian', '123', 'Jorge Antony', 'Milian Montalvo', '70311233', 'Vistas/img/Sistemas/Sis-432.jpg.jpg', 'Sistemas');
+(1, 10, 'jmilian', '70311233', 'Jorge Antony', 'Milian Montalvo', '70311233', 'Vistas/img/Sistemas/Sis-432.jpg.jpg', 'Sistemas');
 
 -- --------------------------------------------------------
 
@@ -452,7 +513,8 @@ INSERT INTO `vueloslogistica` (`id`, `id_padre`, `id_consulta`, `id_logistica`, 
 (198, 29, 10, 0, 'Jorge Antony Milian Montalvo', '70311233', 'Fe y Alegría 3 - Lima - San Juan de Miraflores ', '', '2022-11-28 17:00:00', '2022-12-01 17:00:00', '#616161'),
 (199, 2, 1, 15, 'Jorge Antony Milian Montalvo', '21111111', 'Fe y Alegría 5 - Lima - San Juan de Lurigancho ', '', '2022-11-28 17:38:00', '2022-12-01 17:38:00', '#3F51B5'),
 (200, 31, 11, 0, 'Jorge Antony Milian Montalvo 70311233', 'Jorge Antony Milian Montalvo 70311233', 'Fe y Alegría 1 - Lima - San Martín de Porres ', 'se va de vacaciones por salud!', '2022-12-19 12:00:00', '2022-12-20 11:00:00', '#8E24AA'),
-(201, 2, 1, 0, 'Jorge Antony Milian Montalvo 70311233', 'Jorge Antony Milian Montalvo 70311233', 'Fe y Alegría 3 - Lima - San Juan de Miraflores ', 'URGENTE!', '2022-12-19 11:58:00', '2022-12-23 11:58:00', '#D50000');
+(201, 2, 1, 0, 'Jorge Antony Milian Montalvo 70311233', 'Jorge Antony Milian Montalvo 70311233', 'Fe y Alegría 3 - Lima - San Juan de Miraflores ', 'URGENTE!', '2022-12-19 11:58:00', '2022-12-23 11:58:00', '#D50000'),
+(208, 30, 9, 0, 'P.Nino Dirección de Gestión - 87611233', 'P.Nino Dirección de Gestión - 87611233', 'Fe y Alegría 2 - Lima - San Martín de Porres ', '', '2022-12-23 08:51:00', '2023-01-07 08:51:00', '#D50000');
 
 --
 -- Índices para tablas volcadas
@@ -532,13 +594,13 @@ ALTER TABLE `colegios`
 -- AUTO_INCREMENT de la tabla `consultas`
 --
 ALTER TABLE `consultas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de la tabla `directivos`
 --
 ALTER TABLE `directivos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT de la tabla `inicio`
@@ -562,7 +624,7 @@ ALTER TABLE `logistica`
 -- AUTO_INCREMENT de la tabla `otrostrabajadores`
 --
 ALTER TABLE `otrostrabajadores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=183;
 
 --
 -- AUTO_INCREMENT de la tabla `sistemas`
@@ -580,7 +642,7 @@ ALTER TABLE `vuelos`
 -- AUTO_INCREMENT de la tabla `vueloslogistica`
 --
 ALTER TABLE `vueloslogistica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=208;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=209;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
