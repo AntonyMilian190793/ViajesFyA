@@ -99,7 +99,7 @@ session_start();
         || $url[0] == "perfil-S" || $url[0] == "secretarias" || $url[0] == "administracion" || $url[0] == "inicio-editar" || $url[0] == "perfil-Directivo" 
         || $url[0] == "perfil-Logistica" || $url[0] == "perfil-L" || $url[0] == "perfil-otrosTrabajadores" || $url[0] == "perfil-oT"
         || $url[0] == "perfil-Directivo" || $url[0] == "perfil-D" || $url[0] == "perfil-JefeArea" || $url[0] == "perfil-JA" || $url[0] == "colegios" || $url[0] == "E-Co"
-        || $url[0] == "busqueda" || $url[0] == "VuelosTabla" || $url[0] == "CalendarioG") {
+        || $url[0] == "busqueda" || $url[0] == "VuelosTabla" || $url[0] == "CalendarioG" || $url[0] == "sistemas") {
 
         include "modulos/" . $url[0] . ".php";
       }

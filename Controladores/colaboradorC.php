@@ -51,7 +51,7 @@ class ColaboradorC{
         <td>'.$resultado["usuario"].'</td>
         <td>'.$resultado["clave"].'</td>
         <td>'.$resultado["nombre"].'</td>
-        <td>'.$resultado["apellido"].'</td>
+
         <td>'.$resultado["documento"].'</td>';
 
         if($resultado["foto"] != ""){
@@ -94,8 +94,6 @@ class ColaboradorC{
                 <input type="text" class="input-lg" name="nombrePerfil" value="'.$resultado["nombre"].'">
                 <input type="hidden" class="input-lg" name="Pid" value="'.$resultado["id"].'">
 
-                <h2>Apellido:</h2>
-                <input type="text" class="input-lg" name="apellidoPerfil" value="'.$resultado["apellido"].'">
 
                 <h2>Usuario:</h2>
                 <input type="text" class="input-lg" name="usuarioPerfil" value="'.$resultado["usuario"].'">
@@ -204,7 +202,6 @@ class ColaboradorC{
                 $tablaBD = "otrosTrabajadores";
                 $datosC = array("id" => $_POST["Pid"], 
                 "nombre" => $_POST["nombrePerfil"], 
-                "apellido" => $_POST["apellidoPerfil"], 
                 "usuario" => $_POST["usuarioPerfil"], 
                 "clave" => $_POST["clavePerfil"], 
                 "documento" => $_POST["documentoPerfil"], 

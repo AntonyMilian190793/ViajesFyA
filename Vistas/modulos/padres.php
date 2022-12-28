@@ -30,8 +30,8 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Sistemas") {
                     <thead>
                         <tr>
                             <th>N°</th>
-                            <th>Apellidos</th>
                             <th>Nombres</th>
+                            <th>Apellidos</th>
                             <th>Foto</th>
                             <th>Área</th>
                             <th>Usuario</th>
@@ -51,8 +51,8 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Sistemas") {
                         foreach ($resultado as $key => $value) {
                             echo '<tr>
                             <td>'.($key+1).'</td>
-                            <td>'.$value["apellido"].'</td>
-                            <td>'.$value["nombre"].'</td>';
+                            <td>'.$value["nombre"].'</td>
+                            <td>'.$value["apellido"].'</td>';
 
                             if($value["foto"] == ""){
                                 echo '<td><img src="Vistas/img/defecto1.png" width="40px"></td>';

@@ -53,6 +53,13 @@
         </a>
       </li>
 
+      <li>
+        <a href="http://localhost/ViajesFyA/sistemas">
+          <i class="fa fa-users"></i>
+          <span>Gestionar Sistemas</span>
+        </a>
+      </li>
+
         <li>
         <a href="http://localhost/ViajesFyA/Ver-areas">
           <i class="fa fa-address-book-o"></i>

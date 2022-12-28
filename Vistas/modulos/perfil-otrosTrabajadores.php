@@ -31,10 +31,9 @@
                 <tr>
                     <th>Usuario</th>
                     <th>Contraseña</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Foto</th>
+                    <th>Nombres y Apellidos</th>
                     <th>Documento</th>
+                    <th>Foto</th>
                     <th>Área</th>
                     <th>Editar</th>
                 </tr>

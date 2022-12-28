@@ -37,6 +37,15 @@
             }
         }
 
+            // ver sistemas
+        static public function VerSistemasC($columna, $valor){
+
+            $tablaBD = "sistemas";
+            $resultado = SistemasM::VerSistemasM($tablaBD, $columna, $valor);
+
+            return $resultado;
+        }
+
         //ver perfil sistemas
         public function VerPerfilSistemasC(){
 
