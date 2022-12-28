@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-12-2022 a las 16:51:42
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 7.4.29
+-- Tiempo de generación: 28-12-2022 a las 19:01:19
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,23 +30,113 @@ SET time_zone = "+00:00";
 CREATE TABLE `colegios` (
   `id` int(11) NOT NULL,
   `nombre` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `colegios`
 --
 
 INSERT INTO `colegios` (`id`, `nombre`) VALUES
-(1, 'Fe y Alegría 1 - Lima - San Martín de Porres'),
-(2, 'Fe y Alegría 2 - Lima - San Martín de Porres'),
-(3, 'Fe y Alegría 3 - Lima - San Juan de Miraflores'),
-(4, 'Fe y Alegría 4 - Lima - San Juan de Lurigancho'),
-(5, 'Fe y Alegría 5 - Lima - San Juan de Lurigancho'),
-(6, 'Fe y Alegría 6 - Lima - San Martín de Porres'),
-(7, 'Fe y Alegría 7 - Lima - Comas'),
-(8, 'Fe y Alegría 8 - Lima - Comas'),
-(9, 'Fe y Alegría 9 - Lima - Comas'),
-(10, 'Fe y Alegría 10 - Lima - Comas');
+(120, 'Fe y Alegría N1-Lima-San Martín de Porres-Lima - EBR'),
+(121, 'Fe y Alegría N2-Lima-San Martín de Porres-Lima - EBR'),
+(122, 'Fe y Alegría N3-Lima-San Juan de Miraflores-Lima - EBR'),
+(123, 'Fe y Alegría N4-Lima-San Juan de Lurigancho-Lima - EBR'),
+(124, 'Fe y Alegría N5-Lima-San Juan de Lurigancho-Lima - EBR'),
+(125, 'Fe y Alegria N7-Lima-Comas-Lima - CEBA'),
+(126, 'Fe y Alegria N8-Lima-Comas-Lima - EBR'),
+(127, 'Fe y Alegria N10-Lima-Comas-Lima - EBR'),
+(128, 'Fe y Alegria N11-Lima-Comas-Lima - EBR'),
+(129, 'Fe y Alegria N12-Lima-Puente Piedra-Lima - EBR'),
+(130, 'Fe y Alegria N13-Lima-Comas-Lima - EBR'),
+(131, 'Fe y Alegria N14-Ancash-Nuevo Chimbote-Santa - EBR'),
+(132, 'Fe y Alegria N15-Piura-Castilla-Piura - EBR'),
+(133, 'Fe y Alegria N16-Ancash-Chimbote-Santa - EBR'),
+(134, 'Fe y Alegria N17-Lima-Villa El Salvador-Lima - EBR'),
+(135, 'Fe y Alegria N18-Piura-Sullana-Sullana - EBR'),
+(136, 'Fe y Alegria N19-Ancash-Huaraz      -Huaraz       - EBR'),
+(137, 'Fe y Alegria N20-Cusco-Santiago-Cusco - EBR'),
+(138, 'Fe y Alegria N21-Cusco-San Jer?nimo-Cusco - EBR'),
+(139, 'Fe y Alegria N21-Cusco-San Jer?nimo-Cusco - CETPRO'),
+(140, 'Fe y Alegria N22-Cajamarca-Ja?n-Ja?n - EBR'),
+(141, 'Fe y Alegria N23-Lima-Villa Mar?a del Triunfo-Lima - EBR'),
+(142, 'Fe y Alegria N23-Lima-Villa Mar?a del Triunfo-Lima - CETPRO'),
+(143, 'Fe y Alegria N24-Lima-Villa Mar?a del Triunfo-Lima - EBR'),
+(144, 'Fe y Alegria N25-Lima-San Juan de Lurigancho-Lima - EBR'),
+(145, 'Fe y Alegria N25-Lima-San Juan de Lurigancho-Lima - CETPRO'),
+(146, 'Fe y Alegria N26-Lima-San Juan de Lurigancho-Lima - EBR'),
+(147, 'Fe y Alegria N27-Puno-Macar?-Melgar - EBR'),
+(148, 'Fe y Alegria N28-Lambayeque-Chiclayo-Chiclayo - EBR'),
+(149, 'Fe y Alegria N29-Callao-Ventanilla-Callao - EBR'),
+(150, 'Fe y Alegria N30-Ica-Pueblo Nuevo-Chincha - EBR'),
+(151, 'Fe y Alegria N31-Amazonas-La Peca-Bagua - EBR'),
+(152, 'Fe y Alegria N32-Lima-San Juan de Lurigancho-Lima - EBR'),
+(153, 'Fe y Alegria N32-Lima-San Juan de Lurigancho-Lima - CETPRO'),
+(154, 'Fe y Alegria N33-Callao-Mi Per?-Ventanilla - EBR'),
+(155, 'Fe y Alegria N34-Lima-Chorrillos-Lima - EBR'),
+(156, 'Fe y Alegria N35-Lima Provincia-Barranca-Barranca - EBR'),
+(157, 'Fe y Alegria N36-La Libertad-La Esperanza-Trujillo - EBR'),
+(158, 'Fe y Alegria N37-Lima-San Juan de Lurigancho-Lima - EBR'),
+(159, 'Fe y Alegria N38-Amazonas-Bagua Grande-Utcubamba - EBR'),
+(160, 'Fe y Alegria N39-Lima-El Agustino-Lima - EBR'),
+(161, 'Fe y Alegria N40-Tacna-Tacna-Tacna - EBR'),
+(162, 'Fe y Alegria N41-Lima-Lurigancho-Lima - EBR'),
+(163, 'Fe y Alegria N42-Ancash-Chimbote-Santa - CEBE'),
+(164, 'Fe y Alegria N43-Callao-Ventanilla-Callao - EBR'),
+(165, 'Fe y Alegria N43-Callao-Ventanilla-Callao - CETPRO'),
+(166, 'Fe y Alegria N44-Cusco-Andahuaylillas-Quispicanchi - RED RURAL'),
+(167, 'Fe y Alegria N44-Cusco-Andahuaylillas-Quispicanchi - EBR'),
+(168, 'Fe y Alegria N45-Arequipa-Paucarpata-Arequipa - EBR'),
+(169, 'Fe y Alegria N45-Arequipa-Paucarpata-Arequipa - CEBA'),
+(170, 'Fe y Alegria N46-Loreto-San Juan Bautista-Iquitos - EBR'),
+(171, 'Fe y Alegria N47-Loreto-San Juan Bautista-Iquitos - RED RURAL'),
+(172, 'Fe y Alegria N47-Loreto-San Juan Bautista-Iquitos - CAEM'),
+(173, 'Fe y Alegria N47-Loreto-San Juan Bautista-Iquitos - CETPRO'),
+(174, 'Fe y Alegria N47-Loreto-San Juan Bautista-Iquitos - IESTP'),
+(175, 'Fe y Alegria N48-Piura-Tambogrande-Piura - RED RURAL'),
+(176, 'Fe y Alegria N48-Piura-Tambogrande-Piura - CETPRO'),
+(177, 'Fe y Alegria N48-Piura-Tambogrande-Piura - CEBA'),
+(178, 'Fe y Alegria N49-Piura-Piura-Piura - EBR'),
+(179, 'Fe y Alegria N50-Ayacucho-San Juan Bautista-Huamanga - EBR'),
+(180, 'Fe y Alegria N51-Arequipa-Cerro Colorado-Arequipa - EBR'),
+(181, 'Fe y Alegria N52-Moquegua-Ilo-Ilo - EBR'),
+(182, 'Fe y Alegria N53-Lima-Ate-Lima - EBR'),
+(183, 'Fe y Alegria N54-Ancash-Moro-Santa - RED RURAL'),
+(184, 'Fe y Alegria N56-Puno-San Juan del Oro-Sandia - EBR'),
+(185, 'Fe y Alegria N56-Puno-San Juan del Oro-Sandia - CETPRO'),
+(186, 'Fe y Alegria N57-La Libertad-Trujillo-Trujillo - IESTP'),
+(187, 'Fe y Alegria N57-Cajamarca-Cajamarca-Cajamarca - IESTP'),
+(188, 'Fe y Alegria N57-Cajamarca-Cajamarca-Cajamarca - CETPRO '),
+(189, 'Fe y Alegria N57-La Libertad-Trujillo-Trujillo - CETPRO '),
+(190, 'Fe y Alegria N57-La Libertad-Trujillo-Trujillo - CCC'),
+(191, 'Fe y Alegria N58-Lima-Lurigancho-Lima - EBR'),
+(192, 'Fe y Alegria N59-Callao-Ventanilla-Callao - EBR'),
+(193, 'Fe y Alegria N60-Ayacucho-Los Morochucos-Cangallo - IESTP'),
+(194, 'Fe y Alegria N61-Lima-Villa El Salvador-Lima - CETPRO'),
+(195, 'Fe y Alegria N61-Lima-Villa El Salvador-Lima - IESTP'),
+(196, 'Fe y Alegria N62-Amazonas-Imaza-Bagua - EBR'),
+(197, 'Fe y Alegria N63-La Libertad-El Porvenir-Trujillo - EBR'),
+(198, 'Fe y Alegria N64-Hu?nuco-Tingo Mar?a-Leoncio Prado - EBR'),
+(199, 'Fe y Alegria N65-Lima-San Juan de Miraflores-Lima - EBR'),
+(200, 'Fe y Alegria N66-Jun?n-Huancayo-Huancayo - EBR'),
+(201, 'Fe y Alegria N67-Jun?n-Tarma-Tarma - EBR'),
+(202, 'Fe y Alegria N68-Ica-San Clemente-Pisco - EBR'),
+(203, 'Fe y Alegria N69-Cajamarca-Cutervo-Cutervo - EBR'),
+(204, 'Fe y Alegria N69-Cajamarca-Cutervo-Cutervo - CEBA'),
+(205, 'Fe y Alegria N69-Cajamarca-S?cota-Cutervo - CETPRO'),
+(206, 'Fe y Alegria N70-Ica-Nueva Esperanza-Ica - EBR'),
+(207, 'Fe y Alegria N71-Jun?n-Panc?n-Jauja - EBR'),
+(208, 'Fe y Alegria N72-Ucayali-Pucallpa-Coronel Portillo - RED RURAL'),
+(209, 'Fe y Alegria N73-Piura-Paita-Paita - EBR'),
+(210, 'Fe y Alegria N74-Amazonas-Santa Mar?a de Nieva-Condorcanqui - IESTP'),
+(211, 'Fe y Alegria N75-Lima-San Juan de Miraflores-Lima - IESTP'),
+(212, 'Fe y Alegria N76-Callao-Ventanilla-Callao - EBR'),
+(213, 'Fe y Alegria N77-Ica-Tupac Amaru Inca-Pisco - EBR'),
+(214, 'Fe y Alegria N78-Cajamarca-Pucar?-Ja?n - EBR'),
+(215, 'Fe y Alegria N79-Huancavelica-Acobamba-Acobamba - RED RURAL'),
+(216, 'Fe y Alegria N80-Loreto-Lagunas-Alto Amazonas - EBR'),
+(217, 'Fe y Alegria N80-Loreto-Lagunas-Alto Amazonas - CETPRO'),
+(218, 'Fe y Alegria N81-Piura-Paita-Paita - EBR'),
+(219, 'Fe y Alegria N82-Ica-Ica-Ica - CEBA');
 
 -- --------------------------------------------------------
 
@@ -57,7 +147,7 @@ INSERT INTO `colegios` (`id`, `nombre`) VALUES
 CREATE TABLE `consultas` (
   `id` int(11) NOT NULL,
   `nombre` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `consultas`
@@ -98,7 +188,7 @@ CREATE TABLE `directivos` (
   `horarioE` time NOT NULL,
   `horarioS` time NOT NULL,
   `rol` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `directivos`
@@ -136,7 +226,7 @@ CREATE TABLE `inicio` (
   `direccion` text NOT NULL,
   `logo` text NOT NULL,
   `favicon` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `inicio`
@@ -162,7 +252,7 @@ CREATE TABLE `jefesarea` (
   `clave` text NOT NULL,
   `rol` text NOT NULL,
   `sexo` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `jefesarea`
@@ -195,7 +285,7 @@ CREATE TABLE `logistica` (
   `foto` text NOT NULL,
   `rol` text NOT NULL,
   `sexo` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `logistica`
@@ -222,80 +312,80 @@ CREATE TABLE `otrostrabajadores` (
   `sexo` text NOT NULL,
   `clave` text NOT NULL,
   `rol` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `otrostrabajadores`
 --
 
 INSERT INTO `otrostrabajadores` (`id`, `id_consulta`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `sexo`, `clave`, `rol`) VALUES
-(115, 1, 'Directivos', 'Ernesto Marco Julio Cavassa Canessa', '07806170', '', 'ecavassa', 'Masculino', '07806170', 'otrosTrabajadores'),
-(116, 1, 'Directivos', 'Victor Alberto Quijaite Agurto', '07503892', '', 'vquijaite', 'Masculino', '07503892', 'otrosTrabajadores'),
-(117, 1, 'Directivos', 'Saturnino Vasquez Carranza', '05645468', '', 'svasquez', 'Masculino', '05645468', 'otrosTrabajadores'),
-(118, 1, 'Directivos', 'Ana Mirella Uehara Shiroma', '10573832', '', 'auehara', 'Femenino', '10573832', 'otrosTrabajadores'),
-(119, 1, 'Directivos', 'Susana Carola Helfer Llerena', '29290328', '', 'shelfer', 'Femenino', '29290328', 'otrosTrabajadores'),
-(120, 1, 'Directivos', 'Maria Arminda Portilla Bustamante', '09206130', '', 'mportilla', 'Femenino', '09206130', 'otrosTrabajadores'),
-(121, 2, 'EPTT', 'Ava Valentina Alencastre Begazo', '07459258', '', 'aalencastre', 'Femenino', '07459258', 'otrosTrabajadores'),
-(122, 2, 'EPTT', 'Flor Edith Laura Salinas', '10297742', '', 'flaura', 'Femenino', '10297742', 'otrosTrabajadores'),
-(123, 2, 'EPTT', 'Miriam Andrea Aguilar Chipane', '43243396', '', 'maguilar', 'Femenino', '43243396', 'otrosTrabajadores'),
-(124, 2, 'EPTT', 'Vladimir Unapillco Champi', '41236561', '', 'vunapillco', 'Masculino', '41236561', 'otrosTrabajadores'),
-(125, 2, 'EPTT', 'Yovana Rosario Caso Escobar', '10254260', '', 'ycaso', 'Femenino', '10254260', 'otrosTrabajadores'),
-(126, 2, 'EPTT', 'Katherine Patricia Oriundo Nu?ez', '45675506', '', 'koriundo', 'Femenino', '45675506', 'otrosTrabajadores'),
-(127, 2, 'EPTT', 'Leoncio Bermeo Tuesta', '10325111', '', 'lbermeo', 'Masculino', '10325111', 'otrosTrabajadores'),
-(128, 2, 'EPTT', 'Jose Augusto Aguedo Villacorta', '02846853', '', 'jaguedo', 'Masculino', '02846853', 'otrosTrabajadores'),
-(129, 5, 'Logistica', 'Moises Ulpiano Moreno Caceres', '07815981', '', 'mmoreno', 'Masculino', '07815981', 'otrosTrabajadores'),
-(130, 5, 'Logistica', 'Sinecio Ocampo Tafur', '07190700', '', 'socampo', 'Masculino', '07190700', 'otrosTrabajadores'),
-(131, 5, 'Logistica', 'Raul Ceron Salazar', '41616558', '', 'rceron', 'Masculino', '41616558', 'otrosTrabajadores'),
-(132, 5, 'Logistica', 'Rosa De La Cruz Espinoza', '40270249', '', 'rcruz', 'Femenino', '40270249', 'otrosTrabajadores'),
-(133, 5, 'Logistica', 'Pedro Ocampo Tafur', '10834533', '', 'pocampo', 'Masculino', '10834533', 'otrosTrabajadores'),
-(134, 5, 'Logistica', 'Miguel Angel Leandro Rojas', '09967572', '', 'mleandro', 'Masculino', '09967572', 'otrosTrabajadores'),
-(135, 5, 'Logistica', 'Jaharixa Rosario Paucar Tamayo', '74294689', '', 'jpaucar', 'Femenino', '74294689', 'otrosTrabajadores'),
-(136, 5, 'Logistica', 'Anaiz Angela  Alania Malqui', '71381607', '', 'aalania', 'Femenino', '71381607', 'otrosTrabajadores'),
-(137, 7, 'EBR Urbano - EBR Rural', 'Cecilia Ines Villegas Kanashiro', '06748732', '', 'cvillegas', 'Femenino', '06748732', 'otrosTrabajadores'),
-(138, 7, 'EBR Urbano - EBR Rural', 'Alina Otilia Anglas Carpena', '09670126', '', 'aanglas', 'Femenino', '09670126', 'otrosTrabajadores'),
-(139, 7, 'EBR Urbano - EBR Rural', 'Peggi Rocio Monzon Ponce', '09652698', '', 'pmonzon', 'Femenino', '09652698', 'otrosTrabajadores'),
-(140, 7, 'EBR Urbano - EBR Rural', 'Isolino Juan Velasquez Pacci', '80391197', '', 'ivelasquez', 'Masculino', '80391197', 'otrosTrabajadores'),
-(141, 7, 'EBR Urbano - EBR Rural', 'Maricruz Daniela Cerro Acha', '40048651', '', 'mcerro', 'Femenino', '40048651', 'otrosTrabajadores'),
-(142, 7, 'EBR Urbano - EBR Rural', 'Rosa Elvira Vilchez De Sanchez', '03561221', '', 'rvilchez', 'Femenino', '03561221', 'otrosTrabajadores'),
-(143, 7, 'EBR Urbano - EBR Rural', 'Consuelo Maribel Cordova Sanchez', '19098773', '', 'ccordova', 'Femenino', '19098773', 'otrosTrabajadores'),
-(144, 7, 'EBR Urbano - EBR Rural', 'David Julio Cuenca Chamorro', '09978128', '', 'dcuenca', 'Masculino', '09978128', 'otrosTrabajadores'),
-(145, 7, 'EBR Urbano - EBR Rural', 'Patricia Carmen Huarez Sosa', '08684899', '', 'phuarez', 'Femenino', '08684899', 'otrosTrabajadores'),
-(146, 7, 'EBR Urbano - EBR Rural', 'Yliana Cecilia Galdos Rodriguez', '25567688', '', 'ygaldos', 'Femenino', '25567688', 'otrosTrabajadores'),
-(147, 7, 'EBR Urbano - EBR Rural', 'Cynthia Selena See Wu Rodriguez', '02867558', '', 'cseewu', 'Femenino', '02867558', 'otrosTrabajadores'),
-(148, 7, 'EBR Urbano - EBR Rural', 'Luz Marina Loayza Polo', '24464584', '', 'lloayza', 'Femenino', '24464584', 'otrosTrabajadores'),
-(149, 7, 'EBR Urbano - EBR Rural', 'Irma Lucia Mariño Vargas ', '06757955', '', 'imarino', 'Femenino', '06757955', 'otrosTrabajadores'),
-(150, 7, 'EBR Urbano - EBR Rural', 'Rocio Edith Garcia Palma', '15721524', '', 'rgarcia', 'Femenino', '15721524', 'otrosTrabajadores'),
-(151, 7, 'EBR Urbano - EBR Rural', 'Gloria Tuse Llacsahuanga', '02840593', '', 'gtuse', 'Femenino', '02840593', 'otrosTrabajadores'),
-(152, 7, 'EBR Urbano - EBR Rural', 'Alyson Lisset Rosales Huaynate', '47856266', '', 'arosales', 'Femenino', '47856266', 'otrosTrabajadores'),
-(153, 8, 'EBA', 'Alicia Maria Arana Wimpon', '07960819', '', 'aarana', 'Femenino', '07960819', 'otrosTrabajadores'),
-(154, 8, 'EBA', 'Maria Gladys Trujillo Bolivar', '09241676', '', 'gtrujillo', 'Femenino', '09241676', 'otrosTrabajadores'),
-(155, 8, 'EBA', 'Brigitte Mercedes Vasquez Carhuaricra', '73711756', '', 'bvasquez', 'Femenino', '73711756', 'otrosTrabajadores'),
-(156, 8, 'EBA', 'Rina Eufemia Fenandez Collado', '06264398', '', 'rfenandez', 'Femenino', '06264398', 'otrosTrabajadores'),
-(157, 9, 'Contabilidad ', 'Carlos Enrique Guevara Quispe', '10670262', '', 'cguevara', 'Masculino', '10670262', 'otrosTrabajadores'),
-(158, 9, 'Contabilidad ', 'Ada Rosa Liendo Moran', '10585949', '', 'aliendo', 'Femenino', '10585949', 'otrosTrabajadores'),
-(159, 9, 'Contabilidad ', 'Fabiola Medalith Casas Espilco', '46145906', '', 'fcasas', 'Femenino', '46145906', 'otrosTrabajadores'),
-(160, 9, 'Contabilidad ', 'Fabiola Maricela Chavez Palomino', '73188050', '', 'fchavez', 'Femenino', '73188050', 'otrosTrabajadores'),
-(161, 10, 'Sistemas', 'Jhony Verano Bonifacio', '20051781', '', 'jverano', 'Masculino', '20051781', 'otrosTrabajadores'),
-(162, 10, 'Sistemas', 'Jorge Antony Milian Montalvo ', '70311233', '', 'jmilian', 'Masculino', '70311233', 'otrosTrabajadores'),
-(163, 11, 'Recursos Humanos ', 'Julia Maria E. Vargas Barbieri', '08668154', '', 'jvargas', 'Femenino', '08668154', 'otrosTrabajadores'),
-(164, 11, 'Recursos Humanos ', 'Nataly Grecia Egoavil Cuadrado', '75129856', '', 'negoavil', 'Femenino', '75129856', 'otrosTrabajadores'),
-(165, 12, 'Legal', 'Katheryn Allison Acero Caceres', '70125476', '', 'kacero', 'Femenino', '70125476', 'otrosTrabajadores'),
-(166, 13, 'Recaudo Y Voluntariado', 'Oscar Francisco Morelli Müller', '29730740', '', 'omorelli', 'Masculino', '29730740', 'otrosTrabajadores'),
-(167, 13, 'Recaudo Y Voluntariado', 'Edgar Omar Tapia Burgos', '07621393', '', 'etapia', 'Masculino', '07621393', 'otrosTrabajadores'),
-(168, 13, 'Recaudo Y Voluntariado', 'Stephany Angelica Aguilar Rodriguez', '47214884', '', 'saguilar', 'Femenino', '47214884', 'otrosTrabajadores'),
-(169, 13, 'Recaudo Y Voluntariado', 'Fabiola Trelles Thorne ', '25838877', '', 'ftrelles', 'Femenino', '25838877', 'otrosTrabajadores'),
-(170, 13, 'Recaudo Y Voluntariado', 'Jose Luis Gonzales Solis ', '45169420', '', 'jgonzales', 'Masculino', '45169420', 'otrosTrabajadores'),
-(171, 18, 'Proyectos', 'Nancy Georgina Caminada Bravo', '23850784', '', 'ncaminada', 'Femenino', '23850784', 'otrosTrabajadores'),
-(172, 18, 'Proyectos', 'Cesar Marcaquispe Ore', '42423205', '', 'cmarcaquispe', 'Masculino', '42423205', 'otrosTrabajadores'),
-(173, 18, 'Proyectos', 'Jorge Osvaldo Nuñez Mendoza', '25773809', '', 'jnunez', 'Masculino', '25773809', 'otrosTrabajadores'),
-(174, 18, 'Proyectos', 'Ricardo Arturo Torralba Casas', '06774930', '', 'rtorralba', 'Masculino', '06774930', 'otrosTrabajadores'),
-(175, 19, 'FyA Digital', 'Gladys Reque Garcia', '09282796', '', 'greque', 'Femenino', '09282796', 'otrosTrabajadores'),
-(176, 19, 'FyA Digital', 'Alberto Martin Chocano Saldiva', '06660992', '', 'mchocano', 'Masculino', '06660992', 'otrosTrabajadores'),
-(177, 19, 'FyA Digital', 'Jorge Fernando Tagle Villanueva', '07530813', '', 'jtagle', 'Masculino', '07530813', 'otrosTrabajadores'),
-(178, 26, 'Comunicacion E Incidencia ', 'Jose Ruben Yeren Cassina', '25798003', '', 'jyeren', 'Masculino', '25798003', 'otrosTrabajadores'),
-(179, 26, 'Comunicacion E Incidencia ', 'Juana Hisela Culqui Julca', '09556035', '', 'hculqui', 'Femenino', '09556035', 'otrosTrabajadores'),
-(180, 25, 'Identidad Y Mision ', 'Luis Javier Quiros Pi?eyro', '29707416', '', 'jquiros', 'Masculino', '29707416', 'otrosTrabajadores'),
-(181, 25, 'Identidad Y Mision ', 'Maria Teresa Izquierdo Rojas', '07203021', '', 'mizquierdo', 'Femenino', '07203021', 'otrosTrabajadores');
+(115, 1, '- Directivos', 'Ernesto Marco Julio Cavassa Canessa', '07806170', '', 'ecavassa', 'Masculino', '07806170', 'otrosTrabajadores'),
+(116, 1, '- Directivos', 'Victor Alberto Quijaite Agurto', '07503892', '', 'vquijaite', 'Masculino', '07503892', 'otrosTrabajadores'),
+(117, 1, '- Directivos', 'Saturnino Vasquez Carranza', '05645468', '', 'svasquez', 'Masculino', '05645468', 'otrosTrabajadores'),
+(118, 1, '- Directivos', 'Ana Mirella Uehara Shiroma', '10573832', '', 'auehara', 'Femenino', '10573832', 'otrosTrabajadores'),
+(119, 1, '- Directivos', 'Susana Carola Helfer Llerena', '29290328', '', 'shelfer', 'Femenino', '29290328', 'otrosTrabajadores'),
+(120, 1, '- Directivos', 'Maria Arminda Portilla Bustamante', '09206130', '', 'mportilla', 'Femenino', '09206130', 'otrosTrabajadores'),
+(121, 2, '- EPTT', 'Ava Valentina Alencastre Begazo', '07459258', '', 'aalencastre', 'Femenino', '07459258', 'otrosTrabajadores'),
+(122, 2, '- EPTT', 'Flor Edith Laura Salinas', '10297742', '', 'flaura', 'Femenino', '10297742', 'otrosTrabajadores'),
+(123, 2, '- EPTT', 'Miriam Andrea Aguilar Chipane', '43243396', '', 'maguilar', 'Femenino', '43243396', 'otrosTrabajadores'),
+(124, 2, '- EPTT', 'Vladimir Unapillco Champi', '41236561', '', 'vunapillco', 'Masculino', '41236561', 'otrosTrabajadores'),
+(125, 2, '- EPTT', 'Yovana Rosario Caso Escobar', '10254260', '', 'ycaso', 'Femenino', '10254260', 'otrosTrabajadores'),
+(126, 2, '- EPTT', 'Katherine Patricia Oriundo Nu?ez', '45675506', '', 'koriundo', 'Femenino', '45675506', 'otrosTrabajadores'),
+(127, 2, '- EPTT', 'Leoncio Bermeo Tuesta', '10325111', '', 'lbermeo', 'Masculino', '10325111', 'otrosTrabajadores'),
+(128, 2, '- EPTT', 'Jose Augusto Aguedo Villacorta', '02846853', '', 'jaguedo', 'Masculino', '02846853', 'otrosTrabajadores'),
+(129, 5, '- Logistica', 'Moises Ulpiano Moreno Caceres', '07815981', '', 'mmoreno', 'Masculino', '07815981', 'otrosTrabajadores'),
+(130, 5, '- Logistica', 'Sinecio Ocampo Tafur', '07190700', '', 'socampo', 'Masculino', '07190700', 'otrosTrabajadores'),
+(131, 5, '- Logistica', 'Raul Ceron Salazar', '41616558', '', 'rceron', 'Masculino', '41616558', 'otrosTrabajadores'),
+(132, 5, '- Logistica', 'Rosa De La Cruz Espinoza', '40270249', '', 'rcruz', 'Femenino', '40270249', 'otrosTrabajadores'),
+(133, 5, '- Logistica', 'Pedro Ocampo Tafur', '10834533', '', 'pocampo', 'Masculino', '10834533', 'otrosTrabajadores'),
+(134, 5, '- Logistica', 'Miguel Angel Leandro Rojas', '09967572', '', 'mleandro', 'Masculino', '09967572', 'otrosTrabajadores'),
+(135, 5, '- Logistica', 'Jaharixa Rosario Paucar Tamayo', '74294689', '', 'jpaucar', 'Femenino', '74294689', 'otrosTrabajadores'),
+(136, 5, '- Logistica', 'Anaiz Angela  Alania Malqui', '71381607', '', 'aalania', 'Femenino', '71381607', 'otrosTrabajadores'),
+(137, 7, '- EBR Urbano - EBR Rural', 'Cecilia Ines Villegas Kanashiro', '06748732', '', 'cvillegas', 'Femenino', '06748732', 'otrosTrabajadores'),
+(138, 7, '- EBR Urbano - EBR Rural', 'Alina Otilia Anglas Carpena', '09670126', '', 'aanglas', 'Femenino', '09670126', 'otrosTrabajadores'),
+(139, 7, '- EBR Urbano - EBR Rural', 'Peggi Rocio Monzon Ponce', '09652698', '', 'pmonzon', 'Femenino', '09652698', 'otrosTrabajadores'),
+(140, 7, '- EBR Urbano - EBR Rural', 'Isolino Juan Velasquez Pacci', '80391197', '', 'ivelasquez', 'Masculino', '80391197', 'otrosTrabajadores'),
+(141, 7, '- EBR Urbano - EBR Rural', 'Maricruz Daniela Cerro Acha', '40048651', '', 'mcerro', 'Femenino', '40048651', 'otrosTrabajadores'),
+(142, 7, '- EBR Urbano - EBR Rural', 'Rosa Elvira Vilchez De Sanchez', '03561221', '', 'rvilchez', 'Femenino', '03561221', 'otrosTrabajadores'),
+(143, 7, '- EBR Urbano - EBR Rural', 'Consuelo Maribel Cordova Sanchez', '19098773', '', 'ccordova', 'Femenino', '19098773', 'otrosTrabajadores'),
+(144, 7, '- EBR Urbano - EBR Rural', 'David Julio Cuenca Chamorro', '09978128', '', 'dcuenca', 'Masculino', '09978128', 'otrosTrabajadores'),
+(145, 7, '- EBR Urbano - EBR Rural', 'Patricia Carmen Huarez Sosa', '08684899', '', 'phuarez', 'Femenino', '08684899', 'otrosTrabajadores'),
+(146, 7, '- EBR Urbano - EBR Rural', 'Yliana Cecilia Galdos Rodriguez', '25567688', '', 'ygaldos', 'Femenino', '25567688', 'otrosTrabajadores'),
+(147, 7, '- EBR Urbano - EBR Rural', 'Cynthia Selena See Wu Rodriguez', '02867558', '', 'cseewu', 'Femenino', '02867558', 'otrosTrabajadores'),
+(148, 7, '- EBR Urbano - EBR Rural', 'Luz Marina Loayza Polo', '24464584', '', 'lloayza', 'Femenino', '24464584', 'otrosTrabajadores'),
+(149, 7, '- EBR Urbano - EBR Rural', 'Irma Lucia Mariño Vargas ', '06757955', '', 'imarino', 'Femenino', '06757955', 'otrosTrabajadores'),
+(150, 7, '- EBR Urbano - EBR Rural', 'Rocio Edith Garcia Palma', '15721524', '', 'rgarcia', 'Femenino', '15721524', 'otrosTrabajadores'),
+(151, 7, '- EBR Urbano - EBR Rural', 'Gloria Tuse Llacsahuanga', '02840593', '', 'gtuse', 'Femenino', '02840593', 'otrosTrabajadores'),
+(152, 7, '- EBR Urbano - EBR Rural', 'Alyson Lisset Rosales Huaynate', '47856266', '', 'arosales', 'Femenino', '47856266', 'otrosTrabajadores'),
+(153, 8, '- EBA', 'Alicia Maria Arana Wimpon', '07960819', '', 'aarana', 'Femenino', '07960819', 'otrosTrabajadores'),
+(154, 8, '- EBA', 'Maria Gladys Trujillo Bolivar', '09241676', '', 'gtrujillo', 'Femenino', '09241676', 'otrosTrabajadores'),
+(155, 8, '- EBA', 'Brigitte Mercedes Vasquez Carhuaricra', '73711756', '', 'bvasquez', 'Femenino', '73711756', 'otrosTrabajadores'),
+(156, 8, '- EBA', 'Rina Eufemia Fenandez Collado', '06264398', '', 'rfenandez', 'Femenino', '06264398', 'otrosTrabajadores'),
+(157, 9, '- Contabilidad ', 'Carlos Enrique Guevara Quispe', '10670262', '', 'cguevara', 'Masculino', '10670262', 'otrosTrabajadores'),
+(158, 9, '- Contabilidad ', 'Ada Rosa Liendo Moran', '10585949', '', 'aliendo', 'Femenino', '10585949', 'otrosTrabajadores'),
+(159, 9, '- Contabilidad ', 'Fabiola Medalith Casas Espilco', '46145906', '', 'fcasas', 'Femenino', '46145906', 'otrosTrabajadores'),
+(160, 9, '- Contabilidad ', 'Fabiola Maricela Chavez Palomino', '73188050', '', 'fchavez', 'Femenino', '73188050', 'otrosTrabajadores'),
+(161, 10, '- Sistemas', 'Jhony Verano Bonifacio', '20051781', '', 'jverano', 'Masculino', '20051781', 'otrosTrabajadores'),
+(162, 10, '- Sistemas', 'Jorge Antony Milian Montalvo ', '70311233', '', 'jmilian', 'Masculino', '70311233', 'otrosTrabajadores'),
+(163, 11, '- Recursos Humanos ', 'Julia Maria E. Vargas Barbieri', '08668154', '', 'jvargas', 'Femenino', '08668154', 'otrosTrabajadores'),
+(164, 11, '- Recursos Humanos ', 'Nataly Grecia Egoavil Cuadrado', '75129856', '', 'negoavil', 'Femenino', '75129856', 'otrosTrabajadores'),
+(165, 12, '- Legal', 'Katheryn Allison Acero Caceres', '70125476', '', 'kacero', 'Femenino', '70125476', 'otrosTrabajadores'),
+(166, 13, '- Recaudo Y Voluntariado', 'Oscar Francisco Morelli Müller', '29730740', '', 'omorelli', 'Masculino', '29730740', 'otrosTrabajadores'),
+(167, 13, '- Recaudo Y Voluntariado', 'Edgar Omar Tapia Burgos', '07621393', '', 'etapia', 'Masculino', '07621393', 'otrosTrabajadores'),
+(168, 13, '- Recaudo Y Voluntariado', 'Stephany Angelica Aguilar Rodriguez', '47214884', '', 'saguilar', 'Femenino', '47214884', 'otrosTrabajadores'),
+(169, 13, '- Recaudo Y Voluntariado', 'Fabiola Trelles Thorne ', '25838877', '', 'ftrelles', 'Femenino', '25838877', 'otrosTrabajadores'),
+(170, 13, '- Recaudo Y Voluntariado', 'Jose Luis Gonzales Solis ', '45169420', '', 'jgonzales', 'Masculino', '45169420', 'otrosTrabajadores'),
+(171, 18, '- Proyectos', 'Nancy Georgina Caminada Bravo', '23850784', '', 'ncaminada', 'Femenino', '23850784', 'otrosTrabajadores'),
+(172, 18, '- Proyectos', 'Cesar Marcaquispe Ore', '42423205', '', 'cmarcaquispe', 'Masculino', '42423205', 'otrosTrabajadores'),
+(173, 18, '- Proyectos', 'Jorge Osvaldo Nuñez Mendoza', '25773809', '', 'jnunez', 'Masculino', '25773809', 'otrosTrabajadores'),
+(174, 18, '- Proyectos', 'Ricardo Arturo Torralba Casas', '06774930', '', 'rtorralba', 'Masculino', '06774930', 'otrosTrabajadores'),
+(175, 19, '- FyA Digital', 'Gladys Reque Garcia', '09282796', '', 'greque', 'Femenino', '09282796', 'otrosTrabajadores'),
+(176, 19, '- FyA Digital', 'Alberto Martin Chocano Saldiva', '06660992', '', 'mchocano', 'Masculino', '06660992', 'otrosTrabajadores'),
+(177, 19, '- FyA Digital', 'Jorge Fernando Tagle Villanueva', '07530813', '', 'jtagle', 'Masculino', '07530813', 'otrosTrabajadores'),
+(178, 26, '- Comunicación E Incidencia ', 'Jose Ruben Yeren Cassina', '25798003', '', 'jyeren', 'Masculino', '25798003', 'otrosTrabajadores'),
+(179, 26, '- Comunicación E Incidencia ', 'Juana Hisela Culqui Julca', '09556035', '', 'hculqui', 'Femenino', '09556035', 'otrosTrabajadores'),
+(180, 25, '- Identidad Y Mision ', 'Luis Javier Quiros Pi?eyro', '29707416', '', 'jquiros', 'Masculino', '29707416', 'otrosTrabajadores'),
+(181, 25, '- Identidad Y Mision ', 'Maria Teresa Izquierdo Rojas', '07203021', '', 'mizquierdo', 'Femenino', '07203021', 'otrosTrabajadores');
 
 -- --------------------------------------------------------
 
@@ -313,7 +403,7 @@ CREATE TABLE `sistemas` (
   `documento` text NOT NULL,
   `foto` text NOT NULL,
   `rol` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `sistemas`
@@ -338,7 +428,7 @@ CREATE TABLE `vuelos` (
   `inicio` datetime NOT NULL,
   `fin` datetime NOT NULL,
   `comentario` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `vuelos`
@@ -470,7 +560,7 @@ CREATE TABLE `vueloslogistica` (
   `inicio` datetime NOT NULL,
   `fin` datetime NOT NULL,
   `color` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `vueloslogistica`
@@ -588,7 +678,7 @@ ALTER TABLE `vueloslogistica`
 -- AUTO_INCREMENT de la tabla `colegios`
 --
 ALTER TABLE `colegios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=221;
 
 --
 -- AUTO_INCREMENT de la tabla `consultas`
