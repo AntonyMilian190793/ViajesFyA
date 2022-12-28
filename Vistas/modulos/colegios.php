@@ -20,12 +20,23 @@ if ($_SESSION["rol"] != "Sistemas" ) {
     <section class="content">
         <div class="box">
             <div class="box-header">
+                corregir esta parte para subir los archivos CSV
                 <form method="post">
                     <div class="col-md-6 col-xs-12">
                         <input type="text" class="form-control" name="consultasN" placeholder="Ingrese Nueva Consulta" required>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Crear Colegio </button>
+
+                    <hr>
+<h3>Subir datos con CSV</h3>
+    <form action="archivosCVSColegios/recibe_excel_validando.php" method="POST" enctype="multipart/form-data"/>
+        <div class="file-input text-center">
+            <input  type="file" name="dataCliente" id="file-input" class="file-input__input"/>
+            <label class="file-input__label" for="file-input">
+        
+
+        <button class="btn btn-success btn-lg" type="submit" name="subir" class="btn-enviar" value="Subir Excel">Subir CSV</button>
                 </form>
 
                 <?php
