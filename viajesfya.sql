@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-12-2022 a las 19:01:19
--- Versión del servidor: 10.4.27-MariaDB
--- Versión de PHP: 7.4.33
+-- Tiempo de generación: 28-12-2022 a las 21:46:04
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,113 +30,113 @@ SET time_zone = "+00:00";
 CREATE TABLE `colegios` (
   `id` int(11) NOT NULL,
   `nombre` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `colegios`
 --
 
 INSERT INTO `colegios` (`id`, `nombre`) VALUES
-(120, 'Fe y Alegría N1-Lima-San Martín de Porres-Lima - EBR'),
-(121, 'Fe y Alegría N2-Lima-San Martín de Porres-Lima - EBR'),
-(122, 'Fe y Alegría N3-Lima-San Juan de Miraflores-Lima - EBR'),
-(123, 'Fe y Alegría N4-Lima-San Juan de Lurigancho-Lima - EBR'),
-(124, 'Fe y Alegría N5-Lima-San Juan de Lurigancho-Lima - EBR'),
-(125, 'Fe y Alegria N7-Lima-Comas-Lima - CEBA'),
-(126, 'Fe y Alegria N8-Lima-Comas-Lima - EBR'),
-(127, 'Fe y Alegria N10-Lima-Comas-Lima - EBR'),
-(128, 'Fe y Alegria N11-Lima-Comas-Lima - EBR'),
-(129, 'Fe y Alegria N12-Lima-Puente Piedra-Lima - EBR'),
-(130, 'Fe y Alegria N13-Lima-Comas-Lima - EBR'),
-(131, 'Fe y Alegria N14-Ancash-Nuevo Chimbote-Santa - EBR'),
-(132, 'Fe y Alegria N15-Piura-Castilla-Piura - EBR'),
-(133, 'Fe y Alegria N16-Ancash-Chimbote-Santa - EBR'),
-(134, 'Fe y Alegria N17-Lima-Villa El Salvador-Lima - EBR'),
-(135, 'Fe y Alegria N18-Piura-Sullana-Sullana - EBR'),
-(136, 'Fe y Alegria N19-Ancash-Huaraz      -Huaraz       - EBR'),
-(137, 'Fe y Alegria N20-Cusco-Santiago-Cusco - EBR'),
-(138, 'Fe y Alegria N21-Cusco-San Jer?nimo-Cusco - EBR'),
-(139, 'Fe y Alegria N21-Cusco-San Jer?nimo-Cusco - CETPRO'),
-(140, 'Fe y Alegria N22-Cajamarca-Ja?n-Ja?n - EBR'),
-(141, 'Fe y Alegria N23-Lima-Villa Mar?a del Triunfo-Lima - EBR'),
-(142, 'Fe y Alegria N23-Lima-Villa Mar?a del Triunfo-Lima - CETPRO'),
-(143, 'Fe y Alegria N24-Lima-Villa Mar?a del Triunfo-Lima - EBR'),
-(144, 'Fe y Alegria N25-Lima-San Juan de Lurigancho-Lima - EBR'),
-(145, 'Fe y Alegria N25-Lima-San Juan de Lurigancho-Lima - CETPRO'),
-(146, 'Fe y Alegria N26-Lima-San Juan de Lurigancho-Lima - EBR'),
-(147, 'Fe y Alegria N27-Puno-Macar?-Melgar - EBR'),
-(148, 'Fe y Alegria N28-Lambayeque-Chiclayo-Chiclayo - EBR'),
-(149, 'Fe y Alegria N29-Callao-Ventanilla-Callao - EBR'),
-(150, 'Fe y Alegria N30-Ica-Pueblo Nuevo-Chincha - EBR'),
-(151, 'Fe y Alegria N31-Amazonas-La Peca-Bagua - EBR'),
-(152, 'Fe y Alegria N32-Lima-San Juan de Lurigancho-Lima - EBR'),
-(153, 'Fe y Alegria N32-Lima-San Juan de Lurigancho-Lima - CETPRO'),
-(154, 'Fe y Alegria N33-Callao-Mi Per?-Ventanilla - EBR'),
-(155, 'Fe y Alegria N34-Lima-Chorrillos-Lima - EBR'),
-(156, 'Fe y Alegria N35-Lima Provincia-Barranca-Barranca - EBR'),
-(157, 'Fe y Alegria N36-La Libertad-La Esperanza-Trujillo - EBR'),
-(158, 'Fe y Alegria N37-Lima-San Juan de Lurigancho-Lima - EBR'),
-(159, 'Fe y Alegria N38-Amazonas-Bagua Grande-Utcubamba - EBR'),
-(160, 'Fe y Alegria N39-Lima-El Agustino-Lima - EBR'),
-(161, 'Fe y Alegria N40-Tacna-Tacna-Tacna - EBR'),
-(162, 'Fe y Alegria N41-Lima-Lurigancho-Lima - EBR'),
-(163, 'Fe y Alegria N42-Ancash-Chimbote-Santa - CEBE'),
-(164, 'Fe y Alegria N43-Callao-Ventanilla-Callao - EBR'),
-(165, 'Fe y Alegria N43-Callao-Ventanilla-Callao - CETPRO'),
-(166, 'Fe y Alegria N44-Cusco-Andahuaylillas-Quispicanchi - RED RURAL'),
-(167, 'Fe y Alegria N44-Cusco-Andahuaylillas-Quispicanchi - EBR'),
-(168, 'Fe y Alegria N45-Arequipa-Paucarpata-Arequipa - EBR'),
-(169, 'Fe y Alegria N45-Arequipa-Paucarpata-Arequipa - CEBA'),
-(170, 'Fe y Alegria N46-Loreto-San Juan Bautista-Iquitos - EBR'),
-(171, 'Fe y Alegria N47-Loreto-San Juan Bautista-Iquitos - RED RURAL'),
-(172, 'Fe y Alegria N47-Loreto-San Juan Bautista-Iquitos - CAEM'),
-(173, 'Fe y Alegria N47-Loreto-San Juan Bautista-Iquitos - CETPRO'),
-(174, 'Fe y Alegria N47-Loreto-San Juan Bautista-Iquitos - IESTP'),
-(175, 'Fe y Alegria N48-Piura-Tambogrande-Piura - RED RURAL'),
-(176, 'Fe y Alegria N48-Piura-Tambogrande-Piura - CETPRO'),
-(177, 'Fe y Alegria N48-Piura-Tambogrande-Piura - CEBA'),
-(178, 'Fe y Alegria N49-Piura-Piura-Piura - EBR'),
-(179, 'Fe y Alegria N50-Ayacucho-San Juan Bautista-Huamanga - EBR'),
-(180, 'Fe y Alegria N51-Arequipa-Cerro Colorado-Arequipa - EBR'),
-(181, 'Fe y Alegria N52-Moquegua-Ilo-Ilo - EBR'),
-(182, 'Fe y Alegria N53-Lima-Ate-Lima - EBR'),
-(183, 'Fe y Alegria N54-Ancash-Moro-Santa - RED RURAL'),
-(184, 'Fe y Alegria N56-Puno-San Juan del Oro-Sandia - EBR'),
-(185, 'Fe y Alegria N56-Puno-San Juan del Oro-Sandia - CETPRO'),
-(186, 'Fe y Alegria N57-La Libertad-Trujillo-Trujillo - IESTP'),
-(187, 'Fe y Alegria N57-Cajamarca-Cajamarca-Cajamarca - IESTP'),
-(188, 'Fe y Alegria N57-Cajamarca-Cajamarca-Cajamarca - CETPRO '),
-(189, 'Fe y Alegria N57-La Libertad-Trujillo-Trujillo - CETPRO '),
-(190, 'Fe y Alegria N57-La Libertad-Trujillo-Trujillo - CCC'),
-(191, 'Fe y Alegria N58-Lima-Lurigancho-Lima - EBR'),
-(192, 'Fe y Alegria N59-Callao-Ventanilla-Callao - EBR'),
-(193, 'Fe y Alegria N60-Ayacucho-Los Morochucos-Cangallo - IESTP'),
-(194, 'Fe y Alegria N61-Lima-Villa El Salvador-Lima - CETPRO'),
-(195, 'Fe y Alegria N61-Lima-Villa El Salvador-Lima - IESTP'),
-(196, 'Fe y Alegria N62-Amazonas-Imaza-Bagua - EBR'),
-(197, 'Fe y Alegria N63-La Libertad-El Porvenir-Trujillo - EBR'),
-(198, 'Fe y Alegria N64-Hu?nuco-Tingo Mar?a-Leoncio Prado - EBR'),
-(199, 'Fe y Alegria N65-Lima-San Juan de Miraflores-Lima - EBR'),
-(200, 'Fe y Alegria N66-Jun?n-Huancayo-Huancayo - EBR'),
-(201, 'Fe y Alegria N67-Jun?n-Tarma-Tarma - EBR'),
-(202, 'Fe y Alegria N68-Ica-San Clemente-Pisco - EBR'),
-(203, 'Fe y Alegria N69-Cajamarca-Cutervo-Cutervo - EBR'),
-(204, 'Fe y Alegria N69-Cajamarca-Cutervo-Cutervo - CEBA'),
-(205, 'Fe y Alegria N69-Cajamarca-S?cota-Cutervo - CETPRO'),
-(206, 'Fe y Alegria N70-Ica-Nueva Esperanza-Ica - EBR'),
-(207, 'Fe y Alegria N71-Jun?n-Panc?n-Jauja - EBR'),
-(208, 'Fe y Alegria N72-Ucayali-Pucallpa-Coronel Portillo - RED RURAL'),
-(209, 'Fe y Alegria N73-Piura-Paita-Paita - EBR'),
-(210, 'Fe y Alegria N74-Amazonas-Santa Mar?a de Nieva-Condorcanqui - IESTP'),
-(211, 'Fe y Alegria N75-Lima-San Juan de Miraflores-Lima - IESTP'),
-(212, 'Fe y Alegria N76-Callao-Ventanilla-Callao - EBR'),
-(213, 'Fe y Alegria N77-Ica-Tupac Amaru Inca-Pisco - EBR'),
-(214, 'Fe y Alegria N78-Cajamarca-Pucar?-Ja?n - EBR'),
-(215, 'Fe y Alegria N79-Huancavelica-Acobamba-Acobamba - RED RURAL'),
-(216, 'Fe y Alegria N80-Loreto-Lagunas-Alto Amazonas - EBR'),
-(217, 'Fe y Alegria N80-Loreto-Lagunas-Alto Amazonas - CETPRO'),
-(218, 'Fe y Alegria N81-Piura-Paita-Paita - EBR'),
-(219, 'Fe y Alegria N82-Ica-Ica-Ica - CEBA');
+(321, 'Fe y Alegria N 1 - Lima - San Martín de Porres - Lima  -  EBR'),
+(322, 'Fe y Alegria N 2 - Lima - San Martínn de Porres - Lima  -  EBR'),
+(323, 'Fe y Alegria N 3 - Lima - San Juan de Miraflores - Lima  -  EBR'),
+(324, 'Fe y Alegria N 4 - Lima - San Juan de Lurigancho - Lima  -  EBR'),
+(325, 'Fe y Alegria N 5 - Lima - San Juan de Lurigancho - Lima  -  EBR'),
+(326, 'Fe y Alegria N 7 - Lima - Comas - Lima  -  CEBA'),
+(327, 'Fe y Alegria N 8 - Lima - Comas - Lima  -  EBR'),
+(328, 'Fe y Alegria N 10 - Lima - Comas - Lima  -  EBR'),
+(329, 'Fe y Alegria N 11 - Lima - Comas - Lima  -  EBR'),
+(330, 'Fe y Alegria N 12 - Lima - Puente Piedra - Lima  -  EBR'),
+(331, 'Fe y Alegria N 13 - Lima - Comas - Lima  -  EBR'),
+(332, 'Fe y Alegria N 14 - Ancash - Nuevo Chimbote - Santa  -  EBR'),
+(333, 'Fe y Alegria N 15 - Piura - Castilla - Piura  -  EBR'),
+(334, 'Fe y Alegria N 16 - Ancash - Chimbote - Santa  -  EBR'),
+(335, 'Fe y Alegria N 17 - Lima - Villa El Salvador - Lima  -  EBR'),
+(336, 'Fe y Alegria N 18 - Piura - Sullana - Sullana  -  EBR'),
+(337, 'Fe y Alegria N 19 - Ancash - Huaraz       - Huaraz        -  EBR'),
+(338, 'Fe y Alegria N 20 - Cusco - Santiago - Cusco  -  EBR'),
+(339, 'Fe y Alegria N 21 - Cusco - San Jerónimo - Cusco  -  EBR'),
+(340, 'Fe y Alegria N 21 - Cusco - San Jerónimo - Cusco  -  CETPRO'),
+(341, 'Fe y Alegria N 22 - Cajamarca - Jaén - Jaén  -  EBR'),
+(342, 'Fe y Alegria N 23 - Lima - Villa María del Triunfo - Lima  -  EBR'),
+(343, 'Fe y Alegria N 23 - Lima - Villa Mar?a del Triunfo - Lima  -  CETPRO'),
+(344, 'Fe y Alegria N 24 - Lima - Villa Mar?a del Triunfo - Lima  -  EBR'),
+(345, 'Fe y Alegria N 25 - Lima - San Juan de Lurigancho - Lima  -  EBR'),
+(346, 'Fe y Alegria N 25 - Lima - San Juan de Lurigancho - Lima  -  CETPRO'),
+(347, 'Fe y Alegria N 26 - Lima - San Juan de Lurigancho - Lima  -  EBR'),
+(348, 'Fe y Alegria N 27 - Puno - Macarí - Melgar  -  EBR'),
+(349, 'Fe y Alegria N 28 - Lambayeque - Chiclayo - Chiclayo  -  EBR'),
+(350, 'Fe y Alegria N 29 - Callao - Ventanilla - Callao  -  EBR'),
+(351, 'Fe y Alegria N 30 - Ica - Pueblo Nuevo - Chincha  -  EBR'),
+(352, 'Fe y Alegria N 31 - Amazonas - La Peca - Bagua  -  EBR'),
+(353, 'Fe y Alegria N 32 - Lima - San Juan de Lurigancho - Lima  -  EBR'),
+(354, 'Fe y Alegria N 32 - Lima - San Juan de Lurigancho - Lima  -  CETPRO'),
+(355, 'Fe y Alegria N 33 - Callao - Mi Perú - Ventanilla  -  EBR'),
+(356, 'Fe y Alegria N 34 - Lima - Chorrillos - Lima  -  EBR'),
+(357, 'Fe y Alegria N 35 - Lima Provincia - Barranca - Barranca  -  EBR'),
+(358, 'Fe y Alegria N 36 - La Libertad - La Esperanza - Trujillo  -  EBR'),
+(359, 'Fe y Alegria N 37 - Lima - San Juan de Lurigancho - Lima  -  EBR'),
+(360, 'Fe y Alegria N 38 - Amazonas - Bagua Grande - Utcubamba  -  EBR'),
+(361, 'Fe y Alegria N 39 - Lima - El Agustino - Lima  -  EBR'),
+(362, 'Fe y Alegria N 40 - Tacna - Tacna - Tacna  -  EBR'),
+(363, 'Fe y Alegria N 41 - Lima - Lurigancho - Lima  -  EBR'),
+(364, 'Fe y Alegria N 42 - Ancash - Chimbote - Santa  -  CEBE'),
+(365, 'Fe y Alegria N 43 - Callao - Ventanilla - Callao  -  EBR'),
+(366, 'Fe y Alegria N 43 - Callao - Ventanilla - Callao  -  CETPRO'),
+(367, 'Fe y Alegria N 44 - Cusco - Andahuaylillas - Quispicanchi  -  RED RURAL'),
+(368, 'Fe y Alegria N 44 - Cusco - Andahuaylillas - Quispicanchi  -  EBR'),
+(369, 'Fe y Alegria N 45 - Arequipa - Paucarpata - Arequipa  -  EBR'),
+(370, 'Fe y Alegria N 45 - Arequipa - Paucarpata - Arequipa  -  CEBA'),
+(371, 'Fe y Alegria N 46 - Loreto - San Juan Bautista - Iquitos  -  EBR'),
+(372, 'Fe y Alegria N 47 - Loreto - San Juan Bautista - Iquitos  -  RED RURAL'),
+(373, 'Fe y Alegria N 47 - Loreto - San Juan Bautista - Iquitos  -  CAEM'),
+(374, 'Fe y Alegria N 47 - Loreto - San Juan Bautista - Iquitos  -  CETPRO'),
+(375, 'Fe y Alegria N 47 - Loreto - San Juan Bautista - Iquitos  -  IESTP'),
+(376, 'Fe y Alegria N 48 - Piura - Tambogrande - Piura  -  RED RURAL'),
+(377, 'Fe y Alegria N 48 - Piura - Tambogrande - Piura  -  CETPRO'),
+(378, 'Fe y Alegria N 48 - Piura - Tambogrande - Piura  -  CEBA'),
+(379, 'Fe y Alegria N 49 - Piura - Piura - Piura  -  EBR'),
+(380, 'Fe y Alegria N 50 - Ayacucho - San Juan Bautista - Huamanga  -  EBR'),
+(381, 'Fe y Alegria N 51 - Arequipa - Cerro Colorado - Arequipa  -  EBR'),
+(382, 'Fe y Alegria N 52 - Moquegua - Ilo - Ilo  -  EBR'),
+(383, 'Fe y Alegria N 53 - Lima - Ate - Lima  -  EBR'),
+(384, 'Fe y Alegria N 54 - Ancash - Moro - Santa  -  RED RURAL'),
+(385, 'Fe y Alegria N 56 - Puno - San Juan del Oro - Sandia  -  EBR'),
+(386, 'Fe y Alegria N 56 - Puno - San Juan del Oro - Sandia  -  CETPRO'),
+(387, 'Fe y Alegria N 57 - La Libertad - Trujillo - Trujillo  -  IESTP'),
+(388, 'Fe y Alegria N 57 - Cajamarca - Cajamarca - Cajamarca  -  IESTP'),
+(389, 'Fe y Alegria N 57 - Cajamarca - Cajamarca - Cajamarca  -  CETPRO '),
+(390, 'Fe y Alegria N 57 - La Libertad - Trujillo - Trujillo  -  CETPRO '),
+(391, 'Fe y Alegria N 57 - La Libertad - Trujillo - Trujillo  -  CCC'),
+(392, 'Fe y Alegria N 58 - Lima - Lurigancho - Lima  -  EBR'),
+(393, 'Fe y Alegria N 59 - Callao - Ventanilla - Callao  -  EBR'),
+(394, 'Fe y Alegria N 60 - Ayacucho - Los Morochucos - Cangallo  -  IESTP'),
+(395, 'Fe y Alegria N 61 - Lima - Villa El Salvador - Lima  -  CETPRO'),
+(396, 'Fe y Alegria N 61 - Lima - Villa El Salvador - Lima  -  IESTP'),
+(397, 'Fe y Alegria N 62 - Amazonas - Imaza - Bagua  -  EBR'),
+(398, 'Fe y Alegria N 63 - La Libertad - El Porvenir - Trujillo  -  EBR'),
+(399, 'Fe y Alegria N 64 - Hu?nuco - Tingo Mar?a - Leoncio Prado  -  EBR'),
+(400, 'Fe y Alegria N 65 - Lima - San Juan de Miraflores - Lima  -  EBR'),
+(401, 'Fe y Alegria N 66 - Junín - Huancayo - Huancayo  -  EBR'),
+(402, 'Fe y Alegria N 67 - Junín - Tarma - Tarma  -  EBR'),
+(403, 'Fe y Alegria N 68 - Ica - San Clemente - Pisco  -  EBR'),
+(404, 'Fe y Alegria N 69 - Cajamarca - Cutervo - Cutervo  -  EBR'),
+(405, 'Fe y Alegria N 69 - Cajamarca - Cutervo - Cutervo  -  CEBA'),
+(406, 'Fe y Alegria N 69 - Cajamarca - S?cota - Cutervo  -  CETPRO'),
+(407, 'Fe y Alegria N 70 - Ica - Nueva Esperanza - Ica  -  EBR'),
+(408, 'Fe y Alegria N 71 - Junín - Pancán - Jauja  -  EBR'),
+(409, 'Fe y Alegria N 72 - Ucayali - Pucallpa - Coronel Portillo  -  RED RURAL'),
+(410, 'Fe y Alegria N 73 - Piura - Paita - Paita  -  EBR'),
+(411, 'Fe y Alegria N 74 - Amazonas - Santa María de Nieva - Condorcanqui  -  IESTP'),
+(412, 'Fe y Alegria N 75 - Lima - San Juan de Miraflores - Lima  -  IESTP'),
+(413, 'Fe y Alegria N 76 - Callao - Ventanilla - Callao  -  EBR'),
+(414, 'Fe y Alegria N 77 - Ica - Tupac Amaru Inca - Pisco  -  EBR'),
+(415, 'Fe y Alegria N 78 - Cajamarca - Pucará - Jaén  -  EBR'),
+(416, 'Fe y Alegria N 79 - Huancavelica - Acobamba - Acobamba  -  RED RURAL'),
+(417, 'Fe y Alegria N 80 - Loreto - Lagunas - Alto Amazonas  -  EBR'),
+(418, 'Fe y Alegria N 80 - Loreto - Lagunas - Alto Amazonas  -  CETPRO'),
+(419, 'Fe y Alegria N 81 - Piura - Paita - Paita  -  EBR'),
+(420, 'Fe y Alegria N 82 - Ica - Ica - Ica  -  CEBA');
 
 -- --------------------------------------------------------
 
@@ -147,7 +147,7 @@ INSERT INTO `colegios` (`id`, `nombre`) VALUES
 CREATE TABLE `consultas` (
   `id` int(11) NOT NULL,
   `nombre` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `consultas`
@@ -188,7 +188,7 @@ CREATE TABLE `directivos` (
   `horarioE` time NOT NULL,
   `horarioS` time NOT NULL,
   `rol` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `directivos`
@@ -226,7 +226,7 @@ CREATE TABLE `inicio` (
   `direccion` text NOT NULL,
   `logo` text NOT NULL,
   `favicon` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `inicio`
@@ -252,7 +252,7 @@ CREATE TABLE `jefesarea` (
   `clave` text NOT NULL,
   `rol` text NOT NULL,
   `sexo` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `jefesarea`
@@ -285,7 +285,7 @@ CREATE TABLE `logistica` (
   `foto` text NOT NULL,
   `rol` text NOT NULL,
   `sexo` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `logistica`
@@ -312,7 +312,7 @@ CREATE TABLE `otrostrabajadores` (
   `sexo` text NOT NULL,
   `clave` text NOT NULL,
   `rol` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `otrostrabajadores`
@@ -403,7 +403,7 @@ CREATE TABLE `sistemas` (
   `documento` text NOT NULL,
   `foto` text NOT NULL,
   `rol` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `sistemas`
@@ -428,7 +428,7 @@ CREATE TABLE `vuelos` (
   `inicio` datetime NOT NULL,
   `fin` datetime NOT NULL,
   `comentario` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `vuelos`
@@ -560,7 +560,7 @@ CREATE TABLE `vueloslogistica` (
   `inicio` datetime NOT NULL,
   `fin` datetime NOT NULL,
   `color` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `vueloslogistica`
@@ -603,8 +603,7 @@ INSERT INTO `vueloslogistica` (`id`, `id_padre`, `id_consulta`, `id_logistica`, 
 (198, 29, 10, 0, 'Jorge Antony Milian Montalvo', '70311233', 'Fe y Alegría 3 - Lima - San Juan de Miraflores ', '', '2022-11-28 17:00:00', '2022-12-01 17:00:00', '#616161'),
 (199, 2, 1, 15, 'Jorge Antony Milian Montalvo', '21111111', 'Fe y Alegría 5 - Lima - San Juan de Lurigancho ', '', '2022-11-28 17:38:00', '2022-12-01 17:38:00', '#3F51B5'),
 (200, 31, 11, 0, 'Jorge Antony Milian Montalvo 70311233', 'Jorge Antony Milian Montalvo 70311233', 'Fe y Alegría 1 - Lima - San Martín de Porres ', 'se va de vacaciones por salud!', '2022-12-19 12:00:00', '2022-12-20 11:00:00', '#8E24AA'),
-(201, 2, 1, 0, 'Jorge Antony Milian Montalvo 70311233', 'Jorge Antony Milian Montalvo 70311233', 'Fe y Alegría 3 - Lima - San Juan de Miraflores ', 'URGENTE!', '2022-12-19 11:58:00', '2022-12-23 11:58:00', '#D50000'),
-(208, 30, 9, 0, 'P.Nino Dirección de Gestión - 87611233', 'P.Nino Dirección de Gestión - 87611233', 'Fe y Alegría 2 - Lima - San Martín de Porres ', '', '2022-12-23 08:51:00', '2023-01-07 08:51:00', '#D50000');
+(201, 2, 1, 0, 'Jorge Antony Milian Montalvo 70311233', 'Jorge Antony Milian Montalvo 70311233', 'Fe y Alegría 3 - Lima - San Juan de Miraflores ', 'URGENTE!', '2022-12-19 11:58:00', '2022-12-23 11:58:00', '#D50000');
 
 --
 -- Índices para tablas volcadas
@@ -678,7 +677,7 @@ ALTER TABLE `vueloslogistica`
 -- AUTO_INCREMENT de la tabla `colegios`
 --
 ALTER TABLE `colegios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=221;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=421;
 
 --
 -- AUTO_INCREMENT de la tabla `consultas`
@@ -714,7 +713,7 @@ ALTER TABLE `logistica`
 -- AUTO_INCREMENT de la tabla `otrostrabajadores`
 --
 ALTER TABLE `otrostrabajadores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=183;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=184;
 
 --
 -- AUTO_INCREMENT de la tabla `sistemas`
@@ -732,7 +731,7 @@ ALTER TABLE `vuelos`
 -- AUTO_INCREMENT de la tabla `vueloslogistica`
 --
 ALTER TABLE `vueloslogistica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=209;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=227;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
