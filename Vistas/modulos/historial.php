@@ -41,7 +41,7 @@ if ($_SESSION["id"] != substr($_GET["url"], 10)) {
 
                             foreach ($resultado as $key => $value){
 
-                                if($_SESSION["documento"] == $value["documento"]){
+                                if($value["nyaP"] == $value["documento"]){
                                     
                                 echo '<tr>
                                     <td>'.($key+1).'</td>

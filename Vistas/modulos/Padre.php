@@ -232,6 +232,14 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                         if($consultorio["nombre"] == "Contabilidad"){
                                             echo'<option style="color:#D50000" value="#D50000">&#x1F534; Tomate</option>';
                                         }
+
+                                        if($consultorio["nombre"] == "Comunicación e Incidencia "){
+                                            echo'<option style="color:#00FFFF" value="#00FFFF">&#x1F534; Tomate</option>';
+                                        }
+
+                                        if($consultorio["nombre"] == "Identidad y Misión"){
+                                            echo'<option style="color:#8FBC8F" value="#8FBC8F">&#x1F534; Tomate</option>';
+                                        }
                                         
                                         if($consultorio["nombre"] == "Directivos"){
                                             echo'<option style="color:#E67C73" value="#E67C73">&#9724; Rosa chicle</option>';
