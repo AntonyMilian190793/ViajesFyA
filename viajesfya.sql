@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-12-2022 a las 22:02:18
+-- Tiempo de generación: 29-12-2022 a las 22:53:39
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -413,7 +413,8 @@ CREATE TABLE `sistemas` (
 
 INSERT INTO `sistemas` (`id`, `id_consulta`, `usuario`, `clave`, `nombre`, `apellido`, `documento`, `sexo`, `foto`, `rol`) VALUES
 (1, 10, 'jmilian', '70311233', 'Jorge Antony', 'Milian Montalvo', '70311233', 'Masculino', 'Vistas/img/Sistemas/Sis-432.jpg.jpg', 'Sistemas'),
-(2, 10, 'jverano', '123', 'Jhony', 'Verano Bonifacio	', '20051781', 'Masculino', '', 'Sistemas');
+(2, 10, 'jverano', '123', 'Jhony', 'Verano Bonifacio	', '20051781', 'Masculino', '', 'Sistemas'),
+(4, 10, 'ASAAS', 'ASAS', 'a', 'AS', '12222222', 'Femenino', '', 'Sistemas');
 
 -- --------------------------------------------------------
 
@@ -724,7 +725,7 @@ ALTER TABLE `otrostrabajadores`
 -- AUTO_INCREMENT de la tabla `sistemas`
 --
 ALTER TABLE `sistemas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `vuelos`
