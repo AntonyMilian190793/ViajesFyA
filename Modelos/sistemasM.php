@@ -6,7 +6,6 @@
     class SistemasM extends ConexionBD{
 
         //ingreso  sistemas
-
         static public function IngresarSistemasM($tablaBD, $datosC){
 
             $pdo = ConexionBD::cBD()->prepare("SELECT id, usuario, clave, nombre, apellido, foto, rol FROM $tablaBD WHERE usuario = :usuario");
@@ -17,6 +16,29 @@
             $pdo->close();
             $pdo = null;
         }
+
+                //crear Otros trabajadores
+        static public function CrearSistemasM($tablaBD, $datosC){
+
+            $pdo = ConexionBD::cBD()->prepare("INSERT INTO $tablaBD(apellido, nombre, documento, usuario, sexo, id_consulta, clave, rol) VALUES 
+            (:apellido, :nombre, :documento, :usuario, :sexo, :id_consulta, :clave, :rol)");
+
+            $pdo -> bindParam(":apellido", $datosC["apellido"], PDO::PARAM_STR);
+            $pdo -> bindParam(":nombre", $datosC["nombre"], PDO::PARAM_STR);
+            $pdo -> bindParam(":documento", $datosC["documento"], PDO::PARAM_STR);
+            $pdo->bindParam(":sexo", $datosC["sexo"], PDO::PARAM_STR);
+            $pdo->bindParam(":id_consulta", $datosC["id_consulta"], PDO::PARAM_STR);
+            $pdo -> bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
+            $pdo -> bindParam(":clave", $datosC["clave"], PDO::PARAM_STR);
+            $pdo -> bindParam(":rol", $datosC["rol"], PDO::PARAM_STR);
+
+            if($pdo -> execute()){
+                return true;
+            }
+
+            $pdo -> close();
+            $pdo = null;
+    }
 
             //ver otros trabajadores
     static public function VerSistemasM($tablaBD, $columna, $valor){

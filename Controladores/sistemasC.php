@@ -37,6 +37,27 @@
             }
         }
 
+
+    //crear Otros trabajadores
+        public function CrearSistemasC(){
+
+            if(isset($_POST["rolS"])){
+
+                $tablaBD = "sistemas";
+                $datosC = array("id_consulta"=>$_POST["consulta"] ,"apellido"=>$_POST["apellido"],"nombre"=>$_POST["nombre"],"documento"=>$_POST["documento"],
+                "usuario"=>$_POST["usuario"],"clave"=>$_POST["clave"], "sexo"=>$_POST["sexo"],"rol"=>$_POST["rolS"]);
+
+                $resultado = SistemasM::CrearSistemasM($tablaBD, $datosC);
+
+                if($resultado == true){
+                    echo 
+                    '<script>
+                            window.location = "sistemas";
+                    </script>';
+            }   
+        }
+    }
+
             // ver sistemas
         static public function VerSistemasC($columna, $valor){
 

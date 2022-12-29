@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-12-2022 a las 21:46:04
+-- Tiempo de generación: 29-12-2022 a las 22:02:18
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -161,7 +161,7 @@ INSERT INTO `consultas` (`id`, `nombre`) VALUES
 (8, 'EBA'),
 (9, 'Contabilidad'),
 (10, 'Sistemas'),
-(11, 'Recursos Humanos'),
+(11, 'Vacaciones'),
 (12, 'Legal'),
 (13, 'Recaudo y Voluntariado'),
 (18, 'Proyectos'),
@@ -293,7 +293,8 @@ CREATE TABLE `logistica` (
 
 INSERT INTO `logistica` (`id`, `id_consulta`, `usuario`, `clave`, `nombre`, `documento`, `apellido`, `foto`, `rol`, `sexo`) VALUES
 (15, 1, 'aalania', '123', 'Angela', '70541233', 'Alania', 'Vistas/img/Otros/O-55.jpg', 'Logistica', 'Femino'),
-(20, 1, 'jvargas', '123', 'Julia', '68726221', 'Vargas', '', 'Logistica', '');
+(20, 1, 'jvargas', '123', 'Julia', '68726221', 'Vargas', '', 'Logistica', ''),
+(21, 0, 'negoavil', '75129856', 'Nataly Grecia', '75129856', ' Egoavil Cuadrado	', '', 'Logistica', '');
 
 -- --------------------------------------------------------
 
@@ -320,7 +321,7 @@ CREATE TABLE `otrostrabajadores` (
 
 INSERT INTO `otrostrabajadores` (`id`, `id_consulta`, `apellido`, `nombre`, `documento`, `foto`, `usuario`, `sexo`, `clave`, `rol`) VALUES
 (115, 1, '- Directivos', 'Ernesto Marco Julio Cavassa Canessa', '07806170', '', 'ecavassa', 'Masculino', '07806170', 'otrosTrabajadores'),
-(116, 1, '- Directivos', 'Victor Alberto Quijaite Agurto', '07503892', '', 'vquijaite', 'Masculino', '07503892', 'otrosTrabajadores'),
+(116, 1, '- Directivos', 'Víctor Alberto Quijaite Agurto', '07503892', '', 'vquijaite', 'Masculino', '07503892', 'otrosTrabajadores'),
 (117, 1, '- Directivos', 'Saturnino Vasquez Carranza', '05645468', '', 'svasquez', 'Masculino', '05645468', 'otrosTrabajadores'),
 (118, 1, '- Directivos', 'Ana Mirella Uehara Shiroma', '10573832', '', 'auehara', 'Femenino', '10573832', 'otrosTrabajadores'),
 (119, 1, '- Directivos', 'Susana Carola Helfer Llerena', '29290328', '', 'shelfer', 'Femenino', '29290328', 'otrosTrabajadores'),
@@ -401,6 +402,7 @@ CREATE TABLE `sistemas` (
   `nombre` text NOT NULL,
   `apellido` text NOT NULL,
   `documento` text NOT NULL,
+  `sexo` text NOT NULL,
   `foto` text NOT NULL,
   `rol` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -409,8 +411,9 @@ CREATE TABLE `sistemas` (
 -- Volcado de datos para la tabla `sistemas`
 --
 
-INSERT INTO `sistemas` (`id`, `id_consulta`, `usuario`, `clave`, `nombre`, `apellido`, `documento`, `foto`, `rol`) VALUES
-(1, 10, 'jmilian', '70311233', 'Jorge Antony', 'Milian Montalvo', '70311233', 'Vistas/img/Sistemas/Sis-432.jpg.jpg', 'Sistemas');
+INSERT INTO `sistemas` (`id`, `id_consulta`, `usuario`, `clave`, `nombre`, `apellido`, `documento`, `sexo`, `foto`, `rol`) VALUES
+(1, 10, 'jmilian', '70311233', 'Jorge Antony', 'Milian Montalvo', '70311233', 'Masculino', 'Vistas/img/Sistemas/Sis-432.jpg.jpg', 'Sistemas'),
+(2, 10, 'jverano', '123', 'Jhony', 'Verano Bonifacio	', '20051781', 'Masculino', '', 'Sistemas');
 
 -- --------------------------------------------------------
 
@@ -603,7 +606,9 @@ INSERT INTO `vueloslogistica` (`id`, `id_padre`, `id_consulta`, `id_logistica`, 
 (198, 29, 10, 0, 'Jorge Antony Milian Montalvo', '70311233', 'Fe y Alegría 3 - Lima - San Juan de Miraflores ', '', '2022-11-28 17:00:00', '2022-12-01 17:00:00', '#616161'),
 (199, 2, 1, 15, 'Jorge Antony Milian Montalvo', '21111111', 'Fe y Alegría 5 - Lima - San Juan de Lurigancho ', '', '2022-11-28 17:38:00', '2022-12-01 17:38:00', '#3F51B5'),
 (200, 31, 11, 0, 'Jorge Antony Milian Montalvo 70311233', 'Jorge Antony Milian Montalvo 70311233', 'Fe y Alegría 1 - Lima - San Martín de Porres ', 'se va de vacaciones por salud!', '2022-12-19 12:00:00', '2022-12-20 11:00:00', '#8E24AA'),
-(201, 2, 1, 0, 'Jorge Antony Milian Montalvo 70311233', 'Jorge Antony Milian Montalvo 70311233', 'Fe y Alegría 3 - Lima - San Juan de Miraflores ', 'URGENTE!', '2022-12-19 11:58:00', '2022-12-23 11:58:00', '#D50000');
+(201, 2, 1, 0, 'Jorge Antony Milian Montalvo 70311233', 'Jorge Antony Milian Montalvo 70311233', 'Fe y Alegría 3 - Lima - San Juan de Miraflores ', 'URGENTE!', '2022-12-19 11:58:00', '2022-12-23 11:58:00', '#D50000'),
+(227, 30, 9, 0, 'Jose Ruben Yeren Cassina - Comunicación E Incidencia  - 25798003', 'Jose Ruben Yeren Cassina - Comunicación E Incidencia  - 25798003', 'Colegio...', '', '2022-12-28 15:53:00', '2022-12-29 15:53:00', '#D50000'),
+(228, 29, 10, 0, 'Jorge Antony Milian Montalvo  - Sistemas - 70311233', 'Jorge Antony Milian Montalvo  - Sistemas - 70311233', 'Fe y Alegria N 5 - Lima - San Juan de Lurigancho - Lima  -  EBR ', 'URGENTE!', '2022-12-28 16:20:00', '2022-12-31 16:20:00', '#004063');
 
 --
 -- Índices para tablas volcadas
@@ -707,19 +712,19 @@ ALTER TABLE `jefesarea`
 -- AUTO_INCREMENT de la tabla `logistica`
 --
 ALTER TABLE `logistica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `otrostrabajadores`
 --
 ALTER TABLE `otrostrabajadores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=184;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=185;
 
 --
 -- AUTO_INCREMENT de la tabla `sistemas`
 --
 ALTER TABLE `sistemas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `vuelos`
@@ -731,7 +736,7 @@ ALTER TABLE `vuelos`
 -- AUTO_INCREMENT de la tabla `vueloslogistica`
 --
 ALTER TABLE `vueloslogistica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=227;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=229;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
