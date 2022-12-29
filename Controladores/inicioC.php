@@ -17,12 +17,7 @@
             <h1>Bienvenido</h1>
     
             <h3>'.$resultado["intro"].'</h3>
-    
-            <hr>
-    
-            <h2>Horario:</h2>
-            <h3>Desde: '.$resultado["horaE"].'</h3>
-            <h3>Hasta: '.$resultado["horaS"].'</h3>
+
     
             <hr>
     

@@ -90,6 +90,10 @@ class ColaboradorC{
         echo '<form method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="col-md-6 col-xs-12">
+
+                <input type="hidden" class="input-lg" name="apellidoPerfil" value="'.$resultado["apellido"].'">
+                <input type="hidden" class="input-lg" name="Pid" value="'.$resultado["id"].'">
+
                 <h2>Nombre:</h2>
                 <input type="text" class="input-lg" name="nombrePerfil" value="'.$resultado["nombre"].'">
                 <input type="hidden" class="input-lg" name="Pid" value="'.$resultado["id"].'">
@@ -110,19 +114,7 @@ class ColaboradorC{
 
                 echo '
 
-                <h2>Área de trabajo actual: '.$consulta["nombre"].'</h2>
-                <h3>Cambiar Área</h3>
-                <select class="input-lg" name="consultaPerfil">';
-
-                
-                $columna = null;
-                $valor = null;
-                $consulta = ConsultasC::VerConsultasC($columna, $valor);
-
-
-                foreach ($consulta as $key => $value){
-                    echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
-                }
+                <h2>Área de trabajo actual: '.$consulta["nombre"].'</h2>';
 
                 echo '</select>
                 
@@ -201,12 +193,12 @@ class ColaboradorC{
     
                 $tablaBD = "otrosTrabajadores";
                 $datosC = array("id" => $_POST["Pid"], 
-                "nombre" => $_POST["nombrePerfil"], 
+                "nombre" => $_POST["nombrePerfil"],
+                "apellido" => $_POST["apellidoPerfil"],
                 "usuario" => $_POST["usuarioPerfil"], 
                 "clave" => $_POST["clavePerfil"], 
                 "documento" => $_POST["documentoPerfil"], 
-                "foto" => $rutaImg,
-                "id_consulta" => $_POST['consultaPerfil']
+                "foto" => $rutaImg
             );
                 $resultado = ColaboradorM::ActualizarPerfilColaboradorM($tablaBD, $datosC);
     
