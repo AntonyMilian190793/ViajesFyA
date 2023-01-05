@@ -21,12 +21,12 @@ if ($_SESSION["rol"] != "Sistemas" ) {
         <div class="box">
             <div class="box-header">
                 <!-- corregir esta parte para subir los archivos CSV -->
-                <!-- <form method="post">
+                <form method="post">
                     <div class="col-md-6 col-xs-12">
                         <input type="text" class="form-control" name="consultasN" placeholder="Ingrese Nueva Consulta" required>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Crear Colegio </button> -->
+                    <button type="submit" class="btn btn-primary">Crear Colegio </button>
 
                     <hr>
 <h3>Subir datos con CSV</h3>
@@ -91,7 +91,7 @@ if ($_SESSION["rol"] != "Sistemas" ) {
             
             <br>
     <footer style="position: absolute; footer: 15px; left: 550px;">
-        <p><a>© 2022 Jorge Antony Milian Montalvo. Todos los Derechos Reservados</a>.</p>
+        <p><a>© 2023 Jorge Antony Milian Montalvo. Todos los Derechos Reservados</a>.</p>
     </footer>
         </div>
     </section>

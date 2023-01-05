@@ -184,6 +184,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                         </div>
                         
                         <?php
+                        if($_SESSION["nombre"] == "Angela"){
                                                 
                         echo '<div class="form-group">
                             <h2>Seleccionar Colegio:</h2>
@@ -197,10 +198,29 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                         $valor = null;
                         $resultado	= ColegiosC::VerColegiosC($columna, $valor);
 
+                        
+
                         foreach ($resultado as $key => $value) {
 
                             echo '<option value="'.$value["nombre"].' '.$value["apellido"].'">'.$value["nombre"].' '.$value["apellido"].'</option>';
                         }
+
+                    }else if($_SESSION["nombre"] == "Nataly Grecia"){
+
+                            echo '<div class="form-group">
+                            <h2>Seleccionar:</h2>
+                            <select class="form-control input-lg" id="controlBuscadora" name="nombreCo" style="width: 100%">
+                                <option>Vacaciones</option>
+
+                        </div>';
+                        
+                    }else if($_SESSION["nombre"] == "Julia"){
+                        echo '<div class="form-group">
+                            <h2>Seleccionar:</h2>
+                            <select class="form-control input-lg" id="controlBuscadora" name="nombreCo" style="width: 100%">
+                                <option>Vacaciones</option>
+                        </div>';
+                    }
 
                         ?>
 
@@ -217,7 +237,6 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                         <div class="form-group">
                         <h2>Color del Evento:</h2>
                         <select name="color" class="form-control input-lg" id="color" >
-					       
 
                             <?php
                                         $columna = "id";

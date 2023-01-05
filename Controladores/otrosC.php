@@ -44,6 +44,33 @@ class OtrosC{
 
     }
 
+            //editar Padres
+        static public function OtroC($columna, $valor){
+            $tablaBD = "logistica";
+            $resultado = OtrosM::OtroM($tablaBD, $columna, $valor);
+
+            return $resultado;
+        }
+
+            //actualizar Padres
+        public function ActualizarSecretariaC(){
+
+            if(isset($_POST["Sid"])){
+
+                $tablaBD = "logistica";
+                $datosC = array("id"=>$_POST["Sid"], "apellido"=>$_POST["apellidoE"], "nombre"=>$_POST["nombreE"], "sexo"=>$_POST["sexoE"],
+                "usuario"=>$_POST["usuarioE"], "clave"=>$_POST["claveE"]);
+
+                $resultado = OtrosM::ActualizarSecretariaM($tablaBD, $datosC);
+
+                if($resultado == true){
+                    echo '<script>
+                        window.location = "secretarias";
+                    </script>';
+                }
+            }
+        }
+
 
     //ver perfil otros
     public function VerPefilOtrosC(){

@@ -1,6 +1,6 @@
 <?php
 
-if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Sistemas") {
+if ($_SESSION["rol"] != "Sistemas") {
 
     echo '<script>
   
@@ -55,8 +55,10 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Sistemas") {
                             <td>'.$value["apellido"].'</td>';
 
                             if($value["foto"] == ""){
+
                                 echo '<td><img src="Vistas/img/defecto1.png" width="40px"></td>';
                             }else{
+                                
                                 echo '<td><img src="'.$value["foto"].'" width="40px"></td>';
                             }
 

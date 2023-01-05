@@ -30,12 +30,12 @@ if ($_SESSION["rol"] != "Sistemas") {
                     <thead>
                         <tr>
                             <th>N°</th>
-                            <th>Apellidos</th>
                             <th>Nombres</th>
+                            <th>Apellidos</th>
                             <th>Foto</th>
                             <th>Usuario</th>
                             <th>Contraseña</th>
-                            <th>Borrar</th>
+                            <th>Editar / Borrar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -50,8 +50,8 @@ if ($_SESSION["rol"] != "Sistemas") {
                             
                             <tr>
                                 <td>'.($key+1).'</td>
-                                <td>'.$value["apellido"].'</td>
-                                <td>'.$value["nombre"].'</td>';
+                                <td>'.$value["nombre"].'</td>
+                                <td>'.$value["apellido"].'</td>';
 
                                 if($value["foto"] == ""){
 
@@ -64,16 +64,16 @@ if ($_SESSION["rol"] != "Sistemas") {
 
                                 }
 
-
-                                
-                            
-
                                 echo '
                                 <td>'.$value["usuario"].'</td>
                                 <td>'.$value["clave"].'</td>
-                          
                             
                             <td>
+
+                            <div class="btn-group">
+                                <button class="btn btn-success EditarSecretaria" Sid="'.$value["id"].'" data-toggle="modal" data-target="#EditarSecretaria"><i class="fa fa-pencil"> 
+                                Editar</i></button>
+                            </div>
                                 
                                 
                                     <div class="btn-group">
@@ -147,6 +147,62 @@ if ($_SESSION["rol"] != "Sistemas") {
                 <?php
                     $crear = new OtrosC();
                     $crear ->CrearSecretariaC();
+                ?>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" role="dialog" id="EditarSecretaria">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" role="form">
+                <div class="modal-body">
+                    <div class="box-body">
+
+                        <div class="form-group">
+                            <h2>Nombres:</h2>
+                            <input type="text" class="form-control" id="nombreE" name="nombreE" required>
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Apellidos:</h2>
+                            <input type="text" class="form-control" id="apellidoE" name="apellidoE" required>
+                            <input type="hidden" id="Sid" name="Sid">
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Sexo:</h2>
+                            <select class="form-control input-lg" name="sexoE" required>
+                                <option id="sexoE"></option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                            </select>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <h2>Usuario:</h2>
+                            <input type="text" class="form-control" id="usuarioE" name="usuarioE" required>
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Contraseña:</h2>
+                            <input type="text" class="form-control" id="claveE" name="claveE" required>
+                        </div>
+
+                    </div>                            
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Guarda Cambios</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                </div>
+
+                <?php
+                    $actualizar = new OtrosC();
+                    $actualizar ->ActualizarSecretariaC();
                 ?>
             </form>
         </div>

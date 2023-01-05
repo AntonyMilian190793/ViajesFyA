@@ -18,6 +18,46 @@ require_once "ConexionBD.php";
 
         }
 
+        static public function OtroM($tablaBD, $columna, $valor){
+                
+            if($columna != null){
+
+                $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD WHERE $columna = :$columna");
+                $pdo->bindParam(":" .$columna, $valor, PDO::PARAM_STR);
+                $pdo->execute();
+                return $pdo->fetch();
+            }
+
+            $pdo -> close();
+            $pdo = null;
+
+        }
+
+                //actualizar Padres
+        static public function ActualizarSecretariaM($tablaBD, $datosC){
+
+            $pdo = ConexionBD::cBD()->prepare("UPDATE $tablaBD SET usuario = :usuario, clave = :clave, nombre = :nombre, documento = :documento, 
+            apellido = :apellido, sexo = :sexo WHERE id = :id");
+
+            $pdo->bindParam(":id", $datosC["id"], PDO::PARAM_INT);
+            $pdo->bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
+            $pdo->bindParam(":clave", $datosC["clave"], PDO::PARAM_STR);
+            $pdo->bindParam(":nombre", $datosC["nombre"], PDO::PARAM_STR);
+            $pdo->bindParam(":documento", $datosC["documento"], PDO::PARAM_STR);
+            $pdo->bindParam(":apellido", $datosC["apellido"], PDO::PARAM_STR);
+            $pdo->bindParam(":sexo", $datosC["sexo"], PDO::PARAM_STR);
+
+
+
+            if($pdo->execute()){
+                return true;
+            }
+
+            $pdo->close();
+            $pdo = null;
+        
+        }
+
 
 
     //ver perfil otros
@@ -61,7 +101,7 @@ require_once "ConexionBD.php";
     //mostrar secretarias
     static public function VerOtrosM($tablaBD){
 
-        $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD ORDER BY apellido ASC");
+        $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD ORDER BY nombre ASC");
         $pdo -> execute();
         return $pdo -> fetchAll();
         $pdo -> close();
