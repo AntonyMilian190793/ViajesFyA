@@ -197,6 +197,7 @@ session_start();
   <script src="http://localhost/ViajesFyA/Vistas/js/otrosT.js"></script>
   <script src="http://localhost/ViajesFyA/Vistas/js/secretarias.js"></script>
   <script src="http://localhost/ViajesFyA/Vistas/js/trabajadores.js"></script>
+  <script src="http://localhost/ViajesFyA/Vistas/js/sistemas.js"></script>
 
 
   <script>

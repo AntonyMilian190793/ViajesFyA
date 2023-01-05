@@ -36,14 +36,13 @@ require_once "ConexionBD.php";
                 //actualizar Padres
         static public function ActualizarSecretariaM($tablaBD, $datosC){
 
-            $pdo = ConexionBD::cBD()->prepare("UPDATE $tablaBD SET usuario = :usuario, clave = :clave, nombre = :nombre, documento = :documento, 
+            $pdo = ConexionBD::cBD()->prepare("UPDATE $tablaBD SET usuario = :usuario, clave = :clave, nombre = :nombre, 
             apellido = :apellido, sexo = :sexo WHERE id = :id");
 
             $pdo->bindParam(":id", $datosC["id"], PDO::PARAM_INT);
             $pdo->bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
             $pdo->bindParam(":clave", $datosC["clave"], PDO::PARAM_STR);
             $pdo->bindParam(":nombre", $datosC["nombre"], PDO::PARAM_STR);
-            $pdo->bindParam(":documento", $datosC["documento"], PDO::PARAM_STR);
             $pdo->bindParam(":apellido", $datosC["apellido"], PDO::PARAM_STR);
             $pdo->bindParam(":sexo", $datosC["sexo"], PDO::PARAM_STR);
 

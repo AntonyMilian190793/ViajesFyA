@@ -76,13 +76,13 @@ if ($_SESSION["rol"] != "Sistemas") {
                             <td>
                                 
                             <div class="btn-group">
-                                <button class="btn btn-success EditarOtrosT" Pid="'.$value["id"].'" data-toggle="modal" data-target="#EditarOtrosT"><i class="fa fa-pencil"> 
+                                <button class="btn btn-success EditarSistemas" Sid="'.$value["id"].'" data-toggle="modal" data-target="#EditarSistemas"><i class="fa fa-pencil"> 
                                 Editar</i></button>
 
                                 
                                 
 
-                                        <button class="btn btn-danger EliminarOtroT" Pid="'.$value["id"].'" imgOT="'.$value["foto"].'">
+                                        <button class="btn btn-danger EliminarSistemas" Sid="'.$value["id"].'" imgOT="'.$value["foto"].'">
                                         <i class="fa fa-times"> Borrar</i></button>
                                     </div>
                                 
@@ -185,27 +185,33 @@ if ($_SESSION["rol"] != "Sistemas") {
     </div>
 </div>
 
-<div class="modal fade" role="dialog" id="EditarOtrosT">
+<div class="modal fade" role="dialog" id="EditarSistemas">
     <div class="modal-dialog">
         <div class="modal-content">
             <form method="post" role="form">
                 <div class="modal-body">
                     <div class="box-body">
+
                         <div class="form-group">
                             <h2>Nombres:</h2>
                             <input type="text" class="form-control" id="nombreE" name="nombreE" required>
                         </div>
 
                         <div class="form-group">
-                            <h2>Área:</h2>
+                            <h2>Apellidos:</h2>
                             <input type="text" class="form-control" id="apellidoE" name="apellidoE" required>
-                            <input type="hidden" id="Pid" name="Pid">
+                            <input type="hidden" id="Sid" name="Sid">
                         </div>
 
                         <div class="form-group">
-                            <h2>Documento:</h2>
-                            <input type="text" class="form-control" id="documentoE" name="documentoE" required>
+                            <h2>Sexo:</h2>
+                            <select class="form-control input-lg" name="sexoE" required>
+                                <option id="sexoE"></option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                            </select>
                         </div>
+
 
 
                         <div class="form-group">
@@ -218,26 +224,27 @@ if ($_SESSION["rol"] != "Sistemas") {
                             <input type="text" class="form-control" id="claveE" name="claveE" required>
                         </div>
 
-                    </div>
+                    </div>                            
                 </div>
 
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-success">Guardar Cambios</button>
+                    <button type="submit" class="btn btn-success">Guarda Cambios</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 </div>
 
                 <?php
-                    $actualizar = new OtrosTC();
-                    $actualizar ->ActualizarOtrosTC();
+                    $actualizar = new SistemasC();
+                    $actualizar ->ActualizarSistemasC();
                 ?>
             </form>
         </div>
     </div>
 </div>
 
+
 <?php
 
-$borrarP = new OtrosTC();
-$borrarP -> BorrarOtrosTC();
+$borrarP = new SistemasC();
+$borrarP -> BorrarSistemasC();
 
 ?>

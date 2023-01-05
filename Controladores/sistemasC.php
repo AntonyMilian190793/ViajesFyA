@@ -58,6 +58,60 @@
         }
     }
 
+                //editar Padres
+        static public function SistemaC($columna, $valor){
+            $tablaBD = "sistemas";
+            $resultado = SistemasM::SistemaM($tablaBD, $columna, $valor);
+
+            return $resultado;
+        }
+
+            //actualizar Padres
+        public function ActualizarSistemasC(){
+
+            if(isset($_POST["Sid"])){
+
+                $tablaBD = "sistemas";
+                $datosC = array("id"=>$_POST["Sid"], "apellido"=>$_POST["apellidoE"], "nombre"=>$_POST["nombreE"], "sexo"=>$_POST["sexoE"],
+                "usuario"=>$_POST["usuarioE"], "clave"=>$_POST["claveE"]);
+
+                $resultado = SistemasM::ActualizarSistemasM($tablaBD, $datosC);
+
+                if($resultado == true){
+                    echo '<script>
+                        window.location = "sistemas";
+                    </script>';
+                }
+            }
+        }
+
+        //borrar secretarias
+    public function BorrarSistemasC(){
+
+        if($_GET["Sid"]){
+
+            $tablaBD = "sistemas";
+            $id = $_GET["Sid"];
+
+            if($_GET["imgS"] != ""){
+
+                unlink($_GET["imgS"]);
+            }
+
+            $resultado = SistemasM::BorrarSistemasM($tablaBD, $id);
+
+            
+            if($resultado == true){
+
+                echo '<script>
+
+                window.location = "sistemas";
+                
+                </script>';
+            }
+        }
+    }
+
             // ver sistemas
         static public function VerSistemasC($columna, $valor){
 
