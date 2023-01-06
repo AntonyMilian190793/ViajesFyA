@@ -32,6 +32,7 @@ if ($_SESSION["rol"] != "Sistemas") {
                             <th>N°</th>
                             <th>Nombres</th>
                             <th>Apellidos</th>
+                            <th>N° Documento</th>
                             <th>Foto</th>
                             <th>Área</th>
                             <th>Usuario</th>
@@ -52,7 +53,8 @@ if ($_SESSION["rol"] != "Sistemas") {
                             echo '<tr>
                             <td>'.($key+1).'</td>
                             <td>'.$value["nombre"].'</td>
-                            <td>'.$value["apellido"].'</td>';
+                            <td>'.$value["apellido"].'</td>
+                            <td>'.$value["documento"].'</td>';
 
                             if($value["foto"] == ""){
 

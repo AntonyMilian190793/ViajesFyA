@@ -43,8 +43,8 @@ if ($_SESSION["rol"] != "Sistemas") {
                         <tr>
                             <th>N°</th>
                             <th>Nombres y Apellidos</th>
-                            <th>Área</th>
                             <th>Documento</th>
+                            <th>Área</th>
                             <th>Foto</th>
                             <th>Usuario</th>
                             <th>Contraseña</th>
@@ -65,8 +65,8 @@ if ($_SESSION["rol"] != "Sistemas") {
                             echo '<tr>
                             <td>'.($key+1).'</td>
                             <td>'.$value["nombre"].'</td>
-                            <td>'.$value["apellido"].'</td>
-                            <td>'.$value["documento"].'</td>';
+                            <td>'.$value["documento"].'</td>
+                            <td>'.$value["apellido"].'</td>';
 
                             if($value["foto"] == ""){
                                 echo ' <td><img src="Vistas/img/defecto1.png" width="40px"></td>';
