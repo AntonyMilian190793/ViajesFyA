@@ -28,7 +28,7 @@
         
     <br>
   <footer style="position: absolute; footer: 15px; left: 550px;">
-    <p><a>© 2022 Jorge Antony Milian Montalvo. Todos los Derechos Reservados</a>.</p>
+    <p><a>© 2023 Jorge Antony Milian Montalvo. Todos los Derechos Reservados</a>.</p>
   </footer>
   
         <!-- /.box-footer-->

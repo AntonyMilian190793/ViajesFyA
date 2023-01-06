@@ -61,7 +61,7 @@ if ($_SESSION["rol"] != "otrosTrabajadores" ) {
             
             <br>
     <footer style="position: absolute; footer: 15px; left: 550px;">
-        <p><a>© 2022 Jorge Antony Milian Montalvo. Todos los Derechos Reservados</a>.</p>
+        <p><a>© 202 Jorge Antony Milian Montalvo. Todos los Derechos Reservados</a>.</p>
     </footer>
         </div>
     </section>
