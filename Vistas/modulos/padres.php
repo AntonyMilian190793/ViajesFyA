@@ -114,19 +114,19 @@ if ($_SESSION["rol"] != "Sistemas") {
 
                     <div class="form-group">
                             <h2>Nombres:</h2>
-                            <input type="text" class="form-control" name="nombre" required>
+                            <input type="text" class="form-control" name="nombre" required placeholder="Nombre">
                         </div>
 
                         
                         <div class="form-group">
                             <h2>Apellidos:</h2>
-                            <input type="text" class="form-control" name="apellido" required>
+                            <input type="text" class="form-control" name="apellido" required placeholder="Apellido">
                             <input type="hidden" name="rolP" value="Directivo">
                         </div>
 
                         <div class="form-group">
                             <h2>Sexo:</h2>
-                            <select class="form-control input-lg" name="sexo">
+                            <select class="form-control input-lg" name="sexo" required>
                                 <option>Seleccionar...</option>
                                 <option value="Masculino">Masculino</option>
                                 <option value="Femenino">Femenino</option>
@@ -135,7 +135,7 @@ if ($_SESSION["rol"] != "Sistemas") {
 
                         <div class="form-group">
                             <h2>Área:</h2>
-                            <select class="form-control input-lg" name="consulta">
+                            <select class="form-control input-lg" name="consulta" required>
                                 <option>Seleccionar...</option>
 
                                 <?php

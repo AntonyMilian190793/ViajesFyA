@@ -61,7 +61,7 @@
 
             echo '<div class="form-group">
                     <h2>Nombre:</h2>
-                    <input type="text" class="form-control input-lg" name="consultaE" value="'.$resultado['nombre'].'">
+                    <input type="text" class="form-control input-lg" name="consultaE" value="'.$resultado['nombre'].'" required>
                     <input type="hidden" class="form-control input-lg" name="Cid" value="'.$resultado['id'].'">
 
                     <br>
