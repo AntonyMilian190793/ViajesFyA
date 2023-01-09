@@ -217,7 +217,7 @@ session_start();
         header: {
           left: 'prev,next today',
           center: 'title',
-          right: 'agendaDay, agendaWeek, month, listWeek, listMonth',
+          right: 'agendaDay, agendaWeek, month, listMonth',
         },
         locale: 'es',
         
