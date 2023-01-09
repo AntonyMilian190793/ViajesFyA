@@ -352,8 +352,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                     <div class="box-body">
 
                         <div class="form-group">
-                          
-                            <input type="text" class="form-control input-lg" name="idC" id="idC" readonly>
+                            <input type="hidden" class="form-control input-lg" name="idC" id="idC" readonly>
                         </div>  
 
                         <div class="form-group">
@@ -379,12 +378,14 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
 
                         <div class="form-group">
                             <h2>Comentario:</h2>
-                            <input type="text" class="form-control input-lg" id="description" name="description" readonly>
+                            <input type="text" class="form-control input-lg" id="description" name="description">
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Editar</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Eliminar</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
                 </div>
             </form>
         </div>

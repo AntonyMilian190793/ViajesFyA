@@ -334,24 +334,24 @@ session_start();
       eventClick: function (info, jsEvent, view){
         $('#CalendarioModal').modal();
         console.log(info);
-        document.getElementById('idC').value = info.id;
-        document.getElementById('titleC').value = info.title;
-        document.getElementById('colegioC').value = info.colegioC;
-        document.getElementById('horaS').value = info.start._i;
-        document.getElementById('horaF').value = info.end._i;
-        document.getElementById('description').value = info.description;
+        // document.getElementById('idC').value = info.id;
+        // document.getElementById('titleC').value = info.title;
+        // document.getElementById('colegioC').value = info.colegioC;
+        // document.getElementById('horaS').value = info.start._i;
+        // document.getElementById('horaF').value = info.end._i;
+        // document.getElementById('description').value = info.description;
 
         // var dateString = (info.start);
         // moment(dateString).format('YYYY-MM-DD HH:mm');
         // alert(dateString.toDateString);
 
 
-        // $('#idC').val(info.id);
-        // $('#titleC').val(info.title);
-        // $('#colegioC').val(info.colegioC);
-        // $('#horaS').val(moment(info.start).format('DD-MM-YYYY / HH:mm'));
-        // $('#horaF').val(moment(info.end).format('DD-MM-YYYY / HH:mm'));
-        // $('#description').val(info.description);
+        $('#idC').val(info.id);
+        $('#titleC').val(info.title);
+        $('#colegioC').val(info.colegioC);
+        $('#horaS').val(info.start._i);
+        $('#horaF').val(info.end._i);
+        $('#description').val(info.description);
         
         // console.log(info.title);
         // console.log(info.start);
