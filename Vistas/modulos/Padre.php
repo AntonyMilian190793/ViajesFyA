@@ -165,13 +165,13 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                         
                         <div class="form-group">
                             <h2>Fecha Inicio:</h2>
-                            <input type="datetime-local" class="form-control input-lg" name="inicio" value="" required>
+                            <input type="date" class="form-control input-lg" name="inicio" value="" required>
                             <!-- <input type="text" class="form-control input-lg" name="fyhIC" id="fyhIC" readonly> -->
                         </div>
 
                         <div class="form-group">
                             <h2>Fecha Fin:</h2>
-                            <input type="datetime-local" class="form-control input-lg" name="fin"  value="" required>
+                            <input type="date" class="form-control input-lg" name="fin"  value="" required>
                             <!-- <input type="text" class="form-control input-lg" name="fyhFC" id="fyhFC" readonly> -->
                         </div>
 
@@ -353,7 +353,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
 
                         <div class="form-group">
                           
-                            <input type="hidden" class="form-control input-lg" name="idC" id="idC" readonly>
+                            <input type="text" class="form-control input-lg" name="idC" id="idC" readonly>
                         </div>  
 
                         <div class="form-group">
@@ -368,12 +368,12 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
 
                         <div class="form-group">
                             <h2>Fecha Inicio:</h2>
-                            <input type="text" class="form-control input-lg" id="horaS"  name="horaS" value="" readonly>
+                            <input type="date" class="form-control input-lg" id="horaS"  name="horaS" value="" >
                         </div>
 
                         <div class="form-group">
                             <h2>Fecha Fin:</h2>
-                            <input type="text" class="form-control input-lg" id="horaF"  name="horaF" value="" readonly>
+                            <input type="date" class="form-control input-lg" id="horaF"  name="horaF" value="" >
                         </div>
 
 
