@@ -62,8 +62,12 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                             <td>'.$value["fin"].'</td>
                             <td>'.$value["Hora_Fin"].'</td>
                             <td>'.$value["comentario"].'</td>
-                            <td>
-                            <div class="btn-group">
+                            <td>';
+
+                            if($_SESSION["rol"] == "Logistica"){
+
+                            
+                            echo '<div class="btn-group">
                                 <button class="btn btn-success"><i class="fa fa-pencil"> 
                                 Editar</i></button>
                                 
@@ -72,6 +76,20 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                                     </div>
                             </td>
                         </tr>';
+                        }else if($_SESSION["rol"] == "Sistemas"){
+                            echo '<div class="btn-group">
+                            <button class="btn btn-success"><i class="fa fa-pencil"> 
+                            Editar</i></button>
+                            
+                                    <button class="btn btn-danger EliminarVuelo" Pid="'.$value["id"].'">
+                                    <i class="fa fa-times"> Borrar</i></button>
+                                </div>
+                        </td>
+                    </tr>';
+
+                        }else{
+
+                            }
                         }
 
                         ?>
