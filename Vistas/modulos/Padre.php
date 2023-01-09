@@ -297,7 +297,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                         }
 
                                         if($consultorio["nombre"] == "Vacaciones"){
-                                            echo'<option style="color:#616161" value="#616161">&#9724; Grafito</option>';
+                                            echo'<option style="color:#117A65" value="#117A65">&#9724; Grafito</option>';
                                         }
 
                                         if($consultorio["nombre"] == "Sistemas"){
