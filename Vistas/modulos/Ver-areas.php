@@ -33,7 +33,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica" && $_SESS
                 foreach ($resultado as $key => $value) {
                     echo '
                     <div class="col-lg-6 col-xs-6">
-                        <div class="small-box bg-aqua">
+                        <div class="small-box bg-danger">
                         <div class="inner">
                             <h3>'.$value["nombre"].'</h3>';
 

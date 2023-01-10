@@ -12,7 +12,7 @@
             echo '
             <div class="box-body">
     
-            <div class="col-md-6 bg-primary" style="margin-Top: 5%">
+            <div class="col-md-6 bg-danger" style="margin-Top: 5%">
     
             <h1>Bienvenido</h1>
     
