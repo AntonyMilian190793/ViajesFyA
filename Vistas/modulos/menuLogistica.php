@@ -38,6 +38,13 @@
         </a>
       </li>
 
+      <li>
+        <a href="http://localhost/ViajesFyA/CalendarioG">
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+          <span>Calendario General</span>
+        </a>
+      </li>
+
             <!-- <li>
         <a href="busqueda.html">
           <i class="fa fa-address-book-o"></i>

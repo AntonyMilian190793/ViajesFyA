@@ -42,7 +42,7 @@
       <li>
         <a href="http://localhost/ViajesFyA/CalendarioG">
         <i class="fa fa-calendar" aria-hidden="true"></i>
-          <span>Calendario Global</span>
+          <span>Calendario General</span>
         </a>
       </li>
 

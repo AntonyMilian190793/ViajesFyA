@@ -10,6 +10,13 @@
         </a>
       </li>
 
+      <li>
+        <a href="http://localhost/ViajesFyA/CalendarioG">
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+          <span>Calendario General</span>
+        </a>
+      </li>
+
 
         <!-- <li>
         <?php
@@ -22,15 +29,15 @@
           <span>Viajes</span>
         </a>
       </li>  -->
-
+<!-- 
             <li>
         <a href="http://localhost/ViajesFyA/Ver-Area-OT">
         <i class="fa fa-university" aria-hidden="true"></i>
           <span>Ver su Área</span>
         </a>
-      </li>
+      </li> -->
 
-      <li>
+      <!-- <li>
         
         <?php
         
@@ -40,7 +47,7 @@
           <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
           <span>Historial</span>
         </a>
-      </li>
+      </li> -->
 
     </ul>
       
