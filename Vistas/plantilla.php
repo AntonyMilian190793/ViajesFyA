@@ -476,8 +476,8 @@ session_start();
         $('#idC').val(info.id);
         $('#titleC').val(info.title);
         $('#colegioC').val(info.colegioC);
-        $('#horaS').val(moment(info.start).format('DD-MM-YYYY / HH:mm'));
-        $('#horaF').val(moment(info.end).format('DD-MM-YYYY / HH:mm'));
+        $('#horaS').val(info.start._i);
+        $('#horaF').val(info.end._i);
         $('#description').val(info.description);
         
         // console.log(info.title);
