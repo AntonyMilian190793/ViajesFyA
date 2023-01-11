@@ -190,8 +190,7 @@
                         echo '
 
                         <h2>Área de trabajo actual: '.$consulta["nombre"].'</h2>
-                        <h3>Cambiar Área</h3>
-                        <select class="input-lg" name="consultaPerfil">';
+';
 
                         
                         $columna = null;
@@ -199,9 +198,9 @@
                         $consulta = ConsultasC::VerConsultasC($columna, $valor);
 
 
-                        foreach ($consulta as $key => $value){
-                            echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
-                        }
+                        // foreach ($consulta as $key => $value){
+                        //     echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
+                        // }
 
                         echo '</select>
 
@@ -266,8 +265,7 @@
                 "usuario" => $_POST['usuarioPerfil'],
                 "clave" => $_POST['clavePerfil'],
                 "documento" => $_POST['documentoPerfil'],
-                "foto" => $rutaImg,
-                "id_consulta" => $_POST['consultaPerfil']
+                "foto" => $rutaImg
             );
 
             $resultado = PadresM::ActualizarPerfilPadreM($tablaBD, $datosC);
