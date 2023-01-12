@@ -26,8 +26,9 @@
 
                 echo'<h1>Bienvenid@ '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</h1>';
             }
+
     
-            echo '<h3>'.$resultado["intro"].'</h3>
+            echo '<h3 align="justify">'.$resultado["intro"].'</h3>
 
     
             <hr>
