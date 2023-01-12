@@ -395,8 +395,13 @@ session_start();
         header: {
           left: 'prev,next today',
           center: 'title',
-          right: 'agendaDay, agendaWeek, month',
+          right: 'agendaDay, agendaWeek, month, listMonth',
         },
+
+        views: {
+        listWeek:{"buttonText": "Eventos Semanales"},
+        listMonth:{"buttonText": "Lista Mensual"},
+    },
         
         
 
