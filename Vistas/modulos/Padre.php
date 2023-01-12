@@ -249,59 +249,59 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
 
   
                                         if($consultorio["nombre"] == "Contabilidad"){
-                                            echo'<option style="color:#D50000" value="#D50000">&#x1F534; Tomate</option>';
+                                            echo'<option style="color:#00A5E3" value="#00A5E3">&#9724; Azul</option>';
                                         }
 
                                         if($consultorio["nombre"] == "Comunicación e Incidencia "){
-                                            echo'<option style="color:#00FFFF" value="#00FFFF">&#x1F534; Tomate</option>';
+                                            echo'<option style="color:#8DD7BF" value="#8DD7BF">&#9724; Tomate</option>';
                                         }
 
                                         if($consultorio["nombre"] == "Identidad y Misión"){
-                                            echo'<option style="color:#8FBC8F" value="#8FBC8F">&#x1F534; Tomate</option>';
+                                            echo'<option style="color:#FF5768" value="#FF5768">&#9724;Tomate</option>';
                                         }
                                         
                                         if($consultorio["nombre"] == "Directivos"){
-                                            echo'<option style="color:#E67C73" value="#E67C73">&#9724; Rosa chicle</option>';
+                                            echo'<option style="color:#FFBF65" value="#FFBF65">&#9724; Rosa chicle</option>';
                                         }
                                         
                                         if($consultorio["nombre"] == "EBA"){
-                                            echo'<option style="color:#F4511E" value="#F4511E">&#x1F7E0; Mandarina</option>';
+                                            echo'<option style="color:#FC6238" value="#FC6238">&#9724; Mandarina</option>';
                                         }
                                         
                                         if($consultorio["nombre"] == "EBR Urbano - EBR Rural"){
-                                            echo'<option style="color:#F6BF26" value="#F6BF26">&#x1F7E1; Amarillo huevo</option>';
+                                            echo'<option style="color:#6C88C4" value="#6C88C4">&#9724; Amarillo huevo</option>';
                                         }
                                         
                                         if($consultorio["nombre"] == "EPTT"){
-                                            echo'<option style="color:#33B679" value="#33B679">&#9724; Verde esmeralda</option>';
+                                            echo'<option style="color:#C05780" value="#C05780">&#9724; Verde esmeralda</option>';
                                         }
                                         
                                         if($consultorio["nombre"] == "FyA Digítal"){
-                                            echo'<option style="color:#0B8043" value="#0B8043">&#x1F7E2; Verde musgo</option>';
+                                            echo'<option style="color:#00B0BA" value="#00B0BA">&#9724; Verde musgo</option>';
                                         }
                                         
                                         if($consultorio["nombre"] == "Legal"){
-                                            echo'<option style="color:#039BE5" value="#039BE5">&#x1F535; Azul turquesa</option>';
+                                            echo'<option style="color:#53CFDA" value="#53CFDA">&#9724; Azul turquesa</option>';
                                         }
                                         
                                         if($consultorio["nombre"] == "Logística"){
-                                            echo'<option style="color:#3F51B5" value="#3F51B5">&#9724; Azul arándano</option>';
+                                            echo'<option style="color:#57838D" value="#57838D">&#9724; Azul arándano</option>';
                                         }
                                         
                                         if($consultorio["nombre"] == "Proyectos"){
-                                            echo'<option style="color:#7986CB" value="#7986CB">&#9724; Lavanda</option>';
+                                            echo'<option style="color:#53051D" value="#53051D">&#9724; Lavanda</option>';
                                         }
 
                                         if($consultorio["nombre"] == "Recaudo y Voluntariado"){
-                                            echo'<option style="color:#8E24AA" value="#8E24AA">&#x1F7E3; Morado intenso</option>';
+                                            echo'<option style="color:#EEAC4D" value="#EEAC4D">&#9724;; Morado intenso</option>';
                                         }
 
                                         if($consultorio["nombre"] == "Vacaciones"){
-                                            echo'<option style="color:#117A65" value="#117A65">&#9724; Grafito</option>';
+                                            echo'<option style="color:#64864A" value="#64864A">&#9724; Grafito</option>';
                                         }
 
                                         if($consultorio["nombre"] == "Sistemas"){
-                                            echo'<option style="color:#004063" value="#004063">&#9724; Azul oscuro</option>';
+                                            echo'<option style="color:#1F3D51" value="#1F3D51">&#9724; Azul oscuro</option>';
                                         }
 
 
