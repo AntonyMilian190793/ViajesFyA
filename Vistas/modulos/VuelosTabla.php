@@ -32,11 +32,8 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                         <tr>
                             <th>N°</th>
                             <th>Datos del Trabajador</th>
-
-                            <th>Colegio</th>
+                            <th>Descripción</th>
                             <th>Fecha Inicio</th>
-                            <th>Hora Inicio</th>
-                            <th>Fecha Fin</th>
                             <th>Fecha Fin</th>
                             <th>Comentario</th>
                             <th>Editar / Borrar</th>
@@ -58,9 +55,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                             <td>'.$value["nyaP"].'</td>
                             <td>'.$value["colegio"].'</td>
                             <td>'.$value["inicio"].'</td>
-                            <td>'.$value["Hora_Inicio"].'</td>
                             <td>'.$value["fin"].'</td>
-                            <td>'.$value["Hora_Fin"].'</td>
                             <td>'.$value["comentario"].'</td>
                             <td>';
 
