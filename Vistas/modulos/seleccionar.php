@@ -88,6 +88,6 @@
       </div>
       <!-- /.row -->
       <!-- Main row -->
-<center><img src="img/feyalegria.png" width="1000" height="600">
+                    <center><img src="img/feyalegria.png" width="1000" height="600"></center>
     </section>
 

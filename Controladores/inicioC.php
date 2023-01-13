@@ -12,11 +12,23 @@
             echo '
             <div class="box-body">
     
-            <div class="col-md-6 bg-danger" style="margin-Top: 5%">
+            <div class="col-md-6 bg-danger" style="margin-Top: 5%">';
+
+
+            if($_SESSION["rol"] == "otrosTrabajadores"){
+
+            echo'<h1>Bienvenid@ '.$_SESSION["nombre"].'</h1>';
+
+            }else if($_SESSION["rol"] == "Logistica"){
+
+                echo'<h1>Bienvenid@ '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</h1>';
+            }else if($_SESSION["rol"] == "Directivo"){
+
+                echo'<h1>Bienvenid@ '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</h1>';
+            }
+
     
-            <h1>Bienvenido</h1>
-    
-            <h3>'.$resultado["intro"].'</h3>
+            echo '<h3 align="justify">'.$resultado["intro"].'</h3>
 
     
             <hr>

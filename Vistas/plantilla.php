@@ -395,13 +395,18 @@ session_start();
         header: {
           left: 'prev,next today',
           center: 'title',
-          right: 'agendaDay, agendaWeek, month',
+          right: 'agendaDay, agendaWeek, month, listMonth',
         },
+
+        views: {
+        listWeek:{"buttonText": "Eventos Semanales"},
+        listMonth:{"buttonText": "Lista Mensual"},
+    },
         
         
 
         height: 800,
-        contentHeight: 780,
+        contentHeight: 1000,
         aspectRatio: 3,
         nowIndicator: true,
 
@@ -409,13 +414,15 @@ session_start();
       navLinks: true,
 
       // para que me salga el + en el calendario
-        eventLimit: true, // for all non-agenda views
-          views: {
-          agenda: {
-          eventLimit: 6,
-           // adjust to 6 only for agendaWeek/agendaDay
-      }
-    },
+    //     eventLimit: true, // for all non-agenda views
+    //       views: {
+    //       agenda: {
+    //       eventLimit: 6,
+    //        // adjust to 6 only for agendaWeek/agendaDay
+    //   }
+    // },
+
+    
         
 
 
@@ -443,21 +450,21 @@ session_start();
           ?>
           ],
 
-  eventRender: function(eventObj, $el) {
-    $el.popover({
-      placement : 'top',
-      html : true,
-      trigger : 'hover',
-      title: eventObj.title + ' <a href="#" class="close" data-dismiss="alert">×</a>',
-      content: eventObj.colegioC + 
-      '<br> ' + eventObj.description + '</br>' + 
-      '<p>' + eventObj.start.format('h:mm a ddd MMM Do YYYY') +
-      '<p>' + eventObj.end.format('h:mm a ddd MMM Do YYYY'),
-      trigger: 'hover',
-      placement: 'top',
-      container: 'body'
-    });
-  },
+    eventRender: function(eventObj, $el) {
+      $el.popover({
+        placement : 'top',
+        html : true,
+        trigger : 'hover',
+        title: eventObj.title + ' <a href="#" class="close" data-dismiss="alert">×</a>',
+        content: eventObj.colegioC + 
+        '<br> ' + eventObj.description + '</br>' + 
+        '<p>' + eventObj.start.format('h:mm a ddd MMM Do YYYY') +
+        '<p>' + eventObj.end.format('h:mm a ddd MMM Do YYYY'),
+        trigger: 'hover',
+        placement: 'top',
+        container: 'body'
+      });
+    },
 
 
       defaultView : "month",
@@ -476,8 +483,8 @@ session_start();
         $('#idC').val(info.id);
         $('#titleC').val(info.title);
         $('#colegioC').val(info.colegioC);
-        $('#horaS').val(info.start._i);
-        $('#horaF').val(info.end._i);
+        $('#horaS').val(moment(info.start._i).format('DD-MM-YYYY'));
+        $('#horaF').val(moment(info.end._i).format('DD-MM-YYYY'));
         $('#description').val(info.description);
         
         // console.log(info.title);
