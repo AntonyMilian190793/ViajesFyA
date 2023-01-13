@@ -17,7 +17,7 @@
 
             if($_SESSION["rol"] == "otrosTrabajadores"){
 
-                echo'<h1><strong>Bienvenid@ '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</strong></h1>';
+                echo'<h1><strong>Bienvenid@ '.$_SESSION["nombre"].'</strong></h1>';
 
             }else if($_SESSION["rol"] == "Logistica"){
 
