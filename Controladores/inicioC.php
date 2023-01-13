@@ -17,15 +17,21 @@
 
             if($_SESSION["rol"] == "otrosTrabajadores"){
 
-            echo'<h1>Bienvenid@ '.$_SESSION["nombre"].'</h1>';
+                echo'<h1><strong>Bienvenid@ '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</strong></h1>';
 
             }else if($_SESSION["rol"] == "Logistica"){
 
-                echo'<h1>Bienvenid@ '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</h1>';
+                echo'<h1><strong>Bienvenid@ '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</strong></h1>';
+
             }else if($_SESSION["rol"] == "Directivo"){
 
-                echo'<h1>Bienvenid@ '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</h1>';
+                echo'<h1><strong>Bienvenid@ '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</strong></h1>';
+
+            }else if($_SESSION["rol"] == "Sistemas"){
+
+                echo'<h1><strong>Bienvenid@ '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</strong></h1>';
             }
+
 
     
             echo '<h3 align="justify">'.$resultado["intro"].'</h3>
