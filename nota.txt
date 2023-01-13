@@ -16,5 +16,9 @@ poner para qur funciones los datatables
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
 
+en el .htaccess 
+Options -Indexes
+cambiar por esa linea de codigo
+
 
 y si se camvbia la base de datos cambiar otrostrabajadores por otrosTrabajadores
