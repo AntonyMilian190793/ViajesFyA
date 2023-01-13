@@ -252,7 +252,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                             echo'<option style="color:#CD5C5C" value="#CD5C5C">&#9724; IndianRed</option>';
                                         }
 
-                                        if($consultorio["nombre"] == "Comunicación e Incidencia"){
+                                        if($consultorio["nombre"] == "Comunicación e Incidencia "){
                                             echo'<option style="color:#FF6347" value="#FF6347">&#9724; Tomato</option>';
                                         }
 
