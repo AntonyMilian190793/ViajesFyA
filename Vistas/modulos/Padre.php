@@ -210,7 +210,9 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                             echo '<div class="form-group">
                             <h2>Seleccionar:</h2>
                             <select class="form-control input-lg" id="controlBuscadora" name="nombreCo" style="width: 100%">
+                                <option>Seleccionar...</option>
                                 <option>Vacaciones</option>
+                                <option>Otros</option>
 
                         </div>';
                         
@@ -218,7 +220,9 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                         echo '<div class="form-group">
                             <h2>Seleccionar:</h2>
                             <select class="form-control input-lg" id="controlBuscadora" name="nombreCo" style="width: 100%">
+                                <option>Seleccionar...</option>
                                 <option>Vacaciones</option>
+                                <option>Otros</option>
                         </div>';
                     }
 
