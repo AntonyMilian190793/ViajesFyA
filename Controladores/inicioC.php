@@ -44,9 +44,16 @@
     
             <hr>
     
-            <h2>Contacto:</h2>
+            <h2>Contacto 1:</h2>
             <h3>Teléfono: '.$resultado["telefono"].' <br>
             Correo: '.$resultado["correo"].'
+            </h3>
+
+            <hr>
+
+            <h2>Contacto 2:</h2>
+            <h3>Teléfono: '.$resultado["telefono1"].' <br>
+            Correo: '.$resultado["correo1"].'
             </h3>
             
             
@@ -91,6 +98,12 @@
 
                 <h2>Correo:</h2>
                 <input type="text" class="input-lg" name="correo" value="'.$resultado["correo"].'">
+
+                <h2>Teléfono 1:</h2>
+                <input type="text" class="input-lg" name="telefono1" value="'.$resultado["telefono1"].'">
+
+                <h2>Correo 1:</h2>
+                <input type="text" class="input-lg" name="correo1" value="'.$resultado["correo1"].'">
             </div>
 
             <div class="col-md-6 col-xs-12">
@@ -195,7 +208,9 @@
 
 			$tablaBD = "inicio";
 
-			$datosC = array("id"=>$_POST["Iid"], "intro"=>$_POST["intro"], "horaE"=>$_POST["horaE"], "horaS"=>$_POST["horaS"], "telefono"=>$_POST["telefono"], "correo"=>$_POST["correo"], "direccion"=>$_POST["direccion"], "logo"=>$rutaLogo, "favicon"=>$rutaFavicon);
+			$datosC = array("id"=>$_POST["Iid"], "intro"=>$_POST["intro"], "horaE"=>$_POST["horaE"], "horaS"=>$_POST["horaS"], 
+            "telefono"=>$_POST["telefono"], "correo"=>$_POST["correo"],  "telefono1"=>$_POST["telefono1"], "correo1"=>$_POST["correo1"], 
+            "direccion"=>$_POST["direccion"], "logo"=>$rutaLogo, "favicon"=>$rutaFavicon);
 
 			$resultado = InicioM::ActualizarInicioM($tablaBD, $datosC);
 
