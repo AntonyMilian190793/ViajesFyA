@@ -45,14 +45,17 @@
             <hr>
     
             <h2>Contacto 1:</h2>
-            <h3>Teléfono: '.$resultado["telefono"].' <br>
+
+            <h3>Nombres: '.$resultado["nombre"].' <br>
+            Teléfono: '.$resultado["telefono"].' <br>
             Correo: '.$resultado["correo"].'
             </h3>
 
             <hr>
 
             <h2>Contacto 2:</h2>
-            <h3>Teléfono: '.$resultado["telefono1"].' <br>
+            <h3>Nombres: '.$resultado["nombre1"].' <br>
+            Teléfono: '.$resultado["telefono1"].' <br>
             Correo: '.$resultado["correo1"].'
             </h3>
             
@@ -82,22 +85,27 @@
                 <input type="text" class="input-lg" name="intro" value="'.$resultado["intro"].'">
                 <input type="hidden" class="input-lg" name="Iid" value="'.$resultado["id"].'">
 
-                <div class="form-group">
 
-                    <h2>Horario:</h2>
-                    Desde: <input type="time" class="input-lg" name="horaE" value="'.$resultado["horaE"].'">
-                    Hasta: <input type="time" class="input-lg" name="horaS" value="'.$resultado["horaS"].'">
-
-                </div>
 
                 <h2>Dirección:</h2>
                 <input type="text" class="input-lg" name="direccion" value="'.$resultado["direccion"].'">
+
+                <h1><strong>Trabajador 1</strong></h1>
+
+                <h2>Nombres:</h2>
+                <input type="text" class="input-lg" name="nombre" value="'.$resultado["nombre"].'">
 
                 <h2>Teléfono:</h2>
                 <input type="text" class="input-lg" name="telefono" value="'.$resultado["telefono"].'">
 
                 <h2>Correo:</h2>
                 <input type="text" class="input-lg" name="correo" value="'.$resultado["correo"].'">
+
+                <h1><strong>Trabajador 2</strong></h1>
+
+                <h2>Nombres:</h2>
+                <input type="text" class="input-lg" name="nombre1" value="'.$resultado["nombre1"].'">
+
 
                 <h2>Teléfono 1:</h2>
                 <input type="text" class="input-lg" name="telefono1" value="'.$resultado["telefono1"].'">
@@ -208,8 +216,8 @@
 
 			$tablaBD = "inicio";
 
-			$datosC = array("id"=>$_POST["Iid"], "intro"=>$_POST["intro"], "horaE"=>$_POST["horaE"], "horaS"=>$_POST["horaS"], 
-            "telefono"=>$_POST["telefono"], "correo"=>$_POST["correo"],  "telefono1"=>$_POST["telefono1"], "correo1"=>$_POST["correo1"], 
+			$datosC = array("id"=>$_POST["Iid"], "intro"=>$_POST["intro"],
+            "telefono"=>$_POST["telefono"], "correo"=>$_POST["correo"], "nombre"=>$_POST["nombre"], "nombre1"=>$_POST["nombre1"],  "telefono1"=>$_POST["telefono1"], "correo1"=>$_POST["correo1"], 
             "direccion"=>$_POST["direccion"], "logo"=>$rutaLogo, "favicon"=>$rutaFavicon);
 
 			$resultado = InicioM::ActualizarInicioM($tablaBD, $datosC);
