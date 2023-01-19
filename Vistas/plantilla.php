@@ -38,7 +38,7 @@ session_start();
   <!-- Data Tables -->
   <!-- <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/css/responsive.bootstrap.min.css">
   <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"> -->
-   <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/bower_components/DataTables/dataTables.min.css">
+   <!-- <link rel="stylesheet" href="http://localhost/ViajesFyA/Vistas/bower_components/DataTables/dataTables.min.css"> -->
 
 
     <!-- fullCalendar -->
@@ -180,13 +180,29 @@ session_start();
 
 
 
-  <script type="text/javascript" src="http://localhost/ViajesFyA/Vistas/bower_components/DataTables/dataTables.min.js"></script> 
+  <!-- <script type="text/javascript" src="http://localhost/ViajesFyA/Vistas/bower_components/DataTables/dataTables.min.js"></script>  -->
       <!-- para usar botones en datatables JS -->  
-    <script src="http://localhost/ViajesFyA/Vistas/bower_components/DataTables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>  
+    <!-- <script src="http://localhost/ViajesFyA/Vistas/bower_components/DataTables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>  
     <script src="http://localhost/ViajesFyA/Vistas/bower_components/DataTables/JSZip-2.5.0/jszip.min.js"></script>    
     <script src="http://localhost/ViajesFyA/Vistas/bower_components/DataTables/pdfmake.min.js"></script>    
     <script src="http://localhost/ViajesFyA/Vistas/bower_components/DataTables/pdfmake-0.1.36/vfs_fonts.js"></script>
-    <script src="http://localhost/ViajesFyA/Vistas/bower_components/DataTables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
+    <script src="http://localhost/ViajesFyA/Vistas/bower_components/DataTables/Buttons-1.5.6/js/buttons.html5.min.js"></script> -->
+
+        <!--Data Table-->
+    <script type="text/javascript"  src=" https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript"  src=" https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+
+    <!--Export table buttons-->
+    <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/pdfmake.min.js" ></script>
+    <script type="text/javascript"  src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.print.min.js"></script>
+
+<!--Export table button CSS-->
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
 
 <!-- fullCalendar -->
 <script src="http://localhost/ViajesFyA/Vistas/bower_components/moment/moment.js"></script>
