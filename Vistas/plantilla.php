@@ -255,8 +255,7 @@ session_start();
       navLinks: true,
         
       views: {
-        listWeek:{"buttonText": "Eventos Semanales"},
-        listMonth:{"buttonText": "Eventos Anuales"},
+        listMonth:{"buttonText": "Eventos Mensuales"},
     },
     
 
@@ -413,32 +412,29 @@ session_start();
           center: 'title',
           right: 'agendaDay, agendaWeek, month, listMonth',
         },
-
-        views: {
-        listWeek:{"buttonText": "Eventos Semanales"},
-        listMonth:{"buttonText": "Lista Mensual"},
+        locale: 'es',
+        
+              //para que me salga el + en el calendario
+        eventLimit: true, // for all non-agenda views
+          views: {
+          agenda: {
+          eventLimit: 6,
+           // adjust to 6 only for agendaWeek/agendaDay
+      }
     },
-        
-        
 
         height: 800,
-        contentHeight: 1000,
+        contentHeight: 780,
         aspectRatio: 3,
         nowIndicator: true,
 
-              dayMaxEvents: false,
+      dayMaxEvents: false,
       navLinks: true,
-
-      // para que me salga el + en el calendario
-      eventLimit: true, // for all non-agenda views
-  views: {
-    agenda: {
-      eventLimit: 6 // adjust to 6 only for agendaWeek/agendaDay
-    }
-  },
-
-    
         
+      views: {
+        listMonth:{"buttonText": "Eventos Mensuales"},
+    },
+    
 
 
         events: [
@@ -449,7 +445,7 @@ session_start();
 
             foreach ($resultado as $key => $value){
 
-               echo '{
+              echo '{
                 
                 id: "'.$value["id"].'",
                 title: "'.$value["nyaP"].'",

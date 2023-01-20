@@ -165,13 +165,13 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                         
                         <div class="form-group">
                             <h2>Fecha Inicio:</h2>
-                            <input type="date" class="form-control input-lg" name="inicio" value="" required>
+                            <input type="datetime-local" class="form-control input-lg" name="inicio" value="" required>
                             <!-- <input type="text" class="form-control input-lg" name="fyhIC" id="fyhIC" readonly> -->
                         </div>
 
                         <div class="form-group">
                             <h2>Fecha Fin:</h2>
-                            <input type="date" class="form-control input-lg" name="fin"  value="" required>
+                            <input type="datetime-local" class="form-control input-lg" name="fin"  value="" required>
                             <!-- <input type="text" class="form-control input-lg" name="fyhFC" id="fyhFC" readonly> -->
                         </div>
 
@@ -205,7 +205,29 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                             echo '<option value="'.$value["nombre"].' '.$value["apellido"].'">'.$value["nombre"].' '.$value["apellido"].'</option>';
                         }
 
-                    }else if($_SESSION["nombre"] == "Nataly Grecia"){
+                    }if($_SESSION["nombre"] == "Jorge Antony"){
+                         echo '<div class="form-group">
+
+                            <h2>Seleccionar Colegio:</h2>
+                            <select class="form-control input-lg" id="controlBuscadora" name="nombreCo" style="width: 100%">
+                                <option>Colegio...</option>
+
+                                
+                        </div>';
+
+                        $columna = null;
+                        $valor = null;
+                        $resultado	= ColegiosC::VerColegiosC($columna, $valor);
+
+                        
+
+                        foreach ($resultado as $key => $value) {
+
+                            echo '<option value="'.$value["nombre"].' '.$value["apellido"].'">'.$value["nombre"].' '.$value["apellido"].'</option>';
+                        }
+
+                    }
+                    else if($_SESSION["nombre"] == "Nataly Grecia"){
 
                             echo '<div class="form-group">
                             <h2>Seleccionar:</h2>
@@ -280,7 +302,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                             echo'<option style="color:#C05780" value="#C05780">&#9724; Rosa</option>';
                                         }
                                         
-                                        if($consultorio["nombre"] == "FyA Digítal"){
+                                        if($consultorio["nombre"] == "FyA Digital"){
                                             echo'<option style="color:#00B0BA" value="#00B0BA">&#9724; Turquesa</option>';
                                         }
                                         
@@ -371,12 +393,12 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
 
                         <div class="form-group">
                             <h2>Fecha Inicio:</h2>
-                            <input type="date" class="form-control input-lg" id="horaS"  name="horaS" value="" >
+                            <input type="datetime-local" class="form-control input-lg" id="horaS"  name="horaS" value="" >
                         </div>
 
                         <div class="form-group">
                             <h2>Fecha Fin:</h2>
-                            <input type="date" class="form-control input-lg" id="horaF"  name="horaF" value="" >
+                            <input type="datetime-local" class="form-control input-lg" id="horaF"  name="horaF" value="" >
                         </div>
 
 
