@@ -24,3 +24,5 @@ mejor escriir de nuevo el htaccess
 
 
 y si se camvbia la base de datos cambiar otrostrabajadores por otrosTrabajadores
+
+cambiar en la base de datos el DATE por DATETIME
