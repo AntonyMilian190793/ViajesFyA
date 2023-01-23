@@ -106,18 +106,21 @@ $resultado=$query->fetchAll(PDO::FETCH_ASSOC);
         <div class="box-body">
             <div>
                 <legend>Leyenda de áreas</legend>
-                <div style="display: inline-block; margin-top: 50px;">Contabilidad<span><input type="color" value="#D50000"></span> </div>
-                <div style="display: inline-block; margin-top: 50px; ">Directivos<span><input type="color" value="#E67C73"></span> </div>
-                <div style="display: inline-block; margin-top: 50px; ">EBA<span><input type="color" value="#F4511E"></span> </div>
-                <div style="display: inline-block; margin-top: 50px; ">EBR Urbano - EBR Rural<span><input type="color" value="#F6BF26"></span> </div>
-                <div style="display: inline-block; margin-top: 50px; ">EPTT<span><input type="color" value="#33B679"></span> </div>
-                <div style="display: inline-block; margin-top: 50px; ">FyA Digítal<span><input type="color" value="#0B8043"></span> </div>
-                <div style="display: inline-block; margin-top: 50px; ">Legal<span><input type="color" value="#039BE5"></span> </div>
-                <div style="display: inline-block; margin-top: 50px; ">Logística<span><input type="color" value="#3F51B5"></span> </div>
-                <div style="display: inline-block; margin-top: 50px; ">Proyectos<span><input type="color" value="#7986CB"></span> </div>
-                <div style="display: inline-block; margin-top: 50px; ">Recaudo y Voluntariado<span><input type="color" value="#8E24AA"></span> </div>
-                <div style="display: inline-block; margin-top: 50px; ">Recursos Humanos<span><input type="color" value="#616161"></span> </div>
-                <div style="display: inline-block; margin-top: 50px; ">Sistemas<span><input type="color" value="#004063"></span> </div>
+                <div style="display: inline-block; margin-top: 50px;">Contabilidad<span><input type="color" value="#CD5C5C"></span> </div>
+                <div style="display: inline-block; margin-top: 50px;">Comunmicación e Incidencia<span><input type="color" value="#FF6347"></span> </div>
+                <div style="display: inline-block; margin-top: 50px;">Identidad y Misión<span><input type="color" value="#9ACD32"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">Directivos<span><input type="color" value="#FFBF65"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">EBA<span><input type="color" value="#87CEEB"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">EBR Urbano<span><input type="color" value="#6C88C4"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">EBR Rural<span><input type="color" value="#c3dff9"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">EPTT<span><input type="color" value="#C05780"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">FyA Digital<span><input type="color" value="#00B0BA"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">Legal<span><input type="color" value="#B196C1"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">Logística<span><input type="color" value="#57838D"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">Proyectos<span><input type="color" value="#BDB76B"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">Recaudo y Voluntariado<span><input type="color" value="#6A5ACD"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">Recursos Humanos<span><input type="color" value="#6B8E23"></span> </div>
+                <div style="display: inline-block; margin-top: 50px; ">Sistemas<span><input type="color" value="#4682B4"></span> </div>
 
             </div>
         </div>

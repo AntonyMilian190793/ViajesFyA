@@ -291,11 +291,15 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                         }
                                         
                                         if($consultorio["nombre"] == "EBA"){
-                                            echo'<option style="color:#008080" value="#008080">&#9724; Teal</option>';
+                                            echo'<option style="color:#87CEEB" value="#87CEEB">&#9724; Sky-Blue</option>';
                                         }
                                         
-                                        if($consultorio["nombre"] == "EBR Urbano - EBR Rural"){
+                                        if($consultorio["nombre"] == "EBR Urbano"){
                                             echo'<option style="color:#6C88C4" value="#6C88C4">&#9724; Azul-Turquesa</option>';
+                                        }
+
+                                        if($consultorio["nombre"] == "EBR Rural"){
+                                            echo'<option style="color:#c3dff9" value="#c3dff9">&#9724; Azul-Turquesa</option>';
                                         }
                                         
                                         if($consultorio["nombre"] == "EPTT"){
@@ -322,7 +326,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                             echo'<option style="color:#6A5ACD" value="#6A5ACD">&#9724; SlateBlue</option>';
                                         }
 
-                                        if($consultorio["nombre"] == "Vacaciones"){
+                                        if($consultorio["nombre"] == "Recursos Humanos"){
                                             echo'<option style="color:#6B8E23" value="#6B8E23">&#9724; OliveDrab</option>';
                                         }
 
@@ -387,7 +391,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                         </div>  
                         
                         <div class="form-group">
-                            <h2>Colegio:</h2>
+                            <h2>Colegio y/o Descripción:</h2>
                             <input type="text" class="form-control input-lg" id="colegioC" name="colegioC" value="" readonly>
                         </div> 
 
