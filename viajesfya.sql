@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-01-2023 a las 23:04:16
+-- Tiempo de generación: 23-01-2023 a las 17:41:20
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 7.4.33
 
@@ -155,20 +155,21 @@ CREATE TABLE `consultas` (
 --
 
 INSERT INTO `consultas` (`id`, `nombre`) VALUES
-(1, 'Directivos'),
+(1, 'Dirección General'),
 (2, 'EPTT'),
 (5, 'Logística'),
-(7, 'EBR Urbano - EBR Rural'),
+(7, 'EBR Urbano'),
 (8, 'EBA'),
 (9, 'Contabilidad'),
-(11, 'Vacaciones'),
+(11, 'Recursos Humanos'),
 (12, 'Legal'),
 (13, 'Recaudo y Voluntariado'),
 (18, 'Proyectos'),
 (19, 'FyA Digital'),
 (25, 'Identidad y Misión'),
 (26, 'Comunicación e Incidencia'),
-(28, 'Sistemas');
+(28, 'Sistemas'),
+(31, 'EBR Rural');
 
 -- --------------------------------------------------------
 
@@ -209,7 +210,8 @@ INSERT INTO `directivos` (`id`, `id_consulta`, `apellido`, `nombre`, `documento`
 (47, 25, 'Quirós Piñeyro', 'Luis Javier', '29707416', '', 'jquiros', '29707416', 'Masculino', '00:00:00', '00:00:00', 'Directivo'),
 (48, 26, 'Culqui Julca', 'Juana Hisela', '09556035', '', 'hculqui', '09556035', 'Femenino', '00:00:00', '00:00:00', 'Directivo'),
 (49, 28, 'Verano', 'Jhony', '20051781', '', 'jverano', '123', 'Masculino', '00:00:00', '00:00:00', 'Directivo'),
-(54, 11, 'Vargas', 'Julia', '08668154', '', 'jvargas', '123', 'Femenino', '00:00:00', '00:00:00', 'Directivo');
+(54, 11, 'Vargas', 'Julia', '08668154', '', 'jvargas', '123', 'Femenino', '00:00:00', '00:00:00', 'Directivo'),
+(55, 31, 'Marino', 'Irma', '06757955', '', 'imarino', '123', 'Femenino', '00:00:00', '00:00:00', 'Directivo');
 
 -- --------------------------------------------------------
 
@@ -222,6 +224,8 @@ CREATE TABLE `inicio` (
   `intro` text NOT NULL,
   `horaE` time NOT NULL,
   `horaS` time NOT NULL,
+  `nombre` text NOT NULL,
+  `nombre1` text NOT NULL,
   `telefono` text NOT NULL,
   `telefono1` text NOT NULL,
   `correo` text NOT NULL,
@@ -235,8 +239,8 @@ CREATE TABLE `inicio` (
 -- Volcado de datos para la tabla `inicio`
 --
 
-INSERT INTO `inicio` (`id`, `intro`, `horaE`, `horaS`, `telefono`, `telefono1`, `correo`, `correo1`, `direccion`, `logo`, `favicon`) VALUES
-(1, 'Bienvenid@s miembros de la comunidad de Fe y alegría, la presente plataforma nos permitira organizar nuestras labores de mejor manera teniendo en cuenta las actividades laborales fuera de la oficina como viajes o vacaciones  de nuestros  compañeros. Comencemos!!!', '00:00:00', '00:00:00', '993753004', '996364272', 'jmilian@feyalegria.org.pe', 'jverano@feyalegria.org.pe', 'Jirón Cahuide 884 - Jesús María', 'Vistas/img/logo.jpeg', 'Vistas/img/favicon.png');
+INSERT INTO `inicio` (`id`, `intro`, `horaE`, `horaS`, `nombre`, `nombre1`, `telefono`, `telefono1`, `correo`, `correo1`, `direccion`, `logo`, `favicon`) VALUES
+(1, 'Bienvenid@s miembros de la comunidad de Fe y alegría, la presente plataforma nos permitira organizar nuestras labores de mejor manera teniendo en cuenta las actividades laborales fuera de la oficina como viajes o vacaciones  de nuestros  compañeros. Comencemos!!!', '00:00:00', '00:00:00', 'Jorge Antony Milian Montalvo', 'Jhony Verano Bonifacio', '993753004', '996364272', 'jmilian@feyalegria.org.pe', 'jverano@feyalegria.org.pe', 'Jirón Cahuide 884 - Jesús María', 'Vistas/img/logo.jpeg', 'Vistas/img/favicon.png');
 
 -- --------------------------------------------------------
 
@@ -564,8 +568,8 @@ CREATE TABLE `vueloslogistica` (
   `documento` text NOT NULL,
   `colegio` text NOT NULL,
   `comentario` text NOT NULL,
-  `inicio` date NOT NULL,
-  `fin` date NOT NULL,
+  `inicio` datetime NOT NULL,
+  `fin` datetime NOT NULL,
   `color` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -574,65 +578,67 @@ CREATE TABLE `vueloslogistica` (
 --
 
 INSERT INTO `vueloslogistica` (`id`, `id_padre`, `id_consulta`, `id_logistica`, `nyaP`, `documento`, `colegio`, `comentario`, `inicio`, `fin`, `color`) VALUES
-(246, 54, 11, 0, 'Ernesto Marco Julio Cavassa Canessa - Directivos - 07806170', 'Ernesto Marco Julio Cavassa Canessa - Directivos - 07806170', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-09', '#6B8E23'),
-(247, 54, 11, 0, 'VÃ­ctor Alberto Quijaite Agurto - Directivos - 07503892', 'VÃ­ctor Alberto Quijaite Agurto - Directivos - 07503892', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-09', '#6B8E23'),
-(249, 54, 11, 0, 'Nancy Georgina Caminada Bravo - Proyectos - 23850784', 'Nancy Georgina Caminada Bravo - Proyectos - 23850784', 'Vacaciones', 'Vacaciones según correo del 5 de enero por jefa de Área  ', '2023-01-04', '2023-01-11', '#6B8E23'),
-(250, 54, 11, 0, 'Nancy Georgina Caminada Bravo - Proyectos - 23850784', 'Nancy Georgina Caminada Bravo - Proyectos - 23850784', 'Vacaciones', 'Vacaciones según correo del 5 de enero por jefa de Área  ', '2023-01-13', '2023-01-15', '#6B8E23'),
-(251, 54, 11, 0, 'Luis Javier QuirÃ³s PiÃ±eyro - Identidad Y Mision  - 29707416', 'Luis Javier QuirÃ³s PiÃ±eyro - Identidad Y Mision  - 29707416', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-09', '#6B8E23'),
-(252, 54, 11, 0, 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Vacaciones', 'Vacaciones programadas', '2023-01-02', '2023-01-08', '#6B8E23'),
-(253, 54, 11, 0, 'Juana Hisela Culqui Julca - ComunicaciÃ³n E Incidencia  - 09556035', 'Juana Hisela Culqui Julca - ComunicaciÃ³n E Incidencia  - 09556035', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-09', '#6B8E23'),
-(254, 54, 11, 0, 'Julia Maria E. Vargas Barbieri - Recursos Humanos  - 08668154', 'Julia Maria E. Vargas Barbieri - Recursos Humanos  - 08668154', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-15', '#6B8E23'),
-(257, 54, 11, 0, 'Anaiz Angela  Alania Malqui - Logistica - 71381607', 'Anaiz Angela  Alania Malqui - Logistica - 71381607', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-15', '#6B8E23'),
-(258, 54, 11, 0, 'Anaiz Angela  Alania Malqui - Logistica - 71381607', 'Anaiz Angela  Alania Malqui - Logistica - 71381607', 'Vacaciones', 'Vacaciones programadas', '2023-01-23', '2023-01-29', '#6B8E23'),
-(259, 54, 11, 0, 'Nataly Grecia Egoavil Cuadrado - Recursos Humanos  - 75129856', 'Nataly Grecia Egoavil Cuadrado - Recursos Humanos  - 75129856', 'Vacaciones', 'Vacaciones programadas', '2023-01-16', '2023-01-30', '#6B8E23'),
-(261, 54, 11, 0, 'Raul Ceron Salazar - Logistica - 41616558', 'Raul Ceron Salazar - Logistica - 41616558', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-02', '2023-01-08', '#6B8E23'),
-(262, 54, 11, 0, 'Cesar Marcaquispe Ore - Proyectos - 42423205', 'Cesar Marcaquispe Ore - Proyectos - 42423205', 'Vacaciones', 'Vacaciones según correo del 5 de enero por jefa de Área  ', '2023-01-02', '2023-01-15', '#6B8E23'),
-(263, 54, 11, 0, 'Jorge Osvaldo NuÃ±ez Mendoza - Proyectos - 25773809', 'Jorge Osvaldo NuÃ±ez Mendoza - Proyectos - 25773809', 'Vacaciones', 'Vacaciones según correo del 5 de enero por jefa de Área  ', '2023-01-04', '2023-01-11', '#6B8E23'),
-(264, 54, 11, 0, 'Ricardo Arturo Torralba Casas - Proyectos - 06774930', 'Ricardo Arturo Torralba Casas - Proyectos - 06774930', 'Vacaciones', 'Vacaciones según correo del 5 de enero por jefa de Área  ', '2023-01-04', '2023-01-11', '#6B8E23'),
-(265, 54, 11, 0, 'Ricardo Arturo Torralba Casas - Proyectos - 06774930', 'Ricardo Arturo Torralba Casas - Proyectos - 06774930', 'Vacaciones', 'Vacaciones según correo del 5 de enero por jefa de Área  ', '2023-01-13', '2023-01-15', '#6B8E23'),
-(266, 54, 11, 0, 'Stephany Angelica Aguilar Rodriguez - Recaudo Y Voluntariado - 47214884', 'Stephany Angelica Aguilar Rodriguez - Recaudo Y Voluntariado - 47214884', 'Vacaciones', 'Vacaciones programadas', '2023-01-02', '2023-01-08', '#6B8E23'),
-(267, 54, 11, 0, 'Jhony Verano Bonifacio - Sistemas - 20051781', 'Jhony Verano Bonifacio - Sistemas - 20051781', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-15', '#6B8E23'),
-(268, 54, 11, 0, 'Jorge Antony Milian Montalvo  - Sistemas - 70311233', 'Jorge Antony Milian Montalvo  - Sistemas - 70311233', 'Vacaciones', 'Vacaciones programadas', '2023-01-01', '2023-01-03', '#6B8E23'),
-(269, 54, 11, 0, 'Miriam Andrea Aguilar Chipane - EPTT - 43243396', 'Miriam Andrea Aguilar Chipane - EPTT - 43243396', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-09', '#6B8E23'),
-(270, 54, 11, 0, 'Jose Augusto Aguedo Villacorta - EPTT - 02846853', 'Jose Augusto Aguedo Villacorta - EPTT - 02846853', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-09', '#6B8E23'),
-(271, 54, 11, 0, 'Vladimir Unapillco Champi - EPTT - 41236561', 'Vladimir Unapillco Champi - EPTT - 41236561', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-09', '#6B8E23'),
-(272, 54, 11, 0, 'Yovana Rosario Caso Escobar - EPTT - 10254260', 'Yovana Rosario Caso Escobar - EPTT - 10254260', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-09', '#6B8E23'),
-(273, 54, 11, 0, 'Katherine Patricia Oriundo Nu?ez - EPTT - 45675506', 'Katherine Patricia Oriundo Nu?ez - EPTT - 45675506', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-09', '#6B8E23'),
-(274, 54, 11, 0, 'Patricia Carmen Huarez Sosa - EBR Urbano - EBR Rural - 08684899', 'Patricia Carmen Huarez Sosa - EBR Urbano - EBR Rural - 08684899', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-09', '#6B8E23'),
-(275, 54, 11, 0, 'Yliana Cecilia Galdos Rodriguez - EBR Urbano - EBR Rural - 25567688', 'Yliana Cecilia Galdos Rodriguez - EBR Urbano - EBR Rural - 25567688', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-09', '#6B8E23'),
-(276, 54, 11, 0, 'Cynthia Selena See Wu Rodriguez - EBR Urbano - EBR Rural - 02867558', 'Cynthia Selena See Wu Rodriguez - EBR Urbano - EBR Rural - 02867558', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-09', '#6B8E23'),
-(277, 54, 11, 0, 'Alyson Lisset Rosales Huaynate - EBR Urbano - EBR Rural - 47856266', 'Alyson Lisset Rosales Huaynate - EBR Urbano - EBR Rural - 47856266', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-09', '#6B8E23'),
-(278, 54, 11, 0, 'Brigitte Mercedes Vasquez Carhuaricra - EBA - 73711756', 'Brigitte Mercedes Vasquez Carhuaricra - EBA - 73711756', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-12', '#6B8E23'),
-(279, 54, 11, 0, 'Anaiz Angela  Alania Malqui - Logistica - 71381607', 'Anaiz Angela  Alania Malqui - Logistica - 71381607', 'Vacaciones', 'Vacaciones programadas', '2023-02-01', '2023-02-05', '#6B8E23'),
-(280, 54, 11, 0, 'Fabiola Medalith Casas Espilco - Contabilidad  - 46145906', 'Fabiola Medalith Casas Espilco - Contabilidad  - 46145906', 'Vacaciones', 'Vacaciones programadas', '2023-02-20', '2023-02-26', '#6B8E23'),
-(281, 54, 11, 0, 'Fabiola Maricela Chavez Palomino - Contabilidad  - 73188050', 'Fabiola Maricela Chavez Palomino - Contabilidad  - 73188050', 'Vacaciones', 'Vacaciones programadas', '2023-02-06', '2023-02-12', '#6B8E23'),
-(282, 54, 11, 0, 'Anaiz Angela  Alania Malqui - Logistica - 71381607', 'Anaiz Angela  Alania Malqui - Logistica - 71381607', 'Vacaciones', 'Vacaciones programadas', '2023-03-20', '2023-03-31', '#6B8E23'),
-(283, 54, 11, 0, 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Vacaciones', 'Vacaciones programadas', '2023-04-17', '2023-04-23', '#6B8E23'),
-(284, 54, 11, 0, 'Anaiz Angela  Alania Malqui - Logistica - 71381607', 'Anaiz Angela  Alania Malqui - Logistica - 71381607', 'Vacaciones', 'Vacaciones programadas', '2023-04-01', '2023-04-02', '#6B8E23'),
-(285, 54, 11, 0, 'Nataly Grecia Egoavil Cuadrado - Recursos Humanos  - 75129856', 'Nataly Grecia Egoavil Cuadrado - Recursos Humanos  - 75129856', 'Vacaciones', 'Vacaciones programadas', '2023-04-16', '2023-04-30', '#6B8E23'),
-(286, 54, 11, 0, 'Fabiola Medalith Casas Espilco - Contabilidad  - 46145906', 'Fabiola Medalith Casas Espilco - Contabilidad  - 46145906', 'Vacaciones', 'Vacaciones programadas', '2023-04-10', '2023-04-16', '#6B8E23'),
-(287, 54, 11, 0, 'Ana Mirella Uehara Shiroma - Directivos - 10573832', 'Ana Mirella Uehara Shiroma - Directivos - 10573832', 'Vacaciones', 'Vacaciones programadas', '2023-05-15', '2023-05-21', '#6B8E23'),
-(288, 54, 11, 0, 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Vacaciones', 'Vacaciones programadas', '2023-05-15', '2023-05-21', '#6B8E23'),
-(289, 54, 11, 0, 'Ada Rosa Liendo Moran - Contabilidad  - 10585949', 'Ada Rosa Liendo Moran - Contabilidad  - 10585949', 'Vacaciones', 'Vacaciones programadas', '2023-05-22', '2023-05-31', '#6B8E23'),
-(290, 54, 11, 0, 'Fabiola Medalith Casas Espilco - Contabilidad  - 46145906', 'Fabiola Medalith Casas Espilco - Contabilidad  - 46145906', 'Vacaciones', 'Vacaciones programadas', '2023-05-22', '2023-05-28', '#6B8E23'),
-(296, 54, 11, 0, 'Fabiola Maricela Chavez Palomino - Contabilidad  - 73188050', 'Fabiola Maricela Chavez Palomino - Contabilidad  - 73188050', 'Vacaciones', 'Vacaciones programadas', '2023-06-19', '2023-06-25', '#6B8E23'),
-(297, 54, 11, 0, 'Ada Rosa Liendo Moran - Contabilidad  - 10585949', 'Ada Rosa Liendo Moran - Contabilidad  - 10585949', 'Vacaciones', 'Vacaciones programadas', '2023-06-01', '2023-06-04', '#6B8E23'),
-(298, 54, 11, 0, 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Vacaciones', 'Vacaciones programadas', '2023-07-17', '2023-07-23', '#6B8E23'),
-(299, 54, 11, 0, 'VÃ­ctor Alberto Quijaite Agurto - Directivos - 07503892', 'VÃ­ctor Alberto Quijaite Agurto - Directivos - 07503892', 'Vacaciones', 'Vacaciones programadas', '2023-08-14', '2023-08-28', '#6B8E23'),
-(300, 54, 11, 0, 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Vacaciones', 'Vacaciones programadas', '2023-10-09', '2023-10-15', '#6B8E23'),
-(301, 54, 11, 0, 'Nataly Grecia Egoavil Cuadrado - Recursos Humanos  - 75129856', 'Nataly Grecia Egoavil Cuadrado - Recursos Humanos  - 75129856', 'Vacaciones', 'Vacaciones programadas', '2023-07-17', '2023-07-31', '#6B8E23'),
-(302, 54, 11, 0, 'Ada Rosa Liendo Moran - Contabilidad  - 10585949', 'Ada Rosa Liendo Moran - Contabilidad  - 10585949', 'Vacaciones', 'Vacaciones programadas', '2023-07-17', '2023-07-23', '#6B8E23'),
-(303, 54, 11, 0, 'Fabiola Maricela Chavez Palomino - Contabilidad  - 73188050', 'Fabiola Maricela Chavez Palomino - Contabilidad  - 73188050', 'Vacaciones', 'Vacaciones programadas', '2023-07-31', '2023-08-06', '#6B8E23'),
-(304, 54, 11, 0, 'Ada Rosa Liendo Moran - Contabilidad  - 10585949', 'Ada Rosa Liendo Moran - Contabilidad  - 10585949', 'Vacaciones', 'Vacaciones programadas', '2023-09-25', '2023-10-01', '#6B8E23'),
-(305, 54, 11, 0, 'Fabiola Medalith Casas Espilco - Contabilidad  - 46145906', 'Fabiola Medalith Casas Espilco - Contabilidad  - 46145906', 'Vacaciones', 'Vacaciones programadas', '2023-10-16', '2023-10-22', '#6B8E23'),
-(306, 54, 11, 0, 'Fabiola Maricela Chavez Palomino - Contabilidad  - 73188050', 'Fabiola Maricela Chavez Palomino - Contabilidad  - 73188050', 'Vacaciones', 'Vacaciones programadas', '2023-11-20', '2023-11-26', '#6B8E23'),
-(307, 54, 11, 0, 'Katheryn Allison Acero Caceres - Legal - 70125476', 'Katheryn Allison Acero Caceres - Legal - 70125476', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-08', '#6B8E23'),
-(308, 54, 11, 0, 'Ana Mirella Uehara Shiroma - Directivos - 10573832', 'Ana Mirella Uehara Shiroma - Directivos - 10573832', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01', '2023-01-09', '#6B8E23'),
-(312, 39, 2, 0, 'Ava Valentina Alencastre Begazo - EPTT - 07459258', 'Ava Valentina Alencastre Begazo - EPTT - 07459258', 'Otros ', 'Participar en el taller de evaluación 2022 y planificación 2023', '2023-01-28', '2023-01-31', '#C05780'),
-(313, 39, 2, 0, 'Ana Mirella Uehara Shiroma - Directivos - 10573832', 'Ana Mirella Uehara Shiroma - Directivos - 10573832', 'Otros ', 'Participar en el taller de evaluación 2022 y planificación 2023', '2023-01-28', '2023-01-31', '#C05780'),
-(314, 44, 7, 0, 'Consuelo Maribel Cordova Sanchez - EBR Urbano - EBR Rural - 19098773', 'Consuelo Maribel Cordova Sanchez - EBR Urbano - EBR Rural - 19098773', 'Otros ', 'TALLER INSTITUCIONAL DE INICIO DE AÑO', '2023-01-15', '2023-01-20', '#6C88C4'),
-(315, 44, 7, 0, 'Luz Marina Loayza Polo - EBR Urbano - EBR Rural - 24464584', 'Luz Marina Loayza Polo - EBR Urbano - EBR Rural - 24464584', 'Otros ', 'TALLER INSTITUCIONAL DE INICIO DE AÑO', '2023-01-15', '2023-01-20', '#6C88C4'),
-(316, 44, 7, 0, 'Rosa Elvira Vilchez De Sanchez - EBR Urbano - EBR Rural - 03561221', 'Rosa Elvira Vilchez De Sanchez - EBR Urbano - EBR Rural - 03561221', 'Otros ', 'TALLER INSTITUCIONAL DE INICIO DE AÑO', '2023-01-15', '2023-01-20', '#6C88C4');
+(246, 54, 11, 0, 'Ernesto Marco Julio Cavassa Canessa - Directivos - 07806170', 'Ernesto Marco Julio Cavassa Canessa - Directivos - 07806170', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-09 00:00:00', '#6B8E23'),
+(247, 54, 11, 0, 'VÃ­ctor Alberto Quijaite Agurto - Directivos - 07503892', 'VÃ­ctor Alberto Quijaite Agurto - Directivos - 07503892', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-09 00:00:00', '#6B8E23'),
+(249, 54, 11, 0, 'Nancy Georgina Caminada Bravo - Proyectos - 23850784', 'Nancy Georgina Caminada Bravo - Proyectos - 23850784', 'Vacaciones', 'Vacaciones según correo del 5 de enero por jefa de Área  ', '2023-01-04 00:00:00', '2023-01-11 00:00:00', '#6B8E23'),
+(250, 54, 11, 0, 'Nancy Georgina Caminada Bravo - Proyectos - 23850784', 'Nancy Georgina Caminada Bravo - Proyectos - 23850784', 'Vacaciones', 'Vacaciones según correo del 5 de enero por jefa de Área  ', '2023-01-13 00:00:00', '2023-01-15 00:00:00', '#6B8E23'),
+(251, 54, 11, 0, 'Luis Javier QuirÃ³s PiÃ±eyro - Identidad Y Mision  - 29707416', 'Luis Javier QuirÃ³s PiÃ±eyro - Identidad Y Mision  - 29707416', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-09 00:00:00', '#6B8E23'),
+(252, 54, 11, 0, 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Vacaciones', 'Vacaciones programadas', '2023-01-02 00:00:00', '2023-01-08 00:00:00', '#6B8E23'),
+(253, 54, 11, 0, 'Juana Hisela Culqui Julca - ComunicaciÃ³n E Incidencia  - 09556035', 'Juana Hisela Culqui Julca - ComunicaciÃ³n E Incidencia  - 09556035', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-09 00:00:00', '#6B8E23'),
+(254, 54, 11, 0, 'Julia Maria E. Vargas Barbieri - Recursos Humanos  - 08668154', 'Julia Maria E. Vargas Barbieri - Recursos Humanos  - 08668154', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-15 00:00:00', '#6B8E23'),
+(257, 54, 11, 0, 'Anaiz Angela  Alania Malqui - Logistica - 71381607', 'Anaiz Angela  Alania Malqui - Logistica - 71381607', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-15 00:00:00', '#6B8E23'),
+(259, 54, 11, 0, 'Nataly Grecia Egoavil Cuadrado - Recursos Humanos  - 75129856', 'Nataly Grecia Egoavil Cuadrado - Recursos Humanos  - 75129856', 'Vacaciones', 'Vacaciones programadas', '2023-01-16 00:00:00', '2023-01-30 00:00:00', '#6B8E23'),
+(261, 54, 11, 0, 'Raul Ceron Salazar - Logistica - 41616558', 'Raul Ceron Salazar - Logistica - 41616558', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-02 00:00:00', '2023-01-08 00:00:00', '#6B8E23'),
+(262, 54, 11, 0, 'Cesar Marcaquispe Ore - Proyectos - 42423205', 'Cesar Marcaquispe Ore - Proyectos - 42423205', 'Vacaciones', 'Vacaciones según correo del 5 de enero por jefa de Área  ', '2023-01-02 00:00:00', '2023-01-15 00:00:00', '#6B8E23'),
+(263, 54, 11, 0, 'Jorge Osvaldo NuÃ±ez Mendoza - Proyectos - 25773809', 'Jorge Osvaldo NuÃ±ez Mendoza - Proyectos - 25773809', 'Vacaciones', 'Vacaciones según correo del 5 de enero por jefa de Área  ', '2023-01-04 00:00:00', '2023-01-11 00:00:00', '#6B8E23'),
+(264, 54, 11, 0, 'Ricardo Arturo Torralba Casas - Proyectos - 06774930', 'Ricardo Arturo Torralba Casas - Proyectos - 06774930', 'Vacaciones', 'Vacaciones según correo del 5 de enero por jefa de Área  ', '2023-01-04 00:00:00', '2023-01-11 00:00:00', '#6B8E23'),
+(265, 54, 11, 0, 'Ricardo Arturo Torralba Casas - Proyectos - 06774930', 'Ricardo Arturo Torralba Casas - Proyectos - 06774930', 'Vacaciones', 'Vacaciones según correo del 5 de enero por jefa de Área  ', '2023-01-13 00:00:00', '2023-01-15 00:00:00', '#6B8E23'),
+(266, 54, 11, 0, 'Stephany Angelica Aguilar Rodriguez - Recaudo Y Voluntariado - 47214884', 'Stephany Angelica Aguilar Rodriguez - Recaudo Y Voluntariado - 47214884', 'Vacaciones', 'Vacaciones programadas', '2023-01-02 00:00:00', '2023-01-08 00:00:00', '#6B8E23'),
+(267, 54, 11, 0, 'Jhony Verano Bonifacio - Sistemas - 20051781', 'Jhony Verano Bonifacio - Sistemas - 20051781', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-15 00:00:00', '#6B8E23'),
+(268, 54, 11, 0, 'Jorge Antony Milian Montalvo  - Sistemas - 70311233', 'Jorge Antony Milian Montalvo  - Sistemas - 70311233', 'Vacaciones', 'Vacaciones programadas', '2023-01-01 00:00:00', '2023-01-03 00:00:00', '#6B8E23'),
+(269, 54, 11, 0, 'Miriam Andrea Aguilar Chipane - EPTT - 43243396', 'Miriam Andrea Aguilar Chipane - EPTT - 43243396', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-09 00:00:00', '#6B8E23'),
+(270, 54, 11, 0, 'Jose Augusto Aguedo Villacorta - EPTT - 02846853', 'Jose Augusto Aguedo Villacorta - EPTT - 02846853', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-09 00:00:00', '#6B8E23'),
+(271, 54, 11, 0, 'Vladimir Unapillco Champi - EPTT - 41236561', 'Vladimir Unapillco Champi - EPTT - 41236561', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-09 00:00:00', '#6B8E23'),
+(272, 54, 11, 0, 'Yovana Rosario Caso Escobar - EPTT - 10254260', 'Yovana Rosario Caso Escobar - EPTT - 10254260', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-09 00:00:00', '#6B8E23'),
+(273, 54, 11, 0, 'Katherine Patricia Oriundo Nu?ez - EPTT - 45675506', 'Katherine Patricia Oriundo Nu?ez - EPTT - 45675506', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-09 00:00:00', '#6B8E23'),
+(274, 54, 11, 0, 'Patricia Carmen Huarez Sosa - EBR Urbano - EBR Rural - 08684899', 'Patricia Carmen Huarez Sosa - EBR Urbano - EBR Rural - 08684899', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-09 00:00:00', '#6B8E23'),
+(275, 54, 11, 0, 'Yliana Cecilia Galdos Rodriguez - EBR Urbano - EBR Rural - 25567688', 'Yliana Cecilia Galdos Rodriguez - EBR Urbano - EBR Rural - 25567688', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-09 00:00:00', '#6B8E23'),
+(276, 54, 11, 0, 'Cynthia Selena See Wu Rodriguez - EBR Urbano - EBR Rural - 02867558', 'Cynthia Selena See Wu Rodriguez - EBR Urbano - EBR Rural - 02867558', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-09 00:00:00', '#6B8E23'),
+(277, 54, 11, 0, 'Alyson Lisset Rosales Huaynate - EBR Urbano - EBR Rural - 47856266', 'Alyson Lisset Rosales Huaynate - EBR Urbano - EBR Rural - 47856266', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-09 00:00:00', '#6B8E23'),
+(278, 54, 11, 0, 'Brigitte Mercedes Vasquez Carhuaricra - EBA - 73711756', 'Brigitte Mercedes Vasquez Carhuaricra - EBA - 73711756', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-12 00:00:00', '#6B8E23'),
+(279, 54, 11, 0, 'Anaiz Angela  Alania Malqui - Logistica - 71381607', 'Anaiz Angela  Alania Malqui - Logistica - 71381607', 'Vacaciones', 'Vacaciones programadas', '2023-02-01 00:00:00', '2023-02-05 00:00:00', '#6B8E23'),
+(280, 54, 11, 0, 'Fabiola Medalith Casas Espilco - Contabilidad  - 46145906', 'Fabiola Medalith Casas Espilco - Contabilidad  - 46145906', 'Vacaciones', 'Vacaciones programadas', '2023-02-20 00:00:00', '2023-02-26 00:00:00', '#6B8E23'),
+(281, 54, 11, 0, 'Fabiola Maricela Chavez Palomino - Contabilidad  - 73188050', 'Fabiola Maricela Chavez Palomino - Contabilidad  - 73188050', 'Vacaciones', 'Vacaciones programadas', '2023-02-06 00:00:00', '2023-02-12 00:00:00', '#6B8E23'),
+(282, 54, 11, 0, 'Anaiz Angela  Alania Malqui - Logistica - 71381607', 'Anaiz Angela  Alania Malqui - Logistica - 71381607', 'Vacaciones', 'Vacaciones programadas', '2023-03-20 00:00:00', '2023-03-31 00:00:00', '#6B8E23'),
+(283, 54, 11, 0, 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Vacaciones', 'Vacaciones programadas', '2023-04-17 00:00:00', '2023-04-23 00:00:00', '#6B8E23'),
+(284, 54, 11, 0, 'Anaiz Angela  Alania Malqui - Logistica - 71381607', 'Anaiz Angela  Alania Malqui - Logistica - 71381607', 'Vacaciones', 'Vacaciones programadas', '2023-04-01 00:00:00', '2023-04-02 00:00:00', '#6B8E23'),
+(285, 54, 11, 0, 'Nataly Grecia Egoavil Cuadrado - Recursos Humanos  - 75129856', 'Nataly Grecia Egoavil Cuadrado - Recursos Humanos  - 75129856', 'Vacaciones', 'Vacaciones programadas', '2023-04-16 00:00:00', '2023-04-30 00:00:00', '#6B8E23'),
+(286, 54, 11, 0, 'Fabiola Medalith Casas Espilco - Contabilidad  - 46145906', 'Fabiola Medalith Casas Espilco - Contabilidad  - 46145906', 'Vacaciones', 'Vacaciones programadas', '2023-04-10 00:00:00', '2023-04-16 00:00:00', '#6B8E23'),
+(287, 54, 11, 0, 'Ana Mirella Uehara Shiroma - Directivos - 10573832', 'Ana Mirella Uehara Shiroma - Directivos - 10573832', 'Vacaciones', 'Vacaciones programadas', '2023-05-15 00:00:00', '2023-05-21 00:00:00', '#6B8E23'),
+(288, 54, 11, 0, 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Vacaciones', 'Vacaciones programadas', '2023-05-15 00:00:00', '2023-05-21 00:00:00', '#6B8E23'),
+(289, 54, 11, 0, 'Ada Rosa Liendo Moran - Contabilidad  - 10585949', 'Ada Rosa Liendo Moran - Contabilidad  - 10585949', 'Vacaciones', 'Vacaciones programadas', '2023-05-22 00:00:00', '2023-05-31 00:00:00', '#6B8E23'),
+(290, 54, 11, 0, 'Fabiola Medalith Casas Espilco - Contabilidad  - 46145906', 'Fabiola Medalith Casas Espilco - Contabilidad  - 46145906', 'Vacaciones', 'Vacaciones programadas', '2023-05-22 00:00:00', '2023-05-28 00:00:00', '#6B8E23'),
+(296, 54, 11, 0, 'Fabiola Maricela Chavez Palomino - Contabilidad  - 73188050', 'Fabiola Maricela Chavez Palomino - Contabilidad  - 73188050', 'Vacaciones', 'Vacaciones programadas', '2023-06-19 00:00:00', '2023-06-25 00:00:00', '#6B8E23'),
+(297, 54, 11, 0, 'Ada Rosa Liendo Moran - Contabilidad  - 10585949', 'Ada Rosa Liendo Moran - Contabilidad  - 10585949', 'Vacaciones', 'Vacaciones programadas', '2023-06-01 00:00:00', '2023-06-04 00:00:00', '#6B8E23'),
+(298, 54, 11, 0, 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Vacaciones', 'Vacaciones programadas', '2023-07-17 00:00:00', '2023-07-23 00:00:00', '#6B8E23'),
+(299, 54, 11, 0, 'VÃ­ctor Alberto Quijaite Agurto - Directivos - 07503892', 'VÃ­ctor Alberto Quijaite Agurto - Directivos - 07503892', 'Vacaciones', 'Vacaciones programadas', '2023-08-14 00:00:00', '2023-08-28 00:00:00', '#6B8E23'),
+(300, 54, 11, 0, 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Carlos Enrique Guevara Quispe - Contabilidad  - 10670262', 'Vacaciones', 'Vacaciones programadas', '2023-10-09 00:00:00', '2023-10-15 00:00:00', '#6B8E23'),
+(301, 54, 11, 0, 'Nataly Grecia Egoavil Cuadrado - Recursos Humanos  - 75129856', 'Nataly Grecia Egoavil Cuadrado - Recursos Humanos  - 75129856', 'Vacaciones', 'Vacaciones programadas', '2023-07-17 00:00:00', '2023-07-31 00:00:00', '#6B8E23'),
+(302, 54, 11, 0, 'Ada Rosa Liendo Moran - Contabilidad  - 10585949', 'Ada Rosa Liendo Moran - Contabilidad  - 10585949', 'Vacaciones', 'Vacaciones programadas', '2023-07-17 00:00:00', '2023-07-23 00:00:00', '#6B8E23'),
+(303, 54, 11, 0, 'Fabiola Maricela Chavez Palomino - Contabilidad  - 73188050', 'Fabiola Maricela Chavez Palomino - Contabilidad  - 73188050', 'Vacaciones', 'Vacaciones programadas', '2023-07-31 00:00:00', '2023-08-06 00:00:00', '#6B8E23'),
+(304, 54, 11, 0, 'Ada Rosa Liendo Moran - Contabilidad  - 10585949', 'Ada Rosa Liendo Moran - Contabilidad  - 10585949', 'Vacaciones', 'Vacaciones programadas', '2023-09-25 00:00:00', '2023-10-01 00:00:00', '#6B8E23'),
+(305, 54, 11, 0, 'Fabiola Medalith Casas Espilco - Contabilidad  - 46145906', 'Fabiola Medalith Casas Espilco - Contabilidad  - 46145906', 'Vacaciones', 'Vacaciones programadas', '2023-10-16 00:00:00', '2023-10-22 00:00:00', '#6B8E23'),
+(306, 54, 11, 0, 'Fabiola Maricela Chavez Palomino - Contabilidad  - 73188050', 'Fabiola Maricela Chavez Palomino - Contabilidad  - 73188050', 'Vacaciones', 'Vacaciones programadas', '2023-11-20 00:00:00', '2023-11-26 00:00:00', '#6B8E23'),
+(307, 54, 11, 0, 'Katheryn Allison Acero Caceres - Legal - 70125476', 'Katheryn Allison Acero Caceres - Legal - 70125476', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-08 00:00:00', '#6B8E23'),
+(308, 54, 11, 0, 'Ana Mirella Uehara Shiroma - Directivos - 10573832', 'Ana Mirella Uehara Shiroma - Directivos - 10573832', 'Vacaciones', 'Periodo vacacional institucional', '2023-01-01 00:00:00', '2023-01-09 00:00:00', '#6B8E23'),
+(312, 39, 2, 0, 'Ava Valentina Alencastre Begazo - EPTT - 07459258', 'Ava Valentina Alencastre Begazo - EPTT - 07459258', 'Otros ', 'Participar en el taller de evaluación 2022 y planificación 2023', '2023-01-28 00:00:00', '2023-01-31 00:00:00', '#C05780'),
+(313, 39, 2, 0, 'Ana Mirella Uehara Shiroma - Directivos - 10573832', 'Ana Mirella Uehara Shiroma - Directivos - 10573832', 'Otros ', 'Participar en el taller de evaluación 2022 y planificación 2023', '2023-01-28 00:00:00', '2023-01-31 00:00:00', '#C05780'),
+(314, 44, 7, 0, 'Consuelo Maribel Cordova Sanchez - EBR Urbano - EBR Rural - 19098773', 'Consuelo Maribel Cordova Sanchez - EBR Urbano - EBR Rural - 19098773', 'Otros ', 'TALLER INSTITUCIONAL DE INICIO DE AÑO', '2023-01-15 00:00:00', '2023-01-20 00:00:00', '#6C88C4'),
+(315, 44, 7, 0, 'Luz Marina Loayza Polo - EBR Urbano - EBR Rural - 24464584', 'Luz Marina Loayza Polo - EBR Urbano - EBR Rural - 24464584', 'Otros ', 'TALLER INSTITUCIONAL DE INICIO DE AÑO', '2023-01-15 00:00:00', '2023-01-20 00:00:00', '#6C88C4'),
+(316, 44, 7, 0, 'Rosa Elvira Vilchez De Sanchez - EBR Urbano - EBR Rural - 03561221', 'Rosa Elvira Vilchez De Sanchez - EBR Urbano - EBR Rural - 03561221', 'Otros ', 'TALLER INSTITUCIONAL DE INICIO DE AÑO', '2023-01-15 00:00:00', '2023-01-20 00:00:00', '#6C88C4'),
+(319, 39, 2, 0, 'Vladimir Unapillco Champi - EPTT - 41236561', 'Vladimir Unapillco Champi - EPTT - 41236561', 'Otros ', 'Cajamarca: Participar en taller de Evaluación 2022 y Planificación 2023', '2023-01-25 00:00:00', '2023-01-27 00:00:00', '#C05780'),
+(347, 48, 26, 0, 'Jorge Antony Milian Montalvo  - Sistemas - 70311233', 'Jorge Antony Milian Montalvo  - Sistemas - 70311233', 'Fe y Alegría N 2 - Lima - San Martín de Porres - Lima  -  EBR ', 'Prueba', '2023-01-23 09:54:00', '2023-01-28 09:54:00', '#FF6347'),
+(350, 54, 11, 0, 'Alberto Martin Chocano Saldiva - FyA Digital - 06660992', 'Alberto Martin Chocano Saldiva - FyA Digital - 06660992', 'Fe y Alegría N 1 - Lima - San Martin de Porres - Lima  -  EBR ', '', '2023-01-23 11:37:00', '2023-01-25 11:37:00', '#6B8E23');
 
 --
 -- Índices para tablas volcadas
@@ -712,13 +718,13 @@ ALTER TABLE `colegios`
 -- AUTO_INCREMENT de la tabla `consultas`
 --
 ALTER TABLE `consultas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de la tabla `directivos`
 --
 ALTER TABLE `directivos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT de la tabla `inicio`
@@ -760,7 +766,7 @@ ALTER TABLE `vuelos`
 -- AUTO_INCREMENT de la tabla `vueloslogistica`
 --
 ALTER TABLE `vueloslogistica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=319;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=351;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
