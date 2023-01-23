@@ -343,31 +343,31 @@ session_start();
       // },
       
 
-      defaultView : "month",
-      timeFormat: 'H(:mm)t',
+      // defaultView : "month",
+      // timeFormat: 'H(:mm)t',
 
 
       eventClick: function (info, jsEvent, view){
         $('#CalendarioModal').modal();
         console.log(info);
-        // document.getElementById('idC').value = info.id;
-        // document.getElementById('titleC').value = info.title;
-        // document.getElementById('colegioC').value = info.colegioC;
-        // document.getElementById('horaS').value = info.start._i;
-        // document.getElementById('horaF').value = info.end._i;
-        // document.getElementById('description').value = info.description;
+        document.getElementById('idC').value = info.id;
+        document.getElementById('titleC').value = info.title;
+        document.getElementById('colegioC').value = info.colegioC;
+        document.getElementById('horaS').value = info.start._i;
+        document.getElementById('horaF').value = info.end._i;
+        document.getElementById('description').value = info.description;
 
         // var dateString = (info.start);
         // moment(dateString).format('YYYY-MM-DD HH:mm');
         // alert(dateString.toDateString);
 
 
-        $('#idC').val(info.id);
-        $('#titleC').val(info.title);
-        $('#colegioC').val(info.colegioC);
-        $('#horaS').val(info.start._i);
-        $('#horaF').val(info.end._i);
-        $('#description').val(info.description);
+        // $('#idC').val(info.id);
+        // $('#titleC').val(info.title);
+        // $('#colegioC').val(info.colegioC);
+        // $('#horaS').val(info.start._i);
+        // $('#horaF').val(info.end._i);
+        // $('#description').val(info.description);
         
         // console.log(info.title);
         // console.log(info.start);
@@ -401,112 +401,113 @@ session_start();
 
       // },
 
-      
-
     });
 
-    $('#calendarG').fullCalendar({   
+   
+  </script>
+
+  
+<!-- Segundo escript del calendario general -->
+  <script>
+
+$('#calendarG').fullCalendar({   
 
 
-        header: {
-          left: 'prev,next today',
-          center: 'title',
-          right: 'agendaDay, agendaWeek, month, listMonth',
-        },
-        locale: 'es',
+header: {
+  left: 'prev,next today',
+  center: 'title',
+  right: 'agendaDay, agendaWeek, month, listMonth',
+},
+locale: 'es',
+
+      //para que me salga el + en el calendario
+eventLimit: true, // for all non-agenda views
+  views: {
+  agenda: {
+  eventLimit: 6,
+   // adjust to 6 only for agendaWeek/agendaDay
+}
+},
+
+height: 800,
+contentHeight: 780,
+aspectRatio: 3,
+nowIndicator: true,
+
+dayMaxEvents: false,
+navLinks: true,
+
+views: {
+listMonth:{"buttonText": "Eventos Mensuales"},
+},
+
+
+
+events: [
+
+  <?php
+
+
+
+    foreach ($resultado as $key => $value){
+
+      echo '{
         
-              //para que me salga el + en el calendario
-        eventLimit: true, // for all non-agenda views
-          views: {
-          agenda: {
-          eventLimit: 6,
-           // adjust to 6 only for agendaWeek/agendaDay
-      }
-    },
+        id: "'.$value["id"].'",
+        title: "'.$value["nyaP"].'",
+        description: "'.$value["comentario"].'",
+        colegioC: "'.$value["colegio"].'",
+        start: "'.$value["inicio"].'",
+        end: "'.$value["fin"].'",
+        color: "'.$value["color"].'",
+        editable: true //para editar o mover los eventos creados
+      },';
+    }
 
-        height: 800,
-        contentHeight: 780,
-        aspectRatio: 3,
-        nowIndicator: true,
+  ?>
+  ],
 
-      dayMaxEvents: false,
-      navLinks: true,
-        
-      views: {
-        listMonth:{"buttonText": "Eventos Mensuales"},
-    },
-    
-
-
-        events: [
-
-          <?php
-
-
-
-            foreach ($resultado as $key => $value){
-
-              echo '{
-                
-                id: "'.$value["id"].'",
-                title: "'.$value["nyaP"].'",
-                description: "'.$value["comentario"].'",
-                colegioC: "'.$value["colegio"].'",
-                start: "'.$value["inicio"].'",
-                end: "'.$value["fin"].'",
-                color: "'.$value["color"].'",
-                editable: true //para editar o mover los eventos creados
-              },';
-            }
-
-          ?>
-          ],
-
-    eventRender: function(eventObj, $el) {
-      $el.popover({
-        placement : 'top',
-        html : true,
-        trigger : 'hover',
-        title: eventObj.title + ' <a href="#" class="close" data-dismiss="alert">×</a>',
-        content: eventObj.colegioC + 
-        '<br> ' + eventObj.description + '</br>' + 
-        '<p>' + eventObj.start.format('h:mm a ddd MMM Do YYYY') +
-        '<p>' + eventObj.end.format('h:mm a ddd MMM Do YYYY'),
-        trigger: 'hover',
-        placement: 'top',
-        container: 'body'
-      });
-    },
+              eventRender: function(eventObj, $el) {
+              $el.popover({
+              placement : 'top',
+              html : true,
+              trigger : 'hover',
+              title: eventObj.title + ' <a href="#" class="close" data-dismiss="alert">×</a>',
+              content: eventObj.colegioC + 
+              '<br> ' + eventObj.description + '</br>' + 
+              '<p>' + eventObj.start.format('h:mm a ddd MMM Do YYYY') +
+              '<p>' + eventObj.end.format('h:mm a ddd MMM Do YYYY'),
+              trigger: 'hover',
+              placement: 'top',
+              container: 'body'
+              });
+              },
 
 
-      defaultView : "month",
-      timeFormat: 'H(:mm)t',
+// defaultView : "month",
+// timeFormat: 'H(:mm)t',
 
 
       eventClick: function (info, jsEvent, view){
-        $('#CalendarioModal').modal();
-        console.log(info);
-
-        // var dateString = (info.start);
-        // moment(dateString).format('YYYY-MM-DD HH:mm');
-        // alert(dateString.toDateString);
+      $('#CalendarioModal').modal();
+      console.log(info);
 
 
         $('#idC').val(info.id);
         $('#titleC').val(info.title);
         $('#colegioC').val(info.colegioC);
-        $('#horaS').val(moment(info.start._i).format('DD-MM-YYYY'));
-        $('#horaF').val(moment(info.end._i).format('DD-MM-YYYY'));
+        $('#horaS').val(info.start._i);
+        $('#horaF').val(info.end._i);
         $('#description').val(info.description);
-        
         // console.log(info.title);
         // console.log(info.start);
         // console.log(info.end);
         // console.log(info.description);
-        },  
+},  
 
 
-    });
+});
+
   </script>
 </body>
 
