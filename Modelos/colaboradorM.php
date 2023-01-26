@@ -5,17 +5,17 @@ require_once "ConexionBD.php";
 class ColaboradorM extends ConexionBD{
 
     //ingreso colaborador
-    static public function IngresarColaboradorM($tablaBD, $datosC){
+    // static public function IngresarColaboradorM($tablaBD, $datosC){
             
-            $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, apellido, nombre, sexo, documento, foto, rol, id, id_consulta FROM $tablaBD 
-            WHERE usuario = :usuario");
+    //         $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, apellido, nombre, sexo, documento, foto, rol, id, id_consulta FROM $tablaBD 
+    //         WHERE usuario = :usuario");
 
-            $pdo -> bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
-            $pdo -> execute();
-            return $pdo -> fetch();
-            $pdo -> close();
-            $pdo = null;
-    }
+    //         $pdo -> bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
+    //         $pdo -> execute();
+    //         return $pdo -> fetch();
+    //         $pdo -> close();
+    //         $pdo = null;
+    // }
 
     //ver perfil colaborador
     static public function VerPerfilColaboradorM($tablaBD, $id){

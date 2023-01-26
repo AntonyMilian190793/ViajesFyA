@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-01-2023 a las 17:41:20
+-- Tiempo de generación: 27-01-2023 a las 00:51:59
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 7.4.33
 
@@ -300,9 +300,9 @@ CREATE TABLE `logistica` (
 
 INSERT INTO `logistica` (`id`, `id_consulta`, `usuario`, `clave`, `nombre`, `documento`, `apellido`, `foto`, `rol`, `sexo`) VALUES
 (15, 1, 'aalania', '123', 'Angela', '70541233', 'Alania', 'Vistas/img/Otros/O-55.jpg', 'Logistica', 'Femino'),
-(20, 1, 'jvargas', '08668154', 'Julia', '08668154', 'Vargas', '', 'Logistica', ''),
-(21, 0, 'negoavil', '75129856', 'Nataly Grecia', '75129856', ' Egoavil Cuadrado	', '', 'Logistica', ''),
-(25, 0, 'fcasas', '46145906', 'Fabiola', '46145906', 'Casas', '', 'Logistica', '');
+(20, 1, 'jvargas', '08668154', 'Julia', '08668154', 'Vargas', '', 'Logistica', 'Femino'),
+(21, 0, 'negoavil', '75129856', 'Nataly Grecia', '75129856', ' Egoavil Cuadrado	', '', 'Logistica', 'Femino'),
+(25, 0, 'fcasas', '46145906', 'Fabiola', '46145906', 'Casas', '', 'Logistica', 'Femino');
 
 -- --------------------------------------------------------
 
@@ -564,7 +564,7 @@ CREATE TABLE `vueloslogistica` (
   `id_padre` int(11) NOT NULL,
   `id_consulta` int(11) NOT NULL,
   `id_logistica` int(11) NOT NULL,
-  `nyaP` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `nyaP` text NOT NULL,
   `documento` text NOT NULL,
   `colegio` text NOT NULL,
   `comentario` text NOT NULL,
@@ -638,7 +638,7 @@ INSERT INTO `vueloslogistica` (`id`, `id_padre`, `id_consulta`, `id_logistica`, 
 (316, 44, 7, 0, 'Rosa Elvira Vilchez De Sanchez - EBR Urbano - EBR Rural - 03561221', 'Rosa Elvira Vilchez De Sanchez - EBR Urbano - EBR Rural - 03561221', 'Otros ', 'TALLER INSTITUCIONAL DE INICIO DE AÑO', '2023-01-15 00:00:00', '2023-01-20 00:00:00', '#6C88C4'),
 (319, 39, 2, 0, 'Vladimir Unapillco Champi - EPTT - 41236561', 'Vladimir Unapillco Champi - EPTT - 41236561', 'Otros ', 'Cajamarca: Participar en taller de Evaluación 2022 y Planificación 2023', '2023-01-25 00:00:00', '2023-01-27 00:00:00', '#C05780'),
 (347, 48, 26, 0, 'Jorge Antony Milian Montalvo  - Sistemas - 70311233', 'Jorge Antony Milian Montalvo  - Sistemas - 70311233', 'Fe y Alegría N 2 - Lima - San Martín de Porres - Lima  -  EBR ', 'Prueba', '2023-01-23 09:54:00', '2023-01-28 09:54:00', '#FF6347'),
-(350, 54, 11, 0, 'Alberto Martin Chocano Saldiva - FyA Digital - 06660992', 'Alberto Martin Chocano Saldiva - FyA Digital - 06660992', 'Fe y Alegría N 1 - Lima - San Martin de Porres - Lima  -  EBR ', '', '2023-01-23 11:37:00', '2023-01-25 11:37:00', '#6B8E23');
+(354, 48, 26, 0, 'Alicia Maria Arana Wimpon - EBA - 07960819', 'Alicia Maria Arana Wimpon - EBA - 07960819', 'Fe y Alegría N 1 - Lima - San Martin de Porres - Lima  -  EBR ', '', '2023-01-24 15:39:00', '2023-02-11 15:39:00', '#FF6347');
 
 --
 -- Índices para tablas volcadas
@@ -766,7 +766,7 @@ ALTER TABLE `vuelos`
 -- AUTO_INCREMENT de la tabla `vueloslogistica`
 --
 ALTER TABLE `vueloslogistica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=351;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=369;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
