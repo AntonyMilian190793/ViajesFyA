@@ -8,7 +8,7 @@
         //ingreso  sistemas
         static public function IngresarSistemasM($tablaBD, $datosC){
 
-            $pdo = ConexionBD::cBD()->prepare("SELECT id, usuario, clave, nombre, apellido, foto, rol FROM $tablaBD WHERE usuario = :usuario");
+            $pdo = ConexionBD::cBD()->prepare("SELECT id, usuario, clave, nombre, apellido, sexo, foto, rol FROM $tablaBD WHERE usuario = :usuario");
 
             $pdo -> bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
             $pdo->execute();

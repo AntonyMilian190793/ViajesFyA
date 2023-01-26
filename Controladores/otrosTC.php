@@ -2,6 +2,43 @@
 
     class OtrosTC{
 
+            //imngreso colaborador
+    public function IngresotOrosTC(){
+
+        if(isset($_POST["usuario-Ing"])){
+
+            if(preg_match('/^[a-zA-Z0-9]+$/' , $_POST["usuario-Ing"]) && preg_match('/^[a-zA-Z0-9]+$/' , $_POST["clave-Ing"])){
+
+                $tablaBD = "otrosTrabajadores";
+                $datosC = array("usuario"=>$_POST["usuario-Ing"], "clave"=>$_POST["clave-Ing"]);
+                $resultado = OtrosTM::IngresarOtrosTM($tablaBD, $datosC);
+
+                if(is_array($resultado) && $resultado["usuario"] == $_POST["usuario-Ing"] && $resultado["clave"] == $_POST["clave-Ing"]){
+
+                    $_SESSION["Ingresar"] = true; 
+
+                    $_SESSION["id"] = $resultado["id"];
+                    $_SESSION["usuario"] = $resultado["usuario"];
+                    $_SESSION["nombre"] = $resultado["nombre"];
+                    $_SESSION["apellido"] = $resultado["apellido"];
+                    $_SESSION["sexo"] = $resultado["sexo"];
+                    $_SESSION["documento"] = $resultado["documento"];
+                    $_SESSION["foto"] = $resultado["foto"];
+                    $_SESSION["rol"] = $resultado["rol"];
+
+					echo '<script>
+
+					window.location = "inicio";
+					</script>';
+                }else{
+
+                    echo '<div class="alert alert-danger">Error al Ingresar al sistema</div>';
+
+                }
+            }
+        }
+    }
+
         //crear Otros trabajadores
         public function CrearOtrosTC(){
 

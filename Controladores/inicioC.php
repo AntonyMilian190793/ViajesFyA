@@ -17,19 +17,42 @@
 
             if($_SESSION["rol"] == "otrosTrabajadores"){
 
-                echo'<h1><strong>Bienvenid@ '.$_SESSION["nombre"].'</strong></h1>';
+                if($_SESSION["sexo"] == "Femenino"){
+                    echo'<h1><strong>Bienvenida '.$_SESSION["nombre"].'</strong></h1>';
 
-            }else if($_SESSION["rol"] == "Logistica"){
+                }else{
+                    echo'<h1><strong>Bienvenido '.$_SESSION["nombre"].'</strong></h1>';
+                }
+            }
 
-                echo'<h1><strong>Bienvenid@ '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</strong></h1>';
+            
+            if($_SESSION["rol"] == "Logistica"){
 
-            }else if($_SESSION["rol"] == "Directivo"){
+                if($_SESSION["sexo"] == "Femenino"){
+                    echo'<h1><strong>Bienvenido '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</strong></h1>';
+                }else{
+                    echo'<h1><strong>Bienvenida '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</strong></h1>';
+                }
+            }
 
-                echo'<h1><strong>Bienvenid@ '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</strong></h1>';
+            
+            if($_SESSION["rol"] == "Directivo"){
 
-            }else if($_SESSION["rol"] == "Sistemas"){
+                if($_SESSION["sexo"] == "Femenino"){
+                    echo'<h1><strong>Bienvenida '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</strong></h1>';
+                }else{
+                    echo'<h1><strong>Bienvenido '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</strong></h1>';
+                }
+            }
+            
+            
+            if($_SESSION["rol"] == "Sistemas"){
 
-                echo'<h1><strong>Bienvenid@ '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</strong></h1>';
+                if($_SESSION["sexo"] == "Femenino"){
+                    echo'<h1><strong>Bienvenida '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</strong></h1>';
+                }else{
+                    echo'<h1><strong>Bienvenido '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</strong></h1>';
+                }
             }
 
 

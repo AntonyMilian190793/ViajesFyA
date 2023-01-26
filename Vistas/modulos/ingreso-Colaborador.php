@@ -29,8 +29,8 @@
 
     <?php
 
-        $ingreso = new ColaboradorC();
-        $ingreso -> IngresoColaboradorC();
+        $ingreso = new OtrosTC();
+        $ingreso -> IngresotOrosTC();
     
     ?>
 

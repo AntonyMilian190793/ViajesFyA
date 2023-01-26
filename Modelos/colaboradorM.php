@@ -7,7 +7,7 @@ class ColaboradorM extends ConexionBD{
     //ingreso colaborador
     static public function IngresarColaboradorM($tablaBD, $datosC){
             
-            $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, apellido, nombre, documento, foto, rol, id, id_consulta FROM $tablaBD 
+            $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, apellido, nombre, sexo, documento, foto, rol, id, id_consulta FROM $tablaBD 
             WHERE usuario = :usuario");
 
             $pdo -> bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);

@@ -4,6 +4,19 @@
     
     class OtrosTM extends ConexionBD{
 
+        static public function IngresarOtrosTM($tablaBD, $datosC){
+
+            $pdo = ConexionBD::cBD()->prepare("SELECT usuario, clave, nombre, sexo, documento ,apellido, foto, rol, id FROM $tablaBD 
+            WHERE usuario = :usuario");
+
+            $pdo -> bindParam(":usuario", $datosC["usuario"], PDO::PARAM_STR);
+            $pdo -> execute();
+            return $pdo -> fetch();
+            $pdo -> close();
+            $pdo = null;
+
+        }
+
         //crear Otros trabajadores
         static public function CrearOtrosTM($tablaBD, $datosC){
 

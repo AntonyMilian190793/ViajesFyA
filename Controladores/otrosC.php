@@ -24,6 +24,7 @@ class OtrosC{
                     $_SESSION["usuario"] = $resultado["usuario"];
                     $_SESSION["nombre"] = $resultado["nombre"];
                     $_SESSION["apellido"] = $resultado["apellido"];
+                    $_SESSION["sexo"] = $resultado["sexo"];
                     $_SESSION["documento"] = $resultado["documento"];
                     $_SESSION["foto"] = $resultado["foto"];
                     $_SESSION["rol"] = $resultado["rol"];

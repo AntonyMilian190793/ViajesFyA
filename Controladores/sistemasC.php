@@ -21,6 +21,7 @@
                         $_SESSION["usuario"] = $resultado["usuario"];
                         $_SESSION["nombre"] = $resultado["nombre"];
                         $_SESSION["apellido"] = $resultado["apellido"];
+                        $_SESSION["sexo"] = $resultado["sexo"];
                         $_SESSION["foto"] = $resultado["foto"];
                         $_SESSION["rol"] = $resultado["rol"];
 
