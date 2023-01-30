@@ -412,6 +412,7 @@ session_start();
 
 $('#calendarG').fullCalendar({   
 
+defaultView: 'agendaDay',
 
 header: {
   left: 'prev,next today',
@@ -430,7 +431,7 @@ eventLimit: true, // for all non-agenda views
 },
 
 height: 800,
-contentHeight: 780,
+contentHeight: 800,
 aspectRatio: 3,
 nowIndicator: true,
 
