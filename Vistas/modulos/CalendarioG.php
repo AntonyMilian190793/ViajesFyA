@@ -107,13 +107,14 @@ $resultado=$query->fetchAll(PDO::FETCH_ASSOC);
             <div>
                 <legend>Leyenda de áreas</legend>
                 <div style="display: inline-block; margin-top: 50px;">Contabilidad<span><input type="color" value="#CD5C5C"></span> </div>
-                <div style="display: inline-block; margin-top: 50px;">Comunmicación e Incidencia<span><input type="color" value="#FF6347"></span> </div>
+                <div style="display: inline-block; margin-top: 50px;">Comunicación e Incidencia<span><input type="color" value="#FF6347"></span> </div>
                 <div style="display: inline-block; margin-top: 50px;">Identidad y Misión<span><input type="color" value="#9ACD32"></span> </div>
                 <div style="display: inline-block; margin-top: 50px; ">Directivos<span><input type="color" value="#FFBF65"></span> </div>
                 <div style="display: inline-block; margin-top: 50px; ">EBA<span><input type="color" value="#87CEEB"></span> </div>
                 <div style="display: inline-block; margin-top: 50px; ">EBR Urbano<span><input type="color" value="#6C88C4"></span> </div>
                 <div style="display: inline-block; margin-top: 50px; ">EBR Rural<span><input type="color" value="#c3dff9"></span> </div>
                 <div style="display: inline-block; margin-top: 50px; ">EPTT<span><input type="color" value="#C05780"></span> </div>
+                <hr>
                 <div style="display: inline-block; margin-top: 50px; ">FyA Digital<span><input type="color" value="#00B0BA"></span> </div>
                 <div style="display: inline-block; margin-top: 50px; ">Legal<span><input type="color" value="#B196C1"></span> </div>
                 <div style="display: inline-block; margin-top: 50px; ">Logística<span><input type="color" value="#57838D"></span> </div>
