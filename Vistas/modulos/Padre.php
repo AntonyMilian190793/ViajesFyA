@@ -326,7 +326,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                             echo'<option style="color:#6A5ACD" value="#6A5ACD">&#9724; SlateBlue</option>';
                                         }
 
-                                        if($consultorio["nombre"] == "Recursos Humanos"){
+                                        if($consultorio["nombre"] == "Vaciones"){
                                             echo'<option style="color:#6B8E23" value="#6B8E23">&#9724; OliveDrab</option>';
                                         }
 
