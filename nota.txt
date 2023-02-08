@@ -28,3 +28,6 @@ y si se camvbia la base de datos cambiar otrostrabajadores por otrosTrabajadores
 cambiar en la base de datos el DATE por DATETIME
 
 agregar FEMENINO en la base de datos de logistica
+
+en la base de datos de chayanan.feyalegria.org.pe 
+cambiar el id logistica ponerlo en Null
