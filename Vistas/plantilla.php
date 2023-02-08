@@ -8,8 +8,8 @@ session_start();
 <html lang="es">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
-  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF8" />
+  <meta charset="UTF8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>CHAYANAN</title>
   <!-- Tell the browser to be responsive to screen width -->
@@ -255,7 +255,7 @@ session_start();
       navLinks: true,
         
       views: {
-        listMonth:{"buttonText": "Eventos Mensuales"},
+        listMonth:{"buttonText": "Agenda"},
     },
     
 
@@ -439,7 +439,7 @@ dayMaxEvents: false,
 navLinks: true,
 
 views: {
-listMonth:{"buttonText": "Eventos Mensuales"},
+listMonth:{"buttonText": "Agenda"},
 },
 
 
