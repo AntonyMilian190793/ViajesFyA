@@ -333,6 +333,10 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                         if($consultorio["nombre"] == "Sistemas"){
                                             echo'<option style="color:#4682B4" value="#4682B4">&#9724; SteelBlue</option>';
                                         }
+                                        
+                                        if($consultorio["nombre"] == "Gestión"){
+                                            echo'<option style="color:#F0E68C	" value="#F0E68C	">&#9724; Khaki</option>';
+                                        }
 
 
                                         ?>
