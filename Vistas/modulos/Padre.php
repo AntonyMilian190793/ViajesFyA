@@ -7,6 +7,8 @@
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
 	<script src="http://localhost/ViajesFyA/select2/select2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     
@@ -165,15 +167,77 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                         
                         <div class="form-group">
                             <h2>Fecha Inicio:</h2>
-                            <input type="datetime-local" class="form-control input-lg" name="inicio" value="" required>
+                            <input type="datetime-local" class="form-control input-lg" id="fecha" name="inicio" value="" required>
+                            <p id="msg"></p>
                             <!-- <input type="text" class="form-control input-lg" name="fyhIC" id="fyhIC" readonly> -->
                         </div>
+                         <script>
+                                $(document).ready(function(){
+                                    $("#fecha").focus(function(){
+                                    $('#msg').html('');
+                                });
+                                    $("#fecha").blur(function(){
+                                        var hoy = new Date();
+                                        var fecha = $('#fecha').val();
+                                        var fechaFormulario = Date.parse(fecha);
+                    
+                                if (hoy <= fechaFormulario) {
+                                Swal.fire({
+                                    position: 'top-end',
+                                    icon: 'success',
+                                    title: '¡Fecha correcta!',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                    })
+                                }else{
+                                Swal.fire({
+                                    position: 'top-end',
+                                    icon: 'error',
+                                    title: '¡Fecha pasada!',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                    })
+                                }
+                                    });
+                                });
+                            </script>
 
                         <div class="form-group">
                             <h2>Fecha Fin:</h2>
-                            <input type="datetime-local" class="form-control input-lg" name="fin"  value="" required>
+                            <input type="datetime-local" class="form-control input-lg" id="fecha2" name="fin"  value="" required>
+                            <p id="msg2"></p>
                             <!-- <input type="text" class="form-control input-lg" name="fyhFC" id="fyhFC" readonly> -->
                         </div>
+                                <script>
+                                $(document).ready(function(){
+                                    $("#fecha2").focus(function(){
+                                    $('#msg2').html('');
+                                });
+                                    $("#fecha2").blur(function(){
+                                    var hoy = new Date();
+                                    var fecha = $('#fecha2').val();
+                                    var fechaFormulario = Date.parse(fecha);
+                    
+                                if (hoy <= fechaFormulario) {
+                                Swal.fire({
+                                    position: 'top-end',
+                                    icon: 'success',
+                                    title: '¡Fecha correcta!',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                    })
+                                }else{
+                                Swal.fire({
+                                    position: 'top-end',
+                                    icon: 'error',
+                                    title: '¡Fecha pasada!',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                    })
+                                }
+                                    });
+                                });
+                            </script>
 
                         <!-- <div class="form-group">
                             <h2>Hora Inicio:</h2>
@@ -361,8 +425,30 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Registrar</button>
-                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                   
+                    <button type="submit" class="btn btn-primary" onclick="mostrar()">Registrar</button>
+                    <script>
+                        function mostrar() {
+                            Swal.fire({
+                            icon: 'success',
+                            title: 'Evento registrado!',
+                            showConfirmButton: false,
+                            timer: 1500
+                            })
+                        }
+                    </script>
+                     <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="mostrar1()">Cerrar</button>
+                    <script>
+                        function mostrar1() {
+                            Swal.fire({
+                            icon: 'error',
+                            title: 'Evento no registrado!',
+                            showConfirmButton: false,
+                            timer: 1500
+                            })
+                        }
+                    </script>
+                    
                 </div>
 
                 <?php
