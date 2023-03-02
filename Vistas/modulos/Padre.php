@@ -7,7 +7,7 @@
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
 	<script src="http://localhost/ViajesFyA/select2/select2.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
@@ -390,7 +390,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                             echo'<option style="color:#6A5ACD" value="#6A5ACD">&#9724; SlateBlue</option>';
                                         }
 
-                                        if($consultorio["nombre"] == "Vaciones"){
+                                        if($consultorio["nombre"] == "Vacaciones"){
                                             echo'<option style="color:#6B8E23" value="#6B8E23">&#9724; OliveDrab</option>';
                                         }
 
