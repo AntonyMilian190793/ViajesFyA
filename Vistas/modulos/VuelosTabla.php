@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
 <?php
 
 if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Sistemas" && $_SESSION["rol"] != "otrosTrabajadores") {
@@ -66,7 +80,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                                 <button class="btn btn-success"><i class="fa fa-pencil"> 
                                 Editar</i></button>
                                 
-                                        <button class="btn btn-danger EliminarVuelo" Pid="'.$value["id"].'">
+                                        <button class="btn btn-danger EliminarVuelo" onclick="mostrar3()" Pid="'.$value["id"].'">
                                         <i class="fa fa-times"> Borrar</i></button>
                                     </div>
                             </td>
@@ -76,11 +90,12 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                             <button class="btn btn-success"><i class="fa fa-pencil"> 
                             Editar</i></button>
                             
-                                    <button class="btn btn-danger EliminarVuelo" Pid="'.$value["id"].'">
+                                    <button class="btn btn-danger EliminarVuelo" onclick="mostrar2()" Pid="'.$value["id"].'">
                                     <i class="fa fa-times"> Borrar</i></button>
                                 </div>
                         </td>
                     </tr>';
+                    
 
                         }else{
 
@@ -88,6 +103,27 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                         }
 
                         ?>
+                    
+                    <script>
+                        function mostrar2() {
+                            Swal.fire({
+                            icon: 'error',
+                            title: 'Evento eliminado!',
+                            showConfirmButton: false,
+                            timer: 2000
+                            })
+                        }
+
+                        function mostrar3() {
+                            Swal.fire({
+                            icon: 'error',
+                            title: 'Evento eliminado!',
+                            showConfirmButton: false,
+                            timer: 2000
+                            })
+                        }
+                    </script>
+
                     </tbody>
                 </table>
             </div>
