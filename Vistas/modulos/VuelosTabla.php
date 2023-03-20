@@ -73,7 +73,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                             <td>'.$value["comentario"].'</td>
                             <td>';
 
-                            if($_SESSION["rol"] == ""){
+                            if($_SESSION["nombre"] == "Nataly Grecia"){
 
                             
                             echo '<div class="btn-group">
