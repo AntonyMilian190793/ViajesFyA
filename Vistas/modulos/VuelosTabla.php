@@ -77,8 +77,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
 
                             
                             echo '<div class="btn-group">
-                                <button class="btn btn-success"><i class="fa fa-pencil"> 
-                                Editar</i></button>
+                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#EditarModal"><i class="fa fa-pencil">Editar</i></button>
                                 
                                         <button class="btn btn-danger EliminarVuelo" onclick="mostrar3()" Pid="'.$value["id"].'">
                                         <i class="fa fa-times"> Borrar</i></button>
@@ -86,9 +85,8 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                             </td>
                         </tr>';
                         }else if($_SESSION["rol"] == "Sistemas"){
-                            echo '<div class="btn-group">
-                            <button class="btn btn-success"><i class="fa fa-pencil"> 
-                            Editar</i></button>
+                            echo ' 
+                            <button type="button" class="btn btn-success" EditarVuelo data-toggle="modal" Pid="'.$value["id"].'"data-target="#EditarModal"><i class="fa fa-pencil">Editar</i></button>
                             
                                     <button class="btn btn-danger EliminarVuelo" onclick="mostrar2()" Pid="'.$value["id"].'">
                                     <i class="fa fa-times"> Borrar</i></button>
@@ -103,6 +101,83 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                         }
 
                         ?>
+
+<div class="modal fade" rol="dialog" id="EditarModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post">
+                <div class="modal-body">
+                    <div class="box-body">
+
+                        <div class="form-group">
+                            <input type="text" class="form-control input-lg" id="Pid" name="Pid" readonly>
+                        </div>  
+
+                        <div class="form-group">
+                            <h2>Datos del Trabajador:</h2>
+                            <input type="text" class="form-control input-lg" id="nombreE" name="nombreE" readonly>
+                        </div>  
+                        
+
+                        
+
+                        <div class="form-group">
+                            <h2>Fecha Inicio:</h2>
+                            <input type="datetime-local" class="form-control input-lg" id="inicioE"  name="inicioE" value="">
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Fecha Fin:</h2>
+                            <input type="datetime-local" class="form-control input-lg" id="finE"  name="finE" value="">
+                        </div>
+
+                            <div class="form-group">
+                             <h2>Seleccionar Colegio:</h2>
+                            <select class="form-control input-lg" id="controlBuscadora" name="nombreCo" style="width: 100%">
+                                <option>Colegio...</option>
+
+                                
+                        </div>
+                            <?php
+
+                                $columna = null;
+                                $valor = null;
+                                $resultado	= ColegiosC::VerColegiosC($columna, $valor);
+                                            
+                
+                                foreach ($resultado as $key => $value) {
+
+                                    echo '<option value="'.$value["nombre"].' ">'.$value["nombre"].'</option>';
+                                }
+                            
+                            ?>
+                        </div> 
+
+                            <div class="form-group">
+
+                            <h2></h2>
+                             <input type="hidden">
+                        </div>
+
+
+                        <div class="form-group">
+                            <h2>Comentario:</h2>
+                            <input type="text" class="form-control input-lg" id="comentarioE" name="comentarioE">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Guardar Cambios</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
                     
                     <script>
                         function mostrar2() {
@@ -135,6 +210,8 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
     </section>
 
 </div>
+
+
 
 <?php
 

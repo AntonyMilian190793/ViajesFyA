@@ -487,18 +487,18 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
 
                         <div class="form-group">
                             <h2>Fecha Inicio:</h2>
-                            <input type="datetime-local" class="form-control input-lg" id="horaS"  name="horaS" value="" >
+                            <input type="datetime-local" class="form-control input-lg" id="horaS"  name="horaS" value="" readonly>
                         </div>
 
                         <div class="form-group">
                             <h2>Fecha Fin:</h2>
-                            <input type="datetime-local" class="form-control input-lg" id="horaF"  name="horaF" value="" >
+                            <input type="datetime-local" class="form-control input-lg" id="horaF"  name="horaF" value="" readonly>
                         </div>
 
 
                         <div class="form-group">
                             <h2>Comentario:</h2>
-                            <input type="text" class="form-control input-lg" id="description" name="description">
+                            <input type="text" class="form-control input-lg" id="description" name="description" readonly>
                         </div>
                     </div>
                 </div>
