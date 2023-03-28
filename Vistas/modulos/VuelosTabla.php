@@ -112,7 +112,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                         </div>  
 
                         <div class="form-group">
-                            <h2>Datos del Trabajador:</h2>
+                            <h2>Actualizar evento del trabajador:</h2>
                             <input type="text" class="form-control input-lg" id="nombreE" name="nombreE" readonly>
                         </div>  
 
@@ -181,6 +181,13 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
     </div>
 </div>
 
+<?php
+
+    $borrarP = new CitasC();
+    $borrarP -> BorrarCitasC();
+
+?>
+
                     
                     <script>
                         function mostrar2() {
@@ -213,12 +220,3 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
     </section>
 
 </div>
-
-
-
-<?php
-
-    $borrarP = new CitasC();
-    $borrarP -> BorrarCitasC();
-
-?>
