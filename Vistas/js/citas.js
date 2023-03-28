@@ -4,3 +4,13 @@ $(".DTEV").on("click", ".EliminarVuelo", function() {
     window.location = "index.php?url=VuelosTabla&Pid=" + Pid;
 });
 
+                        function mostrar2() {
+                            Swal.fire({
+                            position: 'top-end',
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Evento eliminado!',
+                            showConfirmButton: false,
+                            timer: 1500
+                            })
+                        }

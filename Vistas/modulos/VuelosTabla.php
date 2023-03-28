@@ -192,19 +192,23 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                     <script>
                         function mostrar2() {
                             Swal.fire({
+                            position: 'top-end',
                             icon: 'error',
-                            title: 'Evento eliminado!',
+                            title: 'Oops...',
+                            text: '¡Evento eliminado!',
                             showConfirmButton: false,
-                            timer: 2000
+                            timer: 1500
                             })
                         }
 
                         function mostrar3() {
                             Swal.fire({
+                            position: 'top-end',
                             icon: 'error',
-                            title: 'Evento eliminado!',
+                            title: 'Oops...',
+                            text: '¡Evento eliminado!',
                             showConfirmButton: false,
-                            timer: 2000
+                            timer: 1500
                             })
                         }
                     </script>
