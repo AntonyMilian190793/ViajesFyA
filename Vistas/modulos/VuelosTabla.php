@@ -40,6 +40,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
 
                 
             </div>
+
             <div class="box-body">
                 <table class="table -table-bordered table-hover table-striped DTEV">
                     <thead>
@@ -76,19 +77,28 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                             if($_SESSION["rol"] == "Logistica"){
 
                             
-                            echo '<div class="btn-group">
+                            echo '
+                            <div class="btn-group">
                                 <button class="btn btn-success EditarVuelo" Pid="'.$value["id"].'" data-toggle="modal" data-target="#EditarModal"><i class="fa fa-pencil">Editar</i></button>
-                                
+                            </div>
+
+                            <div class="btn-group">
                                 <button class="btn btn-danger EliminarVuelo" onclick="mostrar3()" Pid="'.$value["id"].'"><i class="fa fa-times"> Borrar</i></button>
-                                    </div>
+                            </div>
+
                             </td>
                         </tr>';
                         }else if($_SESSION["rol"] == "Sistemas"){
-                            echo ' 
-                        <button class="btn btn-success EditarVuelo" Pid="'.$value["id"].'" data-toggle="modal" data-target="#EditarModal"><i class="fa fa-pencil">Editar</i></button>
+                            echo '
 
-                        <button class="btn btn-danger EliminarVuelo" onclick="mostrar2()" Pid="'.$value["id"].'"><i class="fa fa-times"> Borrar</i></button>
-                                </div>
+                        <div class="btn-group">   
+                            <button class="btn btn-success EditarVuelo" Pid="'.$value["id"].'" data-toggle="modal" data-target="#EditarModal"><i class="fa fa-pencil">Editar</i></button>
+                        </div>
+                        
+                        <div class="btn-group">
+                            <button class="btn btn-danger EliminarVuelo" onclick="mostrar2()" Pid="'.$value["id"].'"><i class="fa fa-times"> Borrar</i></button>
+                        </div>
+
                         </td>
                     </tr>';
                     
@@ -99,6 +109,9 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                         }
 
                         ?>
+                     </tbody>
+                </table>
+            </div>                       
 
 <div class="modal fade" rol="dialog" id="EditarModal">
     <div class="modal-dialog">
@@ -164,8 +177,29 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-success">Guardar Cambios</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-success" onclick="mostrar4()">Guardar Cambios</button>
+                    <script>
+                        function mostrar4() {
+                            Swal.fire({
+                            icon: 'success',
+                            title: 'Evento actualizado!',
+                            showConfirmButton: false,
+                            timer: 1500
+                            })
+                        }
+                    </script>
+                    
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="mostrar5()">Cancelar</button>
+                    <script>
+                        function mostrar5() {
+                            Swal.fire({
+                            icon: 'error',
+                            title: 'Evento no registrado!',
+                            showConfirmButton: false,
+                            timer: 1500
+                            })
+                        }
+                    </script>
 
                 </div>
 
@@ -191,17 +225,6 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                     
                     <script>
                         function mostrar2() {
-                            Swal.fire({
-                            position: 'top-end',
-                            icon: 'error',
-                            title: 'Oops...',
-                            text: '¡Evento eliminado!',
-                            showConfirmButton: false,
-                            timer: 1500
-                            })
-                        }
-
-                        function mostrar3() {
                             Swal.fire({
                             position: 'top-end',
                             icon: 'error',

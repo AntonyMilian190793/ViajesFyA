@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
 <link rel="stylesheet" type="text/css" href="http://localhost/ViajesFyA/select2/select2.min.css">
-	<script
-  src="https://code.jquery.com/jquery-3.3.1.js"
+	<script src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
 	<script src="http://localhost/ViajesFyA/select2/select2.min.js"></script>
@@ -324,6 +323,12 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                             <input type="text" class="form-control input-lg" name="comentario" >
                         </div>
 
+                        <!-- subir archivos-->
+                        <div class="form-group">
+                            <h2>Archivo:</h2>
+                            <input type="file" class="form-control input-lg" name="comentario" >
+                        </div>
+
                         <div class="form-group">
                         <h2>Color del Evento:</h2>
                         <select name="color" class="form-control input-lg" id="color" >
@@ -476,7 +481,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                         </div>  
 
                         <div class="form-group">
-                            <h2>Datos del Trabajador:</h2>
+                            <h2>Evento del trabajador:</h2>
                             <input type="text" class="form-control input-lg" id="titleC" name="titleC" readonly>
                         </div>  
                         
