@@ -41,7 +41,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                 
             </div>
             <div class="box-body">
-                <table class="table -table-bordered table-hover table-striped DTE">
+                <table class="table -table-bordered table-hover table-striped DTEV">
                     <thead>
                         <tr>
                             <th>N°</th>
@@ -86,8 +86,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                         </tr>';
                         }else if($_SESSION["rol"] == "Sistemas"){
                             echo ' 
-                            <button type="button" class="btn btn-success" EditarVuelo data-toggle="modal" Pid="'.$value["id"].'"data-target="#EditarModal"><i class="fa fa-pencil">Editar</i></button>
-                            
+                        <button class="btn btn-success EditarVuelo" Pid="'.$value["id"].'" data-toggle="modal" data-target="#EditarModal"><i class="fa fa-pencil">Editar</i></button>
                                     <button class="btn btn-danger EliminarVuelo" onclick="mostrar2()" Pid="'.$value["id"].'">
                                     <i class="fa fa-times"> Borrar</i></button>
                                 </div>
@@ -110,16 +109,13 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                     <div class="box-body">
 
                         <div class="form-group">
-                            <input type="text" class="form-control input-lg" id="Pid" name="Pid" readonly>
+                            <input type="hidden" id="Pid" name="Pid">
                         </div>  
 
                         <div class="form-group">
                             <h2>Datos del Trabajador:</h2>
                             <input type="text" class="form-control input-lg" id="nombreE" name="nombreE" readonly>
                         </div>  
-                        
-
-                        
 
                         <div class="form-group">
                             <h2>Fecha Inicio:</h2>
@@ -134,6 +130,7 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                             <div class="form-group">
                              <h2>Seleccionar Colegio:</h2>
                             <select class="form-control input-lg" id="controlBuscadora" name="nombreCo" style="width: 100%">
+                                <option id="nombreCo"></option>    
                                 <option>Colegio...</option>
 
                                 

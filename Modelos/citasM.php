@@ -141,21 +141,6 @@
 
         }
 
-        static public function CitaM($tablaBD, $columna, $valor){
-                
-            if($columna != null){
-
-                $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD WHERE $columna = :$columna");
-                $pdo->bindParam(":" .$columna, $valor, PDO::PARAM_STR);
-                $pdo->execute();
-                return $pdo->fetch();
-            }
-
-            $pdo -> close();
-            $pdo = null;
-
-        }
-
 
         static public function EditarCitasM($tablaBD){
             $pdo = ConexionBD::cBD()->prepare("UPDATE $tablaBD inicio = :inicio, fin = :fin, comentario = :comentario WHERE id = :id");
@@ -199,6 +184,22 @@
             $pdo = null;
         
         }
+
+        static public function CitaM($tablaBD, $columna, $valor){
+                
+            if($columna != null){
+
+                $pdo = ConexionBD::cBD()->prepare("SELECT * FROM $tablaBD WHERE $columna = :$columna");
+                $pdo->bindParam(":" .$columna, $valor, PDO::PARAM_STR);
+                $pdo->execute();
+                return $pdo->fetch();
+            }
+
+            $pdo -> close();
+            $pdo = null;
+
+        }
+        
 
     }    
 

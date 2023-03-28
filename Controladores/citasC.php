@@ -111,14 +111,6 @@
             }
         }
 
-        public function CitaC($columna, $valor){
-            $tablaBD = "vueloslogistica";
-            $resultado = CitasM::CitaM($tablaBD, $columna, $valor);
-
-            return $resultado;
-        }
-
-
         //public function ModificarCita(){
           //  $tablaBD = "vueloslogistica";
            // $resultado = CitasM::ModificarCita($tablaBD);
@@ -148,6 +140,14 @@
                 }
             }
         }
+
+        public function CitaC($columna, $valor){
+            $tablaBD = "vueloslogistica";
+            $resultado = CitasM::CitaM($tablaBD, $columna, $valor);
+
+            return $resultado;
+        }
+
 
     }
 
