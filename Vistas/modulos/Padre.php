@@ -324,10 +324,10 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                         </div>
 
                         <!-- subir archivos-->
-                        <div class="form-group">
-                            <h2>Archivo:</h2>
-                            <input type="file" class="form-control input-lg" name="comentario" >
-                        </div>
+                            <!-- <div class="form-group">
+                                <h2>Archivo:</h2>
+                                <input type="file" class="form-control input-lg" name="comentario" >
+                            </div> -->
 
                         <div class="form-group">
                         <h2>Color del Evento:</h2>
