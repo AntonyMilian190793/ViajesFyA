@@ -148,6 +148,23 @@
             return $resultado;
         }
 
+        //actualizar citas
+        public function ActualizarCitasC(){
+
+            if(isset($_POST["Pid"])){
+                $tablaBD = "vueloslogistica";
+                $datosC = array("id" => $_POST["Pid"], "inicio" => $_POST["inicioE"], "fin" => $_POST["finE"], "colegio" => $_POST["nombreCo"], "comentario" => $_POST["comentarioE"]);
+
+                $resultado = CitasM::ActualizarCitasM($tablaBD, $datosC);
+
+                if($resultado == true){
+                    echo '<script>
+                        window.location = "VuelosTabla";
+                    </script>';
+                }
+            }
+        }
+
 
     }
 

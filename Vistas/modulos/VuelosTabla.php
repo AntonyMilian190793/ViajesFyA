@@ -73,22 +73,21 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                             <td>'.$value["comentario"].'</td>
                             <td>';
 
-                            if($_SESSION["nombre"] == "Nataly Grecia"){
+                            if($_SESSION["rol"] == "Logistica"){
 
                             
                             echo '<div class="btn-group">
-                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#EditarModal"><i class="fa fa-pencil">Editar</i></button>
+                                <button class="btn btn-success EditarVuelo" Pid="'.$value["id"].'" data-toggle="modal" data-target="#EditarModal"><i class="fa fa-pencil">Editar</i></button>
                                 
-                                        <button class="btn btn-danger EliminarVuelo" onclick="mostrar3()" Pid="'.$value["id"].'">
-                                        <i class="fa fa-times"> Borrar</i></button>
+                                <button class="btn btn-danger EliminarVuelo" onclick="mostrar3()" Pid="'.$value["id"].'"><i class="fa fa-times"> Borrar</i></button>
                                     </div>
                             </td>
                         </tr>';
                         }else if($_SESSION["rol"] == "Sistemas"){
                             echo ' 
                         <button class="btn btn-success EditarVuelo" Pid="'.$value["id"].'" data-toggle="modal" data-target="#EditarModal"><i class="fa fa-pencil">Editar</i></button>
-                                    <button class="btn btn-danger EliminarVuelo" onclick="mostrar2()" Pid="'.$value["id"].'">
-                                    <i class="fa fa-times"> Borrar</i></button>
+
+                        <button class="btn btn-danger EliminarVuelo" onclick="mostrar2()" Pid="'.$value["id"].'"><i class="fa fa-times"> Borrar</i></button>
                                 </div>
                         </td>
                     </tr>';
@@ -165,10 +164,17 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-dismiss="modal">Guardar Cambios</button>
+                    <button type="submit" class="btn btn-success">Guardar Cambios</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
 
                 </div>
+
+                <?php
+
+                    $actualizar = new CitasC();
+                    $actualizar -> ActualizarCitasC();
+                
+                ?>
 
             </form>
         </div>

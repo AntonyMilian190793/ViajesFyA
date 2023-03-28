@@ -158,7 +158,7 @@
         }
 
 
-         static public function VerVuelosLogisticaM($tablaBD){
+        static public function VerVuelosLogisticaM($tablaBD){
             
             $pdo = ConexionBD::cBD()->prepare("SELECT id ,nyaP, documento, colegio, DATE_FORMAT(inicio, '%W %d de %M de %Y') AS inicio, DATE_FORMAT(inicio, '%h:%m:%s %p') AS Hora_Inicio, DATE_FORMAT(fin, '%W %d de %M de %Y') AS fin, DATE_FORMAT(fin, '%h:%m:%s %p') AS Hora_Fin, comentario   FROM $tablaBD");
             $pdo->execute();
@@ -198,6 +198,25 @@
             $pdo -> close();
             $pdo = null;
 
+        }
+
+        static function ActualizarCitasM($tablaBD, $datosC){
+
+            $pdo = ConexionBD::cBD()->prepare("UPDATE $tablaBD SET comentario = :comentario, inicio = :inicio, fin = :fin, colegio = :colegio WHERE id = :id");
+
+            $pdo->bindParam(":id", $datosC["id"], PDO::PARAM_INT);
+            $pdo->bindParam(":comentario", $datosC["comentario"], PDO::PARAM_STR);
+            $pdo->bindParam(":inicio", $datosC["inicio"], PDO::PARAM_STR);
+            $pdo->bindParam(":fin", $datosC["fin"], PDO::PARAM_STR);
+            $pdo->bindParam(":colegio", $datosC["colegio"], PDO::PARAM_STR);
+
+
+            if($pdo->execute()){
+                return true;
+            }
+
+            $pdo->close();
+            $pdo = null;
         }
         
 
