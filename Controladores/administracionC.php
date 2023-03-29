@@ -253,6 +253,22 @@ class AdministracionC{
 
             return $resultado;
         }
+
+        public function ActualizarAdministracionC(){
+
+            if(isset($_POST["Pid"])){
+                $tablaBD = "jefesarea";
+                $datosC = array("id" => $_POST["Pid"], "nombre" => $_POST["nombreE"], "apellido" => $_POST["apellidoE"], "usuario" => $_POST["usuarioE"], "clave" => $_POST["claveE"]);
+
+                $resultado = AdministracionM::ActualizarAdministracionM($tablaBD, $datosC);
+
+            if($resultado == true){
+                    echo '<script>
+                        window.location = "administracion";
+                    </script>';
+                }
+            }
+        }
 }
 
 ?>
