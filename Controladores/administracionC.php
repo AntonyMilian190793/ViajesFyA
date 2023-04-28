@@ -195,7 +195,7 @@ class AdministracionC{
     }
 
     //ver trabajadores administracion
-    public function VerAdministracionTC(){
+    public static function VerAdministracionTC(){
 
         $tablaBD = "jefesarea";
         $resultado = AdministracionM::VerAdministracionTM($tablaBD);

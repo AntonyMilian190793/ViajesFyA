@@ -253,7 +253,7 @@ class OtrosC{
     }
 
     //mostrar secretaria
-    public function VerOtrosC(){
+    public static function VerOtrosC(){
 
         $tablaBD = "logistica";
         $resultado = OtrosM::VerOtrosM($tablaBD);

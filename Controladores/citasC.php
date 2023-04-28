@@ -22,7 +22,7 @@
         }
 
         //ver citas
-        public function VerCitasC(){
+        public static function VerCitasC(){
 
             $tablaBD = "vueloslogistica";
             $resultado = CitasM::VerCitasM($tablaBD);
@@ -117,7 +117,7 @@
         //}
 
 
-        public function VerVuelosLogisticaC(){
+        public static function VerVuelosLogisticaC(){
             $tablaBD = "vueloslogistica";
             $resultado = CitasM::VerVuelosLogisticaM($tablaBD);
             return $resultado;
