@@ -2,9 +2,9 @@
     <!-- Logo -->
     <a href="http://localhost/ViajesFyA/inicio" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>CHA</b>FYA</span>
+      <span class="hidden-md-down" src="img/logo1.png" alt=""></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><img src="img/logo1.png" height="50px" weight="200px"></span>
+      <span class="hidden-lg-up"><img src="img/logo1.png" height="50px" weight="200px"></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
