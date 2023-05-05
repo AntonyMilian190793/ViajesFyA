@@ -239,10 +239,10 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                     </tbody>
                 </table>
             </div>
-            <br>
-  <footer style="position: absolute; footer: 15px; left: 350px;">
-    <p><a>© 2023 Jorge Antony Milian Montalvo. Todos los Derechos Reservados</a>.</p>
-  </footer>
+            <footer style="position: absolute; footer: 15px; left: 750px;">
+    <br>
+        <p><a style="color:#AA0F16">© 2023 Jorge Antony Milian Montalvo. Todos los Derechos Reservados</a>.</p>
+    </footer>
         </div>
     </section>
 

@@ -110,6 +110,11 @@ if ($_SESSION["rol"] != "Sistemas") {
                     </tbody>
                 </table>
             </div>
+            <br>
+            <footer style="position: absolute; footer: 15px; left: 550px;">
+    <br>
+        <p><a style="color:#AA0F16">© 2023 Jorge Antony Milian Montalvo. Todos los Derechos Reservados</a>.</p>
+    </footer>
         </div>
     </section>
 
