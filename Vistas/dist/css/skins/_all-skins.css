@@ -39,7 +39,7 @@
     color: #fff;
   }
   .skin-blue .main-header .navbar .dropdown-menu li a:hover {
-    background: #AA0F16;
+    background: #fff;
   }
 }
 .skin-blue .main-header .logo {
@@ -75,8 +75,8 @@
 .skin-blue .sidebar-menu > li:hover > a,
 .skin-blue .sidebar-menu > li.active > a,
 .skin-blue .sidebar-menu > li.menu-open > a {
-  color: #ffffff;
-  background: #AA0F16;
+  color: #AA0F16;
+  background: #EFF4F7;
 }
 .skin-blue .sidebar-menu > li.active > a {
   border-left-color: #AA0F16;
