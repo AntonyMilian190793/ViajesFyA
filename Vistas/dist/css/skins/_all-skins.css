@@ -59,7 +59,7 @@
 .skin-blue .wrapper,
 .skin-blue .main-sidebar,
 .skin-blue .left-side {
-  background-color: #222d32;
+  background-color: #FFF;
 }
 .skin-blue .user-panel > .info,
 .skin-blue .user-panel > .info > a {
@@ -76,7 +76,7 @@
 .skin-blue .sidebar-menu > li.active > a,
 .skin-blue .sidebar-menu > li.menu-open > a {
   color: #ffffff;
-  background: #1e282c;
+  background: #AA0F16;
 }
 .skin-blue .sidebar-menu > li.active > a {
   border-left-color: #AA0F16;
@@ -86,7 +86,7 @@
   background: #2c3b41;
 }
 .skin-blue .sidebar a {
-  color: #b8c7ce;
+  color: #AA0F16;
 }
 .skin-blue .sidebar a:hover {
   text-decoration: none;
