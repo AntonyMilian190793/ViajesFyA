@@ -29,9 +29,9 @@
             if($_SESSION["rol"] == "Logistica"){
 
                 if($_SESSION["sexo"] == "Femenino"){
-                    echo'<h1><strong>Bienvenido '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</strong></h1>';
-                }else{
                     echo'<h1><strong>Bienvenida '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</strong></h1>';
+                }else{
+                    echo'<h1><strong>Bienvenido '.$_SESSION["nombre"].' '.$_SESSION["apellido"].'</strong></h1>';
                 }
             }
 

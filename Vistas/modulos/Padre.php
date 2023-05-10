@@ -59,7 +59,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
         if($_SESSION["rol"] == "Logistica"){
             echo '            
             <div class="box-header">
-                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#CitaModal">Crear Evento</button>
+                <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#CitaModal">Crear Evento</button>
             </div>';
         }else if($_SESSION["rol"] == "Sistemas"){
                         echo '            
