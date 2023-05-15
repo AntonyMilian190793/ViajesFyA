@@ -199,6 +199,25 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                 }
                                     });
                                 });
+
+                                var date = new Date();
+    var tdate = date.getDate();
+    var month = date.getMonth() + 1;
+    var hora = ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2);
+
+    if (tdate < 10) {
+        tdate = '0' + tdate; 
+    }
+    if (month < 10) {
+        month = '0' + month;
+    }
+    var year = date.getUTCFullYear();
+
+    var minDate = year + "-" + month + "-" + tdate;
+    var fecha_hora = minDate +'T'+ hora;
+    document.getElementById("fecha").setAttribute("min", fecha_hora);
+    
+    console.log(fecha_hora);
                             </script>
 
                         <div class="form-group">
@@ -236,6 +255,25 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                 }
                                     });
                                 });
+
+                                var date = new Date();
+    var tdate = date.getDate();
+    var month = date.getMonth() + 1;
+    var hora = ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2);
+
+    if (tdate < 10) {
+        tdate = '0' + tdate; 
+    }
+    if (month < 10) {
+        month = '0' + month;
+    }
+    var year = date.getUTCFullYear();
+
+    var minDate = year + "-" + month + "-" + tdate;
+    var fecha_hora = minDate +'T'+ hora;
+    document.getElementById("fecha2").setAttribute("min", fecha_hora);
+    
+    console.log(fecha_hora);
                             </script>
 
                         <!-- <div class="form-group">
