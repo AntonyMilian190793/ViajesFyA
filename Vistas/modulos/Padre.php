@@ -306,7 +306,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                             echo '<option value="'.$value["nombre"].' ">'.$value["nombre"].'</option>';
                         }
 
-                    }if($_SESSION["nombre"] == "Jorge"){
+                    }if($_SESSION["nombre"] == "Jorge Antony"){
                          echo '<div class="form-group">
 
                             <h2>Seleccionar Colegio:</h2>
