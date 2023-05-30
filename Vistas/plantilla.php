@@ -416,7 +416,7 @@ session_start();
 
 $('#calendarG').fullCalendar({   
 
-defaultView: 'agendaDay',
+defaultView: 'month',
 
 header: {
   left: 'prev,next today',

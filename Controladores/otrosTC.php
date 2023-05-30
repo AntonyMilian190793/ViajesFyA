@@ -32,7 +32,7 @@
 					</script>';
                 }else{
 
-                    echo '<div class="alert alert-danger">Error al Ingresar al sistema</div>';
+                    echo '<div class="alert alert-warning">Error al Ingresar al sistema</div>';
 
                 }
             }

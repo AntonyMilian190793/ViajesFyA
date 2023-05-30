@@ -306,7 +306,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                             echo '<option value="'.$value["nombre"].' ">'.$value["nombre"].'</option>';
                         }
 
-                    }if($_SESSION["nombre"] == "Jorge Antony"){
+                    }if($_SESSION["nombre"] == "Jorge"){
                          echo '<div class="form-group">
 
                             <h2>Seleccionar Colegio:</h2>
@@ -335,6 +335,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                             <select class="form-control input-lg" id="controlBuscadora" name="nombreCo" style="width: 100%">
                                 <option>Seleccionar...</option>
                                 <option>Vacaciones</option>
+                                <option>Monitoreo</option>
                                 <option>Otros</option>
 
                         </div>';
@@ -345,6 +346,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                             <select class="form-control input-lg" id="controlBuscadora" name="nombreCo" style="width: 100%">
                                 <option>Seleccionar...</option>
                                 <option>Vacaciones</option>
+                                <option>Monitoreo</option>
                                 <option>Otros</option>
                         </div>';
                     }
@@ -359,6 +361,11 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                         <div class="form-group">
                             <h2>Comentario:</h2>
                             <input type="text" class="form-control input-lg" name="comentario" >
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Archivo:</h2>
+                            <input type="file" class="form-control input-lg"  id="archivo" name="archivo" >
                         </div>
 
                         <!-- subir archivos-->
@@ -406,7 +413,7 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                         }
 
                                         if($consultorio["nombre"] == "EBR Rural"){
-                                            echo'<option style="color:#c3dff9" value="#c3dff9">&#9724; Azul-Turquesa</option>';
+                                            echo'<option style="color:#6A5ACD" value="#6A5ACD">&#9724; Slateblue</option>';
                                         }
                                         
                                         if($consultorio["nombre"] == "EPTT"){
@@ -430,11 +437,12 @@ if ($_SESSION["rol"] != "Directivo" && $_SESSION["rol"] != "Logistica"  && $_SES
                                         }
 
                                         if($consultorio["nombre"] == "Recaudo y Voluntariado"){
-                                            echo'<option style="color:#6A5ACD" value="#6A5ACD">&#9724; SlateBlue</option>';
+                                            echo'<option style="color:#B22222" value="#B22222">&#9724; Firebrick</option>';
                                         }
 
                                         if($consultorio["nombre"] == "Vacaciones"){
                                             echo'<option style="color:#6B8E23" value="#6B8E23">&#9724; OliveDrab</option>';
+                                            echo'<option style="color:#A87B05" value="#A87B05">&#9724; Goldenrod</option>';
                                         }
 
                                         if($consultorio["nombre"] == "Sistemas"){

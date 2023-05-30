@@ -31,3 +31,4 @@ agregar FEMENINO en la base de datos de logistica
 
 en la base de datos de chayanan.feyalegria.org.pe 
 cambiar el id logistica ponerlo en Null
+cuando se suba las imagenes del logo tiene que se Chayanan reemplazar por el ViajesFyA

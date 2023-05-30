@@ -133,51 +133,13 @@ if ($_SESSION["rol"] != "Logistica" && $_SESSION["rol"] != "Directivo" && $_SESS
                             <h2>Fecha Inicio:</h2>
                             <input type="datetime-local" class="form-control input-lg" id="inicioE"  name="inicioE" value="">
                         </div>
-                        <script>
-                                var date = new Date();
-    var tdate = date.getDate();
-    var month = date.getMonth() + 1;
-    var hora = ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2);
 
-    if (tdate < 10) {
-        tdate = '0' + tdate; 
-    }
-    if (month < 10) {
-        month = '0' + month;
-    }
-    var year = date.getUTCFullYear();
-
-    var minDate = year + "-" + month + "-" + tdate;
-    var fecha_hora = minDate +'T'+ hora;
-    document.getElementById("inicioE").setAttribute("min", fecha_hora);
-    
-    console.log(fecha_hora);
-                        </script>
 
                         <div class="form-group">
                             <h2>Fecha Fin:</h2>
                             <input type="datetime-local" class="form-control input-lg" id="finE"  name="finE" value="">
                         </div>
-                        <script>
-                                var date = new Date();
-    var tdate = date.getDate();
-    var month = date.getMonth() + 1;
-    var hora = ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2);
 
-    if (tdate < 10) {
-        tdate = '0' + tdate; 
-    }
-    if (month < 10) {
-        month = '0' + month;
-    }
-    var year = date.getUTCFullYear();
-
-    var minDate = year + "-" + month + "-" + tdate;
-    var fecha_hora = minDate +'T'+ hora;
-    document.getElementById("finE").setAttribute("min", fecha_hora);
-    
-    console.log(fecha_hora);
-                        </script>
 
                             <div class="form-group">
                              <h2>Seleccionar Colegio:</h2>

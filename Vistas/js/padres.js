@@ -70,3 +70,31 @@ $(".DT").DataTable({
         sLengthMenu: "Mostrar _MENU_ Registros",
     }
 });
+
+
+$(".DTTT").DataTable({
+
+    // "lengthMenu": [ 5, 10, 25, 75, 100],//mostramos el menú de registros a revisar
+    "aProcessing": true, //activamos el procesamiento de databbles
+    "aServerSide": true, //paginacion y filtrado realizadosp por el servidor
+    dom: '<Bl<f>rtip>', //definimos los elementos del control de la tabla
+    buttons: [
+
+    ],
+    "language": {
+        sSearch: false,
+        sEmptyTable: "",
+        sZeroRecords: "",
+        sInfo: "Mostrando _START_ a _END_ de _TOTAL_ registros",
+        sInfoEmpty: "",
+        SInfoFiltered: "(Filtrado de _MAX_ registros)",
+        oPaginate: {
+            sFirst: "",
+            sLast: "",
+            sNext: "",
+            sPrevious: ""
+        },
+        sLoadingRecords: "Cargando...",
+        sLengthMenu: "Mostrar _MENU_ Registros",
+    }
+});
